@@ -1,0 +1,304 @@
+html, body {
+	height: 100%;
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(
+		to right,
+		#292929,
+		#a1a1a1 40%,
+		#a1a1a1 60%,
+		#292929
+	);
+	font: 0.9em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	position: relative;	
+	color: white;
+}
+
+b, strong {
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	border-bottom: dotted 1px black;
+}
+
+a:link, a:visited {
+	color: red;
+	/*color: #2A5DB0; */
+}
+
+a:hover {
+	border-bottom: solid 1px red;
+}
+
+a:active {
+	padding-bottom: 2px;
+}
+
+img {
+	border: none;
+}
+
+table {
+	font-size: 1em;
+}
+
+#item_name
+{
+	font-size: 1.25em;
+}
+
+#item_type
+{
+	font-size: 0.75em;
+}
+
+#item_attrs_small
+{
+	font-size: 0.8em;
+}
+
+#attr_title
+{
+	padding-top: 20px;
+}
+
+#attr_table
+{
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+#attr_table td, #attr_table tr
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.unique { color: #908858 !important; }
+.set { color: #00c400 !important; }
+.attr { color: #4850B8; }
+
+/* normalize monospace sizing 
+ * meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/ */
+code, pre { font-family: "Courier New", monospace, serif; font-size: 1em; }
+
+/* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */ 
+select, input, textarea { color:#444; }
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:active { outline: none; }
+a:focus { outline: thin dotted; }
+
+/* align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
+.textLink { cursor: pointer; }
+
+/* www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button { width: auto; overflow: visible; }
+
+#container {
+	min-height: 100%;
+	margin: 0px auto;
+	padding-bottom: 50px;
+	width: auto;
+	max-width: 768px;
+	text-align: center;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	position: relative;
+	background: black;
+}
+
+#headerContainer {
+	font-size: 1em;	
+	border-top: 1px solid #fff;
+	text-align: center;
+	height: 100px;
+    top: 0;
+	left: 0;
+	right: 0;
+	margin: 0px auto;
+	width: auto;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #bbb;
+}
+
+#headerText {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#navContainer {
+	height: 80px;
+	line-height: 2.0em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#navContainer td {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#contentContainer {
+	line-height: 1.4em;
+	position: relative;
+	z-index: 4;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-top: 100px;
+	min-height: 385px;
+}
+
+#contentContainer #content {
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 260px;
+}
+
+#footerContainer {
+	position: fixed;
+    bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	margin: 0px auto;
+	width: auto;
+	max-width: 768px;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-top: 2px double #bbb;
+	background: #f5f5f5;
+	padding-top: 10px;
+}
+
+#quoteContainer {
+	max-width: 620px;
+    margin: 0 auto;
+	text-align: center;
+	background: #f5f5f5;
+	border: 4px double #bbb;
+	font-size: 10pt;
+}
+
+@media (max-width: 660px) {
+	#quoteContainer {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+#quoteText {
+	margin: 0;
+	padding: 10px;
+	text-align:left;
+}
+
+#quoteAuthor {
+	margin: 0;
+	text-align: right;
+	padding-bottom: 5px;
+	padding-right: 10px;
+	font-style: italic;
+}
+
+#footer
+{
+	width: auto;
+	display: block;
+	clear: both;
+	font-size: 8pt;
+	height: 48px;
+	background: linear-gradient(
+		rgba(247, 247, 247, 0),
+		rgba(0, 0, 0, 0.15)
+	);
+	border-bottom: 1px solid white;
+}
+
+#footer p
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin: 0;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#footer table {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.leftText {
+	text-align: left
+}
+
+.rightText {
+	text-align: right
+}
+
+.centerText {
+	text-align: center
+}
+
+.rightTable {
+	margin-left: auto;
+	margin-right: 0px
+}
+
+.centerTable {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+img .image-left {
+	float: left;
+	margin: 3px 3px 3px 0;
+	padding: 3px 3px 3px 0;
+	position: relative;
+	z-index: 5;
+}
+
+img .image-right {
+	float: right;
+	margin: 3px 0 3px 3px;
+	padding: 3px 0 3px 3px;
+	position: relative;
+	z-index: 5;
+}
+
+.centerImage {
+	display:block; 
+	margin-left:auto; 
+	margin-right:auto;
+}
+
+.fullTable {
+	width: 100%;
+}
+
+#mainTable {
+	margin-top: 20px;
+}
