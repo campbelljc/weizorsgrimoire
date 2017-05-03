@@ -1,0 +1,811 @@
+<html>
+<head>
+	<title>The Arreat Summit - Items: Set Items</title>
+	<link rel="stylesheet" type="text/css" href="/diablo2exp/includes/d2-strat.css">
+	<script language="JavaScript" src="/diablo2exp/includes/d2.js"></script>
+</head>
+
+<body background="/diablo2exp/images/bg2.jpg" bgcolor=black text="#AFAFAF" link="#928A70" vlink="#706850" marginwidth=0 marginheight=0 topmargin=0 leftmargin=0>
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr>
+<td background=0 valign=top>
+
+<!--- MAIN MENU ------------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0>
+	<tr>
+	<td background=0><a href="http://us.blizzard.com/en-us/games/d2/" onMouseOut="offImg('logo')" onMouseOver="ovrImg('logo')" ><img src="/images/battle/diablo2exp/images/d2-logo-off.gif" name="logo" alt="Diablo II: Lord of Destruction" border=0 width=116 height=82></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/" onMouseOut="offImg('news')" onMouseOver="ovrImg('news')" onClick="actImg('news')"><img src="/images/battle/diablo2exp/images/menu/menu-news-off.gif" name="news" alt="News" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/basics/" onMouseOut="offImg('basics')" onMouseOver="ovrImg('basics')" onClick="actImg('basics')"><img src="/images/battle/diablo2exp/images/menu/menu-basics-off.gif" name="basics" alt="Basics" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/classes/" onMouseOut="offImg('classes')" onMouseOver="ovrImg('classes')" onClick="actImg('classes')"><img src="/images/battle/diablo2exp/images/menu/menu-classes-off.gif" name="classes" alt="Classes" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/skills/" onMouseOut="offImg('skills')" onMouseOver="ovrImg('skills')" onClick="actImg('skills')"><img src="/images/battle/diablo2exp/images/menu/menu-skills-off.gif" name="skills" alt="Skills" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/items/"><img src="/images/battle/diablo2exp/images/menu/menu-items-act.gif" name="items" alt="Items" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/monsters/" onMouseOut="offImg('monsters')" onMouseOver="ovrImg('monsters')" onClick="actImg('monsters')"><img src="/images/battle/diablo2exp/images/menu/menu-monsters-off.gif" name="monsters" alt="Monsters" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/npcs/" onMouseOut="offImg('npcs')" onMouseOver="ovrImg('npcs')" onClick="actImg('npcs')"><img src="/images/battle/diablo2exp/images/menu/menu-npcs-off.gif" name="npcs" alt="NPCs" border=0 width=116 height=37></a></td>
+	</tr>
+	
+	<tr>
+	<td background=0><a href="/diablo2exp/quests/" onMouseOut="offImg('quests')" onMouseOver="ovrImg('quests')" onClick="actImg('quests')"><img src="/images/battle/diablo2exp/images/menu/menu-quests-off.gif" name="quests" alt="Quests" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/shrines.shtml" onMouseOut="offImg('shrines')" onMouseOver="ovrImg('shrines')" onClick="actImg('shrines')"><img src="/images/battle/diablo2exp/images/menu/menu-shrines-off.gif" name="shrines" alt="Shrines" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/maps/" onMouseOut="offImg('maps')" onMouseOver="ovrImg('maps')" onClick="actImg('maps')"><img src="/images/battle/diablo2exp/images/menu/menu-maps-off.gif" name="maps" alt="Maps" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/faq/" onMouseOut="offImg('faq')" onMouseOver="ovrImg('faq')" onClick="actImg('faq')"><img src="/images/battle/diablo2exp/images/menu/menu-faq-off.gif" name="faq" alt="F.A.Q." border=0 width=116 height=38></a></td>
+	</tr>
+	
+	<tr>
+	<td background=0><a href="/diablo2exp/files.shtml" onMouseOut="offImg('files')" onMouseOver="ovrImg('files')" onClick="actImg('files')"><img src="/images/battle/diablo2exp/images/menu/menu-files-off.gif" name="files" alt="Files" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><img src="/images/battle/diablo2exp/images/menu/menu-bottom.gif" border=0 width=116 height=27></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="http://www.battle.net"><img src="/images/battle/diablo2exp/images/blizz-logo.gif" alt="Battle.net" border=0 width=116 height=78></a></td>
+	</tr>
+	</table>
+</td>
+
+<td background=0 valign=top width=90%>
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-top-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-top-left.gif" border=0 width=65 height=13></td>
+	<td background="/images/battle/diablo2exp/images/mid-top-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-top-right.gif" border=0 width=73 height=13></td>
+	</tr>
+	</table>
+
+<!--- SUBMENU BAR ----------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background=0><img src="/images/battle/diablo2exp/images/mid-linkbar-left.gif" border=0 width=20 height=35></td>
+	<td background="/images/battle/diablo2exp/images/mid-linkbar-back.gif" align=center width=100%>
+		<font face="arial,helvetica" size=1><small>
+
+<a class="tiny" href="/diablo2exp/items/basics.shtml">Item Basics</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#normal">Normal Items</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#exceptional">Exceptional Items</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#elite">Elite Items</a> |
+<a class="tiny" href="/diablo2exp/items/socketeditems.shtml">Socketed Items</a> |
+<a class="tiny" href="/diablo2exp/items/gems.shtml">Gems</a> |
+<a class="tiny" href="/diablo2exp/items/jewels.shtml">Jewels</a> |
+<a class="tiny" href="/diablo2exp/items/runes.shtml">Runes</a> |
+<a class="tiny" href="/diablo2exp/items/runewords.shtml">Rune Words</a> |
+<a class="tiny" href="/diablo2exp/items/magic.shtml">Magic Items</a> |
+<a class="tiny" href="/diablo2exp/items/magic/">Magic Prefixes and Suffixes</a> |
+<a class="tiny" href="/diablo2exp/items/crafteditems.shtml">Crafted Items</a> |
+<a class="tiny" href="/diablo2exp/items/sets/">Set Items</a> |
+<a class="tiny" href="/diablo2exp/items/uniques.shtml">Unique Items</a> |
+<a class="tiny" href="/diablo2exp/items/charms.shtml">Charms</a> |
+<a class="tiny" href="/diablo2exp/items/cube.shtml">The Horadric Cube</a> |
+<a class="tiny" href="/diablo2exp/items/">Items Index</a>
+    <br>
+
+		</small></font>
+	</td>
+	<td background=0><img src="/images/battle/diablo2exp/images/mid-linkbar-right.gif" border=0 width=21 height=35></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-linkbarbot-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-linkbarbot-left.gif" border=0 width=30 height=8></td>
+	<td background="/images/battle/diablo2exp/images/mid-linkbarbot-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-linkbarbot-right.gif" border=0 width=36 height=8></td>
+	</tr>
+
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-mid-back.gif" colspan=2><img src="/images/shared/blank.gif" border=0 width=576 height=7></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxtop-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-textboxtop-left.gif" border=0 width=36 height=23></td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxtop-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-textboxtop-right.gif" border=0 width=36 height=23></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxleft.gif"><img src="/images/shared/blank.gif" border=0 width=20 height=5></td>
+	<td background="/images/battle/diablo2exp/images/blackbg.gif" width=100%>
+
+<font face="arial,helvetica" size=-1><span>
+<center>
+<a href="sets1.shtml#angelic">Angelic Raiment</a> |
+<a href="sets1.shtml#arcanna">Arcanna's Tricks</a> |
+<a href="sets1.shtml#artic">Arctic Gear</a> |
+<a href="sets1.shtml#berserker">Berserker's Arsenal</a> |
+<a href="sets1.shtml#cathans">Cathan's Traps</a> |
+<a href="sets2.shtml#civerbs">Civerb's Vestments</a> |
+<a href="sets2.shtml#cleglaws">Cleglaw's Brace</a> |
+<a href="sets2.shtml#deaths">Death's Disguise</a> |
+<a href="sets2.shtml#hsarus">Hsarus' Defense</a> |
+<a href="sets2.shtml#infernal">Infernal Tools</a> |
+<a href="sets3.shtml#irathas">Iratha's Finery</a> |
+<a href="sets3.shtml#isenharts">Isenhart's Armory</a> |
+<a href="sets3.shtml#milabregas">Milabrega's Regalia</a> |
+<a href="sets3.shtml#sigons">Sigon's Complete Steel</a> |
+<a href="sets3.shtml#tancreds">Tancred's Battlegear</a> |
+<a href="sets3.shtml#vidalas">Vidala's Rig</a> 
+<P>
+<a href="sets4.shtml#aldurs">Aldur's Watchtower</a> |
+<a href="sets4.shtml#bulkathoschildren">Bul-Kathos' Children</a> |
+<a href="sets4.shtml#cowkingsleathers">Cow King's Leathers</a> |
+<a href="sets4.shtml#thedisciple">The Disciple</a> |
+<a href="sets5.shtml#griswoldslegacy">Griswold's Legacy</a> |
+<a href="sets5.shtml#heavensbrethren">Heaven's Brethren</a> |
+<a href="sets5.shtml#hwaninmajesty">Hwanin's Majesty</a> |
+<a href="sets5.shtml#immortalking">Immortal King</a> |
+<a href="sets6.shtml#mavinasbattlehymn">M'avina's Battle Hymn</a> |
+<a href="sets6.shtml#natalyasodium">Natalya's Odium</a> |
+<a href="sets6.shtml#najsancientvestige">Naj's Ancient Vestige</a> |
+<a href="sets6.shtml#orphanscall">Orphan's Call</a> |
+<a href="sets7.shtml#sandersfolly">Sander's Folly</a> |
+<a href="sets7.shtml#sazabis">Sazabi's Grand Tribute</a> |
+<a href="sets7.shtml#talrashas">Tal Rasha's Wrappings</a> |
+<a href="sets7.shtml#trangouls">Trang-Oul's Avatar</a> 
+
+</center>
+</span></font>
+
+
+		<table border=0 cellpadding=10 cellspacing=0 width=100%>
+		<tr>
+		<td background="/diablo2exp/images/blackbg.gif" align=left width=100%>
+			<font face="arial,helvetica" size=-1><span>
+			<p>
+<!--- MAIN CONTENT --------------------------------------------------------------------------->
+
+<!-------------------------ALDUR'S WATCHTOWER------------------------->
+<a name="aldurs"></a>
+		<br>
+<!--- HEADER GRAPHIC ---------------------------->
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background="/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-left.gif" border=0 width=80 height=60></td>
+		<td background="/diablo2exp/images/headers/header-back.gif" align=center width=100%><img src="/diablo2exp/images/headers/sets-aldur.gif" alt="Aldur's Watchtower" border=0></td>
+		<td background="/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-right.gif" border=0 width=80 height=60></td>
+		</tr>
+		</table>
+<!--- END HEADER GRAPHIC ------------------------>
+		<br>
+<table border=0 cellpadding=5 width=100%>
+<a name="aldurswatchtower"></a>
+<table border=0 cellpadding=5 width=100%>
+
+<tr>
+<td width=25%>
+<center>
+<img src="/diablo2exp/images/items/sets/aldursstoneygaze.gif" width="56" height="56">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Aldur's Stony Gaze</font></b><br>Hunter's Guise
+</span></font>
+</center>
+</td>
+<td width=40%>
+<font face="arial,helvetica" size=-1><span>
+Defense: <font color="#4850b8">157-171</font> (varies) (Base Defense: 67-81)<br>
+Required Level: 36<BR>
+Required Strength: 56<br>
+Durability: 20<br>
+<B>(Druid Only)</B><BR>
+<font color="#4850b8">+90 Defense</font><br>
+<font color="#4850b8">25% Faster Hit Recovery</font><br>
+<font color="#4850b8">Regenerate Mana 17%</font><br>
+<font color="#4850b8">Cold Resist +40-50%</font> (varies)<br>
+<font color="#4850b8">Socketed (2)</font><br>
+<font color="#4850b8">+5 To Light Radius</font><br>
+<font color="#00C400">+15 To Energy</font> (2 Item)<BR>
+<font color="#00C400">+15 To Energy</font> (3 Items)<BR>
+<font color="#00C400">+15 To Energy</font> (Completed Set)
+</span></font>
+</td>
+
+<!----MAGIC BONUS-------------->
+<td rowspan=5 width=35%>
+<font face="arial,helvetica" color="#908858" size=-1><span>
+<B>Partial Set Bonus</B><BR>
+150% Bonus To Attack Rating (2 Items)<BR>
+50% Better Chance Of Getting Magic Items (3 Items)<BR>
+<br>
+
+<B>Complete Set Bonus</B><BR>
++3 To Druid Skills<BR>
++350% Enhanced Damage*<BR>
+150% Bonus To Attack Rating<BR>
+50% Better Chance Of Getting Magic Items<BR>
+10% Mana Stolen Per Hit<BR>
+All Resistances +50<BR>
++150 Defense<BR>
++150 To Mana<BR>
+Display Aura<BR>
+</span></font>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>
+<img src="/diablo2exp/images/items/sets/aldursadvance.gif" width="50" height="57">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Aldur's Advance</font></b><br>Battle Boots
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+Defense: 39-47 (varies)<br>
+Required Level: 45<br>
+Required Strength: 95<br>
+Assassin Kick Damage: 37-64<BR>
+<font color="#4850b8">Indestructible</font><br>
+<font color="#4850b8">40% Faster Run/Walk</font><br>
+<font color="#4850b8">+180 Maximum Stamina</font><br>
+<font color="#4850b8">10% Damage Taken Goes To Mana</font><br>
+<font color="#4850b8">Heal Stamina Plus +32%</font><br>
+<font color="#4850b8">+50 To Life</font><br>
+<font color="#4850b8">Fire Resist +40-50%</font> (varies)<br>
+<font color="#00C400">+15 To Dexterity</font> (2 Item)<BR>
+<font color="#00C400">+15 To Dexterity</font> (3 Items)<BR>
+<font color="#00C400">+15 To Dexterity</font> (Completed Set)
+</span></font>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>
+<img src="/diablo2exp/images/items/sets/aldursdeception.gif" width=54 height="83">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Aldur's Deception</font></b><br>Shadow Plate
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+Defense: <font color="#4850b8">746-857</font> (varies)(Base Defense: 446-557)<br>
+Required Level: 76<BR>
+Required Strength: <font color="#4850b8">115</font><br>
+Durability: 70<br>
+<font color="#4850b8">+300 Defense</font><br>
+<font color="#4850b8">Requirements -50%</font><br>
+<font color="#4850b8">Lightning Resist +40-50%</font> (varies)<br>
+<font color="#4850b8">+15 To Dexterity</font><br>
+<font color="#4850b8">+20 To Strength</font><br>
+<font color="#4850b8">+1 To Elemental Skills (Druid Only)</font><br>
+<font color="#4850b8">+1 To Shape Shifting Skills (Druid Only)</font><br>
+<font color="#00C400">+15 To Vitality</font> (2 Item)<BR>
+<font color="#00C400">+15 To Vitality</font> (3 Items)<BR>
+<font color="#00C400">+15 To Vitality</font> (Completed Set)
+</span></font>
+</td></tr>
+
+<tr>
+<td>
+<center>
+<img src="/diablo2exp/images/items/sets/aldursrythm.gif" width=31 height="88">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Aldur's Rhythm</font></b><br>Jagged Star
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+One-Hand Damage: <font color="#4850b8">60 To 93</font> (76.5 Avg)<br>
+Required Level: 42<BR>
+Required Strength: 74<br>
+Durability: 72<br>
+Base Weapon Speed: [10]<BR>
+<font color="#4850b8">+200% Damage To Demons</font><br>
+<font color="#4850b8">+50% Damage To Undead</font><br>
+<font color="#4850b8">Adds 40-62 Damage</font><br>
+<font color="#4850b8">Adds 50-75 Lightning Damage</font><br>
+<font color="#4850b8">30% Increased Attack Speed</font><br>
+<font color="#4850b8">10% Life Stolen Per Hit</font><br>
+<font color="#4850b8">5% Mana Stolen Per Hit</font><br>
+<font color="#4850b8">Socketed (2-3)</font> (varies)*<br>
+<font color="#00C400">+15 To Strength</font> (2 Item)<BR>
+<font color="#00C400">+15 To Strength</font> (3 Items)<BR>
+<font color="#00C400">+15 To Strength</font> (Completed Set)
+</span></font>
+</td></tr>
+
+</table>
+<p>
+
+<B>Notes</B>: This Set is designed for the Druid, however any class can wear the items in this set
+except for Aldur's Stony Gaze. Only the Druid can complete this set.
+<P>
+The partial bonuses are listed multiple times because you get a partial bonus for each of the 
+other items in the set. You receive +15 Energy on Aldur's Stony Gaze for equipping one other item. 
+You receive +15 additional Energy (+30 total) when you have equipped two other items in the set.
+You get a total of +45 to Energy on Aldur's Stony Gaze if you complete the set.
+<P>
+When you complete this set you get a special aura that, although it does not do anything, makes
+your character look unique.
+<P>
+<B>Aldur's Watchtower</B> - The 350% Enhanced Damage is on the complete set, not on the weapon.  Enhanced Damage from 
+non-weapon equipment works like Enhanced Damage from skills and the strength bonus, which is different from how 
+Enhanced Damage on the weapon works.  Essentially, the 350% ED will add 350% of your weapon damage to your total.  
+With a 60-93 damage weapon, that means the 350% Enhanced Damage will add 210-325 total damage.  
+This is really not very significant, but it's not a bug, just a balance issue. 
+<P>
+<B>Aldur's Rhythm</B> The weapon gets 3 sockets 3/4 of the time and 2 sockets 1/4 of the time.
+<P>
+<!-------------------------BUL-KATHOS' CHILDREN------------------------->
+<a name="bulkathoschildren"></a>
+		<br>
+<!--- HEADER GRAPHIC ---------------------------->
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background="/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-left.gif" border=0 width=80 height=60></td>
+		<td background="/diablo2exp/images/headers/header-back.gif" align=center width=100%><img src="/diablo2exp/images/headers/sets-bulkathos.gif" alt="Bul-Kathos' Children" border=0></td>
+		<td background="/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-right.gif" border=0 width=80 height=60></td>
+		</tr>
+		</table>
+<!--- END HEADER GRAPHIC ------------------------>
+		<br>
+
+<table border=0 cellpadding=5 width=100%>
+
+<tr>
+<td width=25%>
+<center>
+<img src="/diablo2exp/images/items/sets/bulkathossacredcharge.gif" width=52 height="108">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Bul-Kathos' Sacred Charge</font></b><br>Colossus Blade
+</span></font>
+</center>
+</td>
+<td width=40%>
+<font face="arial,helvetica" size=-1><span>
+One Handed Damage: <font color="#4850b8">75 To 195</font> (135 Avg)<br>
+Two Handed Damage: <font color="#4850b8">174 To 345</font> (259.5 Avg)<br>
+Required Level: 63<BR>
+Required Strength: 189<br>
+Required Dexterity: 110<br>
+Durability: 50<br>
+Base Weapon Speed: [5]<BR>
+<font color="#4850b8">+200% Enhanced Damage</font><br>
+<font color="#4850b8">35% Chance of Crushing Blow</font><br>
+<font color="#4850b8">All Resistances +20</font><br>
+<font color="#4850b8">+20% Increased Attack Speed</font><br>
+<font color="#4850b8">Knockback</font><br>
+</span></font>
+</td>
+
+
+<!----MAGIC BONUS-------------->
+<td rowspan=5 width=35%>
+<font face="arial,helvetica" color="#908858" size=-1><span>
+
+<B>Complete Set Bonus</B><BR>
++2 To All Skill Levels<BR>
++200 To Attack Rating<BR>
++200% Damage To Demons<BR>
++200% Damage To Undead<BR>
++20 Fire Damage<BR>
++25 Defense<BR>
+</span></font>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>
+<img src="/diablo2exp/images/items/sets/bulkathostribalguardian.gif" width=27 height="81">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Bul-Kathos' Tribal Guardian</font></b><br>Mythical Sword
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+One Handed Damage: <font color="#4850b8">120 To 150</font> (135 Avg)<br>
+Required Level: 66<BR>
+Required Strength: 147<br>
+Required Dexterity: 124<br>
+Durability: 44<br>
+Base Weapon Speed: [0]<BR>
+<font color="#4850b8">+200% Enhanced Damage</font><br>
+<font color="#4850b8">+50 Poison Damage Over 2 Seconds</font><br>
+<font color="#4850b8">Fire Resist +50%</font><br>
+<font color="#4850b8">+20 To Strength</font><br>
+<font color="#4850b8">+20% Increased Attack Speed</font><br>
+</span></font>
+</td>
+</tr>
+</table>
+<p>
+
+<B>Notes</B>: This Set is designed for the Barbarian; however, any class can equip one of the swords in this Set if
+they meet the requirements. Only the Barbarian can complete this Set.
+<P>
+
+<!-------------------------COW KING'S LEATHERS------------------------->
+<a name="cowkingsleathers"></a>
+		<br>
+<!--- HEADER GRAPHIC ---------------------------->
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background="/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-left.gif" border=0 width=80 height=60></td>
+		<td background="/diablo2exp/images/headers/header-back.gif" align=center width=100%><img src="/diablo2exp/images/headers/sets-cowking.gif" alt="Cow King's Leathers" border=0></td>
+		<td background="/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-right.gif" border=0 width=80 height=60></td>
+		</tr>
+		</table>
+<!--- END HEADER GRAPHIC ------------------------>
+		<br>
+
+
+<table border=0 cellpadding=5 width=100%>
+
+<tr>
+<td width=25%>
+<center>
+<img src="/diablo2exp/images/items/armor/cap.gif" width=62 height="62">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Cow King's Horns</font></b><br>War Hat
+</span></font>
+</center>
+</td>
+<td width=40%>
+<font face="arial,helvetica" size=-1><span>
+Defense : <font color="#4850b8">120-128</font> (varies)(Base Defense: 45-53)<br>
+Required Level: 25<BR>
+Required Strength: 20<br>
+Durability: 12<br>
+<font color="#4850b8">+75 Defense</font><br>
+<font color="#4850b8">Half Freeze Duration</font><br>
+<font color="#4850b8">Attacker Takes Damage of 10</font><br>
+<font color="#4850b8">35% Damage Taken Goes To Mana</font><br>
+</span></font>
+</td>
+
+<!----MAGIC BONUS-------------->
+<td rowspan=5 width=35%>
+<font face="arial,helvetica" color="#908858" size=-1><span>
+
+<B>Partial Set Bonus</B><BR>
+Poison Resist +25% (2 items)<BR>
+<BR>
+
+<B>Complete Set Bonus</B><BR>
+Poison Resist +25%<BR>
+25% Chance To Cast Level 5 Static Field When Struck<BR>
++100 Maximum Stamina<BR>
++20 To Strength<BR>
++30% Increased Attack Speed<BR>
+100% Better Chance Of Getting Magic Items<BR>
+100% Extra Gold From Monsters<BR>
+</span></font>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>
+<img src="/diablo2exp/images/items/armor/studdedleather.gif" width=62 height="91">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Cow King's Hide</font></b><br>Studded Leather
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+Defense: <font color="#4850b8">57</font> (Base Defense: 32-35)<br>
+Required Level: 18<BR>
+Required Strength: 27<br>
+Durability: 32<br>
+<font color="#4850b8">+60% Enhanced Defense</font><br>
+<font color="#4850b8">18% Chance To Cast Level 5 Chain Lightning When Struck</font><br>
+<font color="#4850b8">All Resistances +18</font><br>
+<font color="#4850b8">+30 To Life</font><br>
+</span></font>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>
+<img src="/diablo2exp/images/items/armor/heavyboots.gif" width=62 height="63">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Cow King's Hooves</font></b><br>Heavy Boots
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+Defense: <font color="#4850b8">30-41</font> (varies)(Base Defense: 5-6)<br>
+Required Level: 13<br>
+Required Strength: 18<br>
+Durability: 14<BR>
+Assassin Kick Damage: 4-10<BR>
+<font color="#4850b8">+25-35 Defense</font> (varies)<br>
+<font color="#4850b8">+30% Faster Run/Walk</font><br>
+<font color="#4850b8">Adds 25-35 Fire Damage</font><br>
+<font color="#4850b8">+20 To Dexterity</font><br>
+<font color="#4850b8">25% Better Chance of Getting Magic Items</font><br>
+</span></font>
+</td>
+</tr>
+
+</table>
+<p>
+
+<B>Notes</B>: This Set can only be collected in the Cow Level.
+<P>
+
+<!-------------------------THE DISCIPLE------------------------->
+<a name="thedisciple"></a>
+		<br>
+<!--- HEADER GRAPHIC ---------------------------->
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background="/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-left.gif" border=0 width=80 height=60></td>
+		<td background="/diablo2exp/images/headers/header-back.gif" align=center width=100%><img src="/diablo2exp/images/headers/sets-disciple.gif" alt="The Disciple" border=0></td>
+		<td background="/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-right.gif" border=0 width=80 height=60></td>
+		</tr>
+		</table>
+<!--- END HEADER GRAPHIC ------------------------>
+		<br>
+
+<table border=0 cellpadding=5 width=100%>
+
+
+<tr>
+<td width=25%>
+<center>
+<img src="/diablo2exp/images/items/ra/amu2.gif" width=32 height=33>
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Telling of Beads</font></b><br>Amulet
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+Required Level: 30<BR>
+<font color="#4850b8">+1 To All Skills</font><br>
+<font color="#4850b8">Poison Resist +35-50%</font> (varies)<br>
+<font color="#4850b8">Cold Resist +18%</font><br>
+<font color="#4850b8">Attacker Takes Damage of 8-10</font> (varies)<br>
+</font>
+</td>
+
+<!----MAGIC BONUS-------------->
+<td rowspan=5 width=35%>
+<font face="arial,helvetica" color="#908858" size=-1><span>
+<B>Partial Set Bonus</B><BR>
++150 Defense (2 Items)<BR>
++22 Poison Damage Over 3 Seconds (3 Items)*<BR>
++10 To Strength (4 Items)<BR>
+<BR>
+
+<B>Complete Set Bonus</B><BR>
++150 Defense<BR>
++22 Poison Damage Over 3 Seconds*<BR>
++10 To Strength<BR>
++2 To All Skills<BR>
+All Resistances +50<BR>
++100 Mana<BR>
+</span></font>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>
+<img src="/diablo2exp/images/items/sets/layingofhands.gif" width=56 height="49">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Laying of Hands</font></b><br>Bramble Mitts
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+Defense: <font color="#4850b8">79-87</font> (varies)(Base Defense: 54-62)<br>
+Required Level: 63<br>
+Required Strength: 50<br>
+Durability: 12<BR>
+<font color="#4850b8">+25 Defense</font><br>
+<font color="#4850b8">+20% Increased Attack Speed</font><br>
+<font color="#4850b8">+350% Damage To Demons</font><br>
+<font color="#4850b8">Fire Resist +50%</font><br>
+<font color="#4850b8">10% Chance To Cast Level 3 Holy Bolt On Striking</font><br>
+</span></font>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>
+<img src="/diablo2exp/images/items/sets/darkadherent.gif" width=56 height="79">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Dark Adherent</font></b><br>Dusk Shroud
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+Defense: <font color="#4850b8">666-882</font> (varies)(Base Defense: 361-467)<br>
+Required Level: 49<BR>
+Required Strength: 77<br>
+Durability: 20<br>
+<font color="#4850b8">+305-415 Defense</font> (varies)<br>
+<font color="#4850b8">Fire Resist +24%</font><br>
+<font color="#4850b8">25% Chance To Cast Level 3 Nova When Struck</font><br>
+<font color="#4850b8">Adds 24-34 Poison Damage Over 2 Seconds</font><br>
+</span></font>
+</td></tr>
+
+<tr>
+<td>
+<center>
+<img src="/diablo2exp/images/items/sets/riteofpassage.gif" width=54 height="50">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Rite of Passage</font></b><br>Demonhide Boots
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+Defense: <font color="#4850b8">53-60</font> (varies)(Base Defense: 28-35)<br>
+Required Level: 29<BR>
+Required Strength: 20<br>
+Durability: 12<br>
+Assassin Kick Damage: 26-46<BR>
+<font color="#4850b8">+25 Defense</font><br>
+<font color="#4850b8">30% Faster Run/Walk</font><br>
+<font color="#4850b8">+15-25 Maximum Stamina</font> (varies)<br>
+<font color="#4850b8">Half Freeze Duration</font><br>
+</span></font>
+</td></tr>
+
+<tr>
+<td>
+<center>
+<img src="/diablo2exp/images/items/sets/credendum.gif" width=56 height="25">
+<br>
+<font face="arial,helvetica" size=-1><span>
+<b><font color="#00c400">Credendum</font></b><br>Mithril Coil
+</span></font>
+</center>
+</td>
+<td>
+<font face="arial,helvetica" size=-1><span>
+Defense: <font color="#4850b8">108-115</font> (varies)(Base Defense: 58-65)<br>
+Required Level: 65<BR>
+Required Strength: 106<br>
+Durability: 16<br>
+16 boxes<BR>
+<font color="#4850b8">+50 Defense</font><br>
+<font color="#4850b8">All Resistances +15</font><br>
+<font color="#4850b8">+10 To Dexterity</font><br>
+<font color="#4850b8">+10 To Strength</font><br>
+</span></font>
+</td></tr>
+
+</table>
+<p>
+
+<B>Notes:</B>
+<P>
+
+<B>The Disciple</B> If you have any other sources of poison damage (including the damage on the Dark Adherent), the partial/complete set bonus will show some other, inaccurate value.
+<P>
+
+<!--- END MAIN CONTENT ----------------------------------------------------------------------->
+<p>
+<center>
+<a href="//privacy-policy.truste.com/click-with-confidence/ctv/en/us.battle.net/seal_m" target="_blank">
+<img src="//privacy-policy.truste.com/certified-seal/wps/en/us.battle.net/seal_m.png" border="0" />
+</a><br/>
+<br>
+<font face="arial,helvetica" size=1><small>
+<a class="tiny" href="http://us.blizzard.com/en-us/company/about/privacy.html">Online Privacy Policy</a><br>
+<a class="tiny" href="/tou.shtml">Battle.net Terms of Use Agreement</a><br>
+<a class="tiny" href="http://us.blizzard.com/en-us/company/about/legal-faq.html">&copy;2017 Blizzard Entertainment. All rights reserved.</a>
+</small></font>
+</center>
+<!--- Google Analytics -------------------------------->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-544112-16");
+pageTracker._setDomainName("battle.net");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<div style="display:none;">
+<iframe src="http://view.atdmt.com/NTB/iview/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01?click=" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" width="1" height="1">
+<script language="JavaScript" type="text/javascript">
+document.write('<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" target="_blank"><img src="http://view.atdmt.com/NTB/view/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/"/></a>');
+</script>
+<noscript>
+<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" target="_blank">
+<img border="0" src="http://view.atdmt.com/NTB/view/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" />
+</a>
+</noscript>
+</iframe>
+</div>
+			</span></font>
+		</td>
+		</tr>
+		</table>
+
+	</td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxright.gif"><img src="/images/shared/blank.gif" border=0 width=21 height=5></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxbot-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-textboxbot-left.gif" border=0 width=132 height=98></td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxbot-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-textboxbot-right.gif" border=0 width=106 height=98></td>
+	</tr>
+	</table>
+
+<!--- NAVIGATION BAR ------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background=0 align=left width=100%><br><a href="/strategy.shtml"  onMouseOut="offImg('exit')" onMouseOver="ovrImg('exit')"><img src="/diablo2exp/images/botmenu-close-off.gif" name="exit" alt="Exit" border=0 width=43 height=43></a></td>
+	<td background=0><br><a href="sets3.shtml" onMouseOut="offImg('prev')" onMouseOver="ovrImg('prev')"><img src="/diablo2exp/images/botmenu-prev-off.gif" name="prev" alt="Previous" border=0 width=44 height=43></a></td>
+	<td background=0><br><a href="sets5.shtml" onMouseOut="offImg('next')" onMouseOver="ovrImg('next')"><img src="/diablo2exp/images/botmenu-next-off.gif" name="next" alt="Next" border=0 width=45 height=43></a></td>
+	</tr>
+	</table>
+
+	<br>
+</td>
+
+<td background=0 valign=top width=10%>
+	<img src="/images/shared/blank.gif" border=0 width=10 height=1>
+</td>
+</tr>
+</table>
+
+
+</body>
+</html>

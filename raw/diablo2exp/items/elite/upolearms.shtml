@@ -1,0 +1,535 @@
+<html>
+<head>
+	<title>The Arreat Summit - Items: Elite Unique Polearms</title>
+	<link rel="stylesheet" type="text/css" href="/diablo2exp/includes/d2-strat.css">
+	<script language="JavaScript" src="/diablo2exp/includes/d2.js"></script>
+</head>
+
+<body background="/images/battle/diablo2exp/images/bg2.jpg" bgcolor=black text="#AFAFAF" link="#928A70" vlink="#706850" marginwidth=0 marginheight=0 topmargin=0 leftmargin=0><link rel="stylesheet" type="text/css" href="/includes/anylink.css" />
+
+<script type="text/javascript" src="/includes/anylink.js">
+
+/***********************************************
+* AnyLink CSS Menu script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="18">
+<tr>
+<td align="left"><a href="http://www.battle.net" width="107" height="18"><img src="/images/thin_logo.gif" width="107" height="18" border="0"></a></td>
+<td align="right" width="100%" height="18" style="background-image:url(/images/thin_bg.gif); background-position:left;">
+	<table cellpadding="0" cellspacing="0" border="0" height="18">
+	<tr>
+	
+	<td width="136" height="18" background="/images/thin_wc.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'wc')"><img src="/images/pixel.gif" width="136" height="18" border="0"></a><br><div id="wc" class="anylinkcss" style="width:136; position:absolute;">
+<a href ="/war3/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/war3/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/war3/ladder/game-select.aspx" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Ladder</a>
+<a href ="/files.shtml#wc" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Files</a>
+<a href ="/war3/ladder/w3xp-tournaments.aspx?Gateway=Lordaeron" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Tournaments</a>
+<a href ="http://forums.battle.net/board.html?forumId=12012&sid=3000" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+
+   
+   
+   				</td>
+				
+				
+				
+				<td width="107" height="18" background="/images/thin_d.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'dia')"><img src="/images/pixel.gif" width="107" height="18" border="0"></a><br><div id="dia" class="anylinkcss" style="width:107; position:absolute;">
+
+<a href ="/diablo2exp/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/diablo2exp/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/diablo2exp/faq/ladder.shtml" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Ladder FAQ</a>
+<a href ="/files.shtml#d" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Files</a>
+<a href ="http://forums.battle.net/board.html?forumId=12011&sid=3000" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+   
+   </td>
+				<td width="152" height="18" background="/images/thin_sc.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'sc')"><img src="/images/pixel.gif" width="152" height="18" border="0"></a><br><div id="sc" class="anylinkcss" style="width:145; position:absolute;">
+<a href ="/scc/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/scc/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/files.shtml#sc" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Files</a>
+<a href ="/tournaments/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Tournaments</a>
+<a href ="http://forums.battle.net/board.html?forumId=12020&sid=3000" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+   </td>
+ 
+ 
+ </tr>
+   </table>
+   </div></div>
+   </td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr>
+<td background=0 valign=top>
+
+<!--- MAIN MENU ------------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0>
+	<tr>
+	<td background=0><a href="http://us.blizzard.com/en-us/games/d2/" onMouseOut="offImg('logo')" onMouseOver="ovrImg('logo')" ><img src="/images/battle/diablo2exp/images/d2-logo-off.gif" name="logo" alt="Diablo II: Lord of Destruction" border=0 width=116 height=82></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/" onMouseOut="offImg('news')" onMouseOver="ovrImg('news')" onClick="actImg('news')"><img src="/images/battle/diablo2exp/images/menu/menu-news-off.gif" name="news" alt="News" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/basics/" onMouseOut="offImg('basics')" onMouseOver="ovrImg('basics')" onClick="actImg('basics')"><img src="/images/battle/diablo2exp/images/menu/menu-basics-off.gif" name="basics" alt="Basics" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/classes/" onMouseOut="offImg('classes')" onMouseOver="ovrImg('classes')" onClick="actImg('classes')"><img src="/images/battle/diablo2exp/images/menu/menu-classes-off.gif" name="classes" alt="Classes" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/skills/" onMouseOut="offImg('skills')" onMouseOver="ovrImg('skills')" onClick="actImg('skills')"><img src="/images/battle/diablo2exp/images/menu/menu-skills-off.gif" name="skills" alt="Skills" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/items/"><img src="/images/battle/diablo2exp/images/menu/menu-items-act.gif" name="items" alt="Items" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/monsters/" onMouseOut="offImg('monsters')" onMouseOver="ovrImg('monsters')" onClick="actImg('monsters')"><img src="/images/battle/diablo2exp/images/menu/menu-monsters-off.gif" name="monsters" alt="Monsters" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/npcs/" onMouseOut="offImg('npcs')" onMouseOver="ovrImg('npcs')" onClick="actImg('npcs')"><img src="/images/battle/diablo2exp/images/menu/menu-npcs-off.gif" name="npcs" alt="NPCs" border=0 width=116 height=37></a></td>
+	</tr>
+	
+	<tr>
+	<td background=0><a href="/diablo2exp/quests/" onMouseOut="offImg('quests')" onMouseOver="ovrImg('quests')" onClick="actImg('quests')"><img src="/images/battle/diablo2exp/images/menu/menu-quests-off.gif" name="quests" alt="Quests" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/shrines.shtml" onMouseOut="offImg('shrines')" onMouseOver="ovrImg('shrines')" onClick="actImg('shrines')"><img src="/images/battle/diablo2exp/images/menu/menu-shrines-off.gif" name="shrines" alt="Shrines" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/maps/" onMouseOut="offImg('maps')" onMouseOver="ovrImg('maps')" onClick="actImg('maps')"><img src="/images/battle/diablo2exp/images/menu/menu-maps-off.gif" name="maps" alt="Maps" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/faq/" onMouseOut="offImg('faq')" onMouseOver="ovrImg('faq')" onClick="actImg('faq')"><img src="/images/battle/diablo2exp/images/menu/menu-faq-off.gif" name="faq" alt="F.A.Q." border=0 width=116 height=38></a></td>
+	</tr>
+	
+	<tr>
+	<td background=0><a href="/diablo2exp/files.shtml" onMouseOut="offImg('files')" onMouseOver="ovrImg('files')" onClick="actImg('files')"><img src="/images/battle/diablo2exp/images/menu/menu-files-off.gif" name="files" alt="Files" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><img src="/images/battle/diablo2exp/images/menu/menu-bottom.gif" border=0 width=116 height=27></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="http://www.battle.net"><img src="/images/battle/diablo2exp/images/blizz-logo.gif" alt="Battle.net" border=0 width=116 height=78></a></td>
+	</tr>
+	</table>
+</td>
+
+<td background=0 valign=top width=90%>
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-top-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-top-left.gif" border=0 width=65 height=13></td>
+	<td background="/images/battle/diablo2exp/images/mid-top-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-top-right.gif" border=0 width=73 height=13></td>
+	</tr>
+	</table>
+
+<!--- SUBMENU BAR ----------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background=0><img src="/images/battle/diablo2exp/images/mid-linkbar-left.gif" border=0 width=20 height=35></td>
+	<td background="/images/battle/diablo2exp/images/mid-linkbar-back.gif" align=center width=100%>
+		<font face="arial,helvetica" size=1><small>
+
+<a class="tiny" href="/diablo2exp/items/basics.shtml">Item Basics</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#normal">Normal Items</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#exceptional">Exceptional Items</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#elite">Elite Items</a> |
+<a class="tiny" href="/diablo2exp/items/socketeditems.shtml">Socketed Items</a> |
+<a class="tiny" href="/diablo2exp/items/gems.shtml">Gems</a> |
+<a class="tiny" href="/diablo2exp/items/jewels.shtml">Jewels</a> |
+<a class="tiny" href="/diablo2exp/items/runes.shtml">Runes</a> |
+<a class="tiny" href="/diablo2exp/items/runewords.shtml">Rune Words</a> |
+<a class="tiny" href="/diablo2exp/items/magic.shtml">Magic Items</a> |
+<a class="tiny" href="/diablo2exp/items/magic/">Magic Prefixes and Suffixes</a> |
+<a class="tiny" href="/diablo2exp/items/crafteditems.shtml">Crafted Items</a> |
+<a class="tiny" href="/diablo2exp/items/sets/">Set Items</a> |
+<a class="tiny" href="/diablo2exp/items/uniques.shtml">Unique Items</a> |
+<a class="tiny" href="/diablo2exp/items/charms.shtml">Charms</a> |
+<a class="tiny" href="/diablo2exp/items/cube.shtml">The Horadric Cube</a> |
+<a class="tiny" href="/diablo2exp/items/">Items Index</a>
+    <br>
+
+		</small></font>
+	</td>
+	<td background=0><img src="/images/battle/diablo2exp/images/mid-linkbar-right.gif" border=0 width=21 height=35></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-linkbarbot-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-linkbarbot-left.gif" border=0 width=30 height=8></td>
+	<td background="/images/battle/diablo2exp/images/mid-linkbarbot-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-linkbarbot-right.gif" border=0 width=36 height=8></td>
+	</tr>
+
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-mid-back.gif" colspan=2><img src="/images/shared/blank.gif" border=0 width=576 height=7></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxtop-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-textboxtop-left.gif" border=0 width=36 height=23></td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxtop-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-textboxtop-right.gif" border=0 width=36 height=23></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxleft.gif"><img src="/images/shared/blank.gif" border=0 width=20 height=5></td>
+	<td background="/images/battle/diablo2exp/images/blackbg.gif" width=100%>
+
+<font face="arial,helvetica" size=-1><span>
+<center>
+<br>
+<a href="/diablo2exp/items/normal/urings.shtml">Rings</a> | 
+<a href="/diablo2exp/items/normal/uamulets.shtml">Amulets</a>  |
+<a href="/diablo2exp/items/normal/ucharms.shtml">Charms</a>  |
+<a href="/diablo2exp/items/normal/ujewels.shtml">Jewels</a>  |
+<a href="/diablo2exp/items/normal/ucirclets.shtml">Circlets</a> 
+<BR><BR>
+
+<b>Class-Specific Items</b>:
+<a href="/diablo2exp/items/normal/uamazon.shtml">Amazon</a> |
+<a href="/diablo2exp/items/normal/uassassin.shtml">Assassin</a> |
+<a href="/diablo2exp/items/normal/unecromancer.shtml">Necromancer</a> |
+<a href="/diablo2exp/items/normal/ubarbarian.shtml">Barbarian</a> |
+<a href="/diablo2exp/items/normal/usorceress.shtml">Sorceress</a> |
+<a href="/diablo2exp/items/normal/udruid.shtml">Druid</a> |
+<a href="/diablo2exp/items/normal/upaladin.shtml">Paladin</a> 
+<BR><BR>
+
+<b>Normal Unique Armor</b>:
+<a href="/diablo2exp/items/normal/uhelms.shtml">Helms</a> |
+<a href="/diablo2exp/items/normal/uarmor.shtml">Armor</a> |
+<a href="/diablo2exp/items/normal/ushields.shtml">Shields</a> |
+<a href="/diablo2exp/items/normal/ugloves.shtml">Gloves</a> |
+<a href="/diablo2exp/items/normal/uboots.shtml">Boots</a> |
+<a href="/diablo2exp/items/normal/ubelts.shtml">Belts</a> 
+
+<br>
+
+<b>Normal Unique Weapons</b>:
+<a href="/diablo2exp/items/normal/uaxes.shtml">Axes</a> |
+<a href="/diablo2exp/items/normal/ubows.shtml">Bows</a> |
+<a href="/diablo2exp/items/normal/ucrossbows.shtml">Crossbows</a> |
+<a href="/diablo2exp/items/normal/udaggers.shtml">Daggers</a> |
+<a href="/diablo2exp/items/normal/umaces.shtml">Maces</a> |
+<a href="/diablo2exp/items/normal/upolearms.shtml">Polearms</a><br>
+<a href="/diablo2exp/items/normal/uscepters.shtml">Scepters</a> |
+<a href="/diablo2exp/items/normal/uspears.shtml">Spears</a> |
+<a href="/diablo2exp/items/normal/ustaves.shtml">Staves</a> |
+<a href="/diablo2exp/items/normal/uswords.shtml">Swords</a> |
+<a href="/diablo2exp/items/normal/uwands.shtml">Wands</a>
+<BR><BR>
+<b>Exceptional Unique Armor</b>:
+<a href="/diablo2exp/items/exceptional/uhelms.shtml">Helms</a> |
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Armor</a> |
+<a href="/diablo2exp/items/exceptional/ushields.shtml">Shields</a> |
+<a href="/diablo2exp/items/exceptional/ugloves.shtml">Gloves</a> |
+<a href="/diablo2exp/items/exceptional/uboots.shtml">Boots</a> |
+<a href="/diablo2exp/items/exceptional/ubelts.shtml">Belts</a>
+
+<br>
+
+<b>Exceptional Unique Weapons</b>:
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">Axes</a> |
+<a href="/diablo2exp/items/exceptional/ubows.shtml">Bows</a> |
+<a href="/diablo2exp/items/exceptional/ucrossbows.shtml">Crossbows</a> |
+<a href="/diablo2exp/items/exceptional/udaggers.shtml">Daggers</a> |
+<a href="/diablo2exp/items/exceptional/umaces.shtml">Maces</a> |
+<a href="/diablo2exp/items/exceptional/upolearms.shtml">Polearms</a><br>
+<a href="/diablo2exp/items/exceptional/uscepters.shtml">Scepters</a> |
+<a href="/diablo2exp/items/exceptional/uspears.shtml">Spears</a> |
+<a href="/diablo2exp/items/exceptional/ustaves.shtml">Staves</a> |
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Swords</a> |
+<a href="/diablo2exp/items/exceptional/uthrowing.shtml">Throwing Weapons</a> |
+<a href="/diablo2exp/items/exceptional/uwands.shtml">Wands</a>
+<BR><BR>
+
+<b>Elite Unique Armor</b>:
+<a href="/diablo2exp/items/elite/uhelms.shtml">Helms</a> |
+<a href="/diablo2exp/items/elite/uarmor.shtml">Armor</a> |
+<a href="/diablo2exp/items/elite/ushields.shtml">Shields</a> |
+<a href="/diablo2exp/items/elite/ugloves.shtml">Gloves</a> |
+<a href="/diablo2exp/items/elite/uboots.shtml">Boots</a> |
+<a href="/diablo2exp/items/elite/ubelts.shtml">Belts</a>
+<BR>
+
+<b>Elite Unique Weapons</b>:
+<a href="/diablo2exp/items/elite/uaxes.shtml">Axes</a> |
+<a href="/diablo2exp/items/elite/ubows.shtml">Bows</a> |
+<a href="/diablo2exp/items/elite/ucrossbows.shtml">Crossbows</a> |
+<a href="/diablo2exp/items/elite/udaggers.shtml">Daggers</a> |
+<a href="/diablo2exp/items/elite/ujavelins.shtml">Javelins</a> |
+<a href="/diablo2exp/items/elite/umaces.shtml">Maces</a> |
+<a href="/diablo2exp/items/elite/upolearms.shtml">Polearms</a><BR>
+<a href="/diablo2exp/items/elite/uscepters.shtml">Scepters</a> |
+<a href="/diablo2exp/items/elite/uspears.shtml">Spears</a> |
+<a href="/diablo2exp/items/elite/ustaves.shtml">Staves</a> |
+<a href="/diablo2exp/items/elite/uswords.shtml">Swords</a> |
+<a href="/diablo2exp/items/elite/uthrowing.shtml">Throwing Weapons</a>  |
+<a href="/diablo2exp/items/elite/uwands.shtml">Wands</a> 
+<BR>
+<a href="/diablo2exp/items/uniques.shtml">Unique Index</a>
+
+</center>
+</span></font>
+
+		<br>
+<!--- HEADER GRAPHIC ---------------------------->
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-left.gif" border=0 width=80 height=60></td>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif" align=center width=100%><img src="/diablo2exp/images/headers/items-unique.gif" alt="Unique" border=0 width=225 height=60></td>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-right.gif" border=0 width=80 height=60></td>
+		</tr>
+		</table>
+<!--- END HEADER GRAPHIC ------------------------>
+		<br>
+
+		<table border=0 cellpadding=10 cellspacing=0 width=100%>
+		<tr>
+		<td background="/images/battle/diablo2exp/images/blackbg.gif" align=left width=100%>
+			<font face="arial,helvetica" size=-1><span>
+			<p>
+<!--- MAIN CONTENT --------------------------------------------------------------------------->
+
+<center><font color="#908858"><B>Elite Unique Polearms</b></font><BR>
+(See <a href="polearms.shtml">Elite Normal Polearms</a>)
+</center><P>
+
+<Table border=0 cellpadding=5 width=100%>
+
+
+
+<TR>
+<TD align=center>
+<font face="arial,helvetica" size=-1><span>
+<img src="/diablo2exp/images/items/elite/bonehew.gif" width=54 height="110">
+<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Bonehew</b></font></center>
+<center>Ogre Axe</center>
+<br Clear=left>
+</span></font>
+</td>
+<TD>
+<font face="arial,helvetica" size=-1><SPAN>
+Two-Hand Damage: <font color=4850B8>(103-117) To (536-609)</font> (319.5-363 Avg)<BR>
+Required Level: 64<BR>
+Required Strength: 195<BR>
+Required Dexterity: 75<BR>
+Durability: 50<BR>
+Base Weapon Speed: [0]<BR>
+<font color=4850B8>+270-320% Enhanced Damage</font> (varies)<BR>
+<font color=4850B8>Level 14 Corpse Explosion (30 charges)</font><BR>
+<font color=4850B8>Prevent Monster Heal</font><BR>
+<font color=4850B8>30% Increased Attack Speed</font><BR>
+<font color=4850B8>50% Chance To Cast Level 16 Bone Spear On Striking</font><BR>
+<font color=4850B8>Socketed (2)</font><BR>
+(Only Spawns In Patch 1.10 or later)
+</font></td>
+</TR>
+
+
+<TR>
+<TD align=center>
+<font face="arial,helvetica" size=-1><span>
+<img src="/diablo2exp/images/items/weapons/scythe.gif" width=62 height="118">
+<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>The Reaper's Toll</b></font></center>
+<center>Thresher</center>
+<br Clear=left>
+</span></font>
+</td>
+<TD>
+<font face="arial,helvetica" size=-1><SPAN>
+Two-Hand Damage: <font color=4850B8>(34-40) To (408-479)</font> (221-259.5 Avg)<BR>
+Required Level: 75<BR>
+Required Strength: <font color=4850B8>114</font><BR>
+Required Dexterity: 89<BR>
+Durability: 65<BR>
+Base Weapon Speed: [-10]<BR>
+<font color=4850B8>+190-240% Enhanced Damage</font> (varies)<BR>
+<font color=4850B8>Ignore Target's Defense</font><BR>
+<font color=4850B8>Adds 4-44 Cold Damage, Duration 0-2 Sec.</font><BR>
+<font color=4850B8>11-15% Life Stolen Per Hit</font> (varies)<BR>
+<font color=4850B8>33% Deadly Strike</font><BR>
+<font color=4850B8>33% Chance To Cast Level 1 Decrepify On Striking</font><BR>
+<font color=4850B8>Requirements -25%</font><BR>
+<B>(Ladder Only)</B><BR>
+(Only Spawns In Patch 1.10 or later)
+</font></td>
+</TR>
+
+<TR>
+<TD align=center>
+<a name="tombreaver"></a>
+<font face="arial,helvetica" size=-1><span>
+<img src="/diablo2exp/images/items/weapons/poleaxe.gif" width=62 height="118">
+<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Tomb Reaver</b></font></center>
+<center>Cryptic Axe</center>
+<br Clear=left>
+</span></font>
+</td>
+<TD>
+<font face="arial,helvetica" size=-1><SPAN>
+Two-Hand Damage: <font color=4850B8>(99-125) To (450-570)</font> (274.5-347.5 Avg)<BR>
+Required Level: 84<BR>
+Required Strength: 165<BR>
+Required Dexterity: 103<BR>
+Durability: 65<BR>
+Base Weapon Speed: [10]<BR>
+<font color=4850B8>+200-280% Enhanced Damage</font> (varies)<BR>
+<font color=4850B8>+150-230% Damage To Undead</font> (varies)<BR>
+<font color=4850B8>+60% Increased Attack Speed</font><BR>
+<font color=4850B8>+250-350 To Attack Rating Against Undead</font> (varies)<BR>
+<font color=4850B8>All Resistances +30-50</font> (varies)<BR>
+<font color=4850B8>10% Reanimate As: Returned</font>*<BR>
+<font color=4850B8>+10-14 Life After Each Kill</font> (varies)<BR>
+<font color=4850B8>+50-80% Better Chance of Getting Magic Items</font> (varies)<BR>
+<font color=4850B8>+4 To Light Radius</font><BR>
+<font color=4850B8>Socketed (1-3)</font> (varies)<BR>
+<B>(Ladder Only)</B><BR>
+(Only Spawns In Patch 1.10 or later)
+</font></td>
+</TR>
+
+<TR>
+<TD align=center>
+<font face="arial,helvetica" size=-1><span>
+<img src="/diablo2exp/images/items/weapons/warscythe.gif" width=62 height="118">
+<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Stormspire</b></font></center>
+<center>Giant Thresher</center>
+<br Clear=left>
+</span></font>
+</td>
+<TD>
+<font face="arial,helvetica" size=-1><SPAN>
+Two-Hand Damage: <font color=4850B8>(100-140) To (285-399)</font> (192.5-269.5 Avg)<BR>
+Required Level: 70<BR>
+Required Strength: 188<BR>
+Required Dexterity: 140<BR>
+Base Weapon Speed: [-10]<BR>
+<font color=4850B8>150-250% Enhanced Damage</font> (varies)<BR>
+<font color=4850B8>Adds 1-237 Lightning Damage</font><BR>
+<font color=4850B8>2% Chance To Cast Level 20 Charged Bolt When Struck</font><BR>
+<font color=4850B8>5% Chance To Cast Level 5 Chain Lightning When Struck</font><BR>
+<font color=4850B8>30% Increased Attack Speed</font><BR>
+<font color=4850B8>Lightning Resist +50%</font><BR>
+<font color=4850B8>+10 To Strength</font><BR>
+<font color=4850B8>Attacker Takes Lightning Damage of 27</font><BR>
+<font color=4850B8>Indestructible</font><BR>
+(Only Spawns In Patch 1.10 or later)
+</font></td>
+</TR>
+
+
+
+</table>
+
+<B>*Note</B>
+<P>
+<B>Tomb Reaver:</B> 10% Reanimate As: Returned - 10% Chance to reanimate a corpse as a "Returned" monster.
+<P>
+
+
+<!--- END MAIN CONTENT ----------------------------------------------------------------------->
+<p>
+<center>
+<a href="//privacy-policy.truste.com/click-with-confidence/ctv/en/us.battle.net/seal_m" target="_blank">
+<img src="//privacy-policy.truste.com/certified-seal/wps/en/us.battle.net/seal_m.png" border="0" />
+</a><br/>
+<br>
+<font face="arial,helvetica" size=1><small>
+<a class="tiny" href="http://us.blizzard.com/en-us/company/about/privacy.html">Online Privacy Policy</a><br>
+<a class="tiny" href="/tou.shtml">Battle.net Terms of Use Agreement</a><br>
+<a class="tiny" href="http://us.blizzard.com/en-us/company/about/legal-faq.html">&copy;2017 Blizzard Entertainment. All rights reserved.</a>
+</small></font>
+</center>
+<!--- Google Analytics -------------------------------->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-544112-16");
+pageTracker._setDomainName("battle.net");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<div style="display:none;">
+<iframe src="http://view.atdmt.com/NTB/iview/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01?click=" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" width="1" height="1">
+<script language="JavaScript" type="text/javascript">
+document.write('<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" target="_blank"><img src="http://view.atdmt.com/NTB/view/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/"/></a>');
+</script>
+<noscript>
+<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" target="_blank">
+<img border="0" src="http://view.atdmt.com/NTB/view/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" />
+</a>
+</noscript>
+</iframe>
+</div>
+			</span></font>
+		</td>
+		</tr>
+		</table>
+
+	</td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxright.gif"><img src="/images/shared/blank.gif" border=0 width=21 height=5></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxbot-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-textboxbot-left.gif" border=0 width=132 height=98></td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxbot-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-textboxbot-right.gif" border=0 width=106 height=98></td>
+	</tr>
+	</table>
+
+<!--- NAVIGATION BAR ------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background=0 align=left width=100%><br><a href="/strategy.shtml"  onMouseOut="offImg('exit')" onMouseOver="ovrImg('exit')"><img src="/images/battle/diablo2exp/images/botmenu-close-off.gif" name="exit" alt="Exit" border=0 width=43 height=43></a></td>
+	<td background=0><br><a href="umaces.shtml" onMouseOut="offImg('prev')" onMouseOver="ovrImg('prev')"><img src="/images/battle/diablo2exp/images/botmenu-prev-off.gif" name="prev" alt="Previous" border=0 width=44 height=43></a></td>
+	<td background=0><br><a href="uscepters.shtml" onMouseOut="offImg('next')" onMouseOver="ovrImg('next')"><img src="/images/battle/diablo2exp/images/botmenu-next-off.gif" name="next" alt="Next" border=0 width=45 height=43></a></td>
+	</tr>
+	</table>
+
+	<br>
+</td>
+
+<td background=0 valign=top width=10%>
+	<img src="/images/shared/blank.gif" border=0 width=10 height=1>
+</td>
+</tr>
+</table>
+
+
+</body>
+</html>
