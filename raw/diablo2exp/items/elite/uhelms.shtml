@@ -365,7 +365,7 @@ Durability: 12<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>300-345</font> (varies)(Base Defense: 105-149)<BR>
+Defense: <font color=4850B8>300-345</font> (varies) (Base Defense: 105-149)<BR>
 Required Level: 62<BR>
 Required Strength: 109<BR>
 Durability: 24<BR>
@@ -393,7 +393,7 @@ Required Level: 73<BR>
 Required Strength: 192<BR>
 Durability: <font color=4850B8>60</font><BR>
 <font color=4850B8>+60% Enhanced Defense</font><BR>
-<font color=4850B8>+140 To Defense</font><BR>
+<font color=4850B8>+140 Defense</font><BR>
 <font color=4850B8>All Resistances +50</font><BR>
 <font color=4850B8>+15 To Strength</font><BR>
 <font color=4850B8>+15 To Vitality</font><BR>
@@ -414,7 +414,7 @@ Durability: <font color=4850B8>60</font><BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>304-352</font> (varies)(Base Defense: 114-159)<BR>
+Defense: <font color=4850B8>304-352</font> (varies) (Base Defense: 114-159)<BR>
 Required Level: 67<BR>
 Required Strength: <font color=4850B8>96</font><BR>
 Durability: 40<BR>
@@ -443,7 +443,7 @@ Durability: 40<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>310-387</font> (varies)(Base Defense: 101-154)<BR>
+Defense: <font color=4850B8>310-387</font> (varies) (Base Defense: 101-154)<BR>
 Required Level: 83<BR>
 Required Strength: 102<BR>
 Durability: 20<BR>
@@ -477,7 +477,7 @@ Durability: 20<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>349-399</font> (varies)(Base Defense: 111-165)<BR>
+Defense: <font color=4850B8>349-399</font> (varies) (Base Defense: 111-165)<BR>
 Required Level: 82<BR>
 Required Strength: 174<BR>
 <font color=4850B8>+50% Enhanced Defense</font><BR>
@@ -485,7 +485,7 @@ Required Strength: 174<BR>
 <font color=4850B8>+1 To All Skills</font><BR>
 <font color=4850B8>Damage Reduced By 10-15%</font> (varies)<BR>
 <font color=4850B8>All Resistances +20-30</font> (varies)<BR>
-<font color=4850B8>+30% Faster Hit Recovery</font><BR>
+<font color=4850B8>30% Faster Hit Recovery</font><BR>
 <font color=4850B8>Socketed (1-2)</font> (varies)<BR>
 <font color=4850B8>Indestructible</font><BR>
 (Only Spawns In Patch 1.10 or later)
@@ -504,7 +504,7 @@ Required Strength: 174<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>350-477</font> (varies)(Base Defense: 100-157)<BR>
+Defense: <font color=4850B8>350-477</font> (varies) (Base Defense: 100-157)<BR>
 Required Level: 65<BR>
 Required Strength: 106<BR>
 Durability: 40<BR>

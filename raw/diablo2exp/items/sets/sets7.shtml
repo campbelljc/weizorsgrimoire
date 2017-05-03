@@ -284,7 +284,7 @@
 Defense: <font color="#4850b8">(4-102) - (6-104)</font>(varies) (Base Defense: 3-5)<BR>
 Required Level: 25<BR>
 Durability: 12<BR>
-<font color="#4850b8">+ (1 Per Character Level)  1-99 Defense (Based on Character Level)</font><br>
+<font color="#4850b8">+ (1 Per Character Level) 1-99 Defense (Based on Character Level)</font><br>
 <font color="#4850b8">Attacker Takes Damage of 8</font><br>
 <font color="#4850b8">35% Better Chance of Getting Magic Items</font><br>
 </font>
@@ -328,10 +328,10 @@ Durability: 15<BR>
 Base Weapon Speed: [-20]<BR>
 <font color="#4850b8">+75% Enhanced Damage</font><br>
 <font color="#4850b8">+50% Damage To Undead</font><br>
-<font color="#4850b8">+20% Faster Cast Rate</font><br>
+<font color="#4850b8">20% Faster Cast Rate</font><br>
 <font color="#4850b8">+25 To Mana</font><br>
 <font color="#4850b8">8% Mana Stolen Per Hit</font><br>
-<font color="#4850b8">25-75 Cold Damage, 2 sec. Duration (Normal)</font><br>
+<font color="#4850b8">Adds 25-75 Cold Damage, 2 sec. Duration (Normal)</font><br>
 </span></font>
 </td>
 </tr>
@@ -348,13 +348,13 @@ Base Weapon Speed: [-20]<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">25-31</font> (varies)(Base Defense: 5-6)<br>
+Defense: <font color="#4850b8">25-31</font> (varies) (Base Defense: 5-6)<br>
 Required Level: 28<br>
 Durability: 14<BR>
-<font color="#4850b8">Adds 9-11 Poison Damage Over 3 Seconds</font><br>
+<font color="#4850b8">+9-11 Poison Damage Over 3 Seconds</font><br>
 <font color="#4850b8">+20-25 Defense</font><br>
 <font color="#4850b8">+40 To Life</font><br>
-<font color="#4850b8">+20% Increased Attack Speed</font><br>
+<font color="#4850b8">20% Increased Attack Speed</font><br>
 </span></font>
 </td>
 </tr>
@@ -376,7 +376,7 @@ Required Level: 20<br>
 Required Strength: 18<br>
 Durability: 14<BR>
 Assassin Kick Damage: 4-10<BR>
-<font color="#4850b8">+40% Faster Run/Walk</font><br>
+<font color="#4850b8">40% Faster Run/Walk</font><br>
 <font color="#4850b8">+100 To Attack Rating</font><br>
 <font color="#4850b8">+10 To Dexterity</font><br>
 <font color="#4850b8">+5 To Strength</font><br>
@@ -430,11 +430,11 @@ Durability: 30<BR>
 <td rowspan=5 width=35%>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 <B>Partial Set Bonus</B><BR>
-+40% Faster Run/Walk (2 Items)<BR>
+40% Faster Run/Walk (2 Items)<BR>
 <BR>
 
 <B>Complete Set Bonus</B><BR>
-+40% Faster Run/Walk<BR>
+40% Faster Run/Walk<BR>
 15% Life Stolen Per Hit<BR>
 Increase Maximum Life 27%<BR>
 All Resistances +30<BR>
@@ -463,7 +463,7 @@ Base Weapon Speed: [-10]<BR>
 <font color="#4850b8">+150% Enhanced Damage</font><br>
 <font color="#4850b8">+318% Damage To Demons</font><br>
 <font color="#4850b8">Adds 25-35 Cold Damage, 2 sec. Duration (Normal)</font><br>
-<font color="#4850b8">+40% Increased Attack Speed</font><br>
+<font color="#4850b8">40% Increased Attack Speed</font><br>
 <font color="#4850b8">Indestructible</font><br>
 <font color="#4850b8">+15 To Dexterity</font><br>
 <font color="#4850b8">+5 To Strength</font><br>
@@ -483,12 +483,12 @@ Base Weapon Speed: [-10]<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">810-917</font> (varies)(Base Defense: 410-517)<br>
+Defense: <font color="#4850b8">810-917</font> (varies) (Base Defense: 410-517)<br>
 Required Level: 67<br>
 Required Strength: 165<BR>
 Durability: 30<BR>
 <font color="#4850b8">+400 Defense</font><br>
-<font color="#4850b8">+30% Faster Hit Recovery</font><br>
+<font color="#4850b8">30% Faster Hit Recovery</font><br>
 <font color="#4850b8">+300 To Attack Rating Against Demons</font><br>
 <font color="#4850b8">+25 To Strength</font><br>
 <font color="#4850b8">+50-75 To Life</font> (varies)<br>
@@ -544,7 +544,7 @@ Base Weapon Speed: [10]<BR>
 <font color="#00c400">+1 To Sorceress Skill Levels</font> (2 Items)<br>
 <font color="#00c400">-15% To Enemy Fire Resistance</font> (3 Items)<br>
 <font color="#00c400">-15% To Enemy Lightning Resistance</font> (4 Items)<br>
-<font color="#00c400">+15% To Cold Skills Damage</font> (Complete Set)<br>
+<font color="#00c400">+15% To Cold Skill Damage</font> (Complete Set)<br>
 </font>
 </td>
 
@@ -583,7 +583,7 @@ Display Aura<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">99-131</font> (varies)(Base Defense: 54-86)<br>
+Defense: <font color="#4850b8">99-131</font> (varies) (Base Defense: 54-86)<br>
 Required Level: 66<br>
 Required Strength: 55<BR>
 Durability: 20<BR>
@@ -611,7 +611,7 @@ Durability: 20<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">833-941</font> (varies)(Base Defense: 433-541)<br>
+Defense: <font color="#4850b8">833-941</font> (varies) (Base Defense: 433-541)<br>
 Required Level: 71<br>
 Required Strength: <font color="#4850b8">84</font><BR>
 Durability: 55<BR>
@@ -622,7 +622,7 @@ Durability: 55<BR>
 <font color="#4850b8">Lightning Resist +40%</font><br>
 <font color="#4850b8">Fire Resist +40%</font><br>
 <font color="#4850b8">88% Better Chance Of Getting Magic Items</font><br>
-<font color="#00c400">+10% Faster Cast Rate</font> (2 Items)<br>
+<font color="#00c400">10% Faster Cast Rate</font> (2 Items)<br>
 </span></font>
 </td>
 </tr>
@@ -651,7 +651,7 @@ Durability: 16<BR>
 <font color="#4850b8">+20 To Dexterity</font><br>
 <font color="#4850b8">10-15% Better Chance Of Getting Magic Items</font> (varies)<br>
 <font color="#00c400">+60 Defense</font> (2 Items)<br>
-<font color="#00c400">+10% Faster Cast Rate</font> (3 Items)<br>
+<font color="#00c400">10% Faster Cast Rate</font> (3 Items)<br>
 </span></font>
 </td>
 </tr>
@@ -674,7 +674,7 @@ Required Level: 67<BR>
 <font color="#4850b8">Adds 3-32 Lightning Damage</font><br>
 <font color="#4850b8">+42 To Mana</font><br>
 <font color="#4850b8">+50 To Life</font><br>
-<font color="#00c400">+10% Faster Cast Rate</font> (4 Items)<br>
+<font color="#00c400">10% Faster Cast Rate</font> (4 Items)<br>
 </font>
 </td>
 
@@ -717,7 +717,7 @@ When you complete this set you get a special aura that, although it does not do 
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">180-257</font> (varies)(Base Defense: 100-157)<br>
+Defense: <font color="#4850b8">180-257</font> (varies) (Base Defense: 100-157)<br>
 Required Level: 65<br>
 Required Strength: 106<BR>
 Durability: 40<BR>
@@ -801,14 +801,14 @@ Durability: 70<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">175-189</font> (varies)(Base Defense: 50-64)<br>
+Defense: <font color="#4850b8">175-189</font> (varies) (Base Defense: 50-64)<br>
 Required Level: 54<br>
 Required Strength: 50<BR>
 Durability: 20<BR>
 Chance to Block: <font color="#4850b8">60%</font><BR>
 <B>(Necromancer Only)</B><BR>
 <font color="#4850b8">+125 Defense</font><br>
-<font color="#4850b8">+30% Increased Chance Of Blocking</font><br>
+<font color="#4850b8">30% Increased Chance Of Blocking</font><br>
 <font color="#4850b8">Poison Resist +40%</font><br>
 <font color="#4850b8">Fire Resist +38-45%</font> (varies)<br>
 <font color="#4850b8">+15 To Dexterity</font><br>
@@ -832,7 +832,7 @@ Chance to Block: <font color="#4850b8">60%</font><BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">134-166</font> (varies)(Base Defense: 59-66)<br>
+Defense: <font color="#4850b8">134-166</font> (varies) (Base Defense: 59-66)<br>
 Required Level: 62<br>
 Required Strength: <font color="#4850b8">91</font><BR>
 Durability: 18<BR>
@@ -861,14 +861,14 @@ Durability: 18<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">67-74</font> (varies)(Base Defense: 37-44)<br>
+Defense: <font color="#4850b8">67-74</font> (varies) (Base Defense: 37-44)<br>
 Required Level: 45<br>
 Required Strength: 58<BR>
 Durability: 16<BR>
-<font color="#4850b8">+20% Faster Cast Rate</font><br>
+<font color="#4850b8">20% Faster Cast Rate</font><br>
 <font color="#4850b8">Cold Resist +30%</font><br>
 <font color="#4850b8">+30 Defense</font><br>
-<font color="#4850b8">+25% Poison Skill Damage</font><br>
+<font color="#4850b8">+25% to Poison Skill Damage</font><br>
 <font color="#4850b8">+2 To Curses (Necromancer Only)</font><br>
 </span></font>
 </td>

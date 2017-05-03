@@ -352,9 +352,9 @@ Base Weapon Speed: [-10]<BR>
 <font color="#4850b8">Adds 205-455 Cold Damage, 5 sec. Duration (Normal)</font><BR>
 <font color="#4850b8">Freezes Target +2-4</font> (varies)<BR>
 <font color="#4850b8">Cold Absorb 5-15%</font> (varies)<BR>
-<font color="#4850b8">+25% Increased Attack Speed</font><BR>
+<font color="#4850b8">25% Increased Attack Speed</font><BR>
 <font color="#4850b8">Level 16 Blizzard (12 charges)</font><BR>
-<font color="#4850b8">+150-180% Bonus To Attack Rating</font> (varies)<BR>
+<font color="#4850b8">150-180% Bonus To Attack Rating</font> (varies)<BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>
 </TR>
@@ -381,7 +381,7 @@ Base Weapon Speed: [0]<BR>
 <font color="#4850b8">Adds 222-333 Fire Damage</font><BR>
 <font color="#4850b8">7-13% Life Stolen Per Hit</font> (varies)<BR>
 <font color="#4850b8">Fire Resist +15-20%</font> (varies)<BR>
-<font color="#4850b8">Level 23 Enchant (20 Charges)</font><BR>
+<font color="#4850b8">Level 23 Enchant (20 charges)</font><BR>
 <font color="#4850b8">Repairs 1 Durability in 20 Seconds</font><BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>
@@ -408,7 +408,7 @@ Base Weapon Speed: [10]<BR>
 <font color="#4850b8">+50% Damage To Undead</font><BR>
 <font color="#4850b8">Adds 1-200 Fire Damage</font><BR>
 <font color="#4850b8">Adds 1-200 Lightning Damage</font><BR>
-<font color="#4850b8">Adds 1-200 Cold Damage, Duration 0-7 sec.</font><BR>
+<font color="#4850b8">Adds 1-200 Cold Damage, 0-7 sec. Duration</font><BR>
 <font color="#4850b8">50% Increased Attack Speed</font><BR>
 <font color="#4850b8">200% Bonus To Attack Rating</font><BR>
 <font color="#4850b8">+15 To Dexterity</font><BR>
@@ -440,7 +440,7 @@ Durability: 65<BR>
 Base Weapon Speed: [-10]<BR>
 <font color="#4850b8">+230-280% Enhanced Damage</font> (varies)<BR>
 <font color="#4850b8">+50% Damage To Undead</font><BR>
-<font color="#4850b8">+50% Increased Attack Speed</font><BR>
+<font color="#4850b8">50% Increased Attack Speed</font><BR>
 <font color="#4850b8">Slows Target By 20%</font><BR>
 <font color="#4850b8">20% Chance To Cast Level 15 Tornado On Striking</font><BR>
 <font color="#4850b8">Requirements -20%</font><BR>
@@ -470,8 +470,8 @@ Base Weapon Speed: [-10]<BR>
 <font color="#4850b8">+240-300% Enhanced Damage</font> (varies)<BR>
 <font color="#4850b8">+50% Damage To Undead</font><BR>
 <font color="#4850b8">Adds 1-473 Lightning Damage</font><BR>
-<font color="#4850b8">+30% Increased Attack Speed</font><BR>
-<font color="#4850b8">+33% Chance of Crushing Blow</font><BR>
+<font color="#4850b8">30% Increased Attack Speed</font><BR>
+<font color="#4850b8">33% Chance of Crushing Blow</font><BR>
 <font color="#4850b8">20% Chance To Cast Level 18 Tornado On Striking</font><BR>
 <font color="#4850b8">15% Chance To Cast Level 10 Static Field On Striking</font><BR>
 <font color="#4850b8">+3-9 Lightning Absorb</font> (varies)<BR>
@@ -501,7 +501,7 @@ Required Strength: 189<BR>
 Durability: 65<BR>
 Base Weapon Speed: [20]<BR>
 <font color="#4850b8">+280-320% Enhanced Damage</font> (varies)<BR>
-<font color="#4850b8">Damage +10-30</font> (varies)<BR>
+<font color="#4850b8">Adds 10-30 Damage</font> (varies)<BR>
 <font color="#4850b8">+50% Damage To Undead</font><BR>
 <font color="#4850b8">-25% Target Defense</font><BR>
 <font color="#4850b8">40% Chance of Crushing Blow</font><BR>

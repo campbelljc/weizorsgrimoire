@@ -348,7 +348,7 @@ Assassin Kick Damage: 3-8<br>
 <font color=4850B8>+10-20% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+6 Defense</font><BR>
 <font color=4850B8>Fire Resist +45%</font><BR>
-<font color=4850B8>15% To Max Fire Resist</font><BR>
+<font color=4850B8>+15% To Maximum Fire Resist</font><BR>
 <font color=4850B8>Adds 3-6 Fire Damage</font><BR>
 <font color=4850B8>+15 To Life</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -366,7 +366,7 @@ Assassin Kick Damage: 3-8<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>20-21</font> (varies)(Base Defense: 5-6)<BR>
+Defense: <font color=4850B8>20-21</font> (varies) (Base Defense: 5-6)<BR>
 Required Level: 9<BR>
 Required Strength: 18<BR>
 Durability: 14<br>
@@ -392,7 +392,7 @@ Assassin Kick Damage: 4-10<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>25-26</font> (varies)(Base Defense: 8-9)<BR>
+Defense: <font color=4850B8>25-26</font> (varies) (Base Defense: 8-9)<BR>
 Required Level: 15<BR>
 Required Strength: 30<BR>
 Durability: 16<br>
@@ -418,13 +418,13 @@ Assassin Kick Damage: 6-12<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>33-34</font> (varies)(Base Defense: 9-11)<BR>
+Defense: <font color=4850B8>33-34</font> (varies) (Base Defense: 9-11)<BR>
 Required Level: 22<BR>
 Required Strength: 50<BR>
 Durability: 18<br>
 Assassin Kick Damage: 8-16<br>
 <font color=4850B8>+50-60% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>25% Chance of a Crushing Blow</font><BR>
+<font color=4850B8>25% Chance of Crushing Blow</font><BR>
 <font color=4850B8>-1 To Light Radius</font><BR>
 <font color=4850B8>Damage Reduced By 1</font><BR>
 <font color=4850B8>Magic Damage Reduced By 1</font><BR>
@@ -444,7 +444,7 @@ Assassin Kick Damage: 8-16<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>60-63</font> (varies)(Base Defense: 12-15)<BR>
+Defense: <font color=4850B8>60-63</font> (varies) (Base Defense: 12-15)<BR>
 Required Level: 29<BR>
 Required Strength: 70<BR>
 Durability: 24<br>

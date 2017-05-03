@@ -341,7 +341,7 @@ something happening when you level-up. The Rainbow Facets cover Fire, Cold, Ligh
 <TD align=center>
 <font face="arial,helvetica" size=-1><span>
 <img src="/diablo2exp/images/jewels/jewel05.gif" width=28 height=28>
-<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet</b></font></center>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet Fire/Level</b></font></center>
 <center>Jewel</center>
 <br Clear=left>
 </span></font>
@@ -361,7 +361,7 @@ Required Level: 49<BR>
 <TD align=center>
 <font face="arial,helvetica" size=-1><span>
 <img src="/diablo2exp/images/jewels/jewel02.gif" width=28 height=28>
-<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet</b></font></center>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet Cold/Level</b></font></center>
 <center>Jewel</center>
 <br Clear=left>
 </span></font>
@@ -381,7 +381,7 @@ Required Level: 49<BR>
 <TD align=center>
 <font face="arial,helvetica" size=-1><span>
 <img src="/diablo2exp/images/jewels/jewel06.gif" width=28 height=28>
-<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet</b></font></center>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet Lightning/Level</b></font></center>
 <center>Jewel</center>
 <br Clear=left>
 </span></font>
@@ -401,7 +401,7 @@ Required Level: 49<BR>
 <TD align=center>
 <font face="arial,helvetica" size=-1><span>
 <img src="/diablo2exp/images/jewels/jewel04.gif" width=28 height=28>
-<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet</b></font></center>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet Poison/Level</b></font></center>
 <center>Jewel</center>
 <br Clear=left>
 </span></font>
@@ -422,7 +422,7 @@ Required Level: 49<BR>
 <TD align=center>
 <font face="arial,helvetica" size=-1><span>
 <img src="/diablo2exp/images/jewels/jewel05.gif" width=28 height=28>
-<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet</b></font></center>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet Fire/Die</b></font></center>
 <center>Jewel</center>
 <br Clear=left>
 </span></font>
@@ -442,7 +442,7 @@ Required Level: 49<BR>
 <TD align=center>
 <font face="arial,helvetica" size=-1><span>
 <img src="/diablo2exp/images/jewels/jewel02.gif" width=28 height=28>
-<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet</b></font></center>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet Cold/Die</b></font></center>
 <center>Jewel</center>
 <br Clear=left>
 </span></font>
@@ -462,7 +462,7 @@ Required Level: 49<BR>
 <TD align=center>
 <font face="arial,helvetica" size=-1><span>
 <img src="/diablo2exp/images/jewels/jewel06.gif" width=28 height=28>
-<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet</b></font></center>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet Lightning/Die</b></font></center>
 <center>Jewel</center>
 <br Clear=left>
 </span></font>
@@ -482,7 +482,7 @@ Required Level: 49<BR>
 <TD align=center>
 <font face="arial,helvetica" size=-1><span>
 <img src="/diablo2exp/images/jewels/jewel04.gif" width=28 height=28>
-<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet</b></font></center>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Rainbow Facet Poison/Die</b></font></center>
 <center>Jewel</center>
 <br Clear=left>
 </span></font>

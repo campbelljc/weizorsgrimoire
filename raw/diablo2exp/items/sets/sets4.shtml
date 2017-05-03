@@ -240,7 +240,7 @@ Durability: 20<br>
 <br>
 
 <B>Complete Set Bonus</B><BR>
-+3 To Druid Skills<BR>
++3 To Druid Skill Levels<BR>
 +350% Enhanced Damage*<BR>
 150% Bonus To Attack Rating<BR>
 50% Better Chance Of Getting Magic Items<BR>
@@ -273,7 +273,7 @@ Assassin Kick Damage: 37-64<BR>
 <font color="#4850b8">40% Faster Run/Walk</font><br>
 <font color="#4850b8">+180 Maximum Stamina</font><br>
 <font color="#4850b8">10% Damage Taken Goes To Mana</font><br>
-<font color="#4850b8">Heal Stamina Plus +32%</font><br>
+<font color="#4850b8">Heal Stamina Plus 32%</font><br>
 <font color="#4850b8">+50 To Life</font><br>
 <font color="#4850b8">Fire Resist +40-50%</font> (varies)<br>
 <font color="#00C400">+15 To Dexterity</font> (2 Item)<BR>
@@ -295,7 +295,7 @@ Assassin Kick Damage: 37-64<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">746-857</font> (varies)(Base Defense: 446-557)<br>
+Defense: <font color="#4850b8">746-857</font> (varies) (Base Defense: 446-557)<br>
 Required Level: 76<BR>
 Required Strength: <font color="#4850b8">115</font><br>
 Durability: 70<br>
@@ -393,8 +393,8 @@ This is really not very significant, but it's not a bug, just a balance issue.
 </td>
 <td width=40%>
 <font face="arial,helvetica" size=-1><span>
-One Handed Damage: <font color="#4850b8">75 To 195</font> (135 Avg)<br>
-Two Handed Damage: <font color="#4850b8">174 To 345</font> (259.5 Avg)<br>
+One-hand Damage: <font color="#4850b8">75 To 195</font> (135 Avg)<br>
+Two-hand Damage: <font color="#4850b8">174 To 345</font> (259.5 Avg)<br>
 Required Level: 63<BR>
 Required Strength: 189<br>
 Required Dexterity: 110<br>
@@ -403,7 +403,7 @@ Base Weapon Speed: [5]<BR>
 <font color="#4850b8">+200% Enhanced Damage</font><br>
 <font color="#4850b8">35% Chance of Crushing Blow</font><br>
 <font color="#4850b8">All Resistances +20</font><br>
-<font color="#4850b8">+20% Increased Attack Speed</font><br>
+<font color="#4850b8">20% Increased Attack Speed</font><br>
 <font color="#4850b8">Knockback</font><br>
 </span></font>
 </td>
@@ -414,7 +414,7 @@ Base Weapon Speed: [5]<BR>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 
 <B>Complete Set Bonus</B><BR>
-+2 To All Skill Levels<BR>
++2 To All Skills<BR>
 +200 To Attack Rating<BR>
 +200% Damage To Demons<BR>
 +200% Damage To Undead<BR>
@@ -436,7 +436,7 @@ Base Weapon Speed: [5]<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-One Handed Damage: <font color="#4850b8">120 To 150</font> (135 Avg)<br>
+One-hand Damage: <font color="#4850b8">120 To 150</font> (135 Avg)<br>
 Required Level: 66<BR>
 Required Strength: 147<br>
 Required Dexterity: 124<br>
@@ -446,7 +446,7 @@ Base Weapon Speed: [0]<BR>
 <font color="#4850b8">+50 Poison Damage Over 2 Seconds</font><br>
 <font color="#4850b8">Fire Resist +50%</font><br>
 <font color="#4850b8">+20 To Strength</font><br>
-<font color="#4850b8">+20% Increased Attack Speed</font><br>
+<font color="#4850b8">20% Increased Attack Speed</font><br>
 </span></font>
 </td>
 </tr>
@@ -486,7 +486,7 @@ they meet the requirements. Only the Barbarian can complete this Set.
 </td>
 <td width=40%>
 <font face="arial,helvetica" size=-1><span>
-Defense : <font color="#4850b8">120-128</font> (varies)(Base Defense: 45-53)<br>
+Defense: <font color="#4850b8">120-128</font> (varies) (Base Defense: 45-53)<br>
 Required Level: 25<BR>
 Required Strength: 20<br>
 Durability: 12<br>
@@ -510,7 +510,7 @@ Poison Resist +25%<BR>
 25% Chance To Cast Level 5 Static Field When Struck<BR>
 +100 Maximum Stamina<BR>
 +20 To Strength<BR>
-+30% Increased Attack Speed<BR>
+30% Increased Attack Speed<BR>
 100% Better Chance Of Getting Magic Items<BR>
 100% Extra Gold From Monsters<BR>
 </span></font>
@@ -553,13 +553,13 @@ Durability: 32<br>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">30-41</font> (varies)(Base Defense: 5-6)<br>
+Defense: <font color="#4850b8">30-41</font> (varies) (Base Defense: 5-6)<br>
 Required Level: 13<br>
 Required Strength: 18<br>
 Durability: 14<BR>
 Assassin Kick Damage: 4-10<BR>
 <font color="#4850b8">+25-35 Defense</font> (varies)<br>
-<font color="#4850b8">+30% Faster Run/Walk</font><br>
+<font color="#4850b8">30% Faster Run/Walk</font><br>
 <font color="#4850b8">Adds 25-35 Fire Damage</font><br>
 <font color="#4850b8">+20 To Dexterity</font><br>
 <font color="#4850b8">25% Better Chance of Getting Magic Items</font><br>
@@ -625,7 +625,7 @@ Required Level: 30<BR>
 +10 To Strength<BR>
 +2 To All Skills<BR>
 All Resistances +50<BR>
-+100 Mana<BR>
++100 to Mana<BR>
 </span></font>
 </td>
 </tr>
@@ -642,12 +642,12 @@ All Resistances +50<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">79-87</font> (varies)(Base Defense: 54-62)<br>
+Defense: <font color="#4850b8">79-87</font> (varies) (Base Defense: 54-62)<br>
 Required Level: 63<br>
 Required Strength: 50<br>
 Durability: 12<BR>
 <font color="#4850b8">+25 Defense</font><br>
-<font color="#4850b8">+20% Increased Attack Speed</font><br>
+<font color="#4850b8">20% Increased Attack Speed</font><br>
 <font color="#4850b8">+350% Damage To Demons</font><br>
 <font color="#4850b8">Fire Resist +50%</font><br>
 <font color="#4850b8">10% Chance To Cast Level 3 Holy Bolt On Striking</font><br>
@@ -667,14 +667,14 @@ Durability: 12<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">666-882</font> (varies)(Base Defense: 361-467)<br>
+Defense: <font color="#4850b8">666-882</font> (varies) (Base Defense: 361-467)<br>
 Required Level: 49<BR>
 Required Strength: 77<br>
 Durability: 20<br>
 <font color="#4850b8">+305-415 Defense</font> (varies)<br>
 <font color="#4850b8">Fire Resist +24%</font><br>
 <font color="#4850b8">25% Chance To Cast Level 3 Nova When Struck</font><br>
-<font color="#4850b8">Adds 24-34 Poison Damage Over 2 Seconds</font><br>
+<font color="#4850b8">+24-34 Poison Damage Over 2 Seconds</font><br>
 </span></font>
 </td></tr>
 
@@ -690,7 +690,7 @@ Durability: 20<br>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">53-60</font> (varies)(Base Defense: 28-35)<br>
+Defense: <font color="#4850b8">53-60</font> (varies) (Base Defense: 28-35)<br>
 Required Level: 29<BR>
 Required Strength: 20<br>
 Durability: 12<br>
@@ -714,7 +714,7 @@ Assassin Kick Damage: 26-46<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">108-115</font> (varies)(Base Defense: 58-65)<br>
+Defense: <font color="#4850b8">108-115</font> (varies) (Base Defense: 58-65)<br>
 Required Level: 65<BR>
 Required Strength: 106<br>
 Durability: 16<br>

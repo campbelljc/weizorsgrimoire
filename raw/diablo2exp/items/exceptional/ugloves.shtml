@@ -339,7 +339,7 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>97-118</font> (varies)(Base Defense: 28-35)<BR>
+Defense: <font color=4850B8>97-118</font> (varies) (Base Defense: 28-35)<BR>
 Required Level: 29<BR>
 Required Strength: 20<BR>
 Durability: 12<br>
@@ -348,7 +348,7 @@ Durability: 12<br>
 <font color=4850B8>5% Chance of Crushing Blow</font><BR>
 <font color=4850B8>+60 Poison Damage Over 4 Seconds</font><BR>
 <font color=4850B8>5% Life Stolen Per Hit</font><BR>
-<font color=4850B8>5% To Maximum Poison Resist</font><BR>
+<font color=4850B8>+5% To Maximum Poison Resist</font><BR>
 <font color=4850B8>Poison Resist +30%</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
@@ -389,13 +389,13 @@ Durability: 14<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>112-130</font> (varies)(Base Defense: 37-44)<BR>
+Defense: <font color=4850B8>112-130</font> (varies) (Base Defense: 37-44)<BR>
 Required Level: 36<BR>
 Required Strength: 58<BR>
 Durability: 16<br>
 <font color=4850B8>+150-190% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+ (8 Per Character Level) 8-792  To Attack Rating Against Undead (Based On Character Level)</font><BR>
-<font color=4850B8>+ (2 Per Character Level) 2-198 % Damage To Undead (Based On Character Level)</font><BR>
+<font color=4850B8>+ (8 Per Character Level) 8-792 To Attack Rating Against Undead (Based On Character Level)</font><BR>
+<font color=4850B8>+ (2 Per Character Level) 2-198% Damage To Undead (Based On Character Level)</font><BR>
 <font color=4850B8>4-5% Mana Stolen Per Hit</font> (varies)<BR>
 <font color=4850B8>+20 To Life</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -414,7 +414,7 @@ Durability: 16<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>120-144</font> (varies)(Base Defense: 39-47)<BR>
+Defense: <font color=4850B8>120-144</font> (varies) (Base Defense: 39-47)<BR>
 Required Level: 42<BR>
 Required Strength: 88<BR>
 Durability: <font color=4850B8>38</font><br>
@@ -422,7 +422,7 @@ Durability: <font color=4850B8>38</font><br>
 <font color=4850B8>2% Chance To Cast Level 10 Enchant On Striking</font><BR>
 <font color=4850B8>Half Freeze Duration</font><BR>
 <font color=4850B8>Adds 13-46 Fire Damage</font><BR>
-<font color=4850B8>+20% Increased Attack Speed</font><BR>
+<font color=4850B8>20% Increased Attack Speed</font><BR>
 <font color=4850B8>Fire Resist +24%</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
@@ -440,7 +440,7 @@ Durability: <font color=4850B8>38</font><br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>135-162</font> (varies)(Base Defense: 43-53)<BR>
+Defense: <font color=4850B8>135-162</font> (varies) (Base Defense: 43-53)<BR>
 Required Level: 47<BR>
 Required Strength: 110<BR>
 Durability: <font color=4850B8>39</font><br>

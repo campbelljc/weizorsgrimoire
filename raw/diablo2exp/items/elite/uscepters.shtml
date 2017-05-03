@@ -349,7 +349,7 @@ Base Weapon Speed: [0]<BR>
 <font color=4850B8>+250-300% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>+50% Damage To Undead</font><BR>
 <font color=4850B8>-33% Target Defense</font><BR>
-<font color=4850B8>+20% Increased Attack Speed</font><BR>
+<font color=4850B8>20% Increased Attack Speed</font><BR>
 <font color=4850B8>33% Chance of Crushing Blow</font><BR>
 <font color=4850B8>+15-20 Life After Each Demon Kill</font> (varies)<BR>
 <font color=4850B8>+2-3 To Paladin Skill Levels</font> (varies)<BR>
@@ -380,7 +380,7 @@ Durability: 50<BR>
 Base Weapon Speed: [0]<BR>
 
 <font color=4850B8>+250-300% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>Damage +60-120</font> (varies)<BR>
+<font color=4850B8>Adds 60-120 Damage</font> (varies)<BR>
 <font color=4850B8>+50% Damage To Undead</font><BR>
 <font color=4850B8>+200-250% Damage To Demons</font> (varies)<BR>
 <font color=4850B8>+2 To Paladin Skill Levels</font><BR>
@@ -411,14 +411,14 @@ Required Dexterity: 70<BR>
 Durability: 70<BR>
 Base Weapon Speed: [-10]<BR>
 <font color=4850B8>+240-290% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>Damage +40-85</font> (varies)<BR>
+<font color=4850B8>Adds 40-85 Damage</font> (varies)<BR>
 <font color=4850B8>+50% Damage To Undead</font><BR>
 <font color=4850B8>Adds 80-240 Magic Damage</font><BR>
 <font color=4850B8>33% Chance of Crushing Blow</font><BR>
 <font color=4850B8>Slows Target By 25%</font><BR>
 <font color=4850B8>Damage Reduced By 4-7</font> (varies)<BR>
 <font color=4850B8>+2-4 To Combat Skills (Paladin Only)</font> (varies)<BR>
-<font color=4850B8>+10% Increased Attack Speed</font><BR>
+<font color=4850B8>10% Increased Attack Speed</font><BR>
 <font color=4850B8>150-200% Bonus To Attack Rating</font> (varies)<BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>

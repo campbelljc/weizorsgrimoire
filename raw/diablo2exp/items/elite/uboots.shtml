@@ -340,14 +340,14 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>158-178</font> (varies)(Base Defense 56-65)<BR>
+Defense: <font color=4850B8>158-178</font> (varies) (Base Defense: 56-65)<BR>
 Required Level: 64<BR>
 Required Strength: 91<BR>
 Durability: 14<br>
 Assassin Kick Damage: 60-110<BR>
 <font color=4850B8>+140-170% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+20% Faster Hit Recovery</font><BR>
-<font color=4850B8>+20% Faster Run/Walk</font><BR>
+<font color=4850B8>20% Faster Hit Recovery</font><BR>
+<font color=4850B8>20% Faster Run/Walk</font><BR>
 <font color=4850B8>+ (1 Per Character Level) +1-99 Maximum Stamina (Based On Character Level)</font><BR>
 <font color=4850B8>+10-15 To Strength</font> (varies)<BR>
 <font color=4850B8>+10-15 To Vitality</font> (varies)<BR>
@@ -372,21 +372,21 @@ Assassin Kick Damage: 60-110<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>183-204</font> (varies)(Base Defense: 59-67)<BR>
+Defense: <font color=4850B8>183-204</font> (varies) (Base Defense: 59-67)<BR>
 Required Level: 66<BR>
 Required Strength: 118<BR>
 Durability: 16<BR>
 Assassin Kick Damage: 69-118<BR>
 <font color=4850B8>+170-200% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+20% Faster Run/Walk</font><BR>
+<font color=4850B8>20% Faster Run/Walk</font><BR>
 <font color=4850B8>+1-2 To Skeleton Mastery (Necromancer Only)</font> (varies)<BR>
 <font color=4850B8>+10-20 To Strength</font> (varies)<BR>
 <font color=4850B8>+17 To Dexterity</font><BR>
 <font color=4850B8>Regenerate Mana 10%</font><BR>
 <font color=4850B8>Heal Stamina Plus 10%</font><BR>
 <font color=4850B8>Half Freeze Duration</font><BR>
-<font color=4850B8>Level 33 Bone Prison (13 Charges)</font><BR>
-<font color=4850B8>Level 12 Life Tap (10 Charges)</font><BR>
+<font color=4850B8>Level 33 Bone Prison (13 charges)</font><BR>
+<font color=4850B8>Level 12 Life Tap (10 charges)</font><BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>
 </TR>
@@ -402,15 +402,15 @@ Assassin Kick Damage: 69-118<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>122-144</font> (varies)(Base Defense 62-71)<BR>
+Defense: <font color=4850B8>122-144</font> (varies) (Base Defense: 62-71)<BR>
 Required Level: 71<BR>
 Required Strength: <font color=4850B8>167</font><BR>
 Durability: 24<br>
 Assassin Kick Damage: 83-149<BR>
 <font color=4850B8>+70-100% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+1-2 To Shadow Disciplines (Assassin Only)</font> (varies)<BR>
-<font color=4850B8>+30% Faster Run/Walk</font><BR>
-<font color=4850B8>+30% Faster Hit Recovery</font><BR>
+<font color=4850B8>30% Faster Run/Walk</font><BR>
+<font color=4850B8>30% Faster Hit Recovery</font><BR>
 <font color=4850B8>+15-25 To Dexterity</font> (varies)<BR>
 <font color=4850B8>Requirements -20%</font><BR>
 <B>(Ladder Only)</B><BR>

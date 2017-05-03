@@ -350,7 +350,7 @@ Base Weapon Speed: [-10]<BR>
 <font color="#4850b8">+200% Damage To Demons</font><BR>
 <font color="#4850b8">+50% Damage To Undead</font><BR>
 <font color="#4850b8">+200 To Attack Rating Against Demons</font><BR>
-<font color="#4850b8">+20-25% Bonus To Attack Rating</font> (varies)<BR>
+<font color="#4850b8">20-25% Bonus To Attack Rating</font> (varies)<BR>
 <font color="#4850b8">+15 Life After Each Demon Kill</font><BR>
 <font color="#4850b8">+2 To Druid Skill Levels</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -379,7 +379,7 @@ Base Weapon Speed: [0]<BR>
 <font color="#4850b8">20% Deadly Strike</font><BR>
 <font color="#4850b8">20% Chance of Crushing Blow</font><BR>
 <font color="#4850b8">25% Chance of Open Wounds</font><BR>
-<font color="#4850b8">+1 To Druid Skills</font><BR>
+<font color="#4850b8">+1 To Druid Skill Levels</font><BR>
 <font color="#4850b8">+2 To Shape Shifting Skills (Druid Only)</font><BR>
 <font color="#4850b8">Prevent Monster Heal</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -405,9 +405,9 @@ Base Weapon Speed: [0]<BR>
 <font color="#4850b8">+150-180% Enhanced Damage</font> (varies)<BR>
 <font color="#4850b8">Adds 5-10 Damage</font><BR>
 <font color="#4850b8">+50% Damage To Undead</font><BR>
-<font color="#4850b8">Adds 63-112 Cold Damage, 5 sec. Cold Duration (Normal)</font><BR>
+<font color="#4850b8">Adds 63-112 Cold Damage, 5 sec. Duration (Normal)</font><BR>
 <font color="#4850b8">Freezes Target +3</font><BR>
-<font color="#4850b8">Level 9 Frozen Orb (50 Charges)</font><BR>
+<font color="#4850b8">Level 9 Frozen Orb (50 charges)</font><BR>
 <font color="#4850b8">Cannot Be Frozen</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
@@ -428,13 +428,13 @@ One-Hand Damage: <font color="#4850b8">(54-60) To (83-92)</font> (68.5-76 Avg)<B
 Required Level: 42<BR>
 Required Strength: 74<BR>
 Durability: 72<br>
-Base Weapon Speeds: [10]<BR>
+Base Weapon Speed: [10]<BR>
 <font color="#4850b8">+120-150% Enhanced Damage</font> (varies)<BR>
 <font color="#4850b8">Adds 10-15 Damage</font><BR>
 <font color="#4850b8">+50% Damage To Undead</font><BR>
 <font color="#4850b8">Adds 55-115 Fire Damage</font><BR>
 <font color="#4850b8">5% Chance To Cast Level 6 Meteor On Striking</font><BR>
-<font color="#4850b8">Level 11 Meteor (60 Charges)</font><BR>
+<font color="#4850b8">Level 11 Meteor (60 charges)</font><BR>
 <font color="#4850b8">Magic Damage Reduced By 9-12</font> (varies)<BR>
 <font color="#4850b8">+2 To Light Radius</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -463,7 +463,7 @@ Base Weapon Speed: [-10]<BR>
 <font color="#4850b8">Adds 1-150 Lightning Damage</font><BR>
 <font color="#4850b8">20% Increased Attack Speed</font><BR>
 <font color="#4850b8">5% Chance To Cast Level 8 Nova On Striking</font><BR>
-<font color="#4850b8">Level 15 Nova (80 Charges)</font><BR>
+<font color="#4850b8">Level 15 Nova (80 charges)</font><BR>
 <font color="#4850b8">Lightning Resist +25%</font><BR>
 <font color="#4850b8">+100 To Mana</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -489,8 +489,8 @@ Base Weapon Speed: [20]<BR>
 <font color="#4850b8">+180% Enhanced Damage</font><BR>
 <font color="#4850b8">+50% Damage To Undead</font><BR>
 <font color="#4850b8">5% Chance To Cast Level 7 Fissure On Striking</font><BR>
-<font color="#4850b8">+30% Increased Attack Speed</font><BR>
-<font color="#4850b8">Hit Blinds Target</font><BR>
+<font color="#4850b8">30% Increased Attack Speed</font><BR>
+<font color="#4850b8">Hit Blinds Target +1</font><BR>
 <font color="#4850b8">Knockback</font><BR>
 <font color="#4850b8">+3 To Elemental Skills (Druid Only)</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -519,7 +519,7 @@ Base Weapon Speed: [10]<BR>
 <font color="#4850b8">All Resistances +20</font><BR>
 <font color="#4850b8">+25 To Strength</font><BR>
 <font color="#4850b8">+2 To Masteries (Barbarian Only)</font><BR>
-<font color="#4850b8">+3 To Mace Masteries (Barbarian Only)</font><BR>
+<font color="#4850b8">+3 To Mace Mastery (Barbarian Only)</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>
@@ -544,7 +544,7 @@ Base Weapon Speed: [20]<BR>
 <font color="#4850b8">+50% Damage To Undead</font><BR>
 <font color="#4850b8">5% Chance To Cast Level 1 Iron Maiden When Struck</font><BR>
 <font color="#4850b8">5% Chance To Cast Level 1 Amplify Damage On Striking</font><BR>
-<font color="#4850b8">Level 8 Amplify Damage (3 Charges)</font><BR>
+<font color="#4850b8">Level 8 Amplify Damage (3 charges)</font><BR>
 <font color="#4850b8">Attacker Takes Damage of 26</font><BR>
 <font color="#4850b8">Indestructible</font><BR>
 (Only Spawns In Patch 1.09 or later)

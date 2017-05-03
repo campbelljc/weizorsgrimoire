@@ -288,7 +288,7 @@ Durability: 20<BR>
 <font color="#4850b8">+150 Defense</font><br>
 <font color="#4850b8">Replenish Life +10</font><br>
 <font color="#4850b8">+25 To Mana</font><br>
-<font color="#4850b8">+30% Increased Attack Speed</font><br>
+<font color="#4850b8">30% Increased Attack Speed</font><br>
 <font color="#00c400">+1 To All Skills</font> (2 Items)<br>
 <font color="#00c400">50% Bonus To Attack Rating</font> (3 Items)<br>
 <font color="#00c400">All Resistances +25</font> (4 Items)<br>
@@ -336,7 +336,7 @@ Required Dexterity: 152<BR>
 Base Weapon Speed: [10]<BR>
 <B>(Amazon Only)</B><BR>
 <font color="#4850b8">+188% Enhanced Damage</font><br>
-<font color="#4850b8">+40% Increased Attack Speed</font><br>
+<font color="#4850b8">40% Increased Attack Speed</font><br>
 <font color="#4850b8">+50 To Attack Rating</font><br>
 <font color="#4850b8">Fires Magic Arrows [Level 1]</font><br>
 <font color="#00c400">Adds 114-377 Magic Damage</font> (2 Items)<br>
@@ -358,7 +358,7 @@ Base Weapon Speed: [10]<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">(771-1163) - (877-1269)</font> (varies)(Base Defense: 417-523)<br>
+Defense: <font color="#4850b8">(771-1163) - (877-1269)</font> (varies) (Base Defense: 417-523)<br>
 Required Level: 70<br>
 Required Strength: <font color="#4850b8">122</font><br>
 Durability: 48<BR>
@@ -368,7 +368,7 @@ Durability: 48<BR>
 <font color="#4850b8">+ (4 Per Character Level) 4-396 Defense (Based On Character Level)</font><br>
 <font color="#4850b8">+2 To Passive And Magic Skills (Amazon Only)</font><br>
 <font color="#4850b8">+350 Defense</font><br>
-<font color="#00c400">+30% Faster Hit Recovery</font> (3 Items)<br>
+<font color="#00c400">30% Faster Hit Recovery</font> (3 Items)<br>
 </span></font>
 </td>
 </tr>
@@ -385,12 +385,12 @@ Durability: 48<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">84-97</font> (varies)(Base Defense: 39-47)<br>
+Defense: <font color="#4850b8">84-97</font> (varies) (Base Defense: 39-47)<br>
 Required Level: 32<br>
 Required Strength: 88<br>
 Durability: 18<BR>
 <font color="#4850b8">+45-50 Defense</font> (varies)<br>
-<font color="#4850b8">6-18 Cold Damage, 6 sec. Duration (Normal)</font><br>
+<font color="#4850b8">Adds 6-18 Cold Damage, 6 sec. Duration (Normal)</font><br>
 <font color="#4850b8">Half Freeze Duration</font><br>
 <font color="#4850b8">56% Extra Gold From Monsters</font><br>
 <font color="#4850b8">+10 To Strength</font><br>
@@ -413,13 +413,13 @@ Durability: 18<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">81-86</font> (varies)(Base Defense: 31-36)<br>
+Defense: <font color="#4850b8">81-86</font> (varies) (Base Defense: 31-36)<br>
 Required Level: 45<br>
 Required Strength: 20<br>
 Durability: 14<BR>
 16 boxes<BR>
 <font color="#4850b8">+50 Defense</font><br>
-<font color="#4850b8">+20% Faster Run/Walk</font><br>
+<font color="#4850b8">20% Faster Run/Walk</font><br>
 <font color="#4850b8">+5 To Light Radius</font><br>
 <font color="#4850b8">5% Mana Stolen Per Hit</font><br>
 <font color="#00c400">All Resistances +25</font> (4 Items)<br>
@@ -524,9 +524,9 @@ Base Weapon Speed: [0]<BR>
 <font color="#4850b8">+200% Damage To Undead</font><br>
 <font color="#4850b8">+200% Damage To Demons</font><br>
 <font color="#4850b8">Adds 12-17 Fire Damage</font><br>
-<font color="#4850b8">Ignores Target's Defense</font><br>
+<font color="#4850b8">Ignore Target's Defense</font><br>
 <font color="#4850b8">40% Increased Attack Speed</font><br>
-<font color="#4850b8">+50 Cold Damage, 4 sec. Duration (Normal)</font><br>
+<font color="#4850b8">Adds 50 Cold Damage, 4 sec. Duration (Normal)</font><br>
 </span></font>
 </td>
 </tr>
@@ -545,15 +545,15 @@ Base Weapon Speed: [0]<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">540-721</font> (varies)(Base Defense: 390-496)<br>
+Defense: <font color="#4850b8">540-721</font> (varies) (Base Defense: 390-496)<br>
 Required Level: 73<br>
 Required Strength: 149<br>
 Durability: 36<BR>
 <font color="#4850b8">+150-225 Defense</font> (varies)<br>
-<font color="#4850b8">+ (1  Per Character Level) 1-99 To Life (Based On Character Level)</font><br>
+<font color="#4850b8">+ (1 Per Character Level) 1-99 To Life (Based On Character Level)</font><br>
 <font color="#4850b8">Poison Length Reduced By 75%</font><br>
 <font color="#4850b8">Poison Resist +25%</font><br>
-<font color="#4850b8">+2 To Shadow Disciplines Skills (Assassin Only)</font><br>
+<font color="#4850b8">+2 To Shadow Disciplines (Assassin Only)</font><br>
 <font color="#4850b8">Socketed (1-3)</font> (varies)<br>
 </span></font>
 </td>
@@ -571,14 +571,14 @@ Durability: 36<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">112-169</font> (varies)(Base Defense: 37-44)<br>
+Defense: <font color="#4850b8">112-169</font> (varies) (Base Defense: 37-44)<br>
 Required Level: 25<br>
 Required Strength: 65<br>
 Durability: <font color="#4850b8">66</font><BR>
 Assassin Kick Damage: 23-52<BR>
 <font color="#4850b8">+75-125 Defense</font> (varies)<br>
-<font color="#4850b8">+40% Faster Run/Walk</font><br>
-<font color="#4850b8">Heal Stamina Plus  (0.25 Per Character Level)  0-24% (Based On Character Level)</font><br>
+<font color="#4850b8">40% Faster Run/Walk</font><br>
+<font color="#4850b8">Heal Stamina Plus (0.25 Per Character Level) 0-24% (Based On Character Level)</font><br>
 <font color="#4850b8">Cold Resist +15-25%</font> (varies)<br>
 <font color="#4850b8">Lightning Resist +15-25%</font> (varies)<br>
 </span></font>
@@ -627,7 +627,7 @@ Defense: <font color="#4850b8">95-105</font>(varies) (Base Defense: 20-30)<BR>
 Required Level: 28<BR>
 Durability: 35<BR>
 <font color="#4850b8">+75 Defense</font><br>
-<font color="#4850b8">+25-35 Fire Damage</font><br>
+<font color="#4850b8">Adds 25-35 Fire Damage</font><br>
 <font color="#4850b8">12% Chance To Cast Level 5 Chain Lightning When Struck</font><br>
 <font color="#4850b8">+15 To Strength</font><br>
 <font color="#4850b8">+5 To Light Radius</font><br>
@@ -665,7 +665,7 @@ Replenish Life +10
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">721-830</font> (varies)(Base Defense: 421-530)<br>
+Defense: <font color="#4850b8">721-830</font> (varies) (Base Defense: 421-530)<br>
 Required Level: 71<br>
 Required Strength: <font color="#4850b8">79</font><br>
 Durability: 60<BR>
@@ -700,7 +700,7 @@ Base Weapon Speed: [0]<BR>
 <font color="#4850b8">+150% Enhanced Damage</font><br>
 <font color="#4850b8">+50% Damage To Undead</font><br>
 <font color="#4850b8">Adds 6-45 Lightning Damage</font><br>
-<font color="#4850b8">+30% Faster Cast Rate</font><br>
+<font color="#4850b8">30% Faster Cast Rate</font><br>
 <font color="#4850b8">+1 To All Skills</font><br>
 <font color="#4850b8">+70 To Mana</font><br>
 <font color="#4850b8">+35 To Energy</font><br>
@@ -745,7 +745,7 @@ Required Level: 34<BR>
 Required Strength: 115<BR>
 Durability: 40<BR>
 <font color="#4850b8">+120% Enhanced Defense</font><br>
-<font color="#4850b8">+30% Faster Hit Recovery</font><br>
+<font color="#4850b8">30% Faster Hit Recovery</font><br>
 <font color="#4850b8">15% Deadly Strike</font><br>
 <font color="#4850b8">35% Chance of Crushing Blow</font><br>
 <font color="#4850b8">+15 To Strength</font><br>
@@ -756,7 +756,7 @@ Durability: 40<BR>
 <td rowspan=5 width=35%>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 <B>Partial Set Bonus</B><BR>
-+35 Life (2 Items)<BR>
++35 to Life (2 Items)<BR>
 Attacker Takes Damage of 5 (3 Items)<BR>
 <BR>
 
@@ -796,7 +796,7 @@ Paladin Smite Damage: 7 to 14<BR>
 <font color="#4850b8">+175% Enhanced Defense</font><br>
 <font color="#4850b8">Half Freeze Duration</font><br>
 <font color="#4850b8">40% Faster Block Rate</font><br>
-<font color="#4850b8">+55% Increased Chance Of Blocking</font><br>
+<font color="#4850b8">55% Increased Chance Of Blocking</font><br>
 <font color="#4850b8">+5 To Light Radius</font><br>
 </span></font>
 </td>
@@ -819,7 +819,7 @@ Required Level: 37<br>
 Required Strength: 20<br>
 Durability: 14<BR>
 <font color="#4850b8">+50% Enhanced Defense</font><br>
-<font color="#4850b8">+20% Increased Attack Speed</font><br>
+<font color="#4850b8">20% Increased Attack Speed</font><br>
 <font color="#4850b8">+100 To Attack Rating</font><br>
 <font color="#4850b8">+3 To Light Radius</font><br>
 <font color="#4850b8">Fire Resist +15%</font><br>

@@ -343,7 +343,7 @@
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
 Required Level: 10<BR>
-<font color=4850B8>+20% Faster Hit Recovery</font><BR>
+<font color=4850B8>20% Faster Hit Recovery</font><BR>
 <font color=4850B8>Fire Resist +50%</font><BR>
 <font color=4850B8>+10% To Maximum Fire Resist</font><BR>
 <font color=4850B8>Adds 3-6 Fire Damage</font><BR>
@@ -367,10 +367,8 @@ Required Level: 15<BR>
 <font color=4850B8>+1-5 To Light Radius</font> (varies)<BR>
 <font color=4850B8>+1 To All Skills</font><BR>
 <font color=4850B8>3-7% Life Stolen Per Hit</font> (varies)<BR>
-<font color=4850B8>Adds (1-2) to (3-5) Cold Damage</font> (varies)<BR>
-<font color=4850B8>Cold Duration: 2-10 Seconds</font> (varies)*<BR>
+<font color=4850B8>Adds (1-2)-(3-5) Cold Damage, 2-10 sec. Duration</font> (varies)<BR>
 <font color=4850B8>+10-40 Defense vs. Missile</font> (varies)*<BR>
-(Spawns In Any Patch)
 </font></td>
 </TR>
 
@@ -390,7 +388,7 @@ Required Level: 15<BR>
 Required Level: 25<BR>
 <font color=4850B8>+10 Defense</font><BR>
 <font color=4850B8>+10% Enhanced Defense</font><BR>
-<font color=4850B8>+10% Bonus To Attack Rating</font><BR>
+<font color=4850B8>10% Bonus To Attack Rating</font><BR>
 <font color=4850B8>All Resistances +10</font><BR>
 <font color=4850B8>+10 To All Attributes</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -428,8 +426,8 @@ Required Level: 47<BR>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
 Required Level: 50<BR>
-<font color=4850B8>+30% Faster Run/Walk</font><BR>
-<font color=4850B8>+20% Increased Attack Speed</font><BR>
+<font color=4850B8>30% Faster Run/Walk</font><BR>
+<font color=4850B8>20% Increased Attack Speed</font><BR>
 <font color=4850B8>+100 Defense Vs. Missile</font><BR>
 <font color=4850B8>+100 Defense</font><BR>
 <font color=4850B8>+25 To Dexterity</font><BR>
@@ -516,8 +514,8 @@ Required Level: 65<BR>
 <font face="arial,helvetica" size=-1><SPAN>
 Required Level: 65<BR>
 <font color=4850B8>+1 To All Skills</font><BR>
-<font color=4850B8>+20% Increased Attack Speed</font><BR>
-<font color=4850B8>+ (0.375 Per Character Level) 0-37 % Deadly Strike (Based On Character Level)</font><BR>
+<font color=4850B8>20% Increased Attack Speed</font><BR>
+<font color=4850B8>+ (0.375 Per Character Level) 0-37% Deadly Strike (Based On Character Level)</font><BR>
 <font color=4850B8>Lightning Resist +35%</font><BR>
 <font color=4850B8>Adds 1-30 Lightning Damage</font><BR>
 <font color=4850B8>Attacker Takes Lightning Damage Of 15</font><BR>

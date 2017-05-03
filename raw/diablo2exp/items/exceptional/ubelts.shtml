@@ -340,7 +340,7 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>102-113</font> (varies)(Base Defense: 29-34)<BR>
+Defense: <font color=4850B8>102-113</font> (varies) (Base Defense: 29-34)<BR>
 Required Level: 29<BR>
 Required Strength: 20<BR>
 Durability: <font color=4850B8>22</font><br>
@@ -349,7 +349,7 @@ Durability: <font color=4850B8>22</font><br>
 <font color=4850B8>+15 Defense</font><BR>
 <font color=4850B8>6-8% Life Stolen Per Hit</font> (varies)<BR>
 <font color=4850B8>Damage Reduced By 10-15%</font> (varies)<BR>
-<font color=4850B8>Magic Damage Reduced 10-15</font> (varies)<BR>
+<font color=4850B8>Magic Damage Reduced By 10-15</font> (varies)<BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>
@@ -365,7 +365,7 @@ Durability: <font color=4850B8>22</font><br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>96-107</font> (varies)(Base Defense: 31-36)<BR>
+Defense: <font color=4850B8>96-107</font> (varies) (Base Defense: 31-36)<BR>
 Required Level: 32<BR>
 Required Strength: 20<BR>
 Durability: 14<br>
@@ -392,7 +392,7 @@ Durability: 14<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense:  <font color=4850B8>90-102</font> (varies)(Base Defense: 35-40)<BR>
+Defense: <font color=4850B8>90-102</font> (varies) (Base Defense: 35-40)<BR>
 Required Level: 36<BR>
 Required Strength: 58<BR>
 Durability: 16<br>
@@ -418,7 +418,7 @@ Durability: 16<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>98-116</font> (varies)(Base Defense: 37-42)<BR>
+Defense: <font color=4850B8>98-116</font> (varies) (Base Defense: 37-42)<BR>
 Required Level: 42<BR>
 Required Strength: 88<BR>
 Durability: 18<br>
@@ -426,8 +426,8 @@ Durability: 18<br>
 <font color=4850B8>+130-170% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>5% Chance To Cast Level 7-19 Blizzard When Struck</font> (varies)<BR>
 <font color=4850B8>+15 Cold Absorb</font><BR>
-<font color=4850B8>15% To Maximum Cold Resist</font><BR>
-<font color=4850B8>Adds 13-21 Cold Damage @ 3 sec. duration (Normal)</font><BR>
+<font color=4850B8>+15% To Maximum Cold Resist</font><BR>
+<font color=4850B8>Adds 13-21 Cold Damage, 3 sec. Duration (Normal)</font><BR>
 <font color=4850B8>+2 To Chilling Armor (Sorceress Only)</font><BR>
 <font color=4850B8>+2 To Blizzard (Sorceress Only)</font><BR>
 <font color=4850B8>+3 To Glacial Spike (Sorceress Only)</font><BR>
@@ -446,7 +446,7 @@ Durability: 18<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>137-159</font> (varies)(Base Defense: 41-52)<BR>
+Defense: <font color=4850B8>137-159</font> (varies) (Base Defense: 41-52)<BR>
 Required Level: 47<BR>
 Required Strength: 110<BR>
 Durability: 24<br>
@@ -455,7 +455,7 @@ Durability: 24<br>
 <font color=4850B8>Adds 1-50 Lightning Damage</font><BR>
 <font color=4850B8>5% Chance To Cast Level 7 Fist Of The Heavens When Struck</font><BR>
 <font color=4850B8>+20 Lightning Absorb</font><BR>
-<font color=4850B8>10% To Maximum Lightning Resist</font><BR>
+<font color=4850B8>+10% To Maximum Lightning Resist</font><BR>
 <font color=4850B8>+20 To Strength</font><BR>
 <font color=4850B8>+20 To Vitality</font><BR>
 <font color=4850B8>+3 To Lightning Fury (Amazon Only)</font><BR>

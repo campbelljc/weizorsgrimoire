@@ -378,7 +378,7 @@ Required Level: 62<BR>
 <TD align=center>
 <font face="arial,helvetica" size=-1><span>
 <img src="/diablo2exp/images/items/uniques/hellfiretorch.jpg" width=29 height=57>
-<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Hellfire Torch</b></font>*</center>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Hellfire Torch (Sorceress)</b></font>*</center>
 <center>Large Charm</center>
 <br Clear=left>
 </span></font>
@@ -387,7 +387,139 @@ Required Level: 62<BR>
 <font face="arial,helvetica" size=-1><SPAN>
 Required Level: 75<BR>
 <font color=4850B8>5% Chance To Cast level 10 Firestorm* On Striking</font><BR>
-<font color=4850B8>+3 to Random Character Class Skills</font> (varies)<BR>
+<font color=4850B8>+3 to Sorceress Skill Levels</font> (varies)<BR>
+<font color=4850B8>+10-20 To All Attributes</font> (varies)<BR>
+<font color=4850B8>All Resistances +10-20</font> (varies)<BR>
+<font color=4850B8>+8 To Light Radius</font><BR>
+<font color=4850B8>Level 30 Hydra (10 charges)</font><BR>
+(Only Spawns In Patch 1.13 or later)
+</font></td>
+</TR>
+
+<TR>
+<TD align=center>
+<font face="arial,helvetica" size=-1><span>
+<img src="/diablo2exp/images/items/uniques/hellfiretorch.jpg" width=29 height=57>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Hellfire Torch (Amazon)</b></font>*</center>
+<center>Large Charm</center>
+<br Clear=left>
+</span></font>
+</td>
+<TD>
+<font face="arial,helvetica" size=-1><SPAN>
+Required Level: 75<BR>
+<font color=4850B8>5% Chance To Cast level 10 Firestorm* On Striking</font><BR>
+<font color=4850B8>+3 to Amazon Skill Levels</font> (varies)<BR>
+<font color=4850B8>+10-20 To All Attributes</font> (varies)<BR>
+<font color=4850B8>All Resistances +10-20</font> (varies)<BR>
+<font color=4850B8>+8 To Light Radius</font><BR>
+<font color=4850B8>Level 30 Hydra (10 charges)</font><BR>
+(Only Spawns In Patch 1.13 or later)
+</font></td>
+</TR>
+
+<TR>
+<TD align=center>
+<font face="arial,helvetica" size=-1><span>
+<img src="/diablo2exp/images/items/uniques/hellfiretorch.jpg" width=29 height=57>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Hellfire Torch (Assassin)</b></font>*</center>
+<center>Large Charm</center>
+<br Clear=left>
+</span></font>
+</td>
+<TD>
+<font face="arial,helvetica" size=-1><SPAN>
+Required Level: 75<BR>
+<font color=4850B8>5% Chance To Cast level 10 Firestorm* On Striking</font><BR>
+<font color=4850B8>+3 to Assassin Skill Levels</font> (varies)<BR>
+<font color=4850B8>+10-20 To All Attributes</font> (varies)<BR>
+<font color=4850B8>All Resistances +10-20</font> (varies)<BR>
+<font color=4850B8>+8 To Light Radius</font><BR>
+<font color=4850B8>Level 30 Hydra (10 charges)</font><BR>
+(Only Spawns In Patch 1.13 or later)
+</font></td>
+</TR>
+
+<TR>
+<TD align=center>
+<font face="arial,helvetica" size=-1><span>
+<img src="/diablo2exp/images/items/uniques/hellfiretorch.jpg" width=29 height=57>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Hellfire Torch (Barbarian)</b></font>*</center>
+<center>Large Charm</center>
+<br Clear=left>
+</span></font>
+</td>
+<TD>
+<font face="arial,helvetica" size=-1><SPAN>
+Required Level: 75<BR>
+<font color=4850B8>5% Chance To Cast level 10 Firestorm* On Striking</font><BR>
+<font color=4850B8>+3 to Barbarian Skill Levels</font> (varies)<BR>
+<font color=4850B8>+10-20 To All Attributes</font> (varies)<BR>
+<font color=4850B8>All Resistances +10-20</font> (varies)<BR>
+<font color=4850B8>+8 To Light Radius</font><BR>
+<font color=4850B8>Level 30 Hydra (10 charges)</font><BR>
+(Only Spawns In Patch 1.13 or later)
+</font></td>
+</TR>
+
+<TR>
+<TD align=center>
+<font face="arial,helvetica" size=-1><span>
+<img src="/diablo2exp/images/items/uniques/hellfiretorch.jpg" width=29 height=57>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Hellfire Torch (Druid)</b></font>*</center>
+<center>Large Charm</center>
+<br Clear=left>
+</span></font>
+</td>
+<TD>
+<font face="arial,helvetica" size=-1><SPAN>
+Required Level: 75<BR>
+<font color=4850B8>5% Chance To Cast level 10 Firestorm* On Striking</font><BR>
+<font color=4850B8>+3 to Druid Skill Levels</font> (varies)<BR>
+<font color=4850B8>+10-20 To All Attributes</font> (varies)<BR>
+<font color=4850B8>All Resistances +10-20</font> (varies)<BR>
+<font color=4850B8>+8 To Light Radius</font><BR>
+<font color=4850B8>Level 30 Hydra (10 charges)</font><BR>
+(Only Spawns In Patch 1.13 or later)
+</font></td>
+</TR>
+
+<TR>
+<TD align=center>
+<font face="arial,helvetica" size=-1><span>
+<img src="/diablo2exp/images/items/uniques/hellfiretorch.jpg" width=29 height=57>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Hellfire Torch (Necromancer)</b></font>*</center>
+<center>Large Charm</center>
+<br Clear=left>
+</span></font>
+</td>
+<TD>
+<font face="arial,helvetica" size=-1><SPAN>
+Required Level: 75<BR>
+<font color=4850B8>5% Chance To Cast level 10 Firestorm* On Striking</font><BR>
+<font color=4850B8>+3 to Necromancer Skill Levels</font> (varies)<BR>
+<font color=4850B8>+10-20 To All Attributes</font> (varies)<BR>
+<font color=4850B8>All Resistances +10-20</font> (varies)<BR>
+<font color=4850B8>+8 To Light Radius</font><BR>
+<font color=4850B8>Level 30 Hydra (10 charges)</font><BR>
+(Only Spawns In Patch 1.13 or later)
+</font></td>
+</TR>
+
+<TR>
+<TD align=center>
+<font face="arial,helvetica" size=-1><span>
+<img src="/diablo2exp/images/items/uniques/hellfiretorch.jpg" width=29 height=57>
+<center><font face="arial,helvetica" color=908858 size=-1><SPAN><b>Hellfire Torch (Paladin)</b></font>*</center>
+<center>Large Charm</center>
+<br Clear=left>
+</span></font>
+</td>
+<TD>
+<font face="arial,helvetica" size=-1><SPAN>
+Required Level: 75<BR>
+<font color=4850B8>5% Chance To Cast level 10 Firestorm* On Striking</font><BR>
+<font color=4850B8>+3 to Paladin Skill Levels</font> (varies)<BR>
 <font color=4850B8>+10-20 To All Attributes</font> (varies)<BR>
 <font color=4850B8>All Resistances +10-20</font> (varies)<BR>
 <font color=4850B8>+8 To Light Radius</font><BR>

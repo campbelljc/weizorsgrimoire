@@ -352,7 +352,6 @@ Base Weapon Speed: [-10]<BR>
 <font color=4850B8>Poison Resist +30%</font><BR>
 <font color=4850B8>+10 to Life</font><BR>
 <font color=4850B8>+10 to Dexterity</font><BR>
-(Spawns In Any Patch)
 </font></td>
 </TR>
 
@@ -373,7 +372,7 @@ Required Strength: 40<BR>
 Required Dexterity: 33<BR>
 Base Weapon Speed: [0]<BR>
 <font color=4850B8>+50% Enhanced Damage</font><BR>
-<font color=4850B8>Adds 30 Poison Damage Over 3 Seconds</font><BR>
+<font color=4850B8>+30 Poison Damage Over 3 Seconds</font><BR>
 <font color=4850B8>20% Increased Attack Speed</font><BR>
 <font color=4850B8>Piercing Attack (50)</font><BR>
 <font color=4850B8>+50 to Attack Rating</font><BR>
@@ -403,7 +402,7 @@ Base Weapon Speed: [10]<BR>
 <font color=4850B8>Adds 15-35 Fire Damage</font><BR>
 <font color=4850B8>20% Increased Attack Speed</font><BR>
 <font color=4850B8>+70 to Attack Rating</font><BR>
-<font color=4850B8>15% To Max Fire Resist</font><BR>
+<font color=4850B8>+15% To Maximum Fire Resist</font><BR>
 <font color=4850B8>Fire Resist +15%</font><BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>

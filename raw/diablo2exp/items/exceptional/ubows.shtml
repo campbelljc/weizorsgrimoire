@@ -339,7 +339,7 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Two-Hand Damage: <font color=4850B8>(15-18) to (47-57) </font> (31-37.5 Avg)<BR>
+Two-Hand Damage: <font color=4850B8>(15-18) to (47-57)</font> (31-37.5 Avg)<BR>
 Required Level: 28<BR>
 Required Strength: 25<BR>
 Required Dexterity: 43<BR>
@@ -371,7 +371,7 @@ Required Level: 31<BR>
 Required Strength: 25<BR>
 Required Dexterity: 62<BR>
 Base Weapon Speed: [-10]<BR>
-<font color=4850B8>180-220% Enhanced Damage</font> (varies)<BR>
+<font color=4850B8>+180-220% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Slows Target By 30%</font><BR>
 <font color=4850B8>30% Chance of Open Wounds</font><BR>
 <font color=4850B8>30% Increased Attack Speed</font><BR>
@@ -424,7 +424,7 @@ Required Strength: 58<BR>
 Required Dexterity: 73<BR>
 Base Weapon Speed: [-10]<BR>
 <font color=4850B8>+180-220% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>Adds 15-30 Cold Damage - 3 Second Duration</font><BR>
+<font color=4850B8>Adds 15-30 Cold Damage, 3 sec. Duration</font><BR>
 <font color=4850B8>Cold Resist +35%</font><BR>
 <font color=4850B8>+50 Defense VS. Missile</font><BR>
 <font color=4850B8>+40 To Mana</font><BR>
@@ -452,9 +452,9 @@ Base Weapon Speed: [0]<BR>
 <font color=4850B8>+150-170% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Fires Magic Arrows [Level 20]</font><BR>
 <font color=4850B8>2% Chance To Cast Level 5 Amplify Damage On Striking</font><BR>
-<font color=4850B8>+ (1 Per Character Level) 1-99 % Deadly Strike (Based On Character Level)</font><BR>
+<font color=4850B8>+ (1 Per Character Level) 1-99% Deadly Strike (Based On Character Level)</font><BR>
 <font color=4850B8>All Resistances +40</font><BR>
-<font color=4850B8>Sockets (2)</font><BR>
+<font color=4850B8>Socketed (2)</font><BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>
 </TR>
@@ -505,11 +505,11 @@ Base Weapon Speed: [0]<BR>
 <font color=4850B8>Adds 25-50 Damage</font><BR>
 <font color=4850B8>+200-250 To Attack Rating</font> (varies)<BR>
 <font color=4850B8>+1 To Amazon Skill Levels</font><BR>
-<font color=4850B8>Hit Blinds Target</font><BR>
+<font color=4850B8>Hit Blinds Target +1</font><BR>
 <font color=4850B8>15% Mana Stolen Per Hit</font><BR>
 <font color=4850B8>Magic Damage Reduced By 9-13</font> (varies)<BR>
 <font color=4850B8>+10 To Dexterity</font><BR>
-<font color=4850B8>+3 Guided Arrow (Amazon Only)</font><BR>
+<font color=4850B8>+3 To Guided Arrow (Amazon Only)</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>
@@ -534,9 +534,9 @@ Base Weapon Speed: [10]<BR>
 <font color=4850B8>+100-200% Damage To Demons</font> (varies)<BR>
 <font color=4850B8>+100-200% Damage To Undead</font> (varies)<BR>
 <font color=4850B8>50% Increased Attack Speed</font><BR>
-<font color=4850B8>5% Chance To Cast Level 7 Fist Of Heavens On Striking</font><BR>
+<font color=4850B8>5% Chance To Cast Level 7 Fist Of The Heavens On Striking</font><BR>
 <font color=4850B8>Replenish Life +12</font><BR>
-<font color=4850B8>+100-150% Bonus To Attack Rating</font> (varies)<BR>
+<font color=4850B8>100-150% Bonus To Attack Rating</font> (varies)<BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>

@@ -342,7 +342,7 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>302-363</font> (varies)(Base Defense: 121)<BR>
+Defense: <font color=4850B8>302-363</font> (varies) (Base Defense: 121)<BR>
 Required Level: 42<BR>
 Required Strength: 118<BR>
 Durability: 55<br>
@@ -372,16 +372,16 @@ Durability: 55<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>332-377</font> (varies)(Base Defense: 105-150)<BR>
+Defense: <font color=4850B8>332-377</font> (varies) (Base Defense: 105-150)<BR>
 Required Level: 79<BR>
 Required Strength: 129<BR>
 Durability: 35<br>
 (Barbarian Only)<BR>
 <font color=4850B8>+120-150% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+2-3 To Warcries (Barbarian Only)</font> (varies)<BR>
-<font color=4850B8>+3-6 To Feral Rage</font> (varies)<BR>
-<font color=4850B8>+3-6 To Lycanthropy</font> (varies)<BR>
-<font color=4850B8>+3-6 To Werewolf</font> (varies)<BR>
+<font color=4850B8>+3-6 To Feral Rage</font> (All Classes) (varies)<BR>
+<font color=4850B8>+3-6 To Lycanthropy</font> (All Classes) (varies)<BR>
+<font color=4850B8>+3-6 To Werewolf</font> (All Classes) (varies)<BR>
 <font color=4850B8>+8-15 To Strength</font> (varies)<BR>
 <font color=4850B8>+8-15 To Dexterity</font> (varies)<BR>
 <font color=4850B8>+8-15 To Vitality</font> (varies)<BR>
@@ -401,7 +401,7 @@ Durability: 35<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>345-408</font> (varies)(Base Defense: 111-156)<BR>
+Defense: <font color=4850B8>345-408</font> (varies) (Base Defense: 111-156)<BR>
 Required Level: 61<BR>
 Required Strength: 151<BR>
 Durability: 45<br>
@@ -432,14 +432,14 @@ Durability: 45<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>384-432</font> (varies)(Base Defense: 114-159)<BR>
+Defense: <font color=4850B8>384-432</font> (varies) (Base Defense: 114-159)<BR>
 Required Level: 77<BR>
 Required Strength: 174<BR>
 Durability: 50<br>
 (Barbarian Only)<BR>
 <font color=4850B8>+140-170% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>Replenish Life +15-23</font> (varies)<BR>
-<font color=4850B8>+20% Faster Hit Recovery</font><BR>
+<font color=4850B8>20% Faster Hit Recovery</font><BR>
 
 <font color=4850B8>+2 To Barbarian Skill Levels</font><BR>
 <font color=4850B8>+1 To Masteries (Barbarian Only)</font><BR>

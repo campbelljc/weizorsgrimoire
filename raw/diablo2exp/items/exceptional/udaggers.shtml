@@ -341,7 +341,7 @@
 <font face="arial,helvetica" size=-1><SPAN>
 One-Hand Damage: <font color=4850B8>(33-35) To (81-88)</font> (57-61.5 Avg)<BR>
 Required Level: 32<BR>
-Required Strength:  25<BR>
+Required Strength: 25<BR>
 Durability: 16<br>
 Base Weapon Speed: [-20]<BR>
 <font color=4850B8>+200-240% Enhanced Damage</font> (varies)<BR>
@@ -396,7 +396,7 @@ Base Weapon Speed: [0]<BR>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
 One-Hand Damage: <font color=4850B8>30 To 76</font> (53 Avg)<BR>
-Required Level 38<BR>
+Required Level: 38<BR>
 Required Strength: 25<BR>
 Required Dexterity: 88<BR>
 Durability: 24<br>
@@ -425,15 +425,15 @@ Base Weapon Speed: [-20]<BR>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
 One-Hand Damage: <font color=4850B8>47 To 90</font> (68.5 Avg)<BR>
-Required Level 41<BR>
+Required Level: 41<BR>
 Required Strength: 47<BR>
 Required Dexterity: 97<BR>
 Durability: 24<br>
-Base Weapon Speeds: [-10]<BR>
+Base Weapon Speed: [-10]<BR>
 <font color=4850B8>+150% Enhanced Damage</font><BR>
 <font color=4850B8>Adds 1-120 Lightning Damage</font><BR>
 <font color=4850B8>25% Chance To Cast Level 3 Charged Bolt When Struck</font><BR>
-<font color=4850B8>Lightning Resist + (1 Per Character Level) 1-99 % (Based On Character Level)</font><BR>
+<font color=4850B8>Lightning Resist + (1 Per Character Level) 1-99% (Based On Character Level)</font><BR>
 <font color=4850B8>Attacker Takes Lightning Damage of 20</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>

@@ -341,7 +341,7 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>17-19</font> (varies)(Base Defense: 3-5)<BR>
+Defense: <font color=4850B8>17-19</font> (varies) (Base Defense: 3-5)<BR>
 Required Level: 3<BR>
 Durability: 12<br>
 <font color=4850B8>+30% Enhanced Damage</font><BR>
@@ -349,7 +349,6 @@ Durability: 12<br>
 <font color=4850B8>+30 To Attack Rating</font><BR>
 <font color=4850B8>+15 To Mana</font><BR>
 <font color=4850B8>+15 To Life</font><BR>
-(Spawns In Any Patch)
 </font></td>
 </TR>
 
@@ -368,10 +367,9 @@ Defense: 8-11 (varies)<BR>
 Required Level: 15<BR>
 Required Strength: 15<BR>
 Durability: 18<br>
-<font color=4850B8>+1 To All Skill Levels</font><BR>
+<font color=4850B8>+1 To All Skills</font><BR>
 <font color=4850B8>25-50% Better Chance of Getting Magic Items</font> (varies)<BR>
 <font color=4850B8>75% Extra Gold From Monsters</font><BR>
-(Spawns In Any Patch)
 </font></td>
 </TR>
 
@@ -386,13 +384,13 @@ Durability: 18<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>25-28</font> (varies)(Base Defense: 15-18)<BR>
+Defense: <font color=4850B8>25-28</font> (varies) (Base Defense: 15-18)<BR>
 Required Level: 14<BR>
 Required Strength: 26<BR>
 Durability: 24<br>
 <font color=4850B8>+10 Defense</font><BR>
 <font color=4850B8>Attacker Takes Lightning Damage of 7</font>*<BR>
-<font color=4850B8>Hit Blinds Target</font>*<BR>
+<font color=4850B8>Hit Blinds Target +1</font>*<BR>
 <font color=4850B8>Lightning Resist +15%</font><BR>
 <font color=4850B8>+100 Defense vs. Missile</font>*<BR>
 (Only Spawns In Patch 1.09 or later)
@@ -410,7 +408,7 @@ Durability: 24<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>45-60</font> (varies)(Base Defense: 23-26)<BR>
+Defense: <font color=4850B8>45-60</font> (varies) (Base Defense: 23-26)<BR>
 Required Level: 17<BR>
 Required Strength: 41<BR>
 Durability: 30<br>
@@ -461,13 +459,13 @@ Durability: 40<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>34-52</font> (varies)(Base Defense: 9-27)<BR>
+Defense: <font color=4850B8>34-52</font> (varies) (Base Defense: 9-27)<BR>
 Required Level: 20<BR>
 Required Strength: 23<BR>
 Durability: 20<br>
 <font color=4850B8>+25 Defense</font><BR>
 <font color=4850B8>+50% Damage To Undead</font><BR>
-<font color=4850B8>Hit Causes Monsters to Flee 50%</font><BR>
+<font color=4850B8>Hit Causes Monster to Flee 50%</font><BR>
 <font color=4850B8>All Resistances +10</font><BR>
 <font color=4850B8>+20 To Strength</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -485,13 +483,13 @@ Durability: 20<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>99-113</font> (varies)(Base Defense: 25-45)<BR>
+Defense: <font color=4850B8>99-113</font> (varies) (Base Defense: 25-45)<BR>
 Required Level: 29<BR>
 Required Strength: 55<BR>
 Durability: 50<br>
 <font color=4850B8>+30-60% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+50% Damage Vs. Undead</font><BR>
-<font color=4850B8>+50-100 Attack Rating Vs. Undead</font> (varies)<BR>
+<font color=4850B8>+50% Damage To Undead</font><BR>
+<font color=4850B8>+50-100 to Attack Rating against Undead</font> (varies)<BR>
 <font color=4850B8>Half Freeze Duration</font><BR>
 <font color=4850B8>5% Life Stolen Per Hit</font><BR>
 <font color=4850B8>Poison Resist +50%</font><BR>

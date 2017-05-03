@@ -339,7 +339,7 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>94-105</font> (varies)(Base Defense: 28-35)<BR>
+Defense: <font color=4850B8>94-105</font> (varies) (Base Defense: 28-35)<BR>
 Required Level: 29<BR>
 Required Strength: 20<BR>
 Durability: 12<br>
@@ -349,7 +349,7 @@ Assassin Kick Damage: 26-46<BR>
 <font color=4850B8>Adds 12-33 Fire Damage</font><BR>
 <font color=4850B8>+120-150% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+15 Defense</font><BR>
-<font color=4850B8>10% To Maximum Fire Resist</font><BR>
+<font color=4850B8>+10% To Maximum Fire Resist</font><BR>
 <font color=4850B8>Fire Resist +30%</font><BR>
 <font color=4850B8>40-70% Extra Gold From Monsters</font> (varies)<BR>
 <font color=4850B8>+2 To Light Radius</font><BR>
@@ -368,7 +368,7 @@ Assassin Kick Damage: 26-46<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>112-124</font> (varies)(Base Defense: 33-39)<BR>
+Defense: <font color=4850B8>112-124</font> (varies) (Base Defense: 33-39)<BR>
 Required Level: 32<BR>
 Required Strength: 47<BR>
 Durability: 14<br>
@@ -377,9 +377,9 @@ Assassin Kick Damage: 28-50<BR>
 <font color=4850B8>20% Faster Run/Walk</font><BR>
 <font color=4850B8>+100 Defense Vs. Missile</font><BR>
 <font color=4850B8>+15 To Dexterity</font><BR>
-<font color=4850B8>+5% Maximum Fire Resist</font><BR>
+<font color=4850B8>+5% To Maximum Fire Resist</font><BR>
 <font color=4850B8>Heal Stamina Plus 50%</font><BR>
-<font color=4850B8>+40 Max Stamina</font><BR>
+<font color=4850B8>+40 Maximum Stamina</font><BR>
 <font color=4850B8>+45-65 To Life</font> (varies)<BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
@@ -396,7 +396,7 @@ Assassin Kick Damage: 28-50<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>112-130</font> (varies)(Base Defense: 37-44)<BR>
+Defense: <font color=4850B8>112-130</font> (varies) (Base Defense: 37-44)<BR>
 Required Level: 36<BR>
 Required Strength: 65<BR>
 Durability: 16<br>
@@ -421,7 +421,7 @@ Assassin Kick Damage: 23-52<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>120-139</font> (varies)(Base Defense: 39-47)<BR>
+Defense: <font color=4850B8>120-139</font> (varies) (Base Defense: 39-47)<BR>
 Required Level: 42<BR>
 Required Strength: 95<BR>
 Durability: <font color=4850B8>48</font><br>
@@ -449,7 +449,7 @@ Assassin Kick Damage: 37-64<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>140-162</font> (varies)(Base Defense: 43-53)<BR>
+Defense: <font color=4850B8>140-162</font> (varies) (Base Defense: 43-53)<BR>
 Required Level: <font color=4850B8>47</font><BR>
 Required Strength: <font color=4850B8>94</font><BR>
 Durability: <font color=4850B8>34</font><br>

@@ -283,14 +283,14 @@
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">917-950</font> (varies) (Base Defense 417-450)<BR>
+Defense: <font color="#4850b8">917-950</font> (varies) (Base Defense: 417-450)<BR>
 Required Level: 45<BR>
 Required Strength: <font color="#4850b8">102</font><BR>
 Durability: 60<BR>
 <font color="#4850b8">+500 Defense</font><br>
 <font color="#4850b8">Requirements -40%</font><br>
 <font color="#4850b8">+20 To Strength</font><br>
-<font color="#4850b8">+2 To Defensive Aura Skills (Paladin Only)</font><br>
+<font color="#4850b8">+2 To Defensive Auras (Paladin Only)</font><br>
 <font color="#4850b8">Socketed (3)</font><br>
 </font>
 </td>
@@ -305,7 +305,7 @@ Durability: 60<BR>
 
 <B>Complete Set Bonus</B><BR>
 +3 To Paladin Skill Levels<BR>
-+30% Faster Hit Recovery<BR>
+30% Faster Hit Recovery<BR>
 +200 To Attack Rating<BR>
 +20 To Strength<BR>
 +30 To Dexterity<BR>
@@ -336,7 +336,7 @@ Durability: 50<BR>
 <font color="#4850b8">All Resistances +5</font><br>
 <font color="#4850b8">20-30% Better Chance Of Getting Magic Items</font> (varies)<br>
 <font color="#4850b8">Requirements -40%</font><br>
-<font color="#4850b8">+ (0.25 Per Character Level) 0-24 Absorbs Cold Damage (Based On Character Level)</font><br>
+<font color="#4850b8">+ (0.25 Per Character Level) 0-24 Cold Absorb (Based On Character Level)</font><br>
 <font color="#4850b8">Socketed (2)</font><br>
 <font color="#00c400">+2 To Offensive Auras (Paladin Only)</font> (2 Items)<br>
 </span></font>
@@ -387,7 +387,7 @@ Base Weapon Speed: [-10]<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">290-333</font> (varies)(Base Defense: 182-225)<br>
+Defense: <font color="#4850b8">290-333</font> (varies) (Base Defense: 182-225)<br>
 Required Level: 68<br>
 Required Strength: 148<br>
 Durability: 90<BR>
@@ -443,7 +443,7 @@ your character look unique.
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">688-702</font> (varies)(Base Defense: 188-202)<br>
+Defense: <font color="#4850b8">688-702</font> (varies) (Base Defense: 188-202)<br>
 Required Level: 44<BR>
 Required Strength: <font color="#4850b8">52</font><BR>
 Durability: 50<BR>
@@ -494,7 +494,7 @@ Durability: 60<BR>
 Base Weapon Speed: [0]<BR>
 <font color="#4850b8">+ (1.5 Per Character Level) +1-148 To Maximum Damage (Based on Character Level)</font><br>
 <font color="#4850b8">+50% Damage To Undead</font><br>
-<font color="#4850b8">+40% Increased Attack Speed</font><br>
+<font color="#4850b8">40% Increased Attack Speed</font><br>
 <font color="#4850b8">10% Chance To Cast Level 3 Frost Nova On Striking</font><br>
 <font color="#4850b8">Adds 20-30 Fire Damage</font><br>
 </span></font>
@@ -513,13 +513,13 @@ Base Weapon Speed: [0]<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">203-220</font> (varies)(Base Defense: 153-170)<br>
+Defense: <font color="#4850b8">203-220</font> (varies) (Base Defense: 153-170)<br>
 Required Level: 81<br>
 Required Strength: 185<br>
 Chance to Block: Pal: 79% Ama/Asn/Bar: 74% Dru/Nec/Sor: 69%<BR>
 Paladin Smite Damage: 11 to 35<BR> 
 <font color="#4850b8">+50 Defense</font><br>
-<font color="#4850b8">+25% Increased Chance Of Blocking</font><br>
+<font color="#4850b8">25% Increased Chance Of Blocking</font><br>
 <font color="#4850b8">Lightning Resist +30%</font><br>
 <font color="#4850b8">Indestructible</font><br>
 <font color="#4850b8">30% Faster Block Rate</font><br>
@@ -541,7 +541,7 @@ Paladin Smite Damage: 11 to 35<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">164-209</font> (varies)(Base Defense: 114-159)<br>
+Defense: <font color="#4850b8">164-209</font> (varies) (Base Defense: 114-159)<br>
 Required Level: 69<br>
 Required Strength: <font color="#4850b8">116</font><br>
 Durability: 40<BR>
@@ -587,7 +587,7 @@ Durability: 40<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">228</font> (varies)(Base Defense: 78-113)<br>
+Defense: <font color="#4850b8">228</font> (varies) (Base Defense: 78-113)<br>
 Required Level: 45<BR>
 Required Strength: 103<BR>
 Durability: 50<BR>
@@ -608,7 +608,7 @@ Durability: 50<BR>
 
 <B>Complete Set Bonus</B><BR>
 +2 To All Skills<BR>
-+30% Faster Run/Walk<BR>
+30% Faster Run/Walk<BR>
 20% Life Stolen Per Hit<BR>
 +300 Defense<BR>
 All Resistances +30<BR>
@@ -678,12 +678,12 @@ Durability: 36<br>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">6-153</font> (varies)(Base Defense: 5)<br>
+Defense: <font color="#4850b8">6-153</font> (varies) (Base Defense: 5)<br>
 Required Level: 35<br>
 Required Strength: 25<br>
 Durability: 16<BR>
 12 boxes<BR>
-<font color="#4850b8">+ (1.5 Per Character Level)  1-148 Defense (Based on Character Level)</font><br>
+<font color="#4850b8">+ (1.5 Per Character Level) 1-148 Defense (Based on Character Level)</font><br>
 <font color="#4850b8">Adds 3-33 Lightning Damage</font><br>
 <font color="#4850b8">Prevent Monster Heal</font><br>
 <font color="#4850b8">12% Damage Taken Goes To Mana</font><br>
@@ -731,8 +731,8 @@ Durability: 55<BR>
 <font color="#4850b8">+4 To Light Radius</font><br>
 <font color="#4850b8">+125 Defense</font><br>
 <font color="#4850b8">37% Extra Gold From Monsters</font><br>
-<font color="#4850b8">25-40% Better Chance Of Finding Magic Items</font> (varies)<br>
-<font color="#4850b8">+2 To Warcries Skills (Barbarian Only)</font><br>
+<font color="#4850b8">25-40% Better Chance Of Getting Magic Items</font> (varies)<br>
+<font color="#4850b8">+2 To Warcries (Barbarian Only)</font><br>
 <font color="#4850b8">Socketed (2)</font><br>
 </font>
 </td>
@@ -812,7 +812,7 @@ Durability: 60<br>
 <font color="#4850b8">5% Chance To Cast Level 5 Enchant When Struck</font><br>
 <font color="#4850b8">Poison Resist +50%</font><br>
 <font color="#4850b8">+2 To Combat Skills (Barbarian Only)</font><br>
-<font color="#00c400">+25% Faster Hit Recovery</font> (2 Items)<br>
+<font color="#00c400">25% Faster Hit Recovery</font> (2 Items)<br>
 <font color="#00c400">Cold Resist +40%</font> (3 Items)<br>
 <font color="#00c400">Fire Resist +40%</font> (4 Items)<br>
 <font color="#00c400">Lightning Resist +40%</font> (5 Items)<br>
@@ -835,7 +835,7 @@ Durability: 60<br>
 <font face="arial,helvetica" size=-1><span>
 Defense: <font color="#4850b8">89</font> (Base Defense: 41-52)<br>
 Defense: <font color="#00c400">194</font> (Base Defense: 41-52)<br>
-Defense: <font color="#00c400">247</font> (Base Defense 41-52)<br>
+Defense: <font color="#00c400">247</font> (Base Defense: 41-52)<br>
 Required Level: 29<br>
 Required Strength: 110<br>
 Durability: 24<BR>
@@ -845,7 +845,7 @@ Durability: 24<BR>
 <font color="#4850b8">Fire Resist +28%</font><br>
 <font color="#4850b8">+25 To Strength</font><br>
 <font color="#00c400">+105 Defense</font> (2 items)<br>
-<font color="#00c400">+25% Faster Hit Recovery</font> (3 Items)<br>
+<font color="#00c400">25% Faster Hit Recovery</font> (3 Items)<br>
 <font color="#00c400">+100% Enhanced Defense</font> (4 Items)<br>
 <font color="#00c400">Damage Reduced By 20%</font> (5 Items)<br>
 <font color="#00c400">+2 To Masteries (Barbarian Only)</font> (Complete Set)<br>
@@ -865,8 +865,8 @@ Durability: 24<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">108-118</font> (varies)(Base Defense: 43-53)<br>
-Defense: <font color="#00c400">228-238</font> (varies)(Base Defense: 43-53)<br>
+Defense: <font color="#4850b8">108-118</font> (varies) (Base Defense: 43-53)<br>
+Defense: <font color="#00c400">228-238</font> (varies) (Base Defense: 43-53)<br>
 Required Level: 30<br>
 Required Strength: 110<br>
 Durability: 24<BR>
@@ -874,7 +874,7 @@ Durability: 24<BR>
 <font color="#4850b8">12% Chance To Cast Level 4 Charged Bolt When Struck</font><br>
 <font color="#4850b8">+20 To Dexterity</font><br>
 <font color="#4850b8">+20 To Strength</font><br>
-<font color="#00c400">+25% Increased Attack Speed</font> (2 items)<br>
+<font color="#00c400">25% Increased Attack Speed</font> (2 items)<br>
 <font color="#00c400">+120 Defense</font> (3 Items)<br>
 <font color="#00c400">10% Life Stolen Per Hit</font> (4 Items)<br>
 <font color="#00c400">10% Mana Stolen Per Hit</font> (5 Items)<br>

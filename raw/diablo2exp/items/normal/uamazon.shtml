@@ -386,7 +386,7 @@ Base Weapon Speed: [20]<BR>
 <font color=4850B8>+150-200% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Adds 25-50 Damage</font><BR>
 <font color=4850B8>+2 To Amazon Skill Levels</font><BR>
-<font color=4850B8>+30% Increased Attack Speed</font><BR>
+<font color=4850B8>30% Increased Attack Speed</font><BR>
 <font color=4850B8>5-9% Life Stolen Per Hit</font> (varies)<BR>
 <font color=4850B8>+20 To Strength</font><BR>
 <font color=4850B8>+20 To Vitality</font><BR>
@@ -415,7 +415,7 @@ Base Weapon Speed: [10]<BR>
 (Amazon Only)<BR>
 <font color=4850B8>+150-200% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Adds 25-50 Damage</font><BR>
-<font color=4850B8>+20% Increased Attack Speed</font><BR>
+<font color=4850B8>20% Increased Attack Speed</font><BR>
 <font color=4850B8>+2 To Amazon Skill Levels</font><BR>
 <font color=4850B8>5-8% Mana Stolen Per Hit</font> (varies)<BR>
 <font color=4850B8>+20 To Energy</font><BR>
@@ -443,14 +443,14 @@ One-Hand Damage: <font color=4850B8>(70-79) To (137-155)</font> (103.5-117 Avg)<
 Required Level: 42<BR>
 Required Strength: 25<BR>
 Required Dexterity: 109<BR>
-Max Stack: <font color=4850B8>140</font><BR>
+Max Stack <font color=4850B8>(140)</font><BR>
 Base Weapon Speed: [-10]<BR>
 (Amazon Only)<BR>
 <font color=4850B8>+150-200% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Adds 25-50 Damage</font><BR>
 <font color=4850B8>+2 To Amazon Skill Levels</font><BR>
 <font color=4850B8>5-9% Life Stolen Per Hit</font> (varies)<BR>
-<font color=4850B8>+30% Faster Run/Walk</font><BR>
+<font color=4850B8>30% Faster Run/Walk</font><BR>
 <font color=4850B8>+20 To Strength</font><BR>
 <font color=4850B8>+20 To Dexterity</font><BR>
 <font color=4850B8>Replenishes Quantity [1 in 3 sec.]</font><BR>
@@ -483,7 +483,7 @@ Max Stack (80)<BR>
 (Amazon Only)<BR>
 <font color=4850B8>+150-200% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Adds 1-511 Lightning Damage</font><BR>
-<font color=4850B8>+15% Increased Attack Speed</font><BR>
+<font color=4850B8>15% Increased Attack Speed</font><BR>
 <font color=4850B8>-15% To Enemy Lightning Resistance</font><BR>
 <font color=4850B8>20% Chance To Cast Level 14 Lightning On Striking</font><BR>
 <font color=4850B8>+2-4 To Javelin and Spear Skills (Amazon Only)</font> (varies)<BR>

@@ -446,7 +446,7 @@ Required Strength: 25<BR>
 Required Dexterity: 136<BR>
 Base Weapon Speed: [-30]<BR>
 <font color=4850B8>+230-270% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>+30% Increased Attack Speed</font><BR>
+<font color=4850B8>30% Increased Attack Speed</font><BR>
 <font color=4850B8>Adds 250-500 Magic Damage</font><BR>
 <font color=4850B8>Adds 250-500 Cold Damage, 10 sec. Duration (Normal)</font><BR>
 <font color=4850B8>+1 To All Skills</font><BR>
@@ -481,7 +481,7 @@ Base Weapon Speed: [-10]<BR>
 <font color=4850B8>Freezes Target +4</font><BR>
 <font color=4850B8>Cold Absorb 7-15%</font> (varies)<BR>
 <font color=4850B8>Half Freeze Duration</font><BR>
-<font color=4850B8>+25% Increased Attack Speed</font><BR>
+<font color=4850B8>25% Increased Attack Speed</font><BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>
 </TR>
@@ -565,7 +565,7 @@ Required Dexterity: 110<BR>
 Base Weapon Speed: [5]<BR>
 <font color=4850B8>+150-250% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>+ (2.5 Per Character Level) 2-247 To Maximum Damage (Based On Character Level)</font><BR>
-<font color=4850B8>+50% Bonus To Attack Rating</font><BR>
+<font color=4850B8>50% Bonus To Attack Rating</font><BR>
 <font color=4850B8>+80 To Life</font><BR>
 <font color=4850B8>+20 To All Attributes</font><BR>
 <font color=4850B8>Indestructible</font><BR>

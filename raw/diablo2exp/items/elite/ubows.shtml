@@ -349,7 +349,7 @@ Base Weapon Speed: [10]<BR>
 <font color=4850B8>+1 To Amazon Skill Levels</font><BR>
 <font color=4850B8>+ (6 Per Character Level) 6-594 To Attack Rating (Based On Character Level)</font><BR>
 <font color=4850B8>+25 To Dexterity</font><BR>
-<font color=4850B8>Ignores Target's Defense</font><BR>
+<font color=4850B8>Ignore Target's Defense</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>
@@ -378,7 +378,7 @@ Base Weapon Speed: [0]<BR>
 <font color=4850B8>+150-200% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Ignore Target's Defense</font><BR>
 <font color=4850B8>33% Deadly Strike</font><BR>
-<font color=4850B8><a href="/diablo2exp/skills/basics.shtml#oskill">+3-5 To Guided Arrow</a>*</font> (varies)<BR>
+<font color=4850B8><a href="/diablo2exp/skills/basics.shtml#oskill">+3-5 To Guided Arrow</a> (All Classes)*</font> (varies)<BR>
 <font color=4850B8>Fires Magic Arrows [Level 11]</font><BR>
 <B>(Ladder Only)</B><BR>
 (Only Spawns In Patch 1.10 or later)

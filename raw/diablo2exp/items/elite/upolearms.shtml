@@ -377,7 +377,7 @@ Durability: 65<BR>
 Base Weapon Speed: [-10]<BR>
 <font color=4850B8>+190-240% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Ignore Target's Defense</font><BR>
-<font color=4850B8>Adds 4-44 Cold Damage, Duration 0-2 Sec.</font><BR>
+<font color=4850B8>Adds 4-44 Cold Damage, 0-2 sec. Duration</font><BR>
 <font color=4850B8>11-15% Life Stolen Per Hit</font> (varies)<BR>
 <font color=4850B8>33% Deadly Strike</font><BR>
 <font color=4850B8>33% Chance To Cast Level 1 Decrepify On Striking</font><BR>
@@ -407,12 +407,12 @@ Durability: 65<BR>
 Base Weapon Speed: [10]<BR>
 <font color=4850B8>+200-280% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>+150-230% Damage To Undead</font> (varies)<BR>
-<font color=4850B8>+60% Increased Attack Speed</font><BR>
+<font color=4850B8>60% Increased Attack Speed</font><BR>
 <font color=4850B8>+250-350 To Attack Rating Against Undead</font> (varies)<BR>
 <font color=4850B8>All Resistances +30-50</font> (varies)<BR>
 <font color=4850B8>10% Reanimate As: Returned</font>*<BR>
 <font color=4850B8>+10-14 Life After Each Kill</font> (varies)<BR>
-<font color=4850B8>+50-80% Better Chance of Getting Magic Items</font> (varies)<BR>
+<font color=4850B8>50-80% Better Chance of Getting Magic Items</font> (varies)<BR>
 <font color=4850B8>+4 To Light Radius</font><BR>
 <font color=4850B8>Socketed (1-3)</font> (varies)<BR>
 <B>(Ladder Only)</B><BR>
@@ -436,7 +436,7 @@ Required Level: 70<BR>
 Required Strength: 188<BR>
 Required Dexterity: 140<BR>
 Base Weapon Speed: [-10]<BR>
-<font color=4850B8>150-250% Enhanced Damage</font> (varies)<BR>
+<font color=4850B8>+150-250% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Adds 1-237 Lightning Damage</font><BR>
 <font color=4850B8>2% Chance To Cast Level 20 Charged Bolt When Struck</font><BR>
 <font color=4850B8>5% Chance To Cast Level 5 Chain Lightning When Struck</font><BR>

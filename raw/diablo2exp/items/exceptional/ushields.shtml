@@ -339,10 +339,12 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>100-125</font> (varies)(Base Defense: 41-49)<BR>
+Defense: <font color=4850B8>100-125</font> (varies) (Base Defense: 41-49)<BR>
 Required Level: 28<BR>
 Required Strength: 38<BR>
-Chance to Block: Pal: <font color=4850B8>70%</font>, Ama/Asn/Bar: <font color=4850B8>65%</font>, Dru/Nec/Sor: <font color=4850B8>60%</font><BR>
+Chance to Block: Pal: <font color=4850B8>70%</font><br >
+Chance to Block: Ama/Asn/Bar: <font color=4850B8>65%</font><br>
+Chance to Block: Dru/Nec/Sor: <font color=4850B8>60%</font><BR>
 Durability: 68<br>
 Paladin Smite Damage: 8 To 12<BR>
 <font color=4850B8>+100-150% Enhanced Defense</font> (varies)<BR>
@@ -365,14 +367,16 @@ Paladin Smite Damage: 8 To 12<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>156-179</font> (varies)(Base Defense: 47-55)<BR>
+Defense: <font color=4850B8>156-179</font> (varies) (Base Defense: 47-55)<BR>
 Required Level: 31<BR>
 Required Strength: 53<BR>
-Chance to Block: Pal: <font color=4850B8>67%</font>, Ama/Asn/Bar: <font color=4850B8>62%</font>, Dru/Nec/Sor: <font color=4850B8>57%</font><BR>
+Chance to Block: Pal: <font color=4850B8>67%</font><br >
+Chance to Block: Ama/Asn/Bar: <font color=4850B8>62%</font><br>
+Chance to Block: Dru/Nec/Sor: <font color=4850B8>57%</font><BR>
 Durability: 64<br>
 Paladin Smite Damage: 7 To 14<BR>
 <font color=4850B8>+180-220% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+25% Increased Chance of Blocking</font><BR>
+<font color=4850B8>25% Increased Chance of Blocking</font><BR>
 <font color=4850B8>30% Faster Block Rate</font><BR>
 <font color=4850B8>All Resistances +25</font><BR>
 <font color=4850B8>Socketed (2)</font><BR>
@@ -391,14 +395,16 @@ Paladin Smite Damage: 7 To 14<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>161-198</font> (varies)(Base Defense: 53-61)<BR>
+Defense: <font color=4850B8>161-198</font> (varies) (Base Defense: 53-61)<BR>
 Required Level: 35<BR>
 Required Strength: 71<BR>
-Chance to Block: Pal: <font color=4850B8>64%</font>, Ama/Asn/Bar: <font color=4850B8>59%</font>, Dru/Nec/Sor: <font color=4850B8>54%</font><BR>
+Chance to Block: Pal: <font color=4850B8>64%</font><br >
+Chance to Block: Ama/Asn/Bar: <font color=4850B8>59%</font><br>
+Chance to Block: Dru/Nec/Sor: <font color=4850B8>54%</font><BR>
 Durability: 62<br>
 Paladin Smite Damage: 11 To 15<BR>
 <font color=4850B8>+160-220% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+20% Increased Chance of Blocking</font><BR>
+<font color=4850B8>20% Increased Chance of Blocking</font><BR>
 <font color=4850B8>4% Chance To Cast Level 5 Tornado When Struck</font><BR>
 <font color=4850B8>4% Chance To Cast Level 6 Blizzard When Struck</font><BR>
 <font color=4850B8>10% Faster Block Rate</font><BR>
@@ -421,14 +427,16 @@ Paladin Smite Damage: 11 To 15<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>163-204</font> (varies)(Base Defense: 59-67)<BR>
+Defense: <font color=4850B8>163-204</font> (varies) (Base Defense: 59-67)<BR>
 Required Level: 38<BR>
 Required Strength: 91<BR>
-Chance to Block: Pal: <font color=4850B8>48%</font>, Ama/Asn/Bar: <font color=4850B8>43%</font>, Dru/Nec/Sor: <font color=4850B8>38%</font><BR>
+Chance to Block: Pal: <font color=4850B8>48%</font><br >
+Chance to Block: Ama/Asn/Bar: <font color=4850B8>43%</font><br>
+Chance to Block: Dru/Nec/Sor: <font color=4850B8>38%</font><BR>
 Durability: <font color=4850B8>116</font><br>
 Paladin Smite Damage: 15 To 24<BR>
 <font color=4850B8>+140-200% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>Adds 27-53 Cold Damage - 6 Second Duration</font><BR>
+<font color=4850B8>Adds 27-53 Cold Damage, 6 sec. Duration</font><BR>
 <font color=4850B8>Adds 35-95 Fire Damage</font><BR>
 <font color=4850B8>Adds 1-120 Lightning Damage</font><BR>
 <font color=4850B8>3% Chance To Cast Level 6 Hydra When Struck</font><BR>
@@ -450,10 +458,12 @@ Paladin Smite Damage: 15 To 24<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>134-173</font> (varies)(Base Defense: 58-78)<BR>
+Defense: <font color=4850B8>134-173</font> (varies) (Base Defense: 58-78)<BR>
 Required Level: 35<BR>
 Required Strength: 65<BR>
-Chance to Block: Pal: <font color=4850B8>47%</font>, Ama/Asn/Bar: <font color=4850B8>42%</font>, Dru/Nec/Sor: <font color=4850B8>37%</font><BR>
+Chance to Block: Pal: <font color=4850B8>47%</font><br >
+Chance to Block: Ama/Asn/Bar: <font color=4850B8>42%</font><br>
+Chance to Block: Dru/Nec/Sor: <font color=4850B8>37%</font><BR>
 Durability: 55<br>
 Paladin Smite Damage: 18 To 35<BR>
 <font color=4850B8>+70-120% Enhanced Defense</font> (varies)<BR>
@@ -477,14 +487,16 @@ Paladin Smite Damage: 18 To 35<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>221-268</font> (varies)(Base Defense: 68-78)<BR>
+Defense: <font color=4850B8>221-268</font> (varies) (Base Defense: 68-78)<BR>
 Required Level: 44<BR>
 Required Strength: 133<BR>
-Chance to Block: Pal: <font color=4850B8>84%</font>, Ama/Asn/Bar: <font color=4850B8>79%</font>, Dru/Nec/Sor: <font color=4850B8>74%</font><BR>
+Chance to Block: Pal: <font color=4850B8>84%</font><br >
+Chance to Block: Ama/Asn/Bar: <font color=4850B8>79%</font><br>
+Chance to Block: Dru/Nec/Sor: <font color=4850B8>74%</font><BR>
 Durability: <font color=4850B8>172</font><br>
 Paladin Smite Damage: 10 To 17<BR>
 <font color=4850B8>+180-240% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+30% Increased Chance of Blocking</font><BR>
+<font color=4850B8>30% Increased Chance of Blocking</font><BR>
 <font color=4850B8>All Resistances +20-30</font> (varies)<BR>
 <font color=4850B8>Replenish Life +15</font><BR>
 <font color=4850B8>Damage Reduced By 11-16</font> (varies)<BR>
@@ -504,10 +516,12 @@ Paladin Smite Damage: 10 To 17<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>271-347</font> (varies)(Base Defense: 50-150)<BR>
+Defense: <font color=4850B8>271-347</font> (varies) (Base Defense: 50-150)<BR>
 Required Level: 41<BR>
 Required Strength: 58<BR>
-Chance to Block: Pal: <font color=4850B8>50%</font>, Ama/Asn/Bar: <font color=4850B8>45%</font>, Dru/Nec/Sor: <font color=4850B8>40%</font><BR>
+Chance to Block: Pal: <font color=4850B8>50%</font><br >
+Chance to Block: Ama/Asn/Bar: <font color=4850B8>45%</font><br>
+Chance to Block: Dru/Nec/Sor: <font color=4850B8>40%</font><BR>
 Durability: 70<br>
 Paladin Smite Damage: 14 To 20<BR>
 <font color=4850B8>+80-130% Enhanced Defense</font> (varies)<BR>
@@ -532,17 +546,19 @@ Paladin Smite Damage: 14 To 20<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>244-282</font> (varies)(Base Defense: 80-93)<BR>
+Defense: <font color=4850B8>244-282</font> (varies) (Base Defense: 80-93)<BR>
 Required Level: 50<BR>
 Required Strength: 110<BR>
-Chance to Block: Pal: <font color=4850B8>66%</font>, Ama/Asn/Bar: <font color=4850B8>61%</font>, Dru/Nec/Sor: <font color=4850B8>56%</font><BR>
+Chance to Block: Pal: <font color=4850B8>66%</font><br >
+Chance to Block: Ama/Asn/Bar: <font color=4850B8>61%</font><br>
+Chance to Block: Dru/Nec/Sor: <font color=4850B8>56%</font><BR>
 Durability: <font color=4850B8>100</font><BR>
 Paladin Smite Damage: 12 To 16<BR>
 <font color=4850B8>+160-200% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+20% Increased Chance Of Blocking</font><BR>
-<font color=4850B8>+20% Faster Block Rate</font><BR>
+<font color=4850B8>20% Increased Chance Of Blocking</font><BR>
+<font color=4850B8>20% Faster Block Rate</font><BR>
 <font color=4850B8>5% Chance To Cast Level 5 Poison Nova When Struck</font><BR>
-<font color=4850B8>Level 6 Poison Explosion (40 Charges)</font><BR>
+<font color=4850B8>Level 6 Poison Explosion (40 charges)</font><BR>
 <font color=4850B8>Poison Resist +75%</font><BR>
 <font color=4850B8>+80 Poison Damage Over 4 Seconds</font><BR>
 (Only Spawns In Patch 1.09 or later)

@@ -1,0 +1,756 @@
+<html>
+<head>
+	<title>The Arreat Summit - Items: Unique Items - Alphabetic List</title>
+	<link rel="stylesheet" type="text/css" href="/diablo2exp/includes/d2-strat.css">
+	<script language="JavaScript" src="/diablo2exp/includes/d2.js"></script>
+</head>
+
+<body background="/images/battle/diablo2exp/images/bg2.jpg" bgcolor=black text="#AFAFAF" link="#928A70" vlink="#706850" marginwidth=0 marginheight=0 topmargin=0 leftmargin=0><link rel="stylesheet" type="text/css" href="/includes/anylink.css" />
+
+<script type="text/javascript" src="/includes/anylink.js">
+
+/***********************************************
+* AnyLink CSS Menu script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="18">
+<tr>
+<td align="left"><a href="http://www.battle.net" width="107" height="18"><img src="/images/thin_logo.gif" width="107" height="18" border="0"></a></td>
+<td align="right" width="100%" height="18" style="background-image:url(/images/thin_bg.gif); background-position:left;">
+	<table cellpadding="0" cellspacing="0" border="0" height="18">
+	<tr>
+	
+	<td width="136" height="18" background="/images/thin_wc.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'wc')"><img src="/images/pixel.gif" width="136" height="18" border="0"></a><br><div id="wc" class="anylinkcss" style="width:136; position:absolute;">
+<a href ="/war3/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/war3/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/war3/ladder/game-select.aspx" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Ladder</a>
+<a href ="/files.shtml#wc" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Files</a>
+<a href ="/war3/ladder/w3xp-tournaments.aspx?Gateway=Lordaeron" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Tournaments</a>
+<a href ="http://forums.battle.net/board.html?forumId=12012&sid=3000" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+
+   
+   
+   				</td>
+				
+				
+				
+				<td width="107" height="18" background="/images/thin_d.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'dia')"><img src="/images/pixel.gif" width="107" height="18" border="0"></a><br><div id="dia" class="anylinkcss" style="width:107; position:absolute;">
+
+<a href ="/diablo2exp/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/diablo2exp/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/diablo2exp/faq/ladder.shtml" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Ladder FAQ</a>
+<a href ="/files.shtml#d" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Files</a>
+<a href ="http://forums.battle.net/board.html?forumId=12011&sid=3000" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+   
+   </td>
+				<td width="152" height="18" background="/images/thin_sc.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'sc')"><img src="/images/pixel.gif" width="152" height="18" border="0"></a><br><div id="sc" class="anylinkcss" style="width:145; position:absolute;">
+<a href ="/scc/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/scc/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/files.shtml#sc" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Files</a>
+<a href ="/tournaments/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Tournaments</a>
+<a href ="http://forums.battle.net/board.html?forumId=12020&sid=3000" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+   </td>
+ 
+ 
+ </tr>
+   </table>
+   </div></div>
+   </td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr>
+<td background=0 valign=top>
+
+<!--- MAIN MENU ------------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0>
+	<tr>
+	<td background=0><a href="http://us.blizzard.com/en-us/games/d2/" onMouseOut="offImg('logo')" onMouseOver="ovrImg('logo')" ><img src="/images/battle/diablo2exp/images/d2-logo-off.gif" name="logo" alt="Diablo II: Lord of Destruction" border=0 width=116 height=82></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/" onMouseOut="offImg('news')" onMouseOver="ovrImg('news')" onClick="actImg('news')"><img src="/images/battle/diablo2exp/images/menu/menu-news-off.gif" name="news" alt="News" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/basics/" onMouseOut="offImg('basics')" onMouseOver="ovrImg('basics')" onClick="actImg('basics')"><img src="/images/battle/diablo2exp/images/menu/menu-basics-off.gif" name="basics" alt="Basics" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/classes/" onMouseOut="offImg('classes')" onMouseOver="ovrImg('classes')" onClick="actImg('classes')"><img src="/images/battle/diablo2exp/images/menu/menu-classes-off.gif" name="classes" alt="Classes" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/skills/" onMouseOut="offImg('skills')" onMouseOver="ovrImg('skills')" onClick="actImg('skills')"><img src="/images/battle/diablo2exp/images/menu/menu-skills-off.gif" name="skills" alt="Skills" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/items/"><img src="/images/battle/diablo2exp/images/menu/menu-items-act.gif" name="items" alt="Items" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/monsters/" onMouseOut="offImg('monsters')" onMouseOver="ovrImg('monsters')" onClick="actImg('monsters')"><img src="/images/battle/diablo2exp/images/menu/menu-monsters-off.gif" name="monsters" alt="Monsters" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/npcs/" onMouseOut="offImg('npcs')" onMouseOver="ovrImg('npcs')" onClick="actImg('npcs')"><img src="/images/battle/diablo2exp/images/menu/menu-npcs-off.gif" name="npcs" alt="NPCs" border=0 width=116 height=37></a></td>
+	</tr>
+	
+	<tr>
+	<td background=0><a href="/diablo2exp/quests/" onMouseOut="offImg('quests')" onMouseOver="ovrImg('quests')" onClick="actImg('quests')"><img src="/images/battle/diablo2exp/images/menu/menu-quests-off.gif" name="quests" alt="Quests" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/shrines.shtml" onMouseOut="offImg('shrines')" onMouseOver="ovrImg('shrines')" onClick="actImg('shrines')"><img src="/images/battle/diablo2exp/images/menu/menu-shrines-off.gif" name="shrines" alt="Shrines" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/maps/" onMouseOut="offImg('maps')" onMouseOver="ovrImg('maps')" onClick="actImg('maps')"><img src="/images/battle/diablo2exp/images/menu/menu-maps-off.gif" name="maps" alt="Maps" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/faq/" onMouseOut="offImg('faq')" onMouseOver="ovrImg('faq')" onClick="actImg('faq')"><img src="/images/battle/diablo2exp/images/menu/menu-faq-off.gif" name="faq" alt="F.A.Q." border=0 width=116 height=38></a></td>
+	</tr>
+	
+	<tr>
+	<td background=0><a href="/diablo2exp/files.shtml" onMouseOut="offImg('files')" onMouseOver="ovrImg('files')" onClick="actImg('files')"><img src="/images/battle/diablo2exp/images/menu/menu-files-off.gif" name="files" alt="Files" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><img src="/images/battle/diablo2exp/images/menu/menu-bottom.gif" border=0 width=116 height=27></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="http://www.battle.net"><img src="/images/battle/diablo2exp/images/blizz-logo.gif" alt="Battle.net" border=0 width=116 height=78></a></td>
+	</tr>
+	</table>
+</td>
+
+<td background=0 valign=top width=90%>
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-top-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-top-left.gif" border=0 width=65 height=13></td>
+	<td background="/images/battle/diablo2exp/images/mid-top-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-top-right.gif" border=0 width=73 height=13></td>
+	</tr>
+	</table>
+
+<!--- SUBMENU BAR ----------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background=0><img src="/images/battle/diablo2exp/images/mid-linkbar-left.gif" border=0 width=20 height=35></td>
+	<td background="/images/battle/diablo2exp/images/mid-linkbar-back.gif" align=center width=100%>
+		<font face="arial,helvetica" size=1><small>
+
+<a class="tiny" href="/diablo2exp/items/basics.shtml">Item Basics</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#normal">Normal Items</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#exceptional">Exceptional Items</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#elite">Elite Items</a> |
+<a class="tiny" href="/diablo2exp/items/socketeditems.shtml">Socketed Items</a> |
+<a class="tiny" href="/diablo2exp/items/gems.shtml">Gems</a> |
+<a class="tiny" href="/diablo2exp/items/jewels.shtml">Jewels</a> |
+<a class="tiny" href="/diablo2exp/items/runes.shtml">Runes</a> |
+<a class="tiny" href="/diablo2exp/items/runewords.shtml">Rune Words</a> |
+<a class="tiny" href="/diablo2exp/items/magic.shtml">Magic Items</a> |
+<a class="tiny" href="/diablo2exp/items/magic/">Magic Prefixes and Suffixes</a> |
+<a class="tiny" href="/diablo2exp/items/crafteditems.shtml">Crafted Items</a> |
+<a class="tiny" href="/diablo2exp/items/sets/">Set Items</a> |
+<a class="tiny" href="/diablo2exp/items/uniques.shtml">Unique Items</a> |
+<a class="tiny" href="/diablo2exp/items/charms.shtml">Charms</a> |
+<a class="tiny" href="/diablo2exp/items/cube.shtml">The Horadric Cube</a> |
+<a class="tiny" href="/diablo2exp/items/">Items Index</a>
+    <br>
+
+		</small></font>
+	</td>
+	<td background=0><img src="/images/battle/diablo2exp/images/mid-linkbar-right.gif" border=0 width=21 height=35></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-linkbarbot-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-linkbarbot-left.gif" border=0 width=30 height=8></td>
+	<td background="/images/battle/diablo2exp/images/mid-linkbarbot-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-linkbarbot-right.gif" border=0 width=36 height=8></td>
+	</tr>
+
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-mid-back.gif" colspan=2><img src="/images/shared/blank.gif" border=0 width=576 height=7></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxtop-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-textboxtop-left.gif" border=0 width=36 height=23></td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxtop-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-textboxtop-right.gif" border=0 width=36 height=23></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxleft.gif"><img src="/images/shared/blank.gif" border=0 width=20 height=5></td>
+	<td background="/images/battle/diablo2exp/images/blackbg.gif" width=100%>
+
+
+		<br>
+<!--- HEADER GRAPHIC ---------------------------->
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif"><img src="/images/battle/diablo2exp/images/headers/header-left.gif" border=0 width=80 height=60></td>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif" align=center width=100%><img src="/images/battle/diablo2exp/images/headers/items-unique.gif" alt="Unique" border=0 width=225 height=60></td>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif"><img src="/images/battle/diablo2exp/images/headers/header-right.gif" border=0 width=80 height=60></td>
+		</tr>
+		</table>
+<!--- END HEADER GRAPHIC ------------------------>
+		<br>
+
+		<table border=0 cellpadding=10 cellspacing=0 width=100%>
+		<tr>
+		<td background="/images/battle/diablo2exp/images/blackbg.gif" align=left width=100%>
+			<font face="arial,helvetica" size=-1><span>
+			<p>
+<!--- MAIN CONTENT --------------------------------------------------------------------------->
+
+
+You can use this alphabetic list of Unique items created by <b>Malloy</b> to find specific unique items you're looking for.
+<br/><br/>
+
+
+<span>
+<b>A</b><br>
+<a href="/diablo2exp/items/normal/upaladin.shtml">Alma Negra </a><br>
+<a href="/diablo2exp/items/elite/uhelms.shtml">Andariel's Visage </a><br>
+<a href="/diablo2exp/items/normal/ucharms.shtml">Annihilus </a><br>
+<a href="/diablo2exp/items/elite/ubelts.shtml">Arachnid Mesh </a><br>
+<a href="/diablo2exp/items/elite/uspears.shtml">Arioc's Needle </a><br>
+<a href="/diablo2exp/items/elite/uarmor.shtml">Arkaine's Valor </a><br>
+<a href="/diablo2exp/items/exceptional/uwands.shtml">Arm of King Leoric </a><br>
+<a href="/diablo2exp/items/normal/ubarbarian.shtml">Arreat's Face </a><br>
+<a href="/diablo2exp/items/elite/uscepters.shtml">Astreon's Iron Ward </a><br>
+<a href="/diablo2exp/items/exceptional/upolearms.shtml">Athena's Wrath </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">Atma's Scarab </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Atma's Wail </a><br>
+<a href="/diablo2exp/items/normal/uaxes.shtml">Axe of Fechmar </a><br>
+<a href="/diablo2exp/items/elite/uswords.shtml">Azurewrath </a><br>
+<p>
+
+<b>B</b><br>
+<a href="/diablo2exp/items/exceptional/umaces.shtml">Baezil's Vortex </a><br>
+<a href="/diablo2exp/items/normal/ustaves.shtml">Bane Ash </a><br>
+<a href="/diablo2exp/items/elite/umaces.shtml">Baranar's Star </a><br>
+<a href="/diablo2exp/items/normal/uassassin.shtml">Bartuc's Cut-Throat </a><br>
+<a href="/diablo2exp/items/normal/uhelms.shtml">Biggin's Bonnet </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Bing Sz Wang </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Black Hades </a><br>
+<a href="/diablo2exp/items/exceptional/udaggers.shtml">Blackbog's Sharp </a><br>
+<a href="/diablo2exp/items/exceptional/uwands.shtml">Blackhand Key </a><br>
+<a href="/diablo2exp/items/exceptional/uhelms.shtml">Blackhorn's Face </a><br>
+<a href="/diablo2exp/items/exceptional/upolearms.shtml">Blackleach Blade </a><br>
+<a href="/diablo2exp/items/elite/ushields.shtml">Blackoak Shield </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Blacktongue </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Blade Of Ali Baba </a><br>
+<a href="/diablo2exp/items/normal/uaxes.shtml">Bladebone </a><br>
+<a href="/diablo2exp/items/normal/ubelts.shtml">Bladebuckle </a><br>
+<a href="/diablo2exp/items/normal/ubows.shtml">Blastbark </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Blinkbat's Form </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Blood Crescent </a><br>
+<a href="/diablo2exp/items/normal/uamazon.shtml">Blood Raven's Charge </a><br>
+<a href="/diablo2exp/items/normal/ugloves.shtml">Bloodfist </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Bloodletter </a><br>
+<a href="/diablo2exp/items/elite/uswords.shtml">Bloodmoon </a><br>
+<a href="/diablo2exp/items/normal/umaces.shtml">Bloodrise </a><br>
+<a href="/diablo2exp/items/normal/uspears.shtml">Bloodthief </a><br>
+<a href="/diablo2exp/items/exceptional/umaces.shtml">Bloodtree Stump </a><br>
+<a href="/diablo2exp/items/normal/unecromancer.shtml">Boneflame </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Boneflesh </a><br>
+<a href="/diablo2exp/items/elite/upolearms.shtml">Bonehew </a><br>
+<a href="/diablo2exp/items/elite/uwands.shtml">Boneshade </a><br>
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">Boneslayer Blade </a><br>
+<a href="/diablo2exp/items/normal/umaces.shtml">Bonesnap </a><br>
+<a href="/diablo2exp/items/normal/uaxes.shtml">Brainhew </a><br>
+<a href="/diablo2exp/items/normal/urings.shtml">Bul-Kathos' Wedding Band </a><br>
+<a href="/diablo2exp/items/exceptional/ucrossbows.shtml">Buriza-Do Kyanon </a><br>
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">Butcher's Pupil </a><br>
+<a href="/diablo2exp/items/normal/ushields.shtml">Bverrit Keep </a><br>
+<p>
+
+<b>C</b><br>
+<a href="/diablo2exp/items/exceptional/uwands.shtml">Carin Shard </a><br>
+<a href="/diablo2exp/items/normal/urings.shtml">Carrion Wind </a><br>
+<a href="/diablo2exp/items/normal/udruid.shtml">Cerebus' Bite </a><br>
+<a href="/diablo2exp/items/normal/ugloves.shtml">Chance Guards </a><br>
+<a href="/diablo2exp/items/exceptional/ustaves.shtml">Chromatic Ire </a><br>
+<a href="/diablo2exp/items/exceptional/ubows.shtml">Cliffkiller </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Cloudcrack </a><br>
+<a href="/diablo2exp/items/normal/uhelms.shtml">Coif of Glory </a><br>
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">Coldkill </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Coldsteel Eye </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Corpsemourn </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Crainte Vomir </a><br>
+<a href="/diablo2exp/items/elite/uaxes.shtml">Cranebeak </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">Crescent Moon </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Crow Caw </a><br>
+<a href="/diablo2exp/items/elite/uhelms.shtml">Crown of Ages </a><br>
+<a href="/diablo2exp/items/exceptional/uhelms.shtml">Crown of Thieves </a><br>
+<a href="/diablo2exp/items/normal/umaces.shtml">Crushflange </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Culwen's Point </a><br>
+<p>
+
+<b>D</b><br>
+<a href="/diablo2exp/items/exceptional/umaces.shtml">Dark Clan Crusher </a><br>
+<a href="/diablo2exp/items/normal/unecromancer.shtml">Darkforce Spawn </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Darkglow </a><br>
+<a href="/diablo2exp/items/exceptional/uhelms.shtml">Darksight Helm </a><br>
+<a href="/diablo2exp/items/elite/uaxes.shtml">Death Cleaver </a><br>
+<a href="/diablo2exp/items/exceptional/uthrowing.shtml">Deathbit </a><br>
+<a href="/diablo2exp/items/normal/usorceress.shtml">Death's Fathom </a><br>
+<a href="/diablo2exp/items/elite/uwands.shtml">Death's Web </a><br>
+<a href="/diablo2exp/items/normal/uaxes.shtml">Deathspade </a><br>
+<a href="/diablo2exp/items/elite/umaces.shtml">Demon Limb </a><br>
+<a href="/diablo2exp/items/exceptional/ucrossbows.shtml">Demon Machine </a><br>
+<a href="/diablo2exp/items/normal/ubarbarian.shtml">Demonhorn's Edge </a><br>
+<a href="/diablo2exp/items/elite/ujavelins.shtml">Demon's Arch </a><br>
+<a href="/diablo2exp/items/normal/upolearms.shtml">Dimoak's Hew </a><br>
+<a href="/diablo2exp/items/elite/uswords.shtml">Djinn Slayer </a><br>
+<a href="/diablo2exp/items/elite/uswords.shtml">Doombringer </a><br>
+<a href="/diablo2exp/items/normal/ucrossbows.shtml">Doomslinger </a><br>
+<a href="/diablo2exp/items/elite/ugloves.shtml">Dracul's Grasp </a><br>
+<a href="/diablo2exp/items/normal/upaladin.shtml">Dragonscale </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Duriel's Shell </a><br>
+<a href="/diablo2exp/items/normal/uhelms.shtml">Duskdeep </a><br>
+<a href="/diablo2exp/items/normal/urings.shtml">Dwarf Star </a><br>
+<p>
+
+<b>E</b><br>
+<a href="/diablo2exp/items/elite/ubows.shtml">Eaglehorn </a><br>
+<a href="/diablo2exp/items/elite/umaces.shtml">Earth Shifter </a><br>
+<a href="/diablo2exp/items/exceptional/umaces.shtml">Earthshaker </a><br>
+<a href="/diablo2exp/items/exceptional/ubows.shtml">Endlesshail </a><br>
+<a href="/diablo2exp/items/normal/usorceress.shtml">Eschuta's Temper </a><br>
+<a href="/diablo2exp/items/elite/uaxes.shtml">Ethereal Edge </a><br>
+<a href="/diablo2exp/items/elite/uaxes.shtml">Executioner's Justice </a><br>
+<p>
+
+<b>F</b><br>
+<a href="/diablo2exp/items/normal/umaces.shtml">Felloak </a><br>
+<a href="/diablo2exp/items/normal/uassassin.shtml">Firelizard's Talons </a><br>
+<a href="/diablo2exp/items/elite/uswords.shtml">Flamebellow </a><br>
+<a href="/diablo2exp/items/exceptional/umaces.shtml">Fleshrender </a><br>
+<a href="/diablo2exp/items/elite/udaggers.shtml">Fleshripper </a><br>
+<a href="/diablo2exp/items/normal/ugloves.shtml">Frostburn </a><br>
+<a href="/diablo2exp/items/elite/uswords.shtml">Frostwind </a><br>
+<p>
+
+<b>G</b><br>
+<a href="/diablo2exp/items/elite/ujavelins.shtml">Gargoyle's Bite </a><br>
+<a href="/diablo2exp/items/exceptional/ushields.shtml">Gerke's Sanctuary </a><br>
+<a href="/diablo2exp/items/normal/ucharms.shtml">Gheed's Fortune </a><br>
+<a href="/diablo2exp/items/elite/udaggers.shtml">Ghostflame </a><br>
+<a href="/diablo2exp/items/exceptional/ugloves.shtml">Ghoulhide </a><br>
+<a href="/diablo2exp/items/elite/uhelms.shtml">Giant Skull</a><br>
+<a href="/diablo2exp/items/elite/uthrowing.shtml">Gimmershred </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Ginther's Rift </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Gleamscythe </a><br>
+<a href="/diablo2exp/items/exceptional/ubelts.shtml">Gloom's Trap </a><br>
+<a href="/diablo2exp/items/normal/uboots.shtml">Goblin Toe </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Goldskin </a><br>
+<a href="/diablo2exp/items/exceptional/ubows.shtml">Goldstrike Arch </a><br>
+<a href="/diablo2exp/items/normal/ubelts.shtml">Goldwrap </a><br>
+<a href="/diablo2exp/items/exceptional/uboots.shtml">Gore Rider </a><br>
+<a href="/diablo2exp/items/normal/uboots.shtml">Gorefoot </a><br>
+<a href="/diablo2exp/items/normal/uaxes.shtml">Goreshovel </a><br>
+<a href="/diablo2exp/items/normal/uwands.shtml">Gravenspine </a><br>
+<a href="/diablo2exp/items/exceptional/ugloves.shtml">Gravepalm </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Greyform </a><br>
+<a href="/diablo2exp/items/normal/ucirclets.shtml">Griffon's Eye </a><br>
+<a href="/diablo2exp/items/exceptional/upolearms.shtml">Grim's Burning Dead </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Griswold's Edge </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Guardian Angel </a><br>
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">Guardian Naga </a><br>
+<a href="/diablo2exp/items/normal/udaggers.shtml">Gull </a><br>
+<a href="/diablo2exp/items/elite/ucrossbows.shtml">Gut Siphon</a><br>
+<p>
+
+<b>H</b><br>
+<a href="/diablo2exp/items/normal/ubarbarian.shtml">Halaberd's Reign </a><br>
+<a href="/diablo2exp/items/exceptional/uscepters.shtml">Hand of Blessed Light </a><br>
+<a href="/diablo2exp/items/elite/uhelms.shtml">Harlequin Crest </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Hawkmail </a><br>
+<a href="/diablo2exp/items/elite/ushields.shtml">Head Hunter's Glory </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Headstriker </a><br>
+<a href="/diablo2exp/items/exceptional/udaggers.shtml">Heart Carver </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Heavenly Garb </a><br>
+<a href="/diablo2exp/items/elite/uscepters.shtml">Heaven's Light </a><br>
+<a href="/diablo2exp/items/normal/ucrossbows.shtml">Hellcast </a><br>
+<a href="/diablo2exp/items/normal/ubows.shtml">Hellclap </a><br>
+<a href="/diablo2exp/items/normal/ucharms.shtml">Hellfire Torch </a><br>
+<a href="/diablo2exp/items/exceptional/ugloves.shtml">Hellmouth </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Hellplague </a><br>
+<a href="/diablo2exp/items/elite/ucrossbows.shtml">Hellrack </a><br>
+<a href="/diablo2exp/items/elite/uaxes.shtml">Hellslayer </a><br>
+<a href="/diablo2exp/items/normal/upaladin.shtml">Herald Of Zakarum </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Hexfire </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">Highlord's Wrath </a><br>
+<a href="/diablo2exp/items/normal/unecromancer.shtml">Homunculus </a><br>
+<a href="/diablo2exp/items/exceptional/uspears.shtml">Hone Sundan </a><br>
+<a href="/diablo2exp/items/elite/umaces.shtml">Horizon's Tornado </a><br>
+<a href="/diablo2exp/items/normal/uboots.shtml">Hotspur </a><br>
+<a href="/diablo2exp/items/normal/uhelms.shtml">Howltusk </a><br>
+<a href="/diablo2exp/items/normal/uaxes.shtml">Humongous </a><br>
+<a href="/diablo2exp/items/exceptional/upolearms.shtml">Husoldal Evo </a><br>
+<p>
+
+<b>I</b><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Iceblink </a><br>
+<a href="/diablo2exp/items/normal/ucrossbows.shtml">Ichorsting </a><br>
+<a href="/diablo2exp/items/exceptional/uboots.shtml">Infernostride </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Iron Pelt </a><br>
+<a href="/diablo2exp/items/normal/umaces.shtml">Ironstone </a><br>
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">Islestrike </a><br>
+<p>
+
+<b>J</b><br>
+<a href="/diablo2exp/items/normal/uassassin.shtml">Jade Talon </a><br>
+<a href="/diablo2exp/items/normal/udruid.shtml">Jalal's Mane </a><br>
+<p>
+
+<b>K</b><br>
+<a href="/diablo2exp/items/exceptional/uspears.shtml">Kelpie Snare </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Kinemil's Awl </a><br>
+<a href="/diablo2exp/items/normal/ucirclets.shtml">Kira's Guardian </a><br>
+<a href="/diablo2exp/items/normal/uscepters.shtml">Knell Striker </a><br>
+<a href="/diablo2exp/items/exceptional/ubows.shtml">Kuko Shakaku </a><br>
+<p>
+
+<b>L</b><br>
+<a href="/diablo2exp/items/elite/uthrowing.shtml">Lacerator </a><br>
+<a href="/diablo2exp/items/exceptional/ushields.shtml">Lance Guard </a><br>
+<a href="/diablo2exp/items/normal/uspears.shtml">Lance of Yaggai </a><br>
+<a href="/diablo2exp/items/exceptional/ucrossbows.shtml">Langer Briser </a><br>
+<a href="/diablo2exp/items/exceptional/ugloves.shtml">Lava Gout </a><br>
+<a href="/diablo2exp/items/normal/ucrossbows.shtml">Leadcrow </a><br>
+<a href="/diablo2exp/items/normal/ubelts.shtml">Lenymo </a><br>
+<a href="/diablo2exp/items/elite/uarmor.shtml">Leviathan </a><br>
+<a href="/diablo2exp/items/exceptional/ushields.shtml">Lidless Wall </a><br>
+<a href="/diablo2exp/items/elite/uswords.shtml">Lightsabre </a><br>
+<a href="/diablo2exp/items/normal/uamazon.shtml">Lycander's Aim </a><br>
+<a href="/diablo2exp/items/normal/uamazon.shtml">Lycander's Flank </a><br>
+<p>
+
+<b>M</b><br>
+<a href="/diablo2exp/items/normal/uwands.shtml">Maelstrom </a><br>
+<a href="/diablo2exp/items/normal/ugloves.shtml">Magefist </a><br>
+<a href="/diablo2exp/items/exceptional/ubows.shtml">Magewrath </a><br>
+<a href="/diablo2exp/items/normal/urings.shtml">Manald Heal </a><br>
+<a href="/diablo2exp/items/elite/ustaves.shtml">Mang Song's Lesson </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">Mara's Kaleidoscope </a><br>
+<a href="/diablo2exp/items/elite/uboots.shtml">Marrowwalk </a><br>
+<a href="/diablo2exp/items/elite/ushields.shtml">Medusa's Gaze </a><br>
+<a href="/diablo2exp/items/elite/uaxes.shtml">Messerschmidt's Reaver </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">Metalgrid </a><br>
+<a href="/diablo2exp/items/exceptional/umaces.shtml">Moonfall </a><br>
+<a href="/diablo2exp/items/exceptional/ushields.shtml">Moser's Blessed Circle </a><br>
+<p>
+
+<b>N</b><br>
+<a href="/diablo2exp/items/normal/urings.shtml">Nagelring </a><br>
+<a href="/diablo2exp/items/normal/urings.shtml">Nature's Peace </a><br>
+<a href="/diablo2exp/items/normal/ubelts.shtml">Nightsmoke </a><br>
+<a href="/diablo2exp/items/elite/uhelms.shtml">Nightwing's Veil </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">Nokozan Relic </a><br>
+<a href="/diablo2exp/items/elite/umaces.shtml"> Nord's Tenderizer </a><br>
+<a href="/diablo2exp/items/elite/ubelts.shtml">Nosferatu's Coil </a><br>
+<p>
+
+<b>O</b><br>
+<a href="/diablo2exp/items/elite/ustaves.shtml">Ondal's Wisdom </a><br>
+<a href="/diablo2exp/items/elite/uarmor.shtml">Ormus' Robes </a><br>
+<p>
+
+<b>P</b><br>
+<a href="/diablo2exp/items/exceptional/uhelms.shtml">Peasant Crown </a><br>
+<a href="/diablo2exp/items/normal/ushields.shtml">Pelta Lunata </a><br>
+<a href="/diablo2exp/items/exceptional/upolearms.shtml">Pierre Tombale Couant </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Plague Bearer </a><br>
+<a href="/diablo2exp/items/normal/ubows.shtml">Pluckeye </a><br>
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">Pompeii's Wrath </a><br>
+<a href="/diablo2exp/items/exceptional/ucrossbows.shtml">Pus Spitter </a><br>
+<p>
+
+<b>Q</b><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Que-Hegan's Wisdom </a><br>
+<p>
+
+<b>R</b><br>
+<a href="/diablo2exp/items/exceptional/ushields.shtml">Radament's Sphere </a><br>
+<a href="/diablo2exp/items/normal/ujewels.shtml">Rainbow Facet (All) </a><br>
+<a href="/diablo2exp/items/normal/uaxes.shtml">Rakescar </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Rattlecage </a><br>
+<a href="/diablo2exp/items/normal/ubows.shtml">Raven Claw </a><br>
+<a href="/diablo2exp/items/normal/urings.shtml">Raven Frost </a><br>
+<a href="/diablo2exp/items/normal/udruid.shtml">Ravenlore </a><br>
+<a href="/diablo2exp/items/elite/uaxes.shtml">Razor's Edge </a><br>
+<a href="/diablo2exp/items/exceptional/ustaves.shtml">Razorswitch </a><br>
+<a href="/diablo2exp/items/exceptional/ubelts.shtml">Razortail </a><br>
+<a href="/diablo2exp/items/normal/uspears.shtml">Razortine </a><br>
+<a href="/diablo2exp/items/exceptional/ustaves.shtml">Ribcracker </a><br>
+<a href="/diablo2exp/items/exceptional/ubows.shtml">Riphook </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Ripsaw </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml ">Rixot's Keen </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Rockfleece </a><br>
+<a href="/diablo2exp/items/exceptional/uhelms.shtml">Rockstopper </a><br>
+<a href="/diablo2exp/items/normal/ubows.shtml">Rogue's Bow </a><br>
+<a href="/diablo2exp/items/elite/uaxes.shtml">Rune Master </a><br>
+<a href="/diablo2exp/items/normal/uscepters.shtml">Rusthandle </a><br>
+<p>
+
+<b>S</b><br>
+<a href="/diablo2exp/items/elite/uboots.shtml">Sandstorm Trek </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">Saracen's Chance </a><br>
+<a href="/diablo2exp/items/elite/umaces.shtml">Schaefer's Hammer </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">Seraph's Hymn </a><br>
+<a href="/diablo2exp/items/normal/ustaves.shtml">Serpent Lord </a><br>
+<a href="/diablo2exp/items/elite/uboots.shtml">Shadow Dancer </a><br>
+<a href="/diablo2exp/items/normal/uassassin.shtml">Shadow Killer </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Shadowfang </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Shaftstop </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Silks of the Victor </a><br>
+<a href="/diablo2exp/items/exceptional/uboots.shtml">Silkweave </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Skewer of Krintiz </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Skin of the Flayed One </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Skin of the Vipermagi </a><br>
+<a href="/diablo2exp/items/exceptional/ustaves.shtml">Skull Collector </a><br>
+<a href="/diablo2exp/items/normal/uaxes.shtml">Skull Splitter </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Skullder's Ire </a><br>
+<a href="/diablo2exp/items/exceptional/ubows.shtml">Skystrike </a><br>
+<a href="/diablo2exp/items/normal/ubelts.shtml">Snakecord </a><br>
+<a href="/diablo2exp/items/exceptional/ubelts.shtml">Snowclash </a><br>
+<a href="/diablo2exp/items/elite/ugloves.shtml">Soul Drainer </a><br>
+<a href="/diablo2exp/items/normal/upolearms.shtml">Soul Harvest </a><br>
+<a href="/diablo2exp/items/exceptional/uspears.shtml">Soulfeast Tine </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">Soulflay </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Sparking Mail </a><br>
+<a href="/diablo2exp/items/normal/udaggers.shtml">Spectral Shard </a><br>
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">Spellsteel </a><br>
+<a href="/diablo2exp/items/elite/ushields.shtml">Spike Thorn </a><br>
+<a href="/diablo2exp/items/exceptional/udaggers.shtml">Spineripper </a><br>
+<a href="/diablo2exp/items/exceptional/uspears.shtml">Spire of Honor </a><br>
+<a href="/diablo2exp/items/normal/ustaves.shtml">Spire of Lazarus </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Spirit Forge </a><br>
+<a href="/diablo2exp/items/normal/udruid.shtml">Spirit Keeper </a><br>
+<a href="/diablo2exp/items/elite/ushields.shtml">Spirit Ward </a><br>
+<a href="/diablo2exp/items/exceptional/uhelms.shtml">Stealskull </a><br>
+<a href="/diablo2exp/items/elite/uarmor.shtml">Steel Carapace </a><br>
+<a href="/diablo2exp/items/elite/uspears.shtml">Steel Pillar </a><br>
+<a href="/diablo2exp/items/elite/uhelms.shtml">Steel Shade </a><br>
+<a href="/diablo2exp/items/normal/ushields.shtml">Steelclash </a><br>
+<a href="/diablo2exp/items/normal/umaces.shtml">Steeldriver </a><br>
+<a href="/diablo2exp/items/normal/upolearms.shtml">Steelgoad </a><br>
+<a href="/diablo2exp/items/elite/ugloves.shtml">Steelrend </a><br>
+<a href="/diablo2exp/items/elite/umaces.shtml">Stone Crusher </a><br>
+<a href="/diablo2exp/items/normal/urings.shtml">Stone of Jordan </a><br>
+<a href="/diablo2exp/items/normal/uamazon.shtml">Stoneraven </a><br>
+<a href="/diablo2exp/items/exceptional/ushields.shtml">Stormchaser </a><br>
+<a href="/diablo2exp/items/normal/uscepters.shtml">Stormeye </a><br>
+<a href="/diablo2exp/items/normal/ushields.shtml">Stormguild </a><br>
+<a href="/diablo2exp/items/elite/umaces.shtml">Stormlash </a><br>
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">Stormrider </a><br>
+<a href="/diablo2exp/items/elite/ushields.shtml">Stormshield </a><br>
+<a href="/diablo2exp/items/exceptional/udaggers.shtml">Stormspike </a><br>
+<a href="/diablo2exp/items/elite/upolearms.shtml">Stormspire </a><br>
+<a href="/diablo2exp/items/normal/ubows.shtml">Stormstrike </a><br>
+<a href="/diablo2exp/items/normal/umaces.shtml">Stoutnail </a><br>
+<a href="/diablo2exp/items/exceptional/ubelts.shtml">String of Ears </a><br>
+<a href="/diablo2exp/items/exceptional/uwands.shtml">Suicide Branch </a><br>
+<a href="/diablo2exp/items/exceptional/umaces.shtml">Sureshrill Frost </a><br>
+<a href="/diablo2exp/items/normal/ushields.shtml">Swordback Hold </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Swordguard </a><br>
+<p>
+
+<b>T</b><br>
+<a href="/diablo2exp/items/normal/uhelms.shtml">Tarnhelm </a><br>
+<a href="/diablo2exp/items/normal/uboots.shtml">Tearhaunch </a><br>
+<a href="/diablo2exp/items/elite/uarmor.shtml">Templar's Might </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">The Atlantean </a><br>
+<a href="/diablo2exp/items/normal/upolearms.shtml">The Battlebranch </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">The Cat's Eye </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">The Centurion </a><br>
+<a href="/diablo2exp/items/normal/uaxes.shtml">The Chieftain </a><br>
+<a href="/diablo2exp/items/elite/umaces.shtml">The Cranium Basher </a><br>
+<a href="/diablo2exp/items/normal/udaggers.shtml">The Diggler </a><br>
+<a href="/diablo2exp/items/normal/uspears.shtml">The Dragon Chang </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">The Eye of Etlich </a><br>
+<a href="/diablo2exp/items/normal/uhelms.shtml">The Face of Horror </a><br>
+<a href="/diablo2exp/items/exceptional/uscepters.shtml">The Fetid Sprinkler </a><br>
+<a href="/diablo2exp/items/exceptional/umaces.shtml">The Gavel Of Pain </a><br>
+<a href="/diablo2exp/items/normal/umaces.shtml">The General's Tan Do Li Ga </a><br>
+<a href="/diablo2exp/items/elite/uarmor.shtml">The Gladiator's Bane </a><br>
+<a href="/diablo2exp/items/normal/uaxes.shtml">The Gnasher </a><br>
+<a href="/diablo2exp/items/elite/uswords.shtml">The Grandfather </a><br>
+<a href="/diablo2exp/items/normal/upolearms.shtml">The Grim Reaper </a><br>
+<a href="/diablo2exp/items/normal/ugloves.shtml">The Hand of Broc </a><br>
+<a href="/diablo2exp/items/exceptional/uspears.shtml">The Impaler </a><br>
+<a href="/diablo2exp/items/normal/ustaves.shtml">The Iron Jang Bong </a><br>
+<a href="/diablo2exp/items/normal/udaggers.shtml">The Jade Tan Do </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">The Mahim-Oak Curio </a><br>
+<a href="/diablo2exp/items/exceptional/upolearms.shtml">The Meat Scraper </a><br>
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">The Minotaur </a><br>
+<a href="/diablo2exp/items/normal/usorceress.shtml">The Oculus </a><br>
+<a href="/diablo2exp/items/normal/uswords.shtml">The Patriarch </a><br>
+<a href="/diablo2exp/items/elite/upolearms.shtml">The Reaper's Toll </a><br>
+<a href="/diablo2exp/items/elite/uscepters.shtml">The Redeemer </a><br>
+<a href="/diablo2exp/items/normal/uamulets.shtml">The Rising Sun </a><br>
+<a href="/diablo2exp/items/normal/ustaves.shtml">The Salamander </a><br>
+<a href="/diablo2exp/items/exceptional/uthrowing.shtml">The Scalper </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">The Spirit Shroud </a><br>
+<a href="/diablo2exp/items/normal/uspears.shtml">The Tannr Gorerod </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">The Vile Husk </a><br>
+<a href="/diablo2exp/items/normal/ushields.shtml">The Ward </a><br>
+<a href="/diablo2exp/items/exceptional/ubelts.shtml">Thundergod's Vigor </a><br>
+<a href="/diablo2exp/items/normal/uamazon.shtml">Thunderstroke </a><br>
+<a href="/diablo2exp/items/exceptional/ushields.shtml">Tiamat's Rebuke </a><br>
+<a href="/diablo2exp/items/normal/uamazon.shtml">Titan's Revenge </a><br>
+<a href="/diablo2exp/items/exceptional/uswords.shtml">Todesfaelle Flamme </a><br>
+<a href="/diablo2exp/items/elite/upolearms.shtml">Tomb Reaver </a><br>
+<a href="/diablo2exp/items/exceptional/uarmor.shtml">Toothrow </a><br>
+<a href="/diablo2exp/items/normal/uwands.shtml">Torch of Iro </a><br>
+<a href="/diablo2exp/items/normal/uboots.shtml">Treads of Cthon </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Twitchthroe </a><br>
+<a href="/diablo2exp/items/elite/uarmor.shtml">Tyrael's Might </a><br>
+<p>
+
+<b>U</b><br>
+<a href="/diablo2exp/items/normal/ushields.shtml">Umbral Disk </a><br>
+<a href="/diablo2exp/items/normal/uwands.shtml">Ume's Lament </a><br>
+<a href="/diablo2exp/items/normal/uhelms.shtml">Undead Crown </a><br>
+<p>
+
+<b>V</b><br>
+<a href="/diablo2exp/items/exceptional/uhelms.shtml">Valkyrie Wing </a><br>
+<a href="/diablo2exp/items/exceptional/uhelms.shtml">Vampire Gaze </a><br>
+<a href="/diablo2exp/items/elite/uhelms.shtml">Veil of Steel </a><br>
+<a href="/diablo2exp/items/exceptional/ugloves.shtml">Venom Grip </a><br>
+<a href="/diablo2exp/items/normal/uarmor.shtml">Venom Ward </a><br>
+<a href="/diablo2exp/items/elite/ubelts.shtml">Verdungo's Hearty Cord </a><br>
+<a href="/diablo2exp/items/elite/uspears.shtml">Viperfork </a><br>
+<a href="/diablo2exp/items/exceptional/ushields.shtml">Visceratuant </a><br>
+<p>
+
+<b>W</b><br>
+<a href="/diablo2exp/items/normal/ushields.shtml">Wall of the Eyeless </a><br>
+<a href="/diablo2exp/items/exceptional/uboots.shtml">War Traveler </a><br>
+<a href="/diablo2exp/items/exceptional/uaxes.shtml">Warlord's Trust </a><br>
+<a href="/diablo2exp/items/exceptional/ustaves.shtml">Warpspear </a><br>
+<a href="/diablo2exp/items/elite/uthrowing.shtml">Warshrike </a><br>
+<a href="/diablo2exp/items/exceptional/uboots.shtml">Waterwalk </a><br>
+<a href="/diablo2exp/items/elite/ubows.shtml">Widowmaker </a><br>
+<a href="/diablo2exp/items/elite/ubows.shtml">Windforce </a><br>
+<a href="/diablo2exp/items/elite/umaces.shtml">Windhammer </a><br>
+<a href="/diablo2exp/items/normal/urings.shtml">Wisp Projector </a><br>
+<a href="/diablo2exp/items/exceptional/ubows.shtml">Witchwild String </a><br>
+<a href="/diablo2exp/items/normal/ubows.shtml">Witherstring </a><br>
+<a href="/diablo2exp/items/elite/udaggers.shtml">Wizardspike </a><br>
+<a href="/diablo2exp/items/normal/ubows.shtml">Wizendraw </a><br>
+<a href="/diablo2exp/items/normal/upolearms.shtml">Woestave </a><br>
+<a href="/diablo2exp/items/normal/ubarbarian.shtml">Wolfhowl </a><br>
+<a href="/diablo2exp/items/normal/uhelms.shtml">Wormskull </a><br>
+<a href="/diablo2exp/items/elite/ujavelins.shtml">Wraith Flight </a><br>
+<p>
+
+<b>Z</b><br>
+<a href="/diablo2exp/items/exceptional/uscepters.shtml">Zakarum's Hand </a><br>
+<p>
+</span>
+
+
+
+
+<!--- END MAIN CONTENT ----------------------------------------------------------------------->
+<p>
+<center>
+<a href="//privacy-policy.truste.com/click-with-confidence/ctv/en/us.battle.net/seal_m" target="_blank">
+<img src="//privacy-policy.truste.com/certified-seal/wps/en/us.battle.net/seal_m.png" border="0" />
+</a><br/>
+<br>
+<font face="arial,helvetica" size=1><small>
+<a class="tiny" href="http://us.blizzard.com/en-us/company/about/privacy.html">Online Privacy Policy</a><br>
+<a class="tiny" href="/tou.shtml">Battle.net Terms of Use Agreement</a><br>
+<a class="tiny" href="http://us.blizzard.com/en-us/company/about/legal-faq.html">&copy;2017 Blizzard Entertainment. All rights reserved.</a>
+</small></font>
+</center>
+<!--- Google Analytics -------------------------------->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-544112-16");
+pageTracker._setDomainName("battle.net");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<div style="display:none;">
+<iframe src="http://view.atdmt.com/NTB/iview/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01?click=" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" width="1" height="1">
+<script language="JavaScript" type="text/javascript">
+document.write('<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" target="_blank"><img src="http://view.atdmt.com/NTB/view/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/"/></a>');
+</script>
+<noscript>
+<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" target="_blank">
+<img border="0" src="http://view.atdmt.com/NTB/view/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" />
+</a>
+</noscript>
+</iframe>
+</div>
+			</span></font>
+		</td>
+		</tr>
+		</table>
+
+	</td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxright.gif"><img src="/images/shared/blank.gif" border=0 width=21 height=5></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxbot-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-textboxbot-left.gif" border=0 width=132 height=98></td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxbot-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-textboxbot-right.gif" border=0 width=106 height=98></td>
+	</tr>
+	</table>
+
+<!--- NAVIGATION BAR ------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background=0 align=left width=100%><br><a href="/"  onMouseOut="offImg('exit')" onMouseOver="ovrImg('exit')"><img src="/images/battle/diablo2exp/images/botmenu-close-off.gif" name="exit" alt="Exit" border=0 width=43 height=43></a></td>
+	<td background=0><br><a href="/diablo2exp/items/sets/sets3.shtml" onMouseOut="offImg('prev')" onMouseOver="ovrImg('prev')"><img src="/images/battle/diablo2exp/images/botmenu-prev-off.gif" name="prev" alt="Previous" border=0 width=44 height=43></a></td>
+	<td background=0><br><a href="uniquebasics.shtml" onMouseOut="offImg('next')" onMouseOver="ovrImg('next')"><img src="/images/battle/diablo2exp/images/botmenu-next-off.gif" name="next" alt="Next" border=0 width=45 height=43></a></td>
+	</tr>
+	</table>
+
+	<br>
+</td>
+
+<td background=0 valign=top width=10%>
+	<img src="/images/shared/blank.gif" border=0 width=10 height=1>
+</td>
+</tr>
+</table>
+
+
+</body>
+</html>

@@ -372,8 +372,8 @@ Base Weapon Speed: [10]<BR>
 <font color=4850B8>+60-70% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>+8 To Minimum Damage</font><BR>
 <font color=4850B8>15% Bonus to Attack Rating</font><BR>
-<font color=4850B8>Hit Blinds Target</font>*<BR>
-<font color=4850B8>+4 points of Mana after each kill</font><BR>
+<font color=4850B8>Hit Blinds Target +1</font>*<BR>
+<font color=4850B8>+4 to Mana after each kill</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>
@@ -415,7 +415,7 @@ Base Weapon Speed: [10]<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(11-14) To (17-22)</font> (14-18 Avg)<BR>
+One-Hand Damage: (11-14) To (17-22) (14-18 Avg)<BR>
 Required Level: 21<BR>
 Required Strength: 49<BR>
 Required Dexterity: 33<BR>

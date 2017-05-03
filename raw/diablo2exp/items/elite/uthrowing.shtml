@@ -345,11 +345,11 @@ Required Level: 75<BR>
 Required Strength: 45<BR>
 Required Dexterity: 142<BR>
 Base Weapon Speed: [-20]<BR>
-Max Stack: (200)<BR>
+Max Stack (200)<BR>
 <font color=4850B8>+200-250% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>50% Deadly Strike</font><BR>
-<font color=4850B8>+30% Increased Attack Speed</font><BR>
-<font color=4850B8>Piercing Attack [50]</font><BR>
+<font color=4850B8>30% Increased Attack Speed</font><BR>
+<font color=4850B8>Piercing Attack (50)</font><BR>
 <font color=4850B8>25% Chance To Cast Level 9 Nova On Striking</font><BR>
 <font color=4850B8>Replenishes Quantity [1 in 3 sec.]</font><BR>
 <B>(Ladder Only)</B><BR>
@@ -375,12 +375,12 @@ Required Level: 70<BR>
 Required Strength: 88<BR>
 Required Dexterity: 108<BR>
 Base Weapon Speed: [10]<BR>
-Max Stack: (240)<BR>
+Max Stack (240)<BR>
 <font color=4850B8>+160-210% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Adds 218-483 Fire Damage</font><BR>
 <font color=4850B8>Adds 29-501 Lightning Damage</font><BR>
 <font color=4850B8>Adds 176-397 Cold Damage, 4 sec. Duration (Normal)</font><BR>
-<font color=4850B8>+30% Increased Attack Speed</font><BR>
+<font color=4850B8>30% Increased Attack Speed</font><BR>
 <font color=4850B8>Increased Stack Size [60]</font><BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>
@@ -406,9 +406,9 @@ Required Level: 68<BR>
 Required Strength: 96<BR>
 Required Dexterity: 122<BR>
 Base Weapon Speed: [-10]<BR>
-Max Stack: (180)<BR>
+Max Stack (180)<BR>
 <font color=4850B8>+150-210% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>+30% Increased Attack Speed</font><BR>
+<font color=4850B8>30% Increased Attack Speed</font><BR>
 <font color=4850B8>33% Chance of Open Wounds</font><BR>
 <font color=4850B8>Prevent Monster Heal</font><BR>
 <font color=4850B8>Hit Causes Monster To Flee 50%</font><BR>

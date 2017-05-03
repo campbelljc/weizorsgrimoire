@@ -350,7 +350,6 @@ Durability: 12<br>
 <font color=4850B8>All Resistances +5</font><BR>
 <font color=4850B8>+15 To Mana</font><BR>
 <font color=4850B8>+1 To Light Radius</font><BR>
-(Spawns In Any Patch)
 </font></td>
 </TR>
 
@@ -365,7 +364,7 @@ Durability: 12<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>14-15</font> (varies)(Base Defense: 3) <BR>
+Defense: <font color=4850B8>14-15</font> (varies) (Base Defense: 3) <BR>
 Required Level: 12<BR>
 Durability: 14<br>
 8 Boxes<BR>
@@ -391,7 +390,7 @@ Durability: 14<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>22-24</font> (varies)(Base Defense: 5)<BR>
+Defense: <font color=4850B8>22-24</font> (varies) (Base Defense: 5)<BR>
 Required Level: 20<BR>
 Required Strength: 25<BR>
 Durability: 16<br>
@@ -417,7 +416,7 @@ Durability: 16<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>34-36</font> (varies)(Base Defense: 6)<BR>
+Defense: <font color=4850B8>34-36</font> (varies) (Base Defense: 6)<BR>
 Required Level: 27<BR>
 Required Strength: 45<BR>
 Durability: 18<br>
@@ -443,14 +442,14 @@ Durability: 18<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>51-54</font> (varies)(Base Defense: 8-11)<BR>
+Defense: <font color=4850B8>51-54</font> (varies) (Base Defense: 8-11)<BR>
 Required Level: 29<BR>
 Required Strength: 60<BR>
 Durability: 24<br>
 16 Boxes<BR>
 <font color=4850B8>+80-100% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+30 Defense</font><BR>
-<font color=4850B8>+30% Faster Hit Recovery</font><BR>
+<font color=4850B8>30% Faster Hit Recovery</font><BR>
 <font color=4850B8>+10 To Dexterity</font><BR>
 <font color=4850B8>+5 To Strength</font><BR>
 <font color=4850B8>Damage Reduced By 3</font><BR>

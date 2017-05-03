@@ -387,7 +387,7 @@ Durability: 24<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>342-397</font> (varies)(Base Defense: 122-136)<BR>
+Defense: <font color=4850B8>342-397</font> (varies) (Base Defense: 122-136)<BR>
 Required Level: 31<BR>
 Required Strength: 50<BR>
 Durability: <font color=4850B8>58</font><br>
@@ -412,7 +412,7 @@ Durability: <font color=4850B8>58</font><br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>(234-528) - (311-605)</font> (varies)(Base Defense: 138-153)<BR>
+Defense: <font color=4850B8>(234-528) - (311-605)</font> (varies) (Base Defense: 138-153)<BR>
 Required Level: 33<BR>
 Required Strength: 61<BR>
 Durability: <font color=4850B8>157</font><br>
@@ -436,7 +436,7 @@ Durability: <font color=4850B8>157</font><br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>477-534</font> (varies)(Base Defense: 176-190)<BR>
+Defense: <font color=4850B8>477-534</font> (varies) (Base Defense: 176-190)<BR>
 Required Level: 37<BR>
 Required Strength: 86<BR>
 Durability: 36<br>
@@ -444,7 +444,7 @@ Durability: 36<br>
 <font color=4850B8>15% Increased Attack Speed</font><BR>
 <font color=4850B8>15% Faster Hit Recovery</font><BR>
 <font color=4850B8>35% Chance of Open Wounds</font><BR>
-<font color=4850B8>+15 Dexterity</font><BR>
+<font color=4850B8>+15 to Dexterity</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>
@@ -460,16 +460,16 @@ Durability: 36<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>380-449</font> (varies)(Base Defense: 158-172)<BR>
+Defense: <font color=4850B8>380-449</font> (varies) (Base Defense: 158-172)<BR>
 Required Level: 35<BR>
 Required Strength: 74<BR>
 Durability: 26<br>
 <font color=4850B8>+120-160% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+ (1.25 Per Character Level) 1-123 Life (Based On Character Level)</font><BR>
+<font color=4850B8>+ (1.25 Per Character Level) 1-123 To Life (Based On Character Level)</font><BR>
 <font color=4850B8>Fire Resist +5%</font><BR>
 <font color=4850B8>Adds 20-65 Fire Damage</font><BR>
 <font color=4850B8>+15 To Strength</font><BR>
-<font color=4850B8>Gem Sockets (2)</font><BR>
+<font color=4850B8>Socketed (2)</font><BR>
 <font color=4850B8>+4 To Light Radius</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
@@ -486,17 +486,17 @@ Durability: 26<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense:  <font color=4850B8>(528-650) - (610-732)</font> (varies)(Base Defense: 188-202)<BR>
+Defense: <font color=4850B8>(528-650) - (610-732)</font> (varies) (Base Defense: 188-202)<BR>
 Required Level: 41<BR>
 Required Strength: 65<BR>
 Durability: <font color=4850B8>150</font><br>
 <font color=4850B8>+160-200% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+ (1.25 Per Character Level)  1-123 Defense (Based On Character Level)</font><BR>
+<font color=4850B8>+ (1.25 Per Character Level) 1-123 Defense (Based On Character Level)</font><BR>
 <font color=4850B8>+ (1 Per Character Level) 1-99 To Life (Based On Character Level)</font><BR>
-<font color=4850B8>Resist Fire +20%</font><BR>
-<font color=4850B8>Resist Lightning +20%</font><BR>
-<font color=4850B8>Resist Poison +20%</font><BR>
-<font color=4850B8>Resist Cold +50%</font><BR>
+<font color=4850B8>Fire Resist +20%</font><BR>
+<font color=4850B8>Lightning Resist +20%</font><BR>
+<font color=4850B8>Poison Resist +20%</font><BR>
+<font color=4850B8>Cold Resist +50%</font><BR>
 <font color=4850B8>Cannot Be Frozen</font><BR>
 <font color=4850B8>+15 To Strength</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -514,7 +514,7 @@ Durability: <font color=4850B8>150</font><br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>599-684</font> (varies)(Base Defense: 198-213)<BR>
+Defense: <font color=4850B8>599-684</font> (varies) (Base Defense: 198-213)<BR>
 Required Level: 38<BR>
 Required Strength: 92<BR>
 Durability: 45<br>
@@ -537,14 +537,14 @@ Durability: 45<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>634-732</font> (varies)(Base Defense: 225-243)<BR>
+Defense: <font color=4850B8>634-732</font> (varies) (Base Defense: 225-243)<BR>
 Required Level: 42<BR>
 Required Strength: 97<BR>
 Durability: <font color=4850B8>90</font><BR>
 <font color=4850B8>+160-200% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>Repairs 1 Durability In 5 Seconds</font><BR>
-<font color=4850B8>+ (1.25 Per Character Level)  1-123 % Better Chance Of Getting Magic Items (Based On Character Level)</font><BR>
-<font color=4850B8>+1 To All Skill Levels</font><BR>
+<font color=4850B8>(1.25 Per Character Level) 1-123% Better Chance Of Getting Magic Items (Based On Character Level)</font><BR>
+<font color=4850B8>+1 To All Skills</font><BR>
 <font color=4850B8>Magic Damage Reduced By 10</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
@@ -562,12 +562,12 @@ Durability: <font color=4850B8>90</font><BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>628-681</font> (varies)(Base Defense: 225-261)<BR>
+Defense: <font color=4850B8>628-681</font> (varies) (Base Defense: 225-261)<BR>
 Required Level: 51<BR>
 Required Strength: 55<BR>
 Durability: 60<br>
 <font color=4850B8>+140-160% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+1 To All Skill Levels</font><BR>
+<font color=4850B8>+1 To All Skills</font><BR>
 <font color=4850B8>+3 To Mana After Each Kill</font><BR>
 <font color=4850B8>20% Faster Cast Rate</font><BR>
 <font color=4850B8>20% Faster Hit Recovery</font><BR>
@@ -588,7 +588,7 @@ Durability: 60<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>713-888</font> (varies)(Base Defense: 242-258)<BR>
+Defense: <font color=4850B8>713-888</font> (varies) (Base Defense: 242-258)<BR>
 Required Level: 48<BR>
 Required Strength: 103<BR>
 Durability: <font color=4850B8>63</font><br>
@@ -596,7 +596,7 @@ Durability: <font color=4850B8>63</font><br>
 <font color=4850B8>+40-60 Defense</font>(varies)<BR>
 <font color=4850B8>40% Chance of Open Wounds</font><BR>
 <font color=4850B8>Fire Resist +15%</font><BR>
-<font color=4850B8>+10 Strength</font><BR>
+<font color=4850B8>+10 to Strength</font><BR>
 <font color=4850B8>Attacker Takes Damage of 20-40</font> (varies)<BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
@@ -613,20 +613,20 @@ Durability: <font color=4850B8>63</font><br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>770-825</font> (varies)(Base Defense: 252-274)<BR>
+Defense: <font color=4850B8>770-825</font> (varies) (Base Defense: 252-274)<BR>
 Required Level: 45<BR>
 Required Strength: 118<BR>
 Durability: 60<br>
 <font color=4850B8>+180-200% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+20% Increased Chance Of Blocking</font><BR>
-<font color=4850B8>+30% Faster Block Rate</font><BR>
+<font color=4850B8>20% Increased Chance Of Blocking</font><BR>
+<font color=4850B8>30% Faster Block Rate</font><BR>
 <font color=4850B8>+ (2.5 Per Character Level) 2-247 To Attack Rating Against Demons (Based On Character Level)</font><BR>
 <font color=4850B8>+1 To Paladin Skill Levels</font><BR>
 <font color=4850B8>+4 To Light Radius</font><BR>
-<font color=4850B8>15% To Maximum Poison Resist</font><BR>
-<font color=4850B8>15% To Maximum Cold Resist</font><BR>
-<font color=4850B8>15% To Maximum Lightning Resist</font><BR>
-<font color=4850B8>15% To Maximum Fire Resist</font><BR>
+<font color=4850B8>+15% To Maximum Poison Resist</font><BR>
+<font color=4850B8>+15% To Maximum Cold Resist</font><BR>
+<font color=4850B8>+15% To Maximum Lightning Resist</font><BR>
+<font color=4850B8>+15% To Maximum Fire Resist</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>
@@ -644,7 +644,7 @@ Durability: 60<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>(670-866) - (792-988)</font> (varies)(Base Defense: 282-303)<BR>
+Defense: <font color=4850B8>(670-866) - (792-988)</font> (varies) (Base Defense: 282-303)<BR>
 Required Level: 51<BR>
 Required Strength: 125<BR>
 Durability: <font color=4850B8>105</font><br>
@@ -654,7 +654,7 @@ Durability: <font color=4850B8>105</font><br>
 <font color=4850B8>Replenish Life +10</font><BR>
 <font color=4850B8>Increase Maximum Mana 15%</font><BR>
 <font color=4850B8>+15 To Dexterity</font><BR>
-<font color=4850B8>+20% Better Chance Of Getting Magic Items</font><BR>
+<font color=4850B8>20% Better Chance Of Getting Magic Items</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>
@@ -671,7 +671,7 @@ Durability: <font color=4850B8>105</font><br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>823-1029</font> (varies)(Base Defense: 315-342)<BR>
+Defense: <font color=4850B8>823-1029</font> (varies) (Base Defense: 315-342)<BR>
 Required Level: 53<BR>
 Required Strength: 140<BR>
 Durability: 70<br>
@@ -679,7 +679,7 @@ Durability: 70<br>
 <font color=4850B8>+30-60% Damage To Demons</font> (varies)<BR>
 <font color=4850B8>+200-250 To Attack Rating Against Demons</font> (varies)<BR>
 <font color=4850B8>Half Freeze Duration</font><BR>
-<font color=4850B8>Gem Socket (3)</font><BR>
+<font color=4850B8>Socketed (3)</font><BR>
 <font color=4850B8>-2 To Light Radius</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
@@ -697,12 +697,12 @@ Durability: 70<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>1127-1262</font> (varies)(Base Defense: 417-450)<BR>
+Defense: <font color=4850B8>1127-1262</font> (varies) (Base Defense: 417-450)<BR>
 Required Level: 55<BR>
 Required Strength: 170<BR>
 Durability: 60<br>
 <font color=4850B8>+150-180% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>Level 5 Corpse Explosion (40 Charges)</font><BR>
+<font color=4850B8>Level 5 Corpse Explosion (40 charges)</font><BR>
 <font color=4850B8>Adds 12-36 Fire Damage</font><BR>
 <font color=4850B8>6% Chance To Cast Level 2 Iron Maiden When Struck</font><BR>
 <font color=4850B8>Cold Resist +35%</font><BR>

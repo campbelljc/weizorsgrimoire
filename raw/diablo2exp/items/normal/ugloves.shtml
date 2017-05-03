@@ -365,15 +365,15 @@ Durability: 12<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>17-18</font> (varies)(Base Defense: 5-6)<BR>
+Defense: <font color=4850B8>17-18</font> (varies) (Base Defense: 5-6)<BR>
 Required Level: 9<BR>
 Durability: 14<br>
 <font color=4850B8>+10-20% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+10 Defense</font><BR>
-<font color=4850B8>+10% Increased Attack Speed</font><BR>
-<font color=4850B8>+30% Faster Hit Recovery</font><BR>
+<font color=4850B8>10% Increased Attack Speed</font><BR>
+<font color=4850B8>30% Faster Hit Recovery</font><BR>
 <font color=4850B8>+40 To Life</font><BR>
-<font color=4850B8>+5 To Min Damage</font><BR>
+<font color=4850B8>+5 To Minimum Damage</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>
@@ -389,14 +389,14 @@ Durability: 14<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>27-28</font> (varies)(Base Defense: 8-9)<BR>
+Defense: <font color=4850B8>27-28</font> (varies) (Base Defense: 8-9)<BR>
 Required Level: 15<BR>
 Required Strength: 25<BR>
 Durability: 16<br>
 <font color=4850B8>+20-30% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+15 Defense</font><BR>
 <font color=4850B8>+25 To Attack Rating</font><BR>
-<font color=4850B8>25-40% Better Chance of Getting Magic Item</font> (varies)<BR>
+<font color=4850B8>25-40% Better Chance of Getting Magic Items</font> (varies)<BR>
 <font color=4850B8>200% Extra Gold From Monsters</font><BR>
 <font color=4850B8>+2 To Light Radius</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -415,14 +415,14 @@ Durability: 16<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>24-25</font> (varies)(Base Defense: 9-11)<BR>
+Defense: <font color=4850B8>24-25</font> (varies) (Base Defense: 9-11)<BR>
 Required Level: 23<BR>
 Required Strength: 45<BR>
 Durability: 18<br>
 <font color=4850B8>+20-30% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+10 Defense</font><BR>
 <font color=4850B8>+1 To Fire Skills</font><BR>
-<font color=4850B8>+20% Faster Cast Rate</font><BR>
+<font color=4850B8>20% Faster Cast Rate</font><BR>
 <font color=4850B8>Regenerate Mana 25%</font><BR>
 <font color=4850B8>Adds 1-6 Fire Damage</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -441,7 +441,7 @@ Durability: 18<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>47-49</font> (varies)(Base Defense: 12-15)<BR>
+Defense: <font color=4850B8>47-49</font> (varies) (Base Defense: 12-15)<BR>
 Required Level: 29<BR>
 Required Strength: 60<BR>
 Durability: 24<br>
@@ -449,7 +449,7 @@ Durability: 24<br>
 <font color=4850B8>+30 Defense</font><BR>
 <font color=4850B8>+5% Enhanced Damage</font><BR>
 <font color=4850B8>Increase Maximum Mana 40%</font>*<BR>
-<font color=4850B8>Adds 1-6 Cold Damage, Cold Duration: 2 Seconds</font><BR>
+<font color=4850B8>Adds 1-6 Cold Damage, 2 sec. Duration</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>

@@ -342,16 +342,16 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>371-487</font> (varies)(Base Defense: 361-467)<BR>
+Defense: <font color=4850B8>371-487</font> (varies) (Base Defense: 361-467)<BR>
 Required Level: 75<BR>
 Required Strength: 77<BR>
 Durability: 20<BR>
 <font color=4850B8>+10-20 Defense</font> (varies)<BR>
-<font color=4850B8>+20% Faster Cast Rate</font><BR>
+<font color=4850B8>20% Faster Cast Rate</font><BR>
 <font color=4850B8>+10-15% To Cold Skill Damage</font> (varies)<BR>
 <font color=4850B8>+10-15% To Fire Skill Damage</font> (varies)<BR>
 <font color=4850B8>+10-15% To Lightning Skill Damage</font> (varies)<BR>
-<font color=4850B8>+3 bonus to a random Sorceress skill (Sorceress Only)</font>*<BR>
+<font color=4850B8>+3 to a random Sorceress skill (Sorceress Only)</font>*<BR>
 <font color=4850B8>Regenerate Mana 10-15%</font> (varies)<BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>
@@ -369,7 +369,7 @@ Durability: 20<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>1255-1496</font> (varies)(Base Defense: 375-481)<BR>
+Defense: <font color=4850B8>1255-1496</font> (varies) (Base Defense: 375-481)<BR>
 Required Level: 85<BR>
 Required Strength: 111<BR>
 Durability: <font color=4850B8>135</font><BR>
@@ -396,7 +396,7 @@ Durability: <font color=4850B8>135</font><BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>1295-1450</font> (varies)(Base Defense: 410-517)<BR>
+Defense: <font color=4850B8>1295-1450</font> (varies) (Base Defense: 410-517)<BR>
 Required Level: 85<BR>
 Required Strength: 165<BR>
 Durability: 30<BR>
@@ -423,7 +423,7 @@ Durability: 30<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>1514-1722</font> (varies)(Base Defense: 417-523)<BR>
+Defense: <font color=4850B8>1514-1722</font> (varies) (Base Defense: 417-523)<BR>
 Required Level: 65<BR>
 Required Strength: 174<BR>
 <font color=4850B8>+170-200% Enhanced Defense</font> (varies)<BR>
@@ -450,13 +450,13 @@ Required Strength: 174<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>1618-1785</font> (varies)(Base Defense: 446-557)<BR>
+Defense: <font color=4850B8>1618-1785</font> (varies) (Base Defense: 446-557)<BR>
 Required Level: 66<BR>
 Required Strength: 230<BR>
 Durability: 70<BR>
 <font color=4850B8>+190-220% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>Regenerate Mana 10-15%</font> (varies)<BR>
-<font color=4850B8>+20% Faster Hit Recovery</font><BR>
+<font color=4850B8>20% Faster Hit Recovery</font><BR>
 <font color=4850B8>Cold Resist +40-60%</font> (varies)<BR>
 <font color=4850B8>Damage Reduced by 9-14</font> (varies)<BR>
 <font color=4850B8>Repairs 1 Durability in 20 Seconds</font><BR>
@@ -476,7 +476,7 @@ Durability: 70<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>1622-1923</font> (varies)(Base Defense: 487-600)<BR>
+Defense: <font color=4850B8>1622-1923</font> (varies) (Base Defense: 487-600)<BR>
 Required Level: 74<BR>
 Required Strength: 232<BR>
 Durability: 60<BR>
@@ -484,7 +484,7 @@ Durability: 60<BR>
 <font color=4850B8>+250-300 Defense vs. Missile</font> (varies)<BR>
 <font color=4850B8>+10-15 To Strength</font> (varies)<BR>
 <font color=4850B8>+10-15 To Vitality</font> (varies)<BR>
-<font color=4850B8>+20% Faster Hit Recovery</font><BR>
+<font color=4850B8>20% Faster Hit Recovery</font><BR>
 <font color=4850B8>+40-50 Maximum Stamina</font> (varies)<BR>
 <font color=4850B8>+1-2 To Offensive Auras (Paladin Only)</font> (varies)<BR>
 (Only Spawns In Patch 1.10 or later)
@@ -503,12 +503,12 @@ Durability: 60<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>1322-1502</font> (varies)(Base Defense: 487-600)<BR>
+Defense: <font color=4850B8>1322-1502</font> (varies) (Base Defense: 487-600)<BR>
 Required Level: 84<BR>
-Required Strength: <font color=4850B8>None</font><BR>
+Required Strength: <font color=4850B8>0</font><BR>
 <font color=4850B8>+120-150% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+50-100% Damage To Demons</font> (varies)<BR>
-<font color=4850B8>+20% Faster Run/Walk</font><BR>
+<font color=4850B8>20% Faster Run/Walk</font><BR>
 <font color=4850B8>+20-30 To Strength</font> (varies)<BR>
 <font color=4850B8>All Resistances +20-30</font> (varies)<BR>
 <font color=4850B8>Cannot Be Frozen</font><BR>

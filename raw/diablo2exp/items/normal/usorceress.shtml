@@ -352,7 +352,7 @@ Base Weapon Speed: [10]<BR>
 <font color=4850B8>+5 To Mana After Each Kill</font><BR>
 <font color=4850B8>All Resistances +20</font><BR>
 <font color=4850B8>25% Chance To Cast Level 1 Teleport When Struck</font><BR>
-<font color=4850B8>+30% Faster Cast Rate</font><BR>
+<font color=4850B8>30% Faster Cast Rate</font><BR>
 <font color=4850B8>+20 To Vitality</font><BR>
 <font color=4850B8>+20 To Energy</font><BR>
 <font color=4850B8>+20% Enhanced Defense</font><BR>
@@ -383,7 +383,7 @@ Durability: 30<br>
 Base Weapon Speed: [-10]<BR>
 (Sorceress Only)<BR>
 <font color=4850B8>+1-3 To Sorceress Skill Levels</font> (varies)<BR>
-<font color=4850B8>+40% Faster Cast Rate</font><BR>
+<font color=4850B8>40% Faster Cast Rate</font><BR>
 <font color=4850B8>+10-20% To Fire Skill Damage</font> (varies)<BR>
 <font color=4850B8>+10-20% To Lightning Skill Damage</font> (varies)<BR>
 <font color=4850B8>+20-30 To Energy</font> (varies)<BR>
@@ -409,7 +409,7 @@ Durability: 50<br>
 Base Weapon Speed: [10]<BR>
 (Sorceress Only)<BR>
 <font color=4850B8>+3 To Sorceress Skill Levels</font><BR>
-<font color=4850B8>+20% Faster Cast Rate</font><BR>
+<font color=4850B8>20% Faster Cast Rate</font><BR>
 <font color=4850B8>+15-30% To Cold Skill Damage</font> (varies)<BR>
 <font color=4850B8>Lightning Resist +25-40%</font> (varies)<BR>
 <font color=4850B8>Fire Resist +25-40%</font> (varies)<BR>

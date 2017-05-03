@@ -366,7 +366,7 @@ Durability: 12<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>163-201</font> (varies)(Base Defense: 52-62)<BR>
+Defense: <font color=4850B8>163-201</font> (varies) (Base Defense: 52-62)<BR>
 Required Level: 31<BR>
 Required Strength: 43<BR>
 Durability: 18<br>
@@ -392,7 +392,7 @@ Durability: 18<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>219-248</font> (varies)(Base Defense 63-72)<BR>
+Defense: <font color=4850B8>219-248</font> (varies) (Base Defense: 63-72)<BR>
 Required Level: 35<BR>
 Required Strength: 59<BR>
 Durability: 24<br>
@@ -417,13 +417,13 @@ Durability: 24<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>(77-273) - (86-282)</font> (varies)(Base Defense: 75-84)<BR>
+Defense: <font color=4850B8>(77-273) - (86-282)</font> (varies) (Base Defense: 75-84)<BR>
 Required Level: 38<BR>
 Required Strength: 82<BR>
 Durability: 30<br>
 <font color=4850B8>+ (2 Per Character Level) 2-198 Defense (Based On Character Level)</font><BR>
 <font color=4850B8>6% Chance To Cast Level 3 Dim Vision When Struck</font><BR>
-<font color=4850B8>Level 5 Cloak of Shadows (30 Charges)</font><BR>
+<font color=4850B8>Level 5 Cloak of Shadows (30 charges)</font><BR>
 <font color=4850B8>Cannot Be Frozen</font><BR>
 <font color=4850B8>Fire Resist +20-40%</font> (varies)<BR>
 <font color=4850B8>5% Mana Stolen Per Hit</font><BR>
@@ -443,11 +443,11 @@ Durability: 30<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>247-297</font> (varies)(Base Defense: 85-98)<BR>
+Defense: <font color=4850B8>247-297</font> (varies) (Base Defense: 85-98)<BR>
 Required Level: 44<BR>
 Required Strength: 115<BR>
 Durability: 40<br>
-<font color=4850B8>+150-200% Defense</font> (varies)<BR>
+<font color=4850B8>+150-200% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+1-2 To Amazon Skill Levels</font> (varies)<BR>
 <font color=4850B8>20% Faster Run/Walk</font><BR>
 <font color=4850B8>20% Faster Hit Recovery</font><BR>
@@ -468,7 +468,7 @@ Durability: 40<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>243-278</font> (varies)(Base Defense: 54-86)<BR>
+Defense: <font color=4850B8>243-278</font> (varies) (Base Defense: 54-86)<BR>
 Required Level: 41<BR>
 Required Strength: 55<BR>
 Durability: 20<br>
@@ -493,7 +493,7 @@ Durability: 20<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>296-342</font> (varies)(Base Defense: 78-113)<BR>
+Defense: <font color=4850B8>296-342</font> (varies) (Base Defense: 78-113)<BR>
 Required Level: 49<BR>
 Required Strength: 103<BR>
 Durability: 50<br>
@@ -524,7 +524,7 @@ Required Level: 41<BR>
 Required Strength: 58<BR>
 Durability: 40<br>
 <font color=4850B8>+100% Enhanced Defense</font><BR>
-<font color=4850B8>Adds 6-22 Cold Damage - 4 Second Duration</font><BR>
+<font color=4850B8>Adds 6-22 Cold Damage, 4 sec. Duration</font><BR>
 <font color=4850B8>15% Slower Stamina Drain</font><BR>
 <font color=4850B8>6-8% Life Stolen Per Hit</font> (varies)<BR>
 <font color=4850B8>6-8% Mana Stolen Per Hit</font> (varies)<BR>

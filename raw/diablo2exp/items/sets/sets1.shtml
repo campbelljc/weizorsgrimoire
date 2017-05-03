@@ -302,7 +302,7 @@ Durability: 26<br>
 Half Freeze Duration<br>
 All Resistances +25<br>
 40% Better Chance of Getting Magic Item<BR>
-Regenerate Mana +8%<BR>
+Regenerate Mana 8%<BR>
 +10 Dexterity<BR>
 +50 Mana
 </span></font>
@@ -351,8 +351,8 @@ Base Weapon Speed: [-10]<BR>
 Required Level: 12<BR>
 <font color="#4850b8">Replenish Life +6</font><br>
 <font color="#4850b8">+20 To Life</font><br>
-<font color="#00C400">+ (12 Per Character Level) 144-1188 Attack Rating (Based On Character Level)</font> (2 Set Items)<br>
-<font color="#00C400">+50% Better Chance Of Getting Magic Items</font> (3 Set Items)<br>
+<font color="#00C400">+ (12 Per Character Level) 144-1188 to Attack Rating (Based On Character Level)</font> (2 Set Items)<br>
+<font color="#00C400">50% Better Chance Of Getting Magic Items</font> (3 Set Items)<br>
 </span></font>
 </td>
 </tr>
@@ -372,7 +372,7 @@ Required Level: 12<BR>
 Required Level: 12<BR>
 <font color="#4850b8">20% Damage Taken Goes to Mana</font><br>
 <font color="#4850b8">+3 To Light Radius</font><br>
-<font color="#00C400">+75 Life</font> (2 Set Items)<br>
+<font color="#00C400">+75 to Life</font> (2 Set Items)<br>
 <font color="#00C400">+1 To All Skills</font> (3 Set Items)<br>
 </font>
 </td>
@@ -422,7 +422,7 @@ Required Level: 12<BR>
 <td width=40%>
 <font face="arial,helvetica" size=-1><span>
 Defense: 8-11 (varies)<br>
-Defense: <font color="#00C400">(11-305) - (14-308)</font> (varies)(Base Defense: 8-11)<br>
+Defense: <font color="#00C400">(11-305) - (14-308)</font> (varies) (Base Defense: 8-11)<br>
 Required Level: 15<BR>
 Required Strength: 15<br>
 Durability: 18<br>
@@ -462,14 +462,14 @@ Durability: 18<br>
 <td>
 <font face="arial,helvetica" size=-1><span>
 Defense: 90-107 (varies)<br>
-Defense: <font color="#00C400">190-207</font> (varies)(Base Defense: 90-107)<br>
+Defense: <font color="#00C400">190-207</font> (varies) (Base Defense: 90-107)<br>
 Required Level: 15<BR>
 Required Strength: 41<br>
 Durability: 60<br>
 <font color="#4850b8">+2 To Light Radius</font><br>
 <font color="#4850b8">Damage Reduced By 3</font><br>
 <font color="#00C400">+100 Defense</font> (2 Set Items)<br>
-<font color="#00C400">+10 Energy</font> (3 Set Items)<br>
+<font color="#00C400">+10 to Energy</font> (3 Set Items)<br>
 </span></font>
 </td>
 </tr>
@@ -486,15 +486,15 @@ Durability: 60<br>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Two-Hand Damage: 12-28 (20 Avg)<br>
+Two-Hand Damage: 12 to 28 (20 Avg)<br>
 Required Level: 15<BR>
 Durability: 50<br>
 Base Weapon Speed: [20]<BR>
 <font color="#4850b8">+1 to Sorceress Skill Levels</font><br>
 <font color="#4850b8">25% Deadly Strike</font><br>
 <font color="#4850b8">+50% Damage To Undead</font><br>
-<font color="#00C400">+50 Mana</font> (2 Set Items)<br>
-<font color="#00C400">Regenerate Mana +5%</font> (3 Set Items)<br>
+<font color="#00C400">+50 to Mana</font> (2 Set Items)<br>
+<font color="#00C400">Regenerate Mana 5%</font> (3 Set Items)<br>
 </span></font>
 </td>
 </tr>
@@ -514,7 +514,7 @@ Base Weapon Speed: [20]<BR>
 Required Level: 15<BR>
 <font color="#4850b8">Regenerate Mana 20%</font><br>
 <font color="#4850b8">+15 to Mana</font><br>
-<font color="#00C400">+50% Better Chance To Find Magic Items</font> (2 Set Items)<br>
+<font color="#00C400">50% Better Chance Of Getting Magic Items</font> (2 Set Items)<br>
 <font color="#00C400">Fire Resist +20%</font> (3 Set Items)<br>
 </span></font>
 </td>
@@ -562,8 +562,8 @@ Required Level: 15<BR>
 </td>
 <td width=40%>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">45 - 51</font> (varies)(Base Defense 8-11)<br>
-Defense: <font color="#00C400">(48-342) - (54-348)</font> (varies)(Base Defense 8-11)<br>
+Defense: <font color="#4850b8">45 - 51</font> (varies) (Base Defense: 8-11)<br>
+Defense: <font color="#00C400">(48-342) - (54-348)</font> (varies) (Base Defense: 8-11)<br>
 Required Level: 2<BR>
 Required Strength: 12<br>
 Durability: 20<br>
@@ -609,7 +609,7 @@ Required Level: 2<BR>
 Durability: 14<br>
 <font color="#4850b8">Cold Resist +40%</font><br>
 <font color="#4850b8">+30 Defense</font><br>
-<font color="#00C400">+40% Better Chance Of Getting Magic Items</font> (2 Set Items)<br>
+<font color="#00C400">40% Better Chance Of Getting Magic Items</font> (2 Set Items)<br>
 <font color="#00C400">Cold Resist +10%</font> (3 Set Items)<br>
 </span></font>
 </td>
@@ -658,8 +658,8 @@ Required Dexterity: 55<br>
 Base Weapon Speed: [0]<BR>
 <font color="#4850b8">+50% Enhanced Damage</font><br>
 <font color="#4850b8">20% Bonus To Attack Rating</font><br>
-<font color="#00C400">+ (8 Per Character Level) 8-792 Attack Rating (Based On Character Level)</font> (2 Set Items)<br>
-<font color="#00C400">+20-30 Cold Damage, 3 sec. Duration (Normal)</font> (3 Set Items)<br>
+<font color="#00C400">+ (8 Per Character Level) 8-792 to Attack Rating (Based On Character Level)</font> (2 Set Items)<br>
+<font color="#00C400">Adds 20-30 Cold Damage, 3 sec. Duration (Normal)</font> (3 Set Items)<br>
 </span></font>
 </td>
 </tr>
@@ -707,13 +707,13 @@ Base Weapon Speed: [0]<BR>
 </td>
 <td width=40%>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">30-33</font> (varies)(Base Defense: 15-18)<br>
+Defense: <font color="#4850b8">30-33</font> (varies) (Base Defense: 15-18)<br>
 Required Level: 3<BR>
 Required Strength: 26<br>
 Durability: 24<br>
 <font color="#4850b8">+15 Defense</font><br>
 <font color="#4850b8">Fire Resist +25%</font><br>
-<font color="#00C400">+ (8 Per Character Level) 48-792 Attack Rating (Based On Character Level)</font> (2 Set Items)<br>
+<font color="#00C400">+ (8 Per Character Level) 48-792 to Attack Rating (Based On Character Level)</font> (2 Set Items)<br>
 </span></font>
 </td>
 
@@ -728,7 +728,7 @@ Durability: 24<br>
 +50 To Life<BR>
 +75 Defense<BR>
 Poison Length Reduced by 75%<br>
-Adds 5-9 Poison Damage over 3 Seconds<BR>
++5-9 Poison Damage over 3 Seconds<BR>
 </span></font>
 </td>
 </tr>
@@ -746,7 +746,7 @@ Adds 5-9 Poison Damage over 3 Seconds<BR>
 <td>
 <font face="arial,helvetica" size=-1><span>
 Defense: 90-95 (varies)<br>
-Defense: <font color="#00C400">(93-387) - (98-392)</font> (varies)(Base Defense: 90-95)<br>
+Defense: <font color="#00C400">(93-387) - (98-392)</font> (varies) (Base Defense: 90-95)<br>
 Required Level: 3<BR>
 Required Strength: 51<br>
 Durability: 30<br>
@@ -826,7 +826,7 @@ Base Weapon Speed: [10]<BR>
 <td width=40%>
 <font face="arial,helvetica" size=-1><span>
 Defense: 9-27 (varies)<br>
-Defense: <font color="#00C400">(11-207) - (29-225)</font> (varies)(Base Defense: 9-27)<br>
+Defense: <font color="#00C400">(11-207) - (29-225)</font> (varies) (Base Defense: 9-27)<br>
 Required Level: 11<BR>
 Required Strength: 23<br>
 Durability: 20<br>
@@ -868,14 +868,14 @@ All Resistances +25<br>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">87-90</font> (varies)(Base Defense: 72-75)<br>
+Defense: <font color="#4850b8">87-90</font> (varies) (Base Defense: 72-75)<br>
 Required Level: 11<BR>
 Required Strength: <font color="#4850b8">24</font><br>
 Durability: 45<br>
 <font color="#4850b8">+15 Defense</font><br>
 <font color="#4850b8">Requirements -50%</font><br>
 <font color="#00C400">Attacker Takes Damage of 5</font> (2 Set Items)<br>
-<font color="#00C400">Resist Fire +30%</font> (3 Set Items)<br>
+<font color="#00C400">Fire Resist +30%</font> (3 Set Items)<br>
 </span></font>
 </td>
 </tr>
@@ -897,9 +897,9 @@ Required Level: 11<BR>
 Durability: 40<br>
 Base Weapon Speed: [0]<BR>
 <font color="#4850b8">+1 to Fire Skills</font><br>
-<font color="#4850b8">+10 Maximum Fire Damage</font><br>
+<font color="#4850b8">+10 to Maximum Fire Damage</font><br>
 <font color="#4850b8">+50% Damage To Undead</font><br>
-<font color="#00C400">+50 Mana</font> (2 Set Items)<br>
+<font color="#00C400">+50 to Mana</font> (2 Set Items)<br>
 <font color="#00C400">All Resistances +10</font> (3 Set Items)<br>
 </span></font>
 </td>
@@ -921,7 +921,7 @@ Required Level: 11<BR>
 <font color="#4850b8">Attacker Takes Lightning Damage of 5</font><br>
 <font color="#4850b8">10% Faster Hit Recovery</font><br>
 <font color="#00C400">+50 To Attack Rating</font> (2 Set Items)<br>
-<font color="#00C400">+25% Better Chance of Finding Magic Items</font> (3 Set Items)<br>
+<font color="#00C400">25% Better Chance of Getting Magic Items</font> (3 Set Items)<br>
 </span></font>
 </td>
 </tr>
@@ -941,7 +941,7 @@ Required Level: 11<BR>
 Required Level: 11<BR>
 <font color="#4850b8">6% Life Stolen Per Hit</font><br>
 <font color="#4850b8">Damage Reduced by 2</font><br>
-<font color="#00C400">+10 Strength</font> (2 Set Items)<br>
+<font color="#00C400">+10 to Strength</font> (2 Set Items)<br>
 </span></font>
 </td>
 </tr>

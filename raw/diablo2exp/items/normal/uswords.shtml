@@ -351,7 +351,6 @@ Base Weapon Speed: [0]<BR>
 <font color=4850B8>20% Bonus to Attack Rating</font><BR>
 <font color=4850B8>+25 Defense</font><BR>
 <font color=4850B8>+2 To Light Radius</font><BR>
-(Spawns In Any Patch)
 </font></td>
 </TR>
 
@@ -426,7 +425,7 @@ Required Strength: 33<BR>
 Durability: 32<br>
 Base Weapon Speed: [20]<BR>
 <font color=4850B8>+60-100% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>Adds 3-5 Cold Damage - 2 Second Duration</font><BR>
+<font color=4850B8>Adds 3-5 Cold Damage, 2 sec. Duration</font><BR>
 <font color=4850B8>20% Increased Attack Speed</font><BR>
 <font color=4850B8>+20 Defense</font><BR>
 <font color=4850B8>+30 To Mana</font><BR>
@@ -454,9 +453,9 @@ Durability: <font color=4850B8>45</font><br>
 Base Weapon Speed: [0]<BR>
 <font color=4850B8>+100% Enhanced Damage</font><BR>
 <font color=4850B8>Adds 5-10 Magic Damage</font><BR>
-<font color=4850B8>Adds 3-6 Cold Damage, Cold Duration: 4 seconds</font><BR>
+<font color=4850B8>Adds 3-6 Cold Damage, 4 sec. duration</font><BR>
 <font color=4850B8>50% <a href="/diablo2exp/items/magic.shtml#sma">Deadly Strike</a></font><BR>
-<font color=4850B8>10% Better Chance Of Getting Magic Item</font><BR>
+<font color=4850B8>10% Better Chance Of Getting Magic Items</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
 </TR>
@@ -479,7 +478,7 @@ Required Strength: 48<BR>
 Durability: 32<br>
 Base Weapon Speed: [0]<BR>
 <font color=4850B8>+80-120% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>Adds (10-12) to (15-25) Fire Damage</font> (varies)<BR>
+<font color=4850B8>Adds (10-12)-(15-25) Fire Damage</font> (varies)<BR>
 <font color=4850B8>10% Increased Attack Speed</font><BR>
 <font color=4850B8>+100 to Attack Rating</font><BR>
 <font color=4850B8>+12 To Strength</font><BR>
@@ -508,7 +507,7 @@ Base Weapon Speed: [-10]<BR>
 <font color=4850B8>+70-80% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>+2 To Fire Skills</font><BR>
 <font color=4850B8>Adds 25-75 Fire Damage</font><BR>
-<font color=4850B8>Adds 28-56 Poison Damage Over 6 Seconds</font><BR>
+<font color=4850B8>+28-56 Poison Damage Over 6 Seconds</font><BR>
 <font color=4850B8>5% Life Stolen Per Hit</font><BR>
 <font color=4850B8>5% Mana Stolen Per Hit</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -539,7 +538,6 @@ Base Weapon Speed: [0]<BR>
 <font color=4850B8>20% Increased Attack Speed</font><BR>
 <font color=4850B8>20% Faster Hit Recovery</font><BR>
 <font color=4850B8>+60 to Attack Rating</font><BR>
-(Spawns In Any Patch)
 </font></td>
 </TR>
 
@@ -562,10 +560,10 @@ Required Dexterity: 27<BR>
 Durability: 44<br>
 Base Weapon Speed: [0]<BR>
 <font color=4850B8>+100% Enhanced Damage</font><BR>
-<font color=4850B8>Adds 10-30 Cold Damage, Cold Duration: 6 seconds</font><BR>
+<font color=4850B8>Adds 10-30 Cold Damage, 6 sec. duration</font><BR>
 <font color=4850B8>9% Mana Stolen Per Hit</font><BR>
 <font color=4850B8>9% Life Stolen Per Hit</font><BR>
-<font color=4850B8>Cold Resist 20%</font><BR>
+<font color=4850B8>Cold Resist +20%</font><BR>
 <font color=4850B8>-2 To Light Radius</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
@@ -589,7 +587,7 @@ Required Strength: 47<BR>
 Durability: 50<br>
 Base Weapon Speed: [10]<BR>
 <font color=4850B8>+70-100% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>+10% Increased Attack Speed</font><BR>
+<font color=4850B8>10% Increased Attack Speed</font><BR>
 <font color=4850B8>4% Life stolen per hit</font><BR>
 <font color=4850B8>4-10% Mana stolen per hit</font> (varies)<BR>
 <font color=4850B8>All Resistances +5</font><BR>
@@ -695,7 +693,7 @@ Required Dexterity: 60<BR>
 Durability: 50<br>
 Base Weapon Speed: [10]<BR>
 <font color=4850B8>+100-120% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8><a href="/diablo2exp/items/magic.shtml#sma">Hit Blinds Target</a></font><BR>
+<font color=4850B8><a href="/diablo2exp/items/magic.shtml#sma">Hit Blinds Target +1</a></font><BR>
 <font color=4850B8>+10 To Strength</font><BR>
 <font color=4850B8>100% Extra Gold From Monsters</font><BR>
 <font color=4850B8>Magic Damage Reduced By 3</font><BR>

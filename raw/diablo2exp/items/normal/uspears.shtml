@@ -343,7 +343,7 @@
 <font face="arial,helvetica" size=-1><SPAN>
 Two-Hand Damage: <font color=4850B8>13 To 15</font> (14 Avg)<BR>
 Required Level: 8<BR>
-Required  Dexterity: 20<BR>
+Required Dexterity: 20<BR>
 Durability: 30<br>
 Base Weapon Speed: [-10]<BR>
 <font color=4850B8>+100% Damage To Undead</font><BR>
@@ -375,7 +375,7 @@ Base Weapon Speed: [0]<BR>
 <font color=4850B8>+30-50% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>Slows Target By 25%</font>*<BR>
 <font color=4850B8>30% Increased Attack Speed</font><BR>
-<font color=4850B8>50% target defense</font>*<BR>
+<font color=4850B8>-50% target defense</font>*<BR>
 <font color=4850B8>+8 To Dexterity</font><BR>
 <font color=4850B8>+15 To Strength</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -454,7 +454,7 @@ Base Weapon Speed: [20]<BR>
 <font color=4850B8>Adds 23-54 Fire Damage</font><BR>
 <font color=4850B8>+60 to Attack Rating</font><BR>
 <font color=4850B8>Fire Resist +15%</font><BR>
-<font color=4850B8>15% To Maximum Fire Resist</font><BR>
+<font color=4850B8>+15% To Maximum Fire Resist</font><BR>
 <font color=4850B8>+30 to Life</font><BR>
 <font color=4850B8>+3 To Light Radius</font><BR>
 (Only Spawns In Patch 1.09 or later)

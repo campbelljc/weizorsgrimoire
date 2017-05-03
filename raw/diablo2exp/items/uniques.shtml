@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>The Arreat Summit - Items: Exceptional Unique Swords</title>
+	<title>The Arreat Summit - Items: Unique Items</title>
 	<link rel="stylesheet" type="text/css" href="/diablo2exp/includes/d2-strat.css">
 	<script language="JavaScript" src="/diablo2exp/includes/d2.js"></script>
 </head>
@@ -206,6 +206,34 @@
 	<td background="/images/battle/diablo2exp/images/mid-textboxleft.gif"><img src="/images/shared/blank.gif" border=0 width=20 height=5></td>
 	<td background="/images/battle/diablo2exp/images/blackbg.gif" width=100%>
 
+
+		<br>
+<!--- HEADER GRAPHIC ---------------------------->
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif"><img src="/images/battle/diablo2exp/images/headers/header-left.gif" border=0 width=80 height=60></td>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif" align=center width=100%><img src="/images/battle/diablo2exp/images/headers/items-unique.gif" alt="Unique" border=0 width=225 height=60></td>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif"><img src="/images/battle/diablo2exp/images/headers/header-right.gif" border=0 width=80 height=60></td>
+		</tr>
+		</table>
+<!--- END HEADER GRAPHIC ------------------------>
+		<br>
+
+		<table border=0 cellpadding=10 cellspacing=0 width=100%>
+		<tr>
+		<td background="/images/battle/diablo2exp/images/blackbg.gif" align=left width=100%>
+			<font face="arial,helvetica" size=-1><span>
+			<p>
+<!--- MAIN CONTENT --------------------------------------------------------------------------->
+
+
+<CENTER>
+Make sure you learn all about the [<a href="uniquebasics.shtml">Unique Basics</a>].<br/>
+Check out an <a href="uniques-alpha.shtml">alphabetic list</a> of all Unique items.
+</CENTER>
+<P>
+
+
 <font face="arial,helvetica" size=-1><span>
 <center>
 <br>
@@ -297,431 +325,10 @@
 <a href="/diablo2exp/items/elite/uswords.shtml">Swords</a> |
 <a href="/diablo2exp/items/elite/uthrowing.shtml">Throwing Weapons</a>  |
 <a href="/diablo2exp/items/elite/uwands.shtml">Wands</a> 
-<BR>
-<a href="/diablo2exp/items/uniques.shtml">Unique Index</a>
 
 </center>
 </span></font>
 
-		<br>
-<!--- HEADER GRAPHIC ---------------------------->
-		<table border=0 cellpadding=0 cellspacing=0 width=100%>
-		<tr>
-		<td background="/images/battle/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-left.gif" border=0 width=80 height=60></td>
-		<td background="/images/battle/diablo2exp/images/headers/header-back.gif" align=center width=100%><img src="/diablo2exp/images/headers/items-unique.gif" alt="Unique" border=0 width=225 height=60></td>
-		<td background="/images/battle/diablo2exp/images/headers/header-back.gif"><img src="/diablo2exp/images/headers/header-right.gif" border=0 width=80 height=60></td>
-		</tr>
-		</table>
-<!--- END HEADER GRAPHIC ------------------------>
-		<br>
-
-		<table border=0 cellpadding=10 cellspacing=0 width=100%>
-		<tr>
-		<td background="/diablo2exp/images/blackbg.gif" align=left width=100%>
-			<font face="arial,helvetica" size=-1><span>
-			<p>
-<!--- MAIN CONTENT --------------------------------------------------------------------------->
-
-<center><font color="#908858"><B>Exceptional Unique Swords</b></font><BR>
-(see <a href="swords.shtml">Exceptional Swords</a>)</center>
-</center><P>
-
-<Table border=0 cellpadding=5 width=100%>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/rixotskeen.gif" width=62 height="118">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Bloodletter</b></font></center>
-<center>Gladius</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>31 To 97</font> (64 Avg)<BR>
-Required Level: 30<BR>
-Required Strength: 25<BR>
-Durability: <font color=4850B8>54</font><br>
-Base Weapon Speed: [0]<BR>
-<font color=4850B8>+140% Enhanced Damage</font><BR>
-<font color=4850B8>Adds 12-45 Damage</font><BR>
-<font color=4850B8>+90 To Attack Rating</font><BR>
-<font color=4850B8>20% Increased Attack Speed</font><BR>
-<font color=4850B8>10% Slower Stamina Drain</font><BR>
-<font color=4850B8>8% Life Stolen Per Hit</font><BR>
-<font color=4850B8>+1-3 To Whirlwind (Barbarian Only)</font> (varies)<BR>
-<font color=4850B8>+2-4 To Sword Mastery (Barbarian Only)</font> (varies)<BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/bloodcrescent.gif" width=62 height="118">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Coldsteel Eye</b></font></center>
-<center>Cutlass</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(24-28) To (63-73)</font> (43.5-50.5 Avg)<BR>
-Required Level: 31<BR>
-Required Strength: 25<BR>
-Required Dexterity: 52<BR>
-Durability: <font color=4850B8>72</font><br>
-Base Weapon Speed: [-30]<BR>
-<font color=4850B8>+200-250% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>50% Deadly Strike</font><BR>
-<font color=4850B8>20% Increased Attack Speed</font><BR>
-<font color=4850B8>6% Mana Stolen Per Hit</font><BR>
-<font color=4850B8>Slows Target By 30%</font><BR>
-<font color=4850B8>Hit Blinds Target +1</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/krintizskewer.gif" width=62 height="118">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Hexfire</b></font></center>
-<center>Shamshir</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(59-61) To (97-102)</font> (78-81.5 Avg)<BR>
-Required Level: 33<BR>
-Required Strength: 58<BR>
-Required Dexterity: 58<BR>
-Durability: 32<br>
-Base Weapon Speed: [-10]<BR>
-<font color=4850B8>+140-160% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>Adds 35-40 Damage</font><BR>
-<font color=4850B8>+3 To Fire Skills</font><BR>
-<font color=4850B8>Level 6 Hydra (36 charges)</font><BR>
-<font color=4850B8>Ignore Target's Defense</font><BR>
-<font color=4850B8>Fire Resist +25%</font><BR>
-<font color=4850B8>+10% To Maximum Fire Resist</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/bladeofalibaba.gif" width=20 height="77">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Blade Of Ali Baba</b></font></center>
-<center>Tulwar</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(25-35) To (56-77)</font> (40.5-56 Avg)<BR>
-Required Level: 35<BR>
-Required Strength: 70<BR>
-Required Dexterity: 42<BR>
-Durability: 32<br>
-Base Weapon Speed: [20]<BR>
-<font color=4850B8>+60-120% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>(2.5 Per Character Level) 2-247% Extra Gold From Monsters (Based On Character Level)</font><BR>
-<font color=4850B8>(1 Per Character Level) 1-99% Better Chance of Getting Magic Items (Based On Character Level)</font><BR>
-<font color=4850B8>+15 To Mana</font><BR>
-<font color=4850B8>+5-15 To Dexterity</font> (varies)<BR>
-<font color=4850B8>Socketed (2)</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/riftlash.gif" width=38 height="83">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Ginther's Rift</b></font></center>
-<center>Dimensional Blade</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(26-32) To (70-87)</font> (48-59.5 Avg)<BR>
-Required Level: 37<BR>
-Required Strength: 85<BR>
-Required Dexterity: 60<BR>
-Durability: <font color=4850B8>60</font><br>
-Base Weapon Speed: [0]<BR>
-<font color=4850B8>+100-150% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>Adds 50-120 Magic Damage</font><BR>
-<font color=4850B8>30% Increased Attack Speed</font><BR>
-<font color=4850B8>Magic Damage Reduced By 7-12</font> (varies)<BR>
-<font color=4850B8>Repairs 1 Durability in 5 Seconds</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/headstriker.gif" width=44 height="81">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Headstriker</b></font></center>
-<center>Battle Sword</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>40 To (86-184)</font> (63-112 Avg)<BR>
-Required Level: 39<BR>
-Required Strength: 92<BR>
-Required Dexterity: 43<BR>
-Durability: 32<br>
-Base Weapon Speed: [0]<BR>
-<font color=4850B8>+150% Enhanced Damage</font><BR>
-<font color=4850B8>+ (1 Per Character Level) 1-99 To Maximum Damage (Based On Character Level)</font><BR>
-<font color=4850B8>+ (1.5 Per Character Level) 1-148% Deadly Strike (Based On Character Level)</font><BR>
-<font color=4850B8>Prevent Monster Heal</font><BR>
-<font color=4850B8>+15 To Strength</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/plaguebearer.gif" width=40 height="79">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Plague Bearer</b></font></center>
-<center>Rune Sword</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>35 To 150</font> (92.5 Avg)<BR>
-Required Level: 41<BR>
-Required Strength: 103<BR>
-Required Dexterity: 79<BR>
-Durability: 44<br>
-Base Weapon Speed: [-10]<BR>
-<font color=4850B8>+150% Enhanced Damage</font><BR>
-<font color=4850B8>Adds 10-45 Damage</font><BR>
-<font color=4850B8>+300 Poison Damage Over 8 Seconds</font><BR>
-<font color=4850B8>5% Chance To Cast Level 4 Poison Nova On Striking</font><BR>
-<font color=4850B8>Poison Resist +45%</font><BR>
-<font color=4850B8>+5 To Rabies (Druid Only)</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<a name="culwens"></a>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/atlantean.gif" width=23 height="80">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>The Atlantean</b></font></center>
-<center>Ancient Sword</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(54-63) To (129-150)</font> (91.5-106.5 Avg)<BR>
-Required Level: 42<BR>
-Required Strength: 127<BR>
-Required Dexterity: 88<BR>
-Durability: <font color=4850B8>144</font><br>
-Base Weapon Speed: [0]<BR>
-<font color=4850B8>+200-250% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>+2 To Paladin Skill Levels</font><BR>
-<font color=4850B8>50% Bonus To Attack Rating</font><BR>
-<font color=4850B8>+75 Defense</font><BR>
-<font color=4850B8>+8 To Vitality</font><BR>
-<font color=4850B8>+12 To Dexterity</font><BR>
-<font color=4850B8>+16 To Strength</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/shadowfang.gif" width=62 height="118">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Crainte Vomir</b></font></center>
-<center>Espandon</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(20-24) To (67-78)</font> (43.5-51 Avg)<BR>
-Two-Hand Damage: <font color=4850B8>(46-54) To (104-120)</font> (75-87 Avg)<BR>
-Required Level: 42<BR>
-Required Strength: 73<BR>
-Required Dexterity: 61<BR>
-Durability: 44<br>
-Base Weapon Speed: [0]<BR>
-<font color=4850B8>+160-200% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>50% Increased Attack Speed</font><BR>
-<font color=4850B8>Slows Target By 35%</font><BR>
-<font color=4850B8>-70 To Monster Defense Per Hit</font><BR>
-<font color=4850B8>20% Faster Run/Walk</font><BR>
-<font color=4850B8>Damage Reduced By 10%</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/soulflay.gif" width=62 height="118">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Bing Sz Wang</b></font></center>
-<center>Dacian Falx</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(29-33) To (69-78)</font> (49-55.5 Avg)<BR>
-Two-Hand Damage: <font color=4850B8>(59-67) To (140-158)</font> (99.5-112.5 Avg)<BR>
-Required Level: 43<BR>
-Required Strength: <font color="#4850b8">64</font><BR>
-Required Dexterity: <font color="#4850b8">14</font><BR>
-Durability: 50<br>
-Base Weapon Speed: [10]<BR>
-<font color=4850B8>+130-160% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>Adds 50-140 Cold Damage, 3 sec. Duration</font><BR>
-<font color=4850B8>5% Chance To Cast Level 3 Frozen Orb On Striking</font><BR>
-<font color=4850B8>Freezes Target +2</font><BR>
-<font color=4850B8>Requirements -30%</font><BR>
-<font color=4850B8>+20 To Strength</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/kinemilsawl.gif" width=62 height="118">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>The Vile Husk</b></font></center>
-<center>Tusk Sword</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(25-30) To (92-111)</font> (58.5-70.5 Avg)<BR>
-Two-Hand Damage: <font color=4850B8>(47-57) To (145-174)</font> (96-115.5 Avg)<BR>
-Required Level: 44<BR>
-Required Strength: 104<BR>
-Required Dexterity: 71<BR>
-Durability: 50<br>
-Base Weapon Speed: [0]<BR>
-<font color=4850B8>+150-200% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>+ (7.5 Per Character Level) 7-742% Damage To Undead (Based On Character Level)</font><BR>
-<font color=4850B8>+ (10 Per Character Level) 10-990 To Attack Rating against Undead (Based On Character Level)
-</font><BR>
-<font color=4850B8>+250 Poison Damage Over 6 Seconds</font><BR>
-<font color=4850B8>6% Chance To Cast Level 1 Amplify Damage On Striking</font><BR>
-<font color=4850B8>Poison Resist +50%</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/blacktongue.gif" width=62 height="118">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Cloudcrack</b></font></center>
-<center>Gothic Sword</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(35-42) To (100-120)</font> (67.5-81 Avg)<BR>
-Two-Hand Damage: <font color=4850B8>(97-117) To (150-180)</font> (123.5-148.5 Avg)<BR>
-Required Level: 45<BR>
-Required Strength: 113<BR>
-Required Dexterity: 20<BR>
-Durability: 40<br>
-Base Weapon Speed: [10]<BR>
-<font color=4850B8>+150-200% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>6% Chance To Cast Level 7 Fist Of The Heavens On Striking</font><BR>
-<font color=4850B8>Adds 1-240 Lightning Damage</font><BR>
-<font color=4850B8>+10% To Maximum Lightning Resist</font><BR>
-<font color=4850B8>+30 Defense</font><BR>
-<font color=4850B8>Attacker Takes Lightning Damage Of 15</font><BR>
-<font color=4850B8>+2 To Defensive Auras (Paladin Only)</font><BR>
-<font color=4850B8>+2 To Offensive Auras (Paladin Only)</font><BR>
-<font color=4850B8>+2 To Light Radius</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/todesfaelleflamme.gif" width=39 height="107">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Todesfaelle Flamme</b></font></center>
-<center>Zweihander</center>
-<br Clear=left>
-</span></font>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(41-49) To (77-91)</font> (59-70 Avg)<BR>
-Two-Hand Damage: <font color=4850B8>(63-75) To (118-140)</font> (90.5-107.5 Avg)<BR>
-Durability: 50<br>
-Required Level: 46<BR>
-Required Strength: 125<BR>
-Required Dexterity: 94<BR>
-Base Weapon Speed: [-10]<BR>
-<font color=4850B8>+120-160% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>Adds 50-200 Fire Damage</font><BR>
-<font color=4850B8>10% Chance To Cast Level 6 Fireball On Attack</font><BR>
-<font color=4850B8>Level 10 Fire Wall (20 charges)</font><BR>
-<font color=4850B8>Level 10 Enchant (45 charges)</font><BR>
-<font color=4850B8>+10 Fire Absorb</font><BR>
-<font color=4850B8>Fire Resist +40%</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-
-<TR>
-<TD align=center>
-<font face="arial,helvetica" size=-1><span>
-<img src="/images/battle/diablo2exp/images/items/uniques/swordguard.gif" width=62 height="118">
-<center><font face="arial,helvetica" color="#908858" size=-1><SPAN><b>Swordguard</b></font></center>
-<center>Executioner Sword</center>
-<br Clear=left>
-</span>
-</td>
-<TD>
-<font face="arial,helvetica" size=-1><SPAN>
-One-Hand Damage: <font color=4850B8>(64-67) To (108-112)</font> (86-89.5 Avg)<BR>
-Two-Hand Damage: <font color=4850B8>(126-131) To (216-224)</font> (171-177.5 Avg)<BR>
-Required Level: 48<BR>
-Required Strength: <font color="#4850b8">85</font><BR>
-Required Dexterity: <font color="#4850b8">55</font><BR>
-Durability: 50<br>
-Base Weapon Speed: [10]<BR>
-<font color=4850B8>+170-180% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>+ (5 Per Character Level) 5-495 Defense (Based On Character Level)</font><BR>
-<font color=4850B8>30% Damage Taken Goes To Mana</font><BR>
-<font color=4850B8>Requirements -50%</font><BR>
-<font color=4850B8>All Resistances +10-20</font> (varies)<BR>
-<font color=4850B8>20% Faster Hit Recovery</font><BR>
-<font color=4850B8>20% Increased Chance Of Blocking</font><BR>
-<font color=4850B8>+100 Defense vs. Missile</font><BR>
-<font color=4850B8>+200 Defense vs. Melee</font><BR>
-(Only Spawns In Patch 1.09 or later)
-</font></td>
-</TR>
-</table>
 
 <!--- END MAIN CONTENT ----------------------------------------------------------------------->
 <p>
@@ -780,8 +387,8 @@ document.write('<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19
 	<table border=0 cellpadding=0 cellspacing=0 width=100%>
 	<tr>
 	<td background=0 align=left width=100%><br><a href="/"  onMouseOut="offImg('exit')" onMouseOver="ovrImg('exit')"><img src="/images/battle/diablo2exp/images/botmenu-close-off.gif" name="exit" alt="Exit" border=0 width=43 height=43></a></td>
-	<td background=0><br><a href="ustaves.shtml" onMouseOut="offImg('prev')" onMouseOver="ovrImg('prev')"><img src="/images/battle/diablo2exp/images/botmenu-prev-off.gif" name="prev" alt="Previous" border=0 width=44 height=43></a></td>
-	<td background=0><br><a href="uthrowing.shtml" onMouseOut="offImg('next')" onMouseOver="ovrImg('next')"><img src="/images/battle/diablo2exp/images/botmenu-next-off.gif" name="next" alt="Next" border=0 width=45 height=43></a></td>
+	<td background=0><br><a href="/diablo2exp/items/sets/sets3.shtml" onMouseOut="offImg('prev')" onMouseOver="ovrImg('prev')"><img src="/images/battle/diablo2exp/images/botmenu-prev-off.gif" name="prev" alt="Previous" border=0 width=44 height=43></a></td>
+	<td background=0><br><a href="uniquebasics.shtml" onMouseOut="offImg('next')" onMouseOver="ovrImg('next')"><img src="/images/battle/diablo2exp/images/botmenu-next-off.gif" name="next" alt="Next" border=0 width=45 height=43></a></td>
 	</tr>
 	</table>
 

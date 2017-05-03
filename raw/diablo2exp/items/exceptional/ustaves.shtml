@@ -347,7 +347,7 @@ Two-Hand Damage: 6 To 21 (13.5 Avg)<BR>
 Required Level: 28<BR>
 Required Strength: 25<BR>
 Durability: 20<br>
-Base Weapon Speed:  [-10] <BR>
+Base Weapon Speed: [-10] <BR>
 <font color=4850B8>+50% Damage To Undead</font><BR>
 <font color=4850B8>+1 To All Skills</font><BR>
 <font color=4850B8>30% Faster Cast Rate</font><BR>
@@ -437,7 +437,7 @@ Durability: 40<br>
 Base Weapon Speed: [0]<BR>
 <font color=4850B8>+50% Damage To Undead</font><BR>
 <font color=4850B8>Ignore Target's Defense</font><BR>
-<font color=4850B8>+250 Defense Vs. Missiles</font><BR>
+<font color=4850B8>+250 Defense Vs. Missile</font><BR>
 <font color=4850B8>+3 To Sorceress Skill Levels</font><BR>
 <font color=4850B8>+3 To Energy Shield (Sorceress Only)</font><BR>
 <font color=4850B8>+3 To Telekinesis (Sorceress Only)</font><BR>
@@ -465,7 +465,7 @@ Base Weapon Speed: [20]<BR>
 <font color=4850B8>+50% Damage To Undead</font><BR>
 <font color=4850B8>+20 To Mana After Each Kill</font><BR>
 <font color=4850B8>Increase Maximum Mana 20%</font><BR>
-<font color=4850B8>+ (1 Per Character Level) 1-99% Better Chance Of Getting Magic Items (Based On Character Level)</font><BR>
+<font color=4850B8>(1 Per Character Level) 1-99% Better Chance Of Getting Magic Items (Based On Character Level)</font><BR>
 <font color=4850B8>+2 To All Skills</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>

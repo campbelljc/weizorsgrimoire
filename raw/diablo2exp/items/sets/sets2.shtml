@@ -285,7 +285,7 @@ Required Strength: 37<br>
 Durability: 60<br>
 Base Weapon Speed: [10]<BR>
 <font color="#4850b8">+ (1 Per Character Level) 1-99 To Maximum Damage (Based On Character Level)</font><br>
-<font color="#4850b8">+17-23 to Max Damage</font>(varies)<br>
+<font color="#4850b8">+17-23 to Maximum Damage</font> (varies)<br>
 <font color="#4850b8">+50% Damage To Undead</font><br>
 <font color="#4850b8">+75 to Attack Rating</font><br>
 </font>
@@ -338,16 +338,16 @@ Required Level: 9<BR>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">27-29</font> (varies)(Base Defense: 12-14)<br>
+Defense: <font color="#4850b8">27-29</font> (varies) (Base Defense: 12-14)<br>
 Required Level: 9<BR>
 Required Strength: 34<br>
 Durability: 24<br>
 Chance to Block: Pal: <font color=4850B8>57%</font>, Ama/Asn/Bar: <font color=4850B8>52</font>%<br> Dru/Nec/Sor: <font color=4850B8>47%</font><br>
 Paladin Smite Damage: 2 to 4<br>
 <font color="#4850b8">+15 Defense</font><br>
-<font color="#4850b8">+15% Increased Block</font><br>
-<font color="#00C400">+21-22 Mana</font> (Civerb's Icon)(varies)<br>
-<font color="#00C400">Poison Resist +25-26%</font> (Civerb's Cudgel)(varies)<br>
+<font color="#4850b8">15% Increased Chance of Blocking</font><br>
+<font color="#00C400">+21-22 to Mana</font> (Civerb's Icon) (varies)<br>
+<font color="#00C400">Poison Resist +25-26%</font> (Civerb's Cudgel) (varies)<br>
 </font>
 </td>
 </tr>
@@ -455,7 +455,7 @@ Required Strength: 25<br>
 Durability: 16<br>
 <font color="#4850b8">Slows Target by 25%</font><br>
 <font color="#4850b8">Knockback</font><br>
-<font color="#00C400">+ (10 Per Character Level) 10-990 Attack Rating (Based On Character Level)</font> (2 Items)<br>
+<font color="#00C400">+ (10 Per Character Level) 10-990 to Attack Rating (Based On Character Level)</font> (2 Items)<br>
 </font>
 </td>
 </tr>
@@ -472,7 +472,7 @@ Durability: 16<br>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">25-27</font> (varies)(Base Defense: 8-10)<br>
+Defense: <font color="#4850b8">25-27</font> (varies) (Base Defense: 8-10)<br>
 Required Level: 4<BR>
 Required Strength: 22<br>
 Durability: 16<br>
@@ -571,7 +571,7 @@ Defense: 2-3 (varies)<br>
 Required Level: 6<BR>
 Durability: 12<br>
 <font color="#4850b8">Poison Length Reduced by 75%</font><br>
-<font color="#4850b8">Poison Resist 50%</font><br>
+<font color="#4850b8">Poison Resist +50%</font><br>
 <font color="#00C400">30% Increased Attack Speed</font> (2 Items)<br>
 </font>
 </td>
@@ -644,7 +644,7 @@ Durability: 12<br>
 <td width=40%>
 <font face="arial,helvetica" size=-1><span>
 Defense: 4-6 (varies)<br>
-Defense: <font color="#00C400">(6-251) - (8-253)</font> (varies)(Base Defense: 4-6)<br>
+Defense: <font color="#00C400">(6-251) - (8-253)</font> (varies) (Base Defense: 4-6)<br>
 Required Level: 3<BR>
 Required Strength: 12<br>
 Durability: 12<br>
@@ -666,7 +666,7 @@ Attacker Takes Damage of 5 (2 Items)<BR><BR>
 Attacker Takes Damage of 5<BR>
 Cannot be Frozen<br>
 Lightning Resist +25%<br>
-+5 to Max Damage
++5 to Maximum Damage
 </font>
 </td>
 </tr>
@@ -716,7 +716,7 @@ Durability: 16<br>
 Assassin Kick Damage: 6-12<BR>
 <font color="#4850b8">20% Faster Run/Walk</font><br>
 <font color="#4850b8">Fire Resist +25%</font><br>
-<font color="#00C400">+ (10 Per Character Level) 10-990 Attack Rating (Based On Character Level)</font> (2 Items)<br>
+<font color="#00C400">+ (10 Per Character Level) 10-990 to Attack Rating (Based On Character Level)</font> (2 Items)<br>
 </font>
 </td>
 </tr>
@@ -765,7 +765,7 @@ Assassin Kick Damage: 6-12<BR>
 <td width=40%>
 <font face="arial,helvetica" size=-1><span>
 Defense: 3-5 (varies)<br>
-Defense: <font color="#00C400">(5-201) - (7-203)</font> (varies)(Base Defense: 3-5)<br>
+Defense: <font color="#00C400">(5-201) - (7-203)</font> (varies) (Base Defense: 3-5)<br>
 Required Level: 5<BR>
 Durability: 12<br>
 <font color="#4850b8">20% Damage Taken Goes to Mana</font><br>
@@ -832,9 +832,9 @@ Required Level: 5<BR>
 Durability: 15<br>
 Base Weapon Speed: [0]<BR>
 <font color="#4850b8">+1 To Necromancer Skill Levels</font><br>
-<font color="#4850b8">+8 to Min Damage</font><br>
+<font color="#4850b8">+8 to Minimum Damage</font><br>
 <font color="#4850b8">150% Damage to Undead</font><br>
-<font color="#00C400">+ (10 Per Character Level) 10-990 Attack Rating (Based On Character Level)</font> (2 Items)<br>
+<font color="#00C400">+ (10 Per Character Level) 10-990 to Attack Rating (Based On Character Level)</font> (2 Items)<br>
 </font>
 </td>
 </tr>

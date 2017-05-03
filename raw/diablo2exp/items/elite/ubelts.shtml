@@ -341,7 +341,7 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color="#4850b8">119-138</font> (varies)(Base Defense: 55-62)<BR>
+Defense: <font color="#4850b8">119-138</font> (varies) (Base Defense: 55-62)<BR>
 Required Level: 80<BR>
 Required Strength: 50<BR>
 Durability: 12<br>
@@ -349,9 +349,9 @@ Durability: 12<br>
 <font color=4850B8>+90-120% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>Slows Target By 10%</font><BR>
 <font color=4850B8>+1 To All Skills</font><BR>
-<font color=4850B8>+20% Faster Cast Rate</font><BR>
-<font color=4850B8>Increases Maximum Mana 5%</font><BR>
-<font color=4850B8>Level 3 Venom (11 Charges)</font><BR>
+<font color=4850B8>20% Faster Cast Rate</font><BR>
+<font color=4850B8>Increase Maximum Mana 5%</font><BR>
+<font color=4850B8>Level 3 Venom (11 charges)</font><BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>
 </TR>
@@ -394,7 +394,7 @@ Durability: 14<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color="#4850b8">125-158</font> (varies)(Defense: 58-65)<BR>
+Defense: <font color="#4850b8">125-158</font> (varies) (Base Defense: 58-65)<BR>
 Required Level: 63<BR>
 Required Strength: 106<BR>
 Durability: 16<br>

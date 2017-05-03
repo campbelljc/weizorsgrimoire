@@ -344,12 +344,13 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>177-213</font> (varies)(Base Defense: 58-70)<BR>
+Defense: <font color=4850B8>177-213</font> (varies) (Base Defense: 58-70)<BR>
 Defense: 58-70<BR>
 Required Level: 42<BR>
 Required Strength: 58<BR>
 Durability: 20<br>
-Chance To Block: <font color=4850B8>72%</font><BR>
+</font><br >
+Chance to Block: <font color=4850B8>72%</font><BR>
 (Necromancer Only)<BR>
 <font color=4850B8>+150-200% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+5 To Mana After Each Kill</font><BR>
@@ -376,17 +377,18 @@ Chance To Block: <font color=4850B8>72%</font><BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>357-417</font> (varies)(Base Defense: 103-148)<BR>
+Defense: <font color=4850B8>357-417</font> (varies) (Base Defense: 103-148)<BR>
 Required Level: 65<BR>
 Required Strength: 106<BR>
 Durability: 20<br>
-Chance To Block: <font color=4850B8>32%</font><BR>
+</font><br >
+Chance to Block: <font color=4850B8>32%</font><BR>
 (Necromancer Only)<BR>
 <font color=4850B8>+140-180% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+1-3 To Summoning Skills (Necromancer Only)</font> (varies)<BR>
 <font color=4850B8>+1-3 To Poison And Bone Skills (Necromancer Only)</font> (varies)<BR>
 <font color=4850B8>+1-3 To Curses (Necromancer Only)</font> (varies)<BR>
-<font color=4850B8>+30% Faster Cast Rate</font><BR>
+<font color=4850B8>30% Faster Cast Rate</font><BR>
 <font color=4850B8>Increase Maximum Mana 10%</font><BR>
 <B>(Ladder Only)</B><BR>
 (Only Spawns In Patch 1.10 or later)
@@ -405,14 +407,15 @@ Chance To Block: <font color=4850B8>32%</font><BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>323-367</font> (varies)(Base Defense: 100-146)<BR>
+Defense: <font color=4850B8>323-367</font> (varies) (Base Defense: 100-146)<BR>
 Required Level: 72<BR>
 Required Strength: 95<BR>
 Durability: 20<br>
-Chance To Block: <font color=4850B8>30%</font><BR>
+</font><br >
+Chance to Block: <font color=4850B8>30%</font><BR>
 (Necromancer Only)<BR>
 <font color=4850B8>+120-150% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>+20% Faster Run/Walk</font><BR>
+<font color=4850B8>20% Faster Run/Walk</font><BR>
 <font color=4850B8>+2-3 To Necromancer Skill Levels</font> (varies)<BR>
 <font color=4850B8>All Resistances +20-30</font> (varies)<BR>
 <font color=4850B8>15% Chance To Cast Level 3 Terror When Struck</font><BR>

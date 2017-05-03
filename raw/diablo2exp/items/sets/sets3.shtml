@@ -280,7 +280,7 @@
 <td width=40%>
 <font face="arial,helvetica" size=-1><span>
 Defense: 25-45 (varies)<br>
-Defense: <font color="#00C400">(27-223) - (47-243)</font> (varies)(Base Defense: 25-45)<br>
+Defense: <font color="#00C400">(27-223) - (47-243)</font> (varies) (Base Defense: 25-45)<br>
 Required Level: 15<br>
 Required Strength: 55<br>
 Durability: 50<br>
@@ -301,10 +301,10 @@ Durability: 50<br>
 +50 To Defense<BR>
 20% Faster Run/Walk<BR>
 +15 To Dexterity<BR>
-10% To Maximum Poison Resist<br>
-10% To Maximum Cold Resist<br>
-10% To Maximum Lightning Resist<br>
-10% To Maximum Fire Resist<br>
++10% To Maximum Poison Resist<br>
++10% To Maximum Cold Resist<br>
++10% To Maximum Lightning Resist<br>
++10% To Maximum Fire Resist<br>
 All Resistances +20<br>
 </span></font>
 </td>
@@ -425,9 +425,9 @@ Required Level: 8<BR>
 Required Strength: 48<br>
 Durability: 32<br>
 Base Weapon Speed: [0]<BR>
-<font color="#4850b8">+10 to Min Damage</font><br>
+<font color="#4850b8">+10 to Minimum Damage</font><br>
 <font color="#4850b8">20% Increased Attack Speed</font><br>
-<font color="#00C400">+ (5 Per Character Level) 5-495 Attack Rating (Based On Character Level)</font> (2 Items)<br>
+<font color="#00C400">+ (5 Per Character Level) 5-495 to Attack Rating (Based On Character Level)</font> (2 Items)<br>
 </span></font>
 </td>
 
@@ -442,7 +442,7 @@ Base Weapon Speed: [0]<BR>
 +10 To Strength<BR>
 +10 To Dexterity<BR>
 20% Faster Run/Walk<BR>
-+30% Increased Chance of Blocking<BR>
+30% Increased Chance of Blocking<BR>
 35% Bonus to Attack Rating<br>
 5% Life Stolen Per Hit<br>
 All Resistances +10
@@ -485,8 +485,8 @@ Durability: 30<br>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">105-108</font> (varies)(Base Defense: 65-68)<br>
-Defense: <font color="#00C400">(107-303) - (110-306)</font> (varies)(Base Defense: 65-68)<br>
+Defense: <font color="#4850b8">105-108</font> (varies) (Base Defense: 65-68)<br>
+Defense: <font color="#00C400">(107-303) - (110-306)</font> (varies) (Base Defense: 65-68)<br>
 Required Level: 8<BR>
 Required Strength: 30<br>
 Durability: 50<br>
@@ -636,8 +636,8 @@ Required Level: 17<BR>
 Required Strength: 47<br>
 Durability: 30<br>
 <font color="#4850b8">+25 Defense</font><br>
-<font color="#4850b8">20% Better Chance of Getting Magic Item</font><br>
-<font color="#00C400">+50 Life</font> (2 Items)<br>
+<font color="#4850b8">20% Better Chance of Getting Magic Items</font><br>
+<font color="#00C400">+50 to Life</font> (2 Items)<br>
 <font color="#00C400">+50% Enhanced Defense</font> (3 Items)<br>
 </span></font>
 </td>
@@ -662,7 +662,7 @@ Durability: 70<br>
 Base Weapon Speed: [-10]<BR>
 <font color="#4850b8">+50% Enhanced Damage</font><br>
 <font color="#4850b8">+50% Damage to Undead</font><br>
-<font color="#4850b8">+1 to Paladin Skills</font><br>
+<font color="#4850b8">+1 to Paladin Skill Levels</font><br>
 <font color="#4850b8">+2 to Light Radius</font><br>
 </span></font>
 </td>
@@ -711,7 +711,7 @@ Base Weapon Speed: [-10]<BR>
 </td>
 <td width=40%>
 <font face="arial,helvetica" size=-1><span>
-Defense: <font color="#4850b8">55-60</font> (varies)(Base Defense: 30-35)<br>
+Defense: <font color="#4850b8">55-60</font> (varies) (Base Defense: 30-35)<br>
 Required Level: 6<BR>
 Required Strength: 63<br>
 Durability: 40<br>
@@ -784,7 +784,7 @@ Assassin Kick Damage: 10-20<BR>
 <font color="#4850b8">20% Faster Run/Walk</font><br>
 <font color="#4850b8">Cold Resist +40%</font><br>
 <font color="#00C400">+50 To Attack Rating</font> (2 Items)<br>
-<font color="#00C400">+50% Better Chance To Find Magic Items</font> (3 Items)<br>
+<font color="#00C400">50% Better Chance Of Getting Magic Items</font> (3 Items)<br>
 </span></font>
 </td>
 </tr>
@@ -808,7 +808,7 @@ Required Level: 6<BR>
 Required Strength: 75<br>
 Durability: 60<br>
 <font color="#4850b8">+1 to All Skills</font><br>
-<font color="#4850b8">+20% Increased Chance To Block</font><br>
+<font color="#4850b8">20% Increased Chance of Blocking</font><br>
 </span></font>
 </td>
 </tr>
@@ -826,14 +826,14 @@ Durability: 60<br>
 <td>
 <font face="arial,helvetica" size=-1><span>
 Defense: 8-11 (varies)<br>
-Defense: <font color="#00C400">(10-206) - (13-209)</font> (varies)(Base Defense: 8-11)<br>
+Defense: <font color="#00C400">(10-206) - (13-209)</font> (varies) (Base Defense: 8-11)<br>
 Required Level: 6<BR>
 Required Strength: 60<br>
 Durability: 24<br>
 16 boxes<BR>
 <font color="#4850b8">Fire Resist +20%</font><br>
 <font color="#4850b8">+20 to Life</font><br>
-<font color="#00C400">+ (2 Per Character Level) 2-198 To Defense (Based On Character Level)</font> (2 Items)<br>
+<font color="#00C400">+ (2 Per Character Level) 2-198 Defense (Based On Character Level)</font> (2 Items)<br>
 </span></font>
 </td>
 </tr>
@@ -997,7 +997,7 @@ One-Hand Damage: <font color="#4850b8">12 to 19</font> (15.5 Avg)<br>
 Required Level: 20<br>
 Required Strength: 49<br>
 Required Dexterity: 33<br>
-Durability 26<br>
+Durability: 26<br>
 Base Weapon Speed: [-10]<BR>
 <font color="#4850b8">+80% Enhanced Damage</font><br>
 <font color="#4850b8">+75 to Attack Rating</font><br>
@@ -1022,7 +1022,7 @@ Base Weapon Speed: [-10]<BR>
 Required Level: 20<BR>
 <font color="#4850b8">Damage Reduced by 2</font><br>
 <font color="#4850b8">Magic Damage Reduced by 1</font><br>
-<font color="#00C400">+78% Better Chance Of Getting Magic Items</font> (2 Items)<br>
+<font color="#00C400">78% Better Chance Of Getting Magic Items</font> (2 Items)<br>
 <font color="#00C400">+60 To Attack Rating</font> (3 Items)<br>
 </font>
 </td>
@@ -1092,7 +1092,7 @@ Base Weapon Speed: [10]<BR>
 <B>Complete Set Bonus</B><BR>
 +75 To Attack Rating<BR>
 Adds 15-20 Cold Damage, 2 sec. Duration (Normal)<BR>
-Piercing Attack [50]<br>
+Piercing Attack (50)<br>
 Freezes Target<br>
 +15 To Dexterity<BR>
 +10 To Strength
@@ -1120,8 +1120,8 @@ Required Strength: 15<br>
 Durability: 24<br>
 <font color="#4850b8">+50 Defense</font><br>
 <font color="#4850b8">+11 to Dexterity</font><br>
-<font color="#00C400">+24% Fire Resist</font> (2 Items)<br>
-<font color="#00C400">+ (2.5 Per Character Level) +2-247 Defense (Based On Character Level)</font> (3 Items)<br>
+<font color="#00C400">Fire Resist +24%</font> (2 Items)<br>
+<font color="#00C400">+ (2.5 Per Character Level) 2-247 Defense (Based On Character Level)</font> (3 Items)<br>
 </span></font>
 </td>
 </tr>
@@ -1144,7 +1144,7 @@ Required Strength: 50<br>
 Durability: 18<br>
 Assassin Kick Damage: 8-16<BR>
 <font color="#4850b8">30% Faster Run/Walk</font><br>
-<font color="#4850b8">+150 to Maximum Stamina</font><br>
+<font color="#4850b8">+150 Maximum Stamina</font><br>
 <font color="#00C400">All Resistances +8</font> (2 Items)<br>
 </span></font>
 </td>
@@ -1163,7 +1163,7 @@ Assassin Kick Damage: 8-16<BR>
 <td>
 <font face="arial,helvetica" size=-1><span>
 Required Level: 14<br>
-<font color="#4850b8">Cold Resist 20%</font><br>
+<font color="#4850b8">Cold Resist +20%</font><br>
 <font color="#4850b8">+15 To Life</font><br>
 <font color="#00C400">50% Better Chance Of Getting Magic Items</font> (2 Items)<br>
 </span></font>

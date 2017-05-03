@@ -341,17 +341,16 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>28-31</font> (varies)(Base Defense: 8-11)<BR>
+Defense: <font color=4850B8>28-31</font> (varies) (Base Defense: 8-11)<BR>
 Required Level: 7<BR>
 Required Strength: 12<BR>
 Durability: 20<br>
 <font color=4850B8>+20 Defense</font><BR>
 <font color=4850B8>5% Life Stolen Per Hit</font><BR>
 <font color=4850B8>Magic Damage Reduced By 3</font><BR>
-<font color=4850B8>Cold Resist 20%</font><BR>
-<font color=4850B8>Fire Resist 20%</font><BR>
+<font color=4850B8>Cold Resist +20%</font><BR>
+<font color=4850B8>Fire Resist +20%</font><BR>
 <font color=4850B8>+10 To Dexterity</font><BR>
-(Spawns In Any Patch)
 </font></td>
 </TR>
 
@@ -366,7 +365,7 @@ Durability: 20<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>39-42</font> (varies)(Base Defense: 14-17)<BR>
+Defense: <font color=4850B8>39-42</font> (varies) (Base Defense: 14-17)<BR>
 Required Level: 12<BR>
 Required Strength: 15<BR>
 Durability: 24<br>
@@ -390,7 +389,7 @@ Durability: 24<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>51-54</font> (varies)(Base Defense: 21-24)<BR>
+Defense: <font color=4850B8>51-54</font> (varies) (Base Defense: 21-24)<BR>
 Required Level: 14<BR>
 Required Strength: 20<BR>
 Durability: 28<br>
@@ -398,9 +397,9 @@ Durability: 28<br>
 <font color=4850B8>Replenish Life +5</font><BR>
 <font color=4850B8>+50 To Attack Rating</font><BR>
 <font color=4850B8>+15 To Mana</font><BR>
-<font color=4850B8>+15 To Max Stamina</font><BR>
+<font color=4850B8>+15 Maximum Stamina</font><BR>
 <font color=4850B8>+15 To Life</font><BR>
-<font color=4850B8>25% Slow Stamina Drain</font><BR>
+<font color=4850B8>25% Slower Stamina Drain</font><BR>
 <font color=4850B8>Damage Reduced By 2</font><BR>
 (Only Spawns In Patch 1.09 or later)
 </font></td>
@@ -418,12 +417,12 @@ Durability: 28<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>57-60</font> (varies)(Base Defense: 32-35)<BR>
+Defense: <font color=4850B8>57-60</font> (varies) (Base Defense: 32-35)<BR>
 Required Level: 16<BR>
 Required Strength: 27<BR>
 Durability: 32<br>
 <font color=4850B8>+25 Defense</font><BR>
-<font color=4850B8>25% Increase chance of blocking</font>*<BR>
+<font color=4850B8>25% Increased chance of blocking</font>*<BR>
 <font color=4850B8>20% Faster Hit Recovery</font><BR>
 <font color=4850B8>20% Increased Attack Speed</font><BR>
 <font color=4850B8>+10 To Dexterity</font><BR>
@@ -443,15 +442,15 @@ Durability: 32<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>83-98</font> (varies)(Base Defense: 45-48)<BR>
+Defense: <font color=4850B8>83-98</font> (varies) (Base Defense: 45-48)<BR>
 Required Level: 14<BR>
 Required Strength: 36<BR>
 Durability: 26<br>
 <font color=4850B8>+70-100% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>5% To Max Poison Resist</font><BR>
-<font color=4850B8>5% To Max Cold Resist</font><BR>
-<font color=4850B8>5% To Max Lightning Resist</font><BR>
-<font color=4850B8>5% To Max Fire Resist</font><BR>
+<font color=4850B8>+5% To Maximum Poison Resist</font><BR>
+<font color=4850B8>+5% To Maximum Cold Resist</font><BR>
+<font color=4850B8>+5% To Maximum Lightning Resist</font><BR>
+<font color=4850B8>+5% To Maximum Fire Resist</font><BR>
 <font color=4850B8>+50 Defense vs. Melee</font><BR>
 <font color=4850B8>+20 To Attack Rating</font><BR>
 <font color=4850B8>All Resistances +10</font><BR>
@@ -471,13 +470,13 @@ Durability: 26<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>109-122</font> (varies)(Base Defense: 57-60)<BR>
+Defense: <font color=4850B8>109-122</font> (varies) (Base Defense: 57-60)<BR>
 Required Level: 15<BR>
 Required Strength: 44<BR>
 Durability: 36<br>
 <font color=4850B8>+80-100% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>10% Faster Run/Walk</font><BR>
-<font color=4850B8>15% To Max Cold Resist</font><BR>
+<font color=4850B8>+15% To Maximum Cold Resist</font><BR>
 <font color=4850B8>Cold Resist +15%</font><BR>
 <font color=4850B8>Cannot Be Frozen</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -495,13 +494,13 @@ Durability: 36<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>110-138</font> (varies)(Base Defense: 65-68)<BR>
+Defense: <font color=4850B8>110-138</font> (varies) (Base Defense: 65-68)<BR>
 Required Level: 20<BR>
 Required Strength: 30<BR>
 Durability: 50<br>
 <font color=4850B8>+60-100% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+2 To Light Radius</font><BR>
-<font color=4850B8>15% To Max Poison Resist</font><BR>
+<font color=4850B8>+15% To Maximum Poison Resist</font><BR>
 <font color=4850B8>Poison Resist +90%</font><BR>
 <font color=4850B8>Poison Length Reduced By 50%</font><BR>
 (Only Spawns In Patch 1.09 or later)
@@ -519,7 +518,7 @@ Durability: 50<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>133-140</font> (varies)(Base Defense: 72-75)<BR>
+Defense: <font color=4850B8>133-140</font> (varies) (Base Defense: 72-75)<BR>
 Required Level: 17<BR>
 Required Strength: 48<BR>
 Durability: 45<br>
@@ -542,12 +541,12 @@ Durability: 45<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>163-172</font> (varies)(Base Defense: 90-95)<BR>
+Defense: <font color=4850B8>163-172</font> (varies) (Base Defense: 90-95)<BR>
 Required Level: 22<BR>
 Required Strength: 51<BR>
 Durability: 30<br>
 <font color=4850B8>+70-80% Enhanced Defense</font> (varies)<BR>
-<font color=4850B8>Freezes Target</font>*<BR>
+<font color=4850B8>Freezes Target +1</font>*<BR>
 <font color=4850B8>Cold Resist +30%</font><BR>
 <font color=4850B8>Magic Damage Reduced By 1</font><BR>
 <font color=4850B8>+4 To Light Radius</font><BR>
@@ -594,7 +593,7 @@ Durability: 60<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>212-243</font> (varies)(Base Defense: 101-105)<BR>
+Defense: <font color=4850B8>212-243</font> (varies) (Base Defense: 101-105)<BR>
 Required Level: 28<BR>
 Required Strength: <font color="#4850b8">50</font><BR>
 Durability: 48<br>
@@ -618,7 +617,7 @@ Durability: 48<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>234-257</font> (varies)(Base Defense: 108-116)<BR>
+Defense: <font color=4850B8>234-257</font> (varies) (Base Defense: 108-116)<BR>
 Required Level: 26<BR>
 Required Strength: 65<BR>
 Durability: 60<br>
@@ -641,7 +640,7 @@ Durability: 60<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>328-335</font> (varies)(Base Defense: 128-135)<BR>
+Defense: <font color=4850B8>328-335</font> (varies) (Base Defense: 128-135)<BR>
 Required Level: 29<BR>
 Required Strength: 70<BR>
 Durability: 55<br>
@@ -649,7 +648,6 @@ Durability: 55<br>
 <font color=4850B8>25% Chance of Crushing Blow</font><BR>
 <font color=4850B8>Hit Causes Monster To Flee 40%</font><BR>
 <font color=4850B8>+45 To Attack Rating</font><BR>
-(Spawns In Any Patch)
 </font></td>
 </TR>
 
@@ -665,7 +663,7 @@ Durability: 55<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>356-405</font> (varies)(Base Defense: 150-161)<BR>
+Defense: <font color=4850B8>356-405</font> (varies) (Base Defense: 150-161)<BR>
 Required Level: 28<BR>
 Required Strength: 80<BR>
 Durability: 70<br>
@@ -690,7 +688,7 @@ Durability: 70<br>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>468-514</font> (varies)(Base Defense: 218-233)<BR>
+Defense: <font color=4850B8>468-514</font> (varies) (Base Defense: 218-233)<BR>
 Required Level: 28<BR>
 Required Strength: 100<BR>
 Durability: 60<br>
@@ -710,7 +708,7 @@ Durability: 60<br>
 10% Faster Run/Walk will stack with speed increasing boots to make you Run/Walk even faster.<BR>
 <B>Twitchthroe</b>: Adds 25% Blocking to Shield Blocking, will only work with a Shield.<BR>
 <B>Sparking Mail</b>: Attacker Takes Lightning Damage will not work with ranged weapons.<BR>
-<B>Iceblink</b>:  Iceblink works with Ranged Weapons. Learn more about the freeze duration
+<B>Iceblink</b>: Iceblink works with Ranged Weapons. Learn more about the freeze duration
 <a href="/diablo2exp/items/magic.shtml#sma">here</a> (scroll down)<BR>
 <B>Goldskin</b>: Attacker Takes Damage of 10 will not work with ranged weapons.<BR>
 <P>

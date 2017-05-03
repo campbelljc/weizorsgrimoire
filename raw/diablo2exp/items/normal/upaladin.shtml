@@ -344,7 +344,7 @@
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>461-511</font> (varies)(Base Defense: 138-164)<BR>
+Defense: <font color=4850B8>461-511</font> (varies) (Base Defense: 138-164)<BR>
 Required Level: 77<BR>
 Required Strength: 109<BR>
 Chance To Block: <font color=4850B8>78%</font><BR>
@@ -354,7 +354,7 @@ Durability: 68<BR>
 <font color=4850B8>+180-210% Enhanced Defense</font> (varies)<BR>
 <font color=4850B8>+1-2 To Paladin Skill Levels</font> (varies)<BR>
 <font color=4850B8>20% Increased Chance of Blocking</font><BR>
-<font color=4850B8>30% Faster Block Rate</font><BR>
+<font color=4850B8>30% Faster Block Rate</font><br >
 <font color=4850B8>+40-75% Enhanced Damage</font> (varies)<BR>
 <font color=4850B8>40-75% Bonus to Attack Rating</font> (varies)<BR>
 <font color=4850B8>Magic Damage Reduced By 5-9</font> (varies)<BR>
@@ -374,7 +374,7 @@ Durability: 68<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>422-507</font> (varies)(Base Defense: 144-168)<BR>
+Defense: <font color=4850B8>422-507</font> (varies) (Base Defense: 144-168)<BR>
 Required Level: 42<BR>
 Required Strength: 89<BR>
 Durability: 50<br>
@@ -407,7 +407,7 @@ Smite Damage: 20 To 28<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Defense: <font color=4850B8>523-582</font> (varies)(Base Defense: 169-193)<BR>
+Defense: <font color=4850B8>523-582</font> (varies) (Base Defense: 169-193)<BR>
 Required Level: 80<BR>
 Required Strength: 142<BR>
 Durability: 65<br>
@@ -419,7 +419,7 @@ Smite Damage: 46 To 46<BR>
 <font color=4850B8>+15% To Fire Skill Damage</font><BR>
 <font color=4850B8>+10 To Hydra*</font><BR>
 <font color=4850B8>+5% To Maximum Fire Resist</font><BR>
-<font color=4850B8>+15-25 To Strength</font> (varies)<BR>
+<font color=4850B8>+15-25 To Strength</font><br >
 <font color=4850B8>Fire Absorb 10-20%</font> (varies)<BR>
 (Only Spawns In Patch 1.10 or later)
 </font></td>

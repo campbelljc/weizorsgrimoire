@@ -347,10 +347,9 @@ Required Strength: 40<BR>
 Durability: 50<br>
 Base Weapon Speed: [10]<BR>
 <font color=4850B8>+100% Enhanced Damage</font><BR>
-<font color=4850B8>+20% Increased Attack Speed</font><BR>
-<font color=4850B8>+15 Dexterity</font><BR>
+<font color=4850B8>20% Increased Attack Speed</font><BR>
+<font color=4850B8>+15 to Dexterity</font><BR>
 <font color=4850B8>-8 Defense</font><BR>
-(Spawns In Any Patch)
 </font></td>
 </TR>
 
@@ -365,7 +364,7 @@ Base Weapon Speed: [10]<BR>
 </td>
 <TD>
 <font face="arial,helvetica" size=-1><SPAN>
-Two-Hand Damage:  <font color=4850B8>(9-10) To (33-37)</font> (21-23.5 Avg)<BR>
+Two-Hand Damage: <font color=4850B8>(9-10) To (33-37)</font> (21-23.5 Avg)<BR>
 Required Level: 14<BR>
 Required Strength: 50<BR>
 Durability: <font color=4850B8>70-90</font> (varies)<br>
@@ -423,7 +422,7 @@ Required Strength: 62<BR>
 Durability: 65<br>
 Base Weapon Speed: [10]<BR>
 <font color=4850B8>+50-70% Enhanced Damage</font> (varies)<BR>
-<font color=4850B8>+30% Increased Attack Speed</font><BR>
+<font color=4850B8>30% Increased Attack Speed</font><BR>
 <font color=4850B8>+50-100 To Attack Rating</font> (varies)<BR>
 <font color=4850B8>7% Life Stolen Per Hit</font><BR>
 <font color=4850B8>+10 To Dexterity</font><BR>
@@ -453,7 +452,7 @@ Base Weapon Speed: [0]<BR>
 <font color=4850B8><a href="/diablo2exp/items/magic.shtml#sma">Slows Target</a> By 50%</font><BR>
 <font color=4850B8>Hit Blinds Target +3</font><BR>
 <font color=4850B8>-50 To Monster Defense Per Hit</font><BR>
-<font color=4850B8>Freezes Target</font><BR>
+<font color=4850B8>Freezes Target +1</font><BR>
 <font color=4850B8>Prevent Monster Heal</font><BR>
 <font color=4850B8>-3 To Light Radius</font><BR>
 (Only Spawns In Patch 1.09 or later)
