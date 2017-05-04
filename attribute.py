@@ -39,11 +39,11 @@ class Attribute():
                 self.value_text += " (" + self.value_dict['perclvl'] + " per clvl)"
             
             if 'r22' in self.value_dict and self.value_dict['r22'] is not None:
-                self.sort_value = float(self.value_dict['r22'])
+                self.sort_value = float(self.value_dict['r22']) - 0.0001
             elif 'r21' in self.value_dict and self.value_dict['r21'] is not None:
-                self.sort_value = float(self.value_dict['r21'])
+                self.sort_value = float(self.value_dict['r21']) - 0.0001
             elif 'r2' in self.value_dict and self.value_dict['r2'] is not None:
-                self.sort_value = float(self.value_dict['r2'])
+                self.sort_value = float(self.value_dict['r2']) - 0.0001
             elif 'r1' in self.value_dict and self.value_dict['r1'] is not None:
                 self.sort_value = float(self.value_dict['r1'])
             elif 'r11' in self.value_dict and self.value_dict['r11'] is not None:

@@ -113,12 +113,22 @@ table {
 	padding-bottom: 30px;
 }
 
+th[data-sort]
+{
+	cursor: pointer;
+}
+
 #attr_table td, #attr_table tr
 {
 	padding-top: 3px;
 	padding-bottom: 3px;
 	padding-left: 5px;
 	padding-right: 5px;
+}
+
+.attr_table_header
+{
+	text-decoration: underline;
 }
 
 .unique { color: #908858 !important; }

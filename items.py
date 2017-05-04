@@ -14,6 +14,8 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/attrs")
         os.makedirs(HTML_DIR + "/rws")
     shutil.copyfile("style.css", HTML_DIR + "/style.css")
+    if not os.path.exists(HTML_DIR + "/js"):
+        shutil.copytree("js", HTML_DIR + "/js")
 
 def get_link(dirname, item_name):
     return HTML_DIR + "/" + dirname + "/" + item_name.lower().replace(" ", "_").replace("'", "").replace("/", "_").replace(":", "") + ".html"
@@ -59,7 +61,7 @@ def output_item_files(items):
             <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
         	<div id='navContainer'>\
         	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='/items/'>items directory</a></td>\
+        	    <td><a href='../'>items directory</a></td>\
         	  </tr></table><br />\
             </div>\
           </div>\
@@ -97,7 +99,7 @@ def output_runeword_files(items):
             <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
         	<div id='navContainer'>\
         	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='/items/'>items directory</a></td>\
+        	    <td><a href='../'>items directory</a></td>\
         	  </tr></table><br />\
             </div>\
           </div>\
@@ -145,7 +147,7 @@ def output_set_files(sets):
             <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
         	<div id='navContainer'>\
         	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='/items/'>items directory</a></td>\
+        	    <td><a href='../'>items directory</a></td>\
         	  </tr></table><br />\
             </div>\
           </div>\
@@ -176,6 +178,11 @@ def output_attribute_files(items, sets):
             continue
         
         items_per_attribute[attribute].sort(key=lambda tup: tup[1].sort_value, reverse=True)
+        
+        has_val_text = []
+        for item, item_attr in items_per_attribute[attribute]:
+            has_val_text.append(len(item_attr.value_text) > 0)
+        display_value_column = sum(has_val_text) > 0
     
         itemrows = ''
         for item, item_attr in items_per_attribute[attribute]:
@@ -192,12 +199,40 @@ def output_attribute_files(items, sets):
                 quality = item.quality
                 link = get_link('rws', item.name)
             
-            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{3}">{1}</a></td><td>{2}</td></tr>'.format('../../' + link, name, item_attr.value_text, quality)
-    
+            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td>'.format('../../' + link, name, quality)
+            if display_value_column:
+                itemrows += "<td>{0}</td>".format(item_attr.value_text)
+            itemrows += "</tr>"
+        
+        table_headers = "<th class='attr_table_header' data-sort='string'>item</th>"
+        if display_value_column:
+            table_headers += "<th class='attr_table_header' data-sort='range_string'>value</th>"
+        
         # save file...
         header = '<html><head>\
                     <title>{0} -- {1}</title>\
                     <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>\
+                    <script type="text/javascript" src="../js/stupidtable.min.js"></script>\
+                    <script type="text/javascript">\
+                    $(function(){{\
+                      $("#attr_table").stupidtable({{\
+                        "range_string":function(a,b){{\
+                          var valA = a;\
+                          if (a.indexOf("-") > -1)\
+                          {{\
+                            valA = a.split("-")[1];\
+                          }}\
+                          var valB = b;\
+                          if (b.indexOf("-") > -1)\
+                          {{\
+                            valB = b.split("-")[1];\
+                          }}\
+                          return parseInt(valA,10) - parseInt(valB,10);\
+                        }}\
+                      }});\
+                    }});\
+                    </script>\
                     </head><body>'.format(attribute.name, SITENAME)
     
         body = "<div id='container'>\
@@ -205,15 +240,16 @@ def output_attribute_files(items, sets):
             <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
         	<div id='navContainer'>\
         	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='/items/'>items directory</a></td>\
+        	    <td><a href='../'>items directory</a></td>\
         	  </tr></table><br />\
             </div>\
           </div>\
           <p class='attr_title'><strong>{1}</strong></p>\
           <table class='centerTable' id='attr_table'>\
+          <thead><tr>{2}</tr></thead><tbody>\
           {0}\
-          </table>\
-        </div>".format(itemrows, attribute.name)
+          </tbody></table>\
+        </div>".format(itemrows, attribute.name, table_headers)
     
         footer = '</body></html>' 
     
