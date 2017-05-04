@@ -273,7 +273,7 @@ Damage Reduced By 7<BR>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 5% Chance To Cast Level 15 Blaze When Struck<BR>
-5% Chance To Cast level 15 Fire Ball On Striking<BR>
+5% Chance To Cast level 15 Fireball On Striking<BR>
 +2 To Sorceress Skill Levels<BR>
 +1 To Warmth<BR>
 +30% Enhanced Defense<BR>
@@ -309,7 +309,7 @@ Requirements -15%<BR>
 4% Chance To Cast Level 5 Slow Missiles When Struck<BR>
 2% Chance To Cast level 15 Valkyrie On Striking<BR>
 +2 To Amazon Skill Levels<BR>
-+20% Faster Hit Recovery<BR>
+20% Faster Hit Recovery<BR>
 +2 To Critical Strike<BR>
 Cold Resist +30%<BR>
 Attacker Takes Damage of 14<BR>
@@ -344,7 +344,7 @@ Fire Resist +30%
 <font color=4850B8>
 5% Chance To Cast Level 15 Cyclone Armor When Struck<BR>
 5% Chance To Cast Level 15 Twister On Striking<BR>
-+2 To Druid Skills<BR>
++2 To Druid Skill Levels<BR>
 +100-150 To Mana (varies)<BR>
 Lightning Resist +30%<BR>
 Magic Damage Reduced By 7<BR>
@@ -361,9 +361,9 @@ Magic Damage Reduced By 7<BR>
 <font color=4850B8>
 5% Chance To Cast Level 15 Fade When Struck<BR>
 25% Chance To Cast level 15 Venom On Striking<BR>
-+2 To Assassin Skills<BR>
-+45% Increased Attack Speed<BR>
-+20% Faster Hit Recovery<BR>
++2 To Assassin Skill Levels<BR>
+45% Increased Attack Speed<BR>
+20% Faster Hit Recovery<BR>
 Cold Resist +30%<BR>
 50% Extra Gold From Monsters<BR>
 </font>

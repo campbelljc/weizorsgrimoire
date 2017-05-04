@@ -255,7 +255,7 @@
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 Level 9 Fanaticism Aura When Equipped<BR>
-+40% Increased Attack Speed<BR>
+40% Increased Attack Speed<BR>
 +240-270% Enhanced Damage (varies)<BR>
 20% Chance of Crushing Blow<BR>
 25% Chance of Open Wounds<BR>
@@ -279,7 +279,7 @@ Level 13 Summon Grizzly (5 Charges)
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 Level 15-21 Thorns Aura When Equipped (varies)<BR>
-+50% Faster Hit Recovery<BR>
+50% Faster Hit Recovery<BR>
 +25-50% To Poison Skill Damage (varies)<BR>
 +300 Defense<BR>
 Increase Maximum Mana 5%<BR>
@@ -302,7 +302,7 @@ Level 13 Spirit of Barbs (33 Charges)<BR>
 <font color=4850B8>
 50% Chance To Cast Level 20 Poison Nova When You Kill An Enemy<BR>
 Indestructible<BR>
-+60% Increased Attack Speed<BR>
+60% Increased Attack Speed<BR>
 +350-400% Enhanced Damage (varies)<BR>
 +200% Damage To Undead<BR>
 -25% Target Defense<BR>
@@ -325,7 +325,7 @@ Requirements -20%<BR>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 +1 To All Skills<BR>
-+40% Increased Attack Speed<BR>
+40% Increased Attack Speed<BR>
 +250-290% Enhanced Damage (varies)<BR>
 Adds 5-30 Fire Damage<BR>
 7% Life Stolen Per Hit<BR>
@@ -369,7 +369,7 @@ Damage Reduced By 8%<BR>
 <font color=4850B8>
 9% Chance To Cast Level 11 Frozen Orb On Striking<BR>
 11% Chance To Cast Level 9 Charged Bolt On Striking<BR>
-+35% Increased Attack Speed<BR>
+35% Increased Attack Speed<BR>
 +290-340% Enhanced Damage (varies)<BR>
 Adds 216-471 Magic Damage<BR>
 25% Chance of Open Wounds<BR>
@@ -390,7 +390,7 @@ Adds 216-471 Magic Damage<BR>
 <font color=4850B8>
 10% Chance To Cast Level 17 Chain Lightning On Striking<BR>
 7% Chance To Cast Level 13 Static Field On Striking<BR>
-+20% Increased Attack Speed<BR>
+20% Increased Attack Speed<BR>
 +180-220% Enhanced Damage (varies)<BR>
 Ignore Target's Defense<BR>
 -35% To Enemy Lightning Resistance<BR>
@@ -408,7 +408,7 @@ Level 18 Summon Spirit Wolf (30 Charges)<BR>
 <TD align=center><font face="arial,helvetica" size=-1><span>Lem + Ist + Io</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-1% Chance To Cast Level 50 Delirium* (morph) When Struck<BR>
+1% Chance To Cast Level 50 Delirium When Struck<BR>
 6% Chance To Cast Level 14 Mind Blast When Struck<BR>
 14% Chance To Cast Level 13 Terror When Struck<BR>
 11% Chance To Cast Level 18 Confuse On Striking<BR>
@@ -432,7 +432,7 @@ Level 17 Attract (60 Charges)<BR>
 5% Chance To Cast Level 18 Volcano On Striking<BR>
 Level 12 Holy Freeze Aura When Equipped<BR>
 +2 To All Skills<BR>
-+45% Increased Attack Speed<BR>
+45% Increased Attack Speed<BR>
 +330-370% Enhanced Damage (varies)<BR>
 -(40-60)% To Enemy Cold Resistance (varies)<BR>
 20% Deadly Strike<BR>
@@ -450,7 +450,7 @@ Requirements -20%
 <TD align=center><font face="arial,helvetica" size=-1><span>Shael + Um + Thul</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-+40% Faster Hit Recovery<BR>
+40% Faster Hit Recovery<BR>
 +10-20% Enhanced Damage (varies)<BR>
 Adds 37-133 Cold Damage 2 sec. Duration (Normal)<BR>
 15% Chance of Crushing Blow<BR>
@@ -472,7 +472,7 @@ Poison Resist +15%<BR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 +2 To All Skills<BR>
-+45% Faster Run/Walk<BR>
+45% Faster Run/Walk<BR>
 +1 To Teleport<BR>
 +750-775 Defense (varies)<BR>
 + (0.75 Per Character Level) +0-74 To Strength (Based On Character Level)<BR>
@@ -480,7 +480,7 @@ Increase Maximum Life 5%<BR>
 Damage Reduced By 8%<BR>
 +14 Life After Each Kill<BR>
 15% Damage Taken Goes To Mana<BR>
-+ (1 Per Character Level) +1-99% Better Chance of Getting Magic Items (Based On Character Level)<BR>
+(1 Per Character Level) 1-99% Better Chance of Getting Magic Items (Based On Character Level)<BR>
 </font>
 </span></font></TD>
 </TR>
@@ -496,7 +496,7 @@ Indestructible<BR>
 +9 To Minimum Damage<BR>
 7% Life Stolen Per Hit<BR>
 20% Chance of Crushing Blow<BR>
-Hit Blinds Target<BR>
+Hit Blinds Target +1<BR>
 Slows Target By 33%<BR>
 Regenerate Mana 16%<BR>
 Replenish Life +16<BR>
@@ -519,8 +519,8 @@ Level 8 Revive (88 Charges)<BR>
 15% Chance To Cast Level 5 Life Tap On Striking<BR>
 Level 13-16 Defiance Aura When Equipped (varies)<BR>
 +2 To Offensive Auras (Paladin Only)<BR>
-+30% Faster Block Rate<BR>
-Freezes Target<BR>
+30% Faster Block Rate<BR>
+Freezes Target +1<BR>
 +220-260% Enhanced Defense (varies)<BR>
 Replenish Life +7<BR>
 +5% To Maximum Cold Resist<BR>
@@ -536,7 +536,7 @@ Repairs 1 Durability in 4 Seconds
 <TD align=center><font face="arial,helvetica" size=-1><span>Fal + Ohm + Ort + Jah</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-+30% Increased Attack Speed<BR>
+30% Increased Attack Speed<BR>
 +320-370% Enhanced Damage (varies)<BR>
 Ignore Target's Defense<BR>
 Adds 180-200 Magic Damage<BR>
@@ -557,7 +557,7 @@ Prevent Monster Heal<BR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 15% Chance To Cast Level 3 Dim Vision When Struck<BR>
-+10% Faster Hit Recovery<BR>
+10% Faster Hit Recovery<BR>
 +200-260% Enhanced Defense (varies)<BR>
 +10 To Strength<BR>
 All Resistances +45<BR>
@@ -578,13 +578,13 @@ Half Freeze Duration<BR>
 100% Chance To Cast Level 36 Blaze When You Level-Up<BR>
 100% Chance To Cast Level 48 Meteor When You Die<BR>
 Level 16 Holy Fire Aura When Equipped<BR>
-+33% Increased Attack Speed<BR>
+33% Increased Attack Speed<BR>
 +280-330% Enhanced Damage (varies)<BR>
 Ignore Target's Defense<BR>
 7% Life Stolen Per Hit<BR>
 -20% To Enemy Fire Resistance<BR>
 20% Deadly Strike<BR>
-Hit Blinds Target<BR>
+Hit Blinds Target +1<BR>
 Freezes Target +3
 </font>
 </span></font></TD>
@@ -597,7 +597,7 @@ Freezes Target +3
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 +3 To All Skills<BR>
-+40% Faster Cast Rate<BR>
+40% Faster Cast Rate<BR>
 +75% Damage To Demons<BR>
 +100 To Attack Rating Against Demons<BR>
 Adds 3-14 Cold Damage, 3 sec. Duration (Normal)<BR>
@@ -618,7 +618,7 @@ Level 14 Raven (60 Charges)<BR>
 <TD align=center><font face="arial,helvetica" size=-1><span>Mal + Um + Gul + Fal</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-+30% Increased Attack Speed<BR>
+30% Increased Attack Speed<BR>
 +230-270% Enhanced Damage (varies)<BR>
 -25% Target Defense<BR>
 20% Bonus To Attack Rating<BR>
@@ -638,7 +638,7 @@ Prevent Monster Heal<BR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Dol + Ort + Eld + Lem</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-+25% Increased Attack Speed<BR>
+25% Increased Attack Speed<BR>
 +160-210% Enhanced Damage (varies)<BR>
 50-80% Bonus To Attack Rating (varies)<BR>
 +75% Damage To Undead<BR>
@@ -661,14 +661,14 @@ Level 3 Heart of Wolverine (12 Charges)<BR>
 <TD align=center><font face="arial,helvetica" size=-1><span>Mal + Tir</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-+25% Faster Hit Recovery<BR>
+25% Faster Hit Recovery<BR>
 +140-170% Enhanced Defense (varies)<BR>
 All Resistances +25-35 (varies)<BR>
 Damage Reduced by 3<BR>
 Magic Damage Reduced by 17<BR>
 +2 To Mana After Each Kill<BR>
 +1 To Light Radius<BR>
-Repairs Durability 1 In 4 Seconds<BR>
+Repairs 1 Durability in 4 Seconds<BR>
 </font>
 </span></font></TD>
 </TR>
@@ -679,8 +679,8 @@ Repairs Durability 1 In 4 Seconds<BR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Ko + Ko + Mal</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-+20% Faster Hit Recovery<BR>
-+20% Faster Block Rate<BR>
+20% Faster Hit Recovery<BR>
+20% Faster Block Rate<BR>
 20% Increased Chance of Blocking<BR>
 +130-160% Enhanced Defense (varies)<BR>
 +250 Defense vs. Missile<BR>
@@ -699,8 +699,8 @@ Level 12 Slow Missiles (60 Charges)<BR>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 +1 To All Skills<BR>
-+10% Faster Cast Rate<BR>
-+20% Faster Block Rate<BR>
+10% Faster Cast Rate<BR>
+20% Faster Block Rate<BR>
 +60-100% Enhanced Defense (varies)<BR>
 +10 To Energy<BR>
 Regenerate Mana 15%<BR>
@@ -717,7 +717,7 @@ Regenerate Mana 15%<BR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Shael + Um + Pul + Lum</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-+60% Faster Hit Recovery<BR>
+60% Faster Hit Recovery<BR>
 +250-290% Enhanced Defense (varies)<BR>
 +300 Defense Vs. Missile<BR>
 +16 To Strength<BR>
@@ -739,13 +739,13 @@ Level 16 Clay Golem (16 Charges)<BR>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 10% Chance To Cast Level 9 Tornado On Striking<BR>
-+20% Faster Run/Walk<BR>
-+40% Increased Attack Speed<BR>
-+15% Faster Hit Recovery<BR>
+20% Faster Run/Walk<BR>
+40% Increased Attack Speed<BR>
+15% Faster Hit Recovery<BR>
 +120-160% Enhanced Damage (varies)<BR>
 -50% Target Defense<BR>
 +50 To Attack Rating<BR>
-Hit Blinds Target<BR>
+Hit Blinds Target +1<BR>
 +1 To Light Radius<BR>
 Level 13 Twister (127 Charges)
 </font>
@@ -790,7 +790,7 @@ Ignore Target's Defense<BR>
 20% Deadly Strike<BR>
 Prevent Monster Heal<BR>
 Knockback<BR>
-Fires Explosive Arrows or Bolts (15)<BR>
+Fires Explosive Arrows or Bolts [Level 15]<BR>
 </font>
 </span></font></TD>
 </TR>
@@ -810,9 +810,9 @@ Indestructible<BR>
 Adds 1-50 Lightning Damage<BR>
 7% Mana Stolen Per Hit<BR>
 50% Chance of Crushing Blow<BR>
-+(0.5 per Character Level) 0.5-49.5% Deadly Strike (Based on Character Level)<BR>
++ (0.5 per Character Level) 0.5-49.5% Deadly Strike (Based on Character Level)<BR>
 +1 To Light Radius<BR>
-Level 22 Blood Golem  (15 Charges)<BR>
+Level 22 Blood Golem (15 Charges)<BR>
 Requirements -20%
 </font>
 </span></font></TD>
@@ -852,7 +852,7 @@ Level 14 Holy Fire Aura When Equipped<BR>
 +360 Defense<BR>
 +230 Defense Vs. Missile<BR>
 +3-5 To All Attributes (varies)<BR>
-+0.375-37.125 To Strength (Based on Character Level)<BR>
++ (0.375 per Character Level) 0.375-37.125 To Strength (Based on Character Level)<BR>
 Increase Maximum Mana 5% (Armor Only)<BR>
 +50 To Mana (Shields Only)<BR>
 +5% To Maximum Lightning Resist<BR>
@@ -869,13 +869,13 @@ Damage Reduced by 7<BR>
 <font color=4850B8>
 10% Chance To Cast Level 15 Confuse When Struck<BR>
 Level 15 Holy Shock Aura When Equipped<BR>
-+20-30% Faster Hit Recovery (varies)<BR>
+20-30% Faster Hit Recovery (varies)<BR>
 +30% Enhanced Defense<BR>
 +150-220 Defense (varies)<BR>
 +10 To Vitality<BR>
 Increase Maximum Life 5% (Helms Only)<BR>
 +50 To Life (Shields Only)<BR>
-+0.625-61.875 To Mana (Based On Character Level)<BR>
++ (0.625 per Character Level) 0.625-61.875 To Mana (Based On Character Level)<BR>
 All Resistances +5-20 (varies)<BR>
 12-25% Better Chance of Getting Magic Items (varies)
 </font>
@@ -889,7 +889,7 @@ All Resistances +5-20 (varies)<BR>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 Level 15 Thorns Aura When Equipped<BR>
-+35% Increased Attack Speed<BR>
+35% Increased Attack Speed<BR>
 +320-380% Damage To Demons (varies)<BR>
 +280% Damage To Undead<BR>
 +75 Poison Damage Over 5 Seconds<BR>
@@ -915,7 +915,7 @@ Ignore Target's Defense<BR>
 300% Bonus To Attack Rating<BR>
 +75% Damage To Undead<BR>
 +50 To Attack Rating Against Undead<BR>
-+120 Fire Damage<BR>
+Adds 120 Fire Damage<BR>
 All Resistances +15<BR>
 10% Reanimate As: Returned<BR>
 75% Extra Gold From Monsters
@@ -931,14 +931,14 @@ All Resistances +15<BR>
 <font color=4850B8>
 <B>Weapons</B><BR>
 20% Chance To Cast Level 15 Chilling Armor when Struck<BR>
-+25% Faster Cast Rate<BR>
+25% Faster Cast Rate<BR>
 +300% Enhanced Damage<BR>
 +9 To Minimum Damage<BR>
 +50 To Attack Rating<BR>
 20% Deadly Strike<BR>
 Hit Causes Monster To Flee 25%<BR>
 +200% Enhanced Defense<BR>
-+X To Life (Based on Character Level)*<BR>
++ (1-1.5 per Character Level) 1-148.5 To Life (Based on Character Level) (varies)<BR>
 All Resistances +25-30 (varies)<BR>
 12% Damage Taken Goes To Mana<BR>
 +1 To Light Radius<BR>
@@ -946,11 +946,11 @@ All Resistances +25-30 (varies)<BR>
 
 <B>Body Armor</B><BR>
 20% Chance To Cast Level 15 Chilling Armor when Struck<BR>
-+25% Faster Cast Rate<BR>
+25% Faster Cast Rate<BR>
 +300% Enhanced Damage<BR>
 +200% Enhanced Defense<BR>
 +15 Defense<BR>
-+X To Life (Based on Character Level)*<BR>
++ (1-1.5 per Character Level) 1-148.5 To Life (Based on Character Level) (varies)<BR>
 Replenish Life +7<BR>
 +5% To Maximum Lightning Resist<BR>
 All Resistances +25-30 (varies)<BR>
@@ -968,11 +968,11 @@ Damage Reduced By 7<BR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 35% Chance To Cast Level 15 Venom On Striking<BR>
-+30-40% Increased Attack Speed (varies)<BR>
-Damage +340-400 (varies)<BR>
+30-40% Increased Attack Speed (varies)<BR>
+Adds 340-400 Damage (varies)<BR>
 Ignore Target's Defense<BR>
 -25% Target Defense<BR>
-+(1.875 per character level) 1.875-185.625% Damage To Demons (Based on Character Level) <BR>
++ (1.875 per character level) 1.875-185.625% Damage To Demons (Based on Character Level) <BR>
 Adds 5-30 Fire Damage<BR>
 -20-25% To Enemy Poison Resistance (varies)<BR>
 20% Deadly Strike<BR>
@@ -1015,14 +1015,14 @@ Level 20 Revive (25 Charges)
 100% Chance To Cast Level 40 Blizzard When You Level-up<BR>
 25% Chance To Cast Level 22 Frost Nova On Striking<BR>
 Level 18 Holy Freeze Aura When Equipped<BR>
-+20% Increased Attack Speed<BR>
+20% Increased Attack Speed<BR>
 +140-210% Enhanced Damage (varies)<BR>
 Ignore Target's Defense<BR>
 +25-30% To Cold Skill Damage (varies)<BR>
 -20% To Enemy Cold Resistance<BR>
 7% Life Stolen Per Hit<BR>
 20% Deadly Strike<BR>
-3.125-309.375 Extra Gold From Monsters (Based on Character Level)
+3.125-309.375% Extra Gold From Monsters (Based on Character Level)
 </font>
 </span></font></TD>
 </TR>
@@ -1035,12 +1035,12 @@ Ignore Target's Defense<BR>
 <font color=4850B8>
 50% Chance To Cast Level 20 Chain Lightning When You Kill An Enemy<BR>
 Level 12 Conviction Aura When Equipped<BR>
-+35% Faster Run/Walk<BR>
+35% Faster Run/Walk<BR>
 +255-325% Enhanced Damage (varies)<BR>
 -(45-55)% To Enemy Lightning Resistance (varies)<BR>
 40% Chance of Crushing Blow<BR>
 Prevent Monster Heal<BR>
-0.5-49.5 To Vitality (Based on Character Level)<BR>
++0.5-49.5 To Vitality (Based on Character Level)<BR>
 30% Better Chance of Getting Magic Items<BR>
 Level 21 Cyclone Armor (30 Charges)<BR>
 </font>
@@ -1054,7 +1054,7 @@ Level 21 Cyclone Armor (30 Charges)<BR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
 Level 12-17 Meditation Aura When Equipped (varies)<BR>
-+35% Faster Cast Rate<BR>
+35% Faster Cast Rate<BR>
 +200-260% Enhanced Damage (varies)<BR>
 +9 To Minimum Damage<BR>
 180-250% Bonus to Attack Rating (varies)<BR>
@@ -1082,8 +1082,8 @@ Level 17 Might Aura When Equipped<BR>
 Ignore Target's Defense<BR>
 60-70% Chance of Crushing Blow (varies)<BR>
 Prevent Monster Heal<BR>
-Hit Blinds Target<BR>
-+(0.5 per character level) 0.5-49.5% Chance of Getting Magic Items (Based on Character Level) 
+Hit Blinds Target +1<BR>
+(0.5 per character level) 0.5-49.5% Better Chance of Getting Magic Items (Based on Character Level) 
 </font>
 </span></font></TD>
 </TR>
@@ -1116,7 +1116,7 @@ Slain Monsters Rest In Peace<BR>
 <font color=4850B8>
 30% Chance To Cast Level 20 Bone Spirit On Striking<BR>
 Indestructible<BR>
-+50% Increased Attack Speed<BR>
+50% Increased Attack Speed<BR>
 +210-340% Enhanced Damage (varies)<BR>
 +75% Damage To Demons<BR>
 +100 To Attack Rating Against Demons<BR>
@@ -1162,7 +1162,7 @@ Requirements -20%
 40% Chance To Cast Level 22 Firestorm On Striking<BR>
 Level 10-15 Redemption Aura When Equipped (varies)<BR>
 +350-400% Enhanced Damage (varies)<BR>
-Ignores Target's Defense<BR>
+Ignore Target's Defense<BR>
 14% Mana Stolen Per Hit<BR>
 -28% To Enemy Fire Resistance<BR>
 20% Deadly Strike<BR>
@@ -1197,7 +1197,7 @@ Level 16-20 Concentration Aura When Equipped (varies)<BR>
 +1-99% Damage To Demons (Based on Character Level)<BR>
 Adds 50-280 Lightning Damage<BR>
 20% Deadly Strike<BR>
-Hit Blinds Target<BR>
+Hit Blinds Target +1<BR>
 Freezes Target +3<BR>
 +10 To Vitality<BR>
 Replenish Life +8<BR>
@@ -1217,7 +1217,7 @@ Replenish Life +8<BR>
 20% Bonus To Attack Rating<BR>
 Adds 160-250 Magic Damage<BR>
 Adds 60-180 Fire Damage<BR>
-+5-10 To All Stats (varies)<BR>
++5-10 To All Attributes (varies)<BR>
 +10 To Dexterity<BR>
 38% Damage Taken Goes To Mana<BR>
 75% Extra Gold From Monsters<BR>
@@ -1236,8 +1236,8 @@ Requirements -20%
 
 <B>Weapons</B><BR>
 +2 To All Skills<BR>
-+25-35% Faster Cast Rate (varies)<BR>
-+55% Faster Hit Recovery<BR>
+25-35% Faster Cast Rate (varies)<BR>
+55% Faster Hit Recovery<BR>
 Adds 1-50 Lightning Damage<BR>
 Adds 3-14 Cold Damage 3 Second Duration (Normal)<BR>
 +75 Poison Damage Over 5 Seconds<BR>
@@ -1249,8 +1249,8 @@ Adds 3-14 Cold Damage 3 Second Duration (Normal)<BR>
 <BR>
 <B>Shields</B><BR>
 +2 To All Skills<BR>
-+25-35% Faster Cast Rate (varies)<BR>
-+55% Faster Hit Recovery<BR>
+25-35% Faster Cast Rate (varies)<BR>
+55% Faster Hit Recovery<BR>
 +250 Defense Vs. Missile<BR>
 +22 To Vitality<BR>
 +89-112 To Mana (varies)<BR>

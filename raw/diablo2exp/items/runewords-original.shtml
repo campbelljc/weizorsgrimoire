@@ -256,7 +256,7 @@ Cold Resist +43%<BR>
 Fire Resist +48%<BR>
 Lightning Resist +48%<BR>
 Poison Resist +48%<BR>
-10% Damage Goes To Mana<BR>
+10% Damage Taken Goes To Mana<BR>
 </font>
 </span></font></TD>
 </TR>
@@ -312,8 +312,8 @@ Adds 5-30 Fire Damage<BR>
 Adds 21-110 Lightning Damage<BR>
 +75 Poison Damage Over 5 Seconds<BR>
 +10 To Maximum Damage<BR>
-Lightning Resistance +60%<BR>
-+5 To Maximum Lightning Resistance<BR>
+Lightning Resist +60%<BR>
++5% To Maximum Lightning Resist<BR>
 +3 To Holy Shock (Paladin Only)<BR>
 Level 7 Chain Lightning (60 Charges)<BR>
 </font>
@@ -372,7 +372,7 @@ Adds 5-30 Fire Damage<BR>
 +3 To Inferno (Sorceress Only)<BR>
 +3 To Warmth (Sorceress Only)<BR>
 +2 To Mana After Each Kill<BR>
-+ (2 Per Character Level) +2-198 To Defense (Based On Character Level)<BR>
++ (2 Per Character Level) 2-198 Defense (Based On Character Level)<BR>
 Cold Resist +33%<BR>
 </font>
 </span></font></TD>
@@ -404,7 +404,7 @@ All Resistances +30
 <TD align=center><font face="arial,helvetica" size=-1><span>Ort + Sol</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-+1 To All Skill Levels<BR>
++1 To All Skills<BR>
 +10 To Energy<BR>
 +2 To Mana After Each Kill<BR>
 Lightning Resist +30%<BR>
@@ -461,8 +461,8 @@ Knockback
 +3 to Sorceress Skill Levels<BR>
 33% Faster Cast Rate<BR>
 Increase Maximum Mana 20%<BR>
-+3 Energy Shield (Sorceress Only)<BR>
-+2 Static Field (Sorceress Only)<BR>
++3 to Energy Shield (Sorceress Only)<BR>
++2 to Static Field (Sorceress Only)<BR>
 +10 To Energy<BR>
 +10 To Vitality<BR>
 +9 To Minimum Damage<BR>
@@ -501,7 +501,7 @@ Level 13 Cloak of Shadows (9 Charges)<BR>
 +30 Defense Vs. Missile<BR>
 +10 To Energy<BR>
 +10 To Vitality<BR>
-15% Damage Goes To Mana<BR>
+15% Damage Taken Goes To Mana<BR>
 Magic Damage Reduced By 3<BR>
 +33 To Mana<BR>
 Damage Reduced By 7<BR>
@@ -533,7 +533,7 @@ Cannot Be Frozen<BR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Dol + Eld + Hel + Ist + Tir + Vex</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-200% Enhanced Damage<BR>
++200% Enhanced Damage<BR>
 +75% Damage To Undead<BR>
 Requirements -20%<BR>
 20% Increased Attack Speed<BR>
@@ -575,7 +575,7 @@ Level 6 Weaken (18 Charges)<BR>
 <font color=4850B8>
 Magic Damage Reduced By 3<BR>
 +6 To Dexterity<BR>
-+15 To Maximum Stamina<BR>
++15 Maximum Stamina<BR>
 Poison Resist +30%<BR>
 Regenerate Mana 15%<BR>
 25% Faster Run/Walk<BR>
@@ -591,7 +591,7 @@ Regenerate Mana 15%<BR>
 <TD align=center><font face="arial,helvetica" size=-1><span>Tir + El</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-20% Enhanced Damage<BR>
++20% Enhanced Damage<BR>
 +3 To Minimum Damage<BR>
 +3 To Maximum Damage<BR>
 +50 To Attack Rating<BR>
@@ -609,7 +609,7 @@ Regenerate Mana 15%<BR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Amn + Tir</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-35% Enhanced Damage<BR>
++35% Enhanced Damage<BR>
 25% Chance Of Crushing Blow<BR>
 7% Life Stolen Per Hit<BR>
 +2 To Mana After Each Kill<BR>
