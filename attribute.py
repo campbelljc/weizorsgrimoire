@@ -33,7 +33,9 @@ class Attribute():
             elif 'r2' in self.value_dict and self.value_dict['r2'] is not None:
                 self.value_text += "-" + self.value_dict['r2']
             
-            if 'perclvl' in self.value_dict and self.value_dict['perclvl'] is not None:
+            if 'perclvl2' in self.value_dict and self.value_dict['perclvl2'] is not None:
+                self.value_text += " (" + self.value_dict['perclvl'] + "-" + self.value_dict['perclvl2'] + " per clvl)"                
+            elif 'perclvl' in self.value_dict and self.value_dict['perclvl'] is not None:
                 self.value_text += " (" + self.value_dict['perclvl'] + " per clvl)"
             
             if 'r22' in self.value_dict and self.value_dict['r22'] is not None:
@@ -90,10 +92,11 @@ for classname, trees in class_skills:
                 attribute_matches.append(AttributeMatch('ctc_'+proc_type.replace(" ", "_")+'_'+skill.replace(" ", "_"), r'(?P<p>\d+)% chance to cast level (?P<r1>\d+)[\-]*(?P<r2>\d+)* '+skill+' '+proc_type, r'chance to cast level (?P<r1>\d+)[\-]*(?P<r2>\d+)* '+skill+' '+proc_type))
 
 attribute_matches += [
-    AttributeMatch('firestorm', r'5% chance to cast level 10 firestorm on striking', r'5% chance to cast level 10 firestorm on striking'),
+    AttributeMatch('firestorm', r'1% chance to cast level 50 delirium when struck', r'1% chance to cast level 50 delirium when struck'),
+    AttributeMatch('delirium', r'5% chance to cast level 10 firestorm on striking', r'5% chance to cast level 10 firestorm on striking'),
     AttributeMatch('edmg', r'\+[\(]*(?P<r1>\d+)[\-]*(?P<r2>\d+)*[\)]*% enhanced damage', 'enhanced damage'),
     AttributeMatch('emaxdmg', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)*% enhanced maximum damage( \(based on character level\))*', 'enhanced maximum damage'),
-    AttributeMatch('dmgdemons', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)*% damage to demons( \(based on character level\))*', 'damage to demons'),
+    AttributeMatch('dmgdemons', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>[\d\.]+)[\-]*(?P<r2>[\d\.]+)*% damage to demons( \(based on character level\))*', 'damage to demons'),
     AttributeMatch('dmgundead', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)*% damage to undead( \(based on character level\))*', 'damage to undead'),
     AttributeMatch('mindmg', r'\+(?P<v>\d+) to minimum damage', 'minimum damage'),
     AttributeMatch('maxdmg', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* to maximum damage( \(based on character level\))*', 'maximum damage'),
@@ -122,8 +125,8 @@ attribute_matches += [
     AttributeMatch('arbonus', r'(?P<r1>\d+)[\-]*(?P<r2>\d+)*% bonus to attack rating', 'bonus to attack rating'),
     AttributeMatch('ardemons', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)* to attack rating against demons', 'attack rating against demons'),
     AttributeMatch('arundead', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)* to attack rating against undead', 'attack rating against undead'),
-    AttributeMatch('ias', r'(?P<v>\d+)% increased attack speed', 'increased attack speed'),
-    AttributeMatch('ds', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(?P<r1>\d+)[\-]*(?P<r2>\d+)*% deadly strike( \(based on character level\))*', 'deadly strike'),
+    AttributeMatch('ias', r'(?P<r1>\d+)[\-]*(?P<r2>\d+)*% increased attack speed', 'increased attack speed'),
+    AttributeMatch('ds', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(?P<r1>[\d\.]+)[\-]*(?P<r2>[\d\.]+)*% deadly strike( \(based on character level\))*', 'deadly strike'),
     AttributeMatch('cb', r'(?P<r1>\d+)[\-]*(?P<r2>\d+)*% chance of crushing blow', 'chance of crushing blow'),
     AttributeMatch('ow', r'(?P<v>\d+)% chance of open wounds', 'chance of open wounds'),
 
@@ -142,9 +145,9 @@ attribute_matches += [
     AttributeMatch('magicarrow', r'fires magic arrows \[level (?P<v>\d+)\]', 'fires magic arrows'),
     AttributeMatch('explboltarrow', r'fires explosive arrows or bolts \[level (?P<v>\d+)\]', 'fires explosive arrows or bolts'),
     
-    AttributeMatch('fcr', r'(?P<v>\d+)% faster cast rate', 'faster cast rate'),
+    AttributeMatch('fcr', r'(?P<r1>\d+)[\-]*(?P<r2>\d+)*% faster cast rate', 'faster cast rate'),
     AttributeMatch('frw', r'(?P<v>\d+)% faster run/walk', 'faster run/walk'),
-    AttributeMatch('fhr', r'(?P<v>\d+)% faster hit recovery', 'faster hit recovery'),
+    AttributeMatch('fhr', r'(?P<r1>\d+)[\-]*(?P<r2>\d+)*% faster hit recovery', 'faster hit recovery'),
     AttributeMatch('reqs', r'requirements (?P<v>[\d\-]+)%', 'requirements'),
     
     AttributeMatch('edef', r'\+[\(]*(?P<r1>\d+)[\-]*(?P<r2>\d+)*[\)]*% enhanced defense', 'enhanced defense'),
@@ -153,12 +156,12 @@ attribute_matches += [
     AttributeMatch('defplus', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)* defense( \(based on character level\))*', 'defense'),
     
     AttributeMatch('atts', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)* to all attributes', 'all attributes'),
-    AttributeMatch('str', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* to strength( \(based on character level\))*', 'strength'),
+    AttributeMatch('str', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>[\d\.]+)[\-]*(?P<r2>[\d\.]+)* to strength( \(based on character level\))*', 'strength'),
     AttributeMatch('dex', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* to dexterity( \(based on character level\))*', 'dexterity'),
-    AttributeMatch('vit', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* to vitality( \(based on character level\))*', 'vitality'),
+    AttributeMatch('vit', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>[\d\.]+)[\-]*(?P<r2>[\d\.]+)* to vitality( \(based on character level\))*', 'vitality'),
     AttributeMatch('enr', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* to energy( \(based on character level\))*', 'energy'),
-    AttributeMatch('life', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* to life( \(based on character level\))*', 'life'),
-    AttributeMatch('mana', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)* to mana( \(based on character level\))*', 'mana')
+    AttributeMatch('life', r'(\+ \((?P<perclvl>[\d\.]+[\-]*(?P<perclvl2>[\d\.]+)*) per character level\) )*(\+)*(?P<r1>[\d\.]+)[\-]*(?P<r2>[\d\.]+)* to life( \(based on character level\))*', 'life'),
+    AttributeMatch('mana', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>[\-]*[\d\.]+)[\-]*(?P<r2>[\d\.]+)* to mana( \(based on character level\))*', 'mana')
 ]
 
 for classname, trees in class_skills:
@@ -177,6 +180,7 @@ attribute_matches += [
     AttributeMatch('lightskilldmg', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)*% to lightning skill damage', 'lightning skill damage'),
     AttributeMatch('psnskilldmg', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)*% to poison skill damage', 'poison skill damage'),
     
+    AttributeMatch('magicsorbplus', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* magic absorb( \(based on character level\))*', 'magic absorb'),
     AttributeMatch('firesorbplus', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* fire absorb( \(based on character level\))*', 'fire absorb'),
     AttributeMatch('coldsorbplus', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* cold absorb( \(based on character level\))*', 'cold absorb'),
     AttributeMatch('lightsorbplus', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* lightning absorb( \(based on character level\))*', 'lightning absorb'),
@@ -207,6 +211,7 @@ attribute_matches += [
 
     AttributeMatch('poisonlenred', r'poison length reduced by (?P<v>\d+)', 'poison length reduced by'),
 
+    AttributeMatch('drainlife', r'drain life (?P<r1>-\d+)[\-]*(?P<r2>\d+)*', 'drain life'),
     AttributeMatch('repllife', r'replenish life \+(?P<r1>\d+)[\-]*(?P<r2>\d+)*', 'replenish life'),
     
     AttributeMatch('reanimatereturned', r'(?P<v>\d+)% reanimate as: returned', 'reanimate as: returned'),
@@ -214,7 +219,7 @@ attribute_matches += [
     AttributeMatch('stacksize', r'increased stack size \[(?P<v>\d+)\]', 'increased stack size'),
     
     AttributeMatch('maxstamina', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* maximum stamina( \(based on character level\))*', 'maximum stamina'),
-    AttributeMatch('slowerstaminadrain', r'(?P<r1>\d+)[\-]*(?P<r2>\d+)*% slower stamina drain', 'slower stamina drain'),
+    AttributeMatch('slowerstaminadrain', r'(?P<r1>(-)*\d+)[\-]*(?P<r2>\d+)*% slower stamina drain', 'slower stamina drain'),
     AttributeMatch('healstamina', r'heal stamina plus (\((?P<perclvl>[\d\.]+) per character level\) )*(?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)*%( \(based on character level\))*', 'heal stamina plus'),
     
     AttributeMatch('laek', r'\+(?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)* life after each kill', 'life after each kill'),
@@ -230,9 +235,9 @@ attribute_matches += [
     AttributeMatch('atklightdmg', r'attacker takes lightning damage of (?P<r1>\d+)[\-]*(?P<r2>\d+)*', 'attacker takes lightning damage of'),
     
     AttributeMatch('exp', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)*% to experience gained', 'experience gained'),
-    AttributeMatch('gf', r'(\((?P<perclvl>[\d\.]+) per character level\) )*(?P<r1>\d+)[\-]*(?P<r2>\d+)*% extra gold from monsters( \(based on character level\))*', 'extra gold from monsters'),
+    AttributeMatch('gf', r'(\((?P<perclvl>[\d\.]+) per character level\) )*(?P<r1>(-)*[\d\.]+)[\-]*(?P<r2>[\d\.]+)*% extra gold from monsters( \(based on character level\))*', 'extra gold from monsters'),
     AttributeMatch('prices', r'reduces all vendor prices (?P<r1>\d+)[\-]*(?P<r2>\d+)*%', 'reduces all vendor prices'),
-    AttributeMatch('mf', r'(\((?P<perclvl>[\d\.]+) per character level\) )*(?P<r1>\d+)[\-]*(?P<r2>\d+)*% better chance of getting magic items( \(based on character level\))*', 'better chance of getting magic items'),
+    AttributeMatch('mf', r'(\((?P<perclvl>[\d\.]+) per character level\) )*(?P<r1>[\d\.]+)[\-]*(?P<r2>[\d\.]+)*% better chance of getting magic items( \(based on character level\))*', 'better chance of getting magic items'),
         
     AttributeMatch('halffreezeduration', r'half freeze duration', 'half freeze duration'),
     AttributeMatch('cannotbefrozen', r'cannot be frozen', 'cannot be frozen'),

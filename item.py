@@ -21,6 +21,12 @@ class SetItem(Item):
         self.set_bonuses = set_bonuses
         super().__init__(name, imagepath, 'Set', '', '', stype, attr_dict)
 
+class Runeword(Item):
+    def __init__(self, name, allowed_items, runes, attr_dict):
+        self.allowed_items = allowed_items
+        self.runes = runes
+        super().__init__(name, '', 'Runeword', '', '', '', attr_dict)
+
 class ItemSet():
     def __init__(self, set_name, set_items, set_bonuses):
         self.set_name = set_name

@@ -1,0 +1,1514 @@
+<html>
+<head>
+	<title>The Arreat Summit - Items: Rune Words: 1.10 Rune Words</title>
+	<link rel="stylesheet" type="text/css" href="/diablo2exp/includes/d2-strat.css">
+	<script language="JavaScript" src="/diablo2exp/includes/d2.js"></script>
+</head>
+
+<body background="/images/battle/diablo2exp/images/bg2.jpg" bgcolor=black text="#AFAFAF" link="#928A70" vlink="#706850" marginwidth=0 marginheight=0 topmargin=0 leftmargin=0><link rel="stylesheet" type="text/css" href="/includes/anylink.css" />
+
+<script type="text/javascript" src="/includes/anylink.js">
+
+/***********************************************
+* AnyLink CSS Menu script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="18">
+<tr>
+<td align="left"><a href="http://www.battle.net" width="107" height="18"><img src="/images/thin_logo.gif" width="107" height="18" border="0"></a></td>
+<td align="right" width="100%" height="18" style="background-image:url(/images/thin_bg.gif); background-position:left;">
+	<table cellpadding="0" cellspacing="0" border="0" height="18">
+	<tr>
+	
+	<td width="136" height="18" background="/images/thin_wc.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'wc')"><img src="/images/pixel.gif" width="136" height="18" border="0"></a><br><div id="wc" class="anylinkcss" style="width:136; position:absolute;">
+<a href ="/war3/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/war3/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/war3/ladder/game-select.aspx" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Ladder</a>
+<a href ="/files.shtml#wc" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Files</a>
+<a href ="/war3/ladder/w3xp-tournaments.aspx?Gateway=Lordaeron" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Tournaments</a>
+<a href ="http://forums.battle.net/board.html?forumId=12012&sid=3000" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+
+   
+   
+   				</td>
+				
+				
+				
+				<td width="107" height="18" background="/images/thin_d.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'dia')"><img src="/images/pixel.gif" width="107" height="18" border="0"></a><br><div id="dia" class="anylinkcss" style="width:107; position:absolute;">
+
+<a href ="/diablo2exp/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/diablo2exp/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/diablo2exp/faq/ladder.shtml" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Ladder FAQ</a>
+<a href ="/files.shtml#d" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Files</a>
+<a href ="http://forums.battle.net/board.html?forumId=12011&sid=3000" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+   
+   </td>
+				<td width="152" height="18" background="/images/thin_sc.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'sc')"><img src="/images/pixel.gif" width="152" height="18" border="0"></a><br><div id="sc" class="anylinkcss" style="width:145; position:absolute;">
+<a href ="/scc/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/scc/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/files.shtml#sc" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Files</a>
+<a href ="/tournaments/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Tournaments</a>
+<a href ="http://forums.battle.net/board.html?forumId=12020&sid=3000" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+   </td>
+ 
+ 
+ </tr>
+   </table>
+   </div></div>
+   </td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr>
+<td background=0 valign=top>
+
+<!--- MAIN MENU ------------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0>
+	<tr>
+	<td background=0><a href="http://us.blizzard.com/en-us/games/d2/" onMouseOut="offImg('logo')" onMouseOver="ovrImg('logo')" ><img src="/images/battle/diablo2exp/images/d2-logo-off.gif" name="logo" alt="Diablo II: Lord of Destruction" border=0 width=116 height=82></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/" onMouseOut="offImg('news')" onMouseOver="ovrImg('news')" onClick="actImg('news')"><img src="/images/battle/diablo2exp/images/menu/menu-news-off.gif" name="news" alt="News" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/basics/" onMouseOut="offImg('basics')" onMouseOver="ovrImg('basics')" onClick="actImg('basics')"><img src="/images/battle/diablo2exp/images/menu/menu-basics-off.gif" name="basics" alt="Basics" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/classes/" onMouseOut="offImg('classes')" onMouseOver="ovrImg('classes')" onClick="actImg('classes')"><img src="/images/battle/diablo2exp/images/menu/menu-classes-off.gif" name="classes" alt="Classes" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/skills/" onMouseOut="offImg('skills')" onMouseOver="ovrImg('skills')" onClick="actImg('skills')"><img src="/images/battle/diablo2exp/images/menu/menu-skills-off.gif" name="skills" alt="Skills" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/items/"><img src="/images/battle/diablo2exp/images/menu/menu-items-act.gif" name="items" alt="Items" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/monsters/" onMouseOut="offImg('monsters')" onMouseOver="ovrImg('monsters')" onClick="actImg('monsters')"><img src="/images/battle/diablo2exp/images/menu/menu-monsters-off.gif" name="monsters" alt="Monsters" border=0 width=116 height=37></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/npcs/" onMouseOut="offImg('npcs')" onMouseOver="ovrImg('npcs')" onClick="actImg('npcs')"><img src="/images/battle/diablo2exp/images/menu/menu-npcs-off.gif" name="npcs" alt="NPCs" border=0 width=116 height=37></a></td>
+	</tr>
+	
+	<tr>
+	<td background=0><a href="/diablo2exp/quests/" onMouseOut="offImg('quests')" onMouseOver="ovrImg('quests')" onClick="actImg('quests')"><img src="/images/battle/diablo2exp/images/menu/menu-quests-off.gif" name="quests" alt="Quests" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/shrines.shtml" onMouseOut="offImg('shrines')" onMouseOver="ovrImg('shrines')" onClick="actImg('shrines')"><img src="/images/battle/diablo2exp/images/menu/menu-shrines-off.gif" name="shrines" alt="Shrines" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/maps/" onMouseOut="offImg('maps')" onMouseOver="ovrImg('maps')" onClick="actImg('maps')"><img src="/images/battle/diablo2exp/images/menu/menu-maps-off.gif" name="maps" alt="Maps" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="/diablo2exp/faq/" onMouseOut="offImg('faq')" onMouseOver="ovrImg('faq')" onClick="actImg('faq')"><img src="/images/battle/diablo2exp/images/menu/menu-faq-off.gif" name="faq" alt="F.A.Q." border=0 width=116 height=38></a></td>
+	</tr>
+	
+	<tr>
+	<td background=0><a href="/diablo2exp/files.shtml" onMouseOut="offImg('files')" onMouseOver="ovrImg('files')" onClick="actImg('files')"><img src="/images/battle/diablo2exp/images/menu/menu-files-off.gif" name="files" alt="Files" border=0 width=116 height=38></a></td>
+	</tr>
+
+	<tr>
+	<td background=0><img src="/images/battle/diablo2exp/images/menu/menu-bottom.gif" border=0 width=116 height=27></td>
+	</tr>
+
+	<tr>
+	<td background=0><a href="http://www.battle.net"><img src="/images/battle/diablo2exp/images/blizz-logo.gif" alt="Battle.net" border=0 width=116 height=78></a></td>
+	</tr>
+	</table>
+</td>
+
+<td background=0 valign=top width=90%>
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-top-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-top-left.gif" border=0 width=65 height=13></td>
+	<td background="/images/battle/diablo2exp/images/mid-top-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-top-right.gif" border=0 width=73 height=13></td>
+	</tr>
+	</table>
+
+<!--- SUBMENU BAR ----------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background=0><img src="/images/battle/diablo2exp/images/mid-linkbar-left.gif" border=0 width=20 height=35></td>
+	<td background="/images/battle/diablo2exp/images/mid-linkbar-back.gif" align=center width=100%>
+		<font face="arial,helvetica" size=1><small>
+
+<a class="tiny" href="/diablo2exp/items/basics.shtml">Item Basics</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#normal">Normal Items</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#exceptional">Exceptional Items</a> |
+<a class="tiny" href="/diablo2exp/items/weaponsandarmor.shtml#elite">Elite Items</a> |
+<a class="tiny" href="/diablo2exp/items/socketeditems.shtml">Socketed Items</a> |
+<a class="tiny" href="/diablo2exp/items/gems.shtml">Gems</a> |
+<a class="tiny" href="/diablo2exp/items/jewels.shtml">Jewels</a> |
+<a class="tiny" href="/diablo2exp/items/runes.shtml">Runes</a> |
+<a class="tiny" href="/diablo2exp/items/runewords.shtml">Rune Words</a> |
+<a class="tiny" href="/diablo2exp/items/magic.shtml">Magic Items</a> |
+<a class="tiny" href="/diablo2exp/items/magic/">Magic Prefixes and Suffixes</a> |
+<a class="tiny" href="/diablo2exp/items/crafteditems.shtml">Crafted Items</a> |
+<a class="tiny" href="/diablo2exp/items/sets/">Set Items</a> |
+<a class="tiny" href="/diablo2exp/items/uniques.shtml">Unique Items</a> |
+<a class="tiny" href="/diablo2exp/items/charms.shtml">Charms</a> |
+<a class="tiny" href="/diablo2exp/items/cube.shtml">The Horadric Cube</a> |
+<a class="tiny" href="/diablo2exp/items/">Items Index</a>
+    <br>
+
+		</small></font>
+	</td>
+	<td background=0><img src="/images/battle/diablo2exp/images/mid-linkbar-right.gif" border=0 width=21 height=35></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-linkbarbot-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-linkbarbot-left.gif" border=0 width=30 height=8></td>
+	<td background="/images/battle/diablo2exp/images/mid-linkbarbot-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-linkbarbot-right.gif" border=0 width=36 height=8></td>
+	</tr>
+
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-mid-back.gif" colspan=2><img src="/images/shared/blank.gif" border=0 width=576 height=7></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxtop-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-textboxtop-left.gif" border=0 width=36 height=23></td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxtop-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-textboxtop-right.gif" border=0 width=36 height=23></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxleft.gif"><img src="/images/shared/blank.gif" border=0 width=20 height=5></td>
+	<td background="/images/battle/diablo2exp/images/blackbg.gif" width=100%>
+
+
+<br>
+<!--- HEADER GRAPHIC ---------------------------->
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif"><img src="/images/battle/diablo2exp/images/headers/header-left.gif" border=0 width=80 height=60></td>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif" align=center width=100%><img src="/images/battle/diablo2exp/images/headers/items-runewords.gif" alt="Rune Words" border=0></td>
+		<td background="/images/battle/diablo2exp/images/headers/header-back.gif"><img src="/images/battle/diablo2exp/images/headers/header-right.gif" border=0 width=80 height=60></td>
+		</tr>
+		</table>
+<!--- END HEADER GRAPHIC ------------------------>
+<br>
+
+		<table border=0 cellpadding=10 cellspacing=0 width=100%>
+		<tr>
+		<td background="/images/battle/diablo2exp/images/blackbg.gif" align=left width=100%>
+			<font face="arial,helvetica" size=-1><span>
+			<p>
+<!--- MAIN CONTENT -->
+
+<a href="http://classic.battle.net/diablo2exp/pdf/The_Arreat_Summit%20-%20Items_%20Rune_Words_%201.10_Rune_Words.pdf">PDF Version</a>
+<p>
+
+<a href="runewords.shtml">Rune Words Index</a> |
+<a href="runewords-original.shtml">Original Rune Words</a> |
+<a href="runewords-110.shtml">1.10 Rune Words</a> |
+<a href="runewords-111.shtml">1.11 Rune Words</a>
+<P>
+
+
+<!--1.10 WORDS -->
+
+<CENTER>
+<TABLE Border=0 Cellpadding=5>
+<TR>
+<TH align=center><font face="arial,helvetica" size=-1><span>1.10 Rune Words</span></font></TH>
+<TH align=center><font face="arial,helvetica" size=-1><span>Allowed Items</span></font></TH>
+<TH align=center><font face="arial,helvetica" size=-1><span>Rune Order</span></font></TH>
+<TH align=center><font face="arial,helvetica" size=-1><span>Completed Stats</span></font></TH>
+<TR>
+
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Beast</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>5 Socket Axes/Scepters/Hammers</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Ber + Tir + Um + Mal + Lum</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+Level 9 Fanaticism Aura When Equipped<BR>
++40% Increased Attack Speed<BR>
++240-270% Enhanced Damage (varies)<BR>
+20% Chance of Crushing Blow<BR>
+25% Chance of Open Wounds<BR>
++3 To Werebear<BR>
++3 To Lycanthropy<BR>
+Prevent Monster Heal<BR>
++25-40 To Strength (varies)<BR>
++10 To Energy<BR>
++2 To Mana After Each Kill<BR>
+Level 13 Summon Grizzly (5 Charges)
+</font>
+</span></font></TD>
+</TR>
+
+
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Bramble</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Ral + Ohm + Sur + Eth</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+Level 15-21 Thorns Aura When Equipped (varies)<BR>
++50% Faster Hit Recovery<BR>
++25-50% To Poison Skill Damage (varies)<BR>
++300 Defense<BR>
+Increase Maximum Mana 5%<BR>
+Regenerate Mana 15%<BR>
++5% To Maximum Cold Resist<BR>
+Fire Resist +30%<BR>
+Poison Resist +100%<BR>
++13 Life After Each Kill<BR>
+Level 13 Spirit of Barbs (33 Charges)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Breath of the Dying</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>6 Socket Weapons</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Vex + Hel + El + Eld + Zod + Eth</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+50% Chance To Cast Level 20 Poison Nova When You Kill An Enemy<BR>
+Indestructible<BR>
++60% Increased Attack Speed<BR>
++350-400% Enhanced Damage (varies)<BR>
++200% Damage To Undead<BR>
+-25% Target Defense<BR>
++50 To Attack Rating<BR>
++50 To Attack Rating Against Undead<BR>
+7% Mana Stolen Per Hit<BR>
+12-15% Life Stolen Per Hit (varies)<BR>
+Prevent Monster Heal<BR>
+<U>+30 To All Attributes</U><BR>
++1 To Light Radius<BR>
+Requirements -20%<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Call To Arms*</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>5 Socket Weapons</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Amn + Ral + Mal + Ist + Ohm</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++1 To All Skills<BR>
++40% Increased Attack Speed<BR>
++250-290% Enhanced Damage (varies)<BR>
+Adds 5-30 Fire Damage<BR>
+7% Life Stolen Per Hit<BR>
++2-6 To Battle Command (varies)*<BR>
++1-6 To Battle Orders (varies)*<BR>
++1-4 To Battle Cry (varies)*<BR>
+Prevent Monster Heal<BR>
+Replenish Life +12<BR>
+30% Better Chance of Getting Magic Items
+</font>
+</span></font></TD>
+</TR>
+
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Chains of Honor</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Dol + Um + Ber + Ist</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++2 To All Skills<BR>
++200% Damage To Demons<BR>
++100% Damage To Undead<BR>
+8% Life Stolen Per Hit<BR>
++70% Enhanced Defense<BR>
++20 To Strength<BR>
+Replenish Life +7<BR>
+All Resistances +65<BR>
+Damage Reduced By 8%<BR>
+25% Better Chance of Getting Magic Items
+</font>
+</span></font></TD>
+</TR>
+
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Chaos</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Claws</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Fal + Ohm + Um</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+9% Chance To Cast Level 11 Frozen Orb On Striking<BR>
+11% Chance To Cast Level 9 Charged Bolt On Striking<BR>
++35% Increased Attack Speed<BR>
++290-340% Enhanced Damage (varies)<BR>
+Adds 216-471 Magic Damage<BR>
+25% Chance of Open Wounds<BR>
++1 To Whirlwind<BR>
++10 To Strength<BR>
++15 Life After Each Demon Kill<BR>
+</font>
+</span></font></TD>
+</TR>
+
+
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Crescent Moon</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Axes/Swords/Polearms</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Shael + Um + Tir</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+10% Chance To Cast Level 17 Chain Lightning On Striking<BR>
+7% Chance To Cast Level 13 Static Field On Striking<BR>
++20% Increased Attack Speed<BR>
++180-220% Enhanced Damage (varies)<BR>
+Ignore Target's Defense<BR>
+-35% To Enemy Lightning Resistance<BR>
+25% Chance of Open Wounds<BR>
++9-11 Magic Absorb (varies)<BR>
++2 To Mana After Each Kill<BR>
+Level 18 Summon Spirit Wolf (30 Charges)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Delirium*</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Helms</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Lem + Ist + Io</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+1% Chance To Cast Level 50 Delirium* (morph) When Struck<BR>
+6% Chance To Cast Level 14 Mind Blast When Struck<BR>
+14% Chance To Cast Level 13 Terror When Struck<BR>
+11% Chance To Cast Level 18 Confuse On Striking<BR>
++2 To All Skills<BR>
++261 Defense<BR>
++10 To Vitality<BR>
+50% Extra Gold From Monsters<BR>
+25% Better Chance of Getting Magic Items<BR>
+Level 17 Attract (60 Charges)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Doom</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>5 Socket Axes/Polearms/Hammers</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Hel + Ohm + Um + Lo + Cham</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+5% Chance To Cast Level 18 Volcano On Striking<BR>
+Level 12 Holy Freeze Aura When Equipped<BR>
++2 To All Skills<BR>
++45% Increased Attack Speed<BR>
++330-370% Enhanced Damage (varies)<BR>
+-(40-60)% To Enemy Cold Resistance (varies)<BR>
+20% Deadly Strike<BR>
+25% Chance of Open Wounds<BR>
+Prevent Monster Heal<BR>
+Freezes Target +3<BR>
+Requirements -20%
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Duress</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Shael + Um + Thul</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++40% Faster Hit Recovery<BR>
++10-20% Enhanced Damage (varies)<BR>
+Adds 37-133 Cold Damage 2 sec. Duration (Normal)<BR>
+15% Chance of Crushing Blow<BR>
+33% Chance of Open Wounds<BR>
++150-200% Enhanced Defense (varies)<BR>
+-20% Slower Stamina Drain<BR>
+Cold Resist +45%<BR>
+Lightning Resist +15%<BR>
+Fire Resist +15%<BR>
+Poison Resist +15%<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Enigma</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Jah + Ith + Ber</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++2 To All Skills<BR>
++45% Faster Run/Walk<BR>
++1 To Teleport<BR>
++750-775 Defense (varies)<BR>
++ (0.75 Per Character Level) +0-74 To Strength (Based On Character Level)<BR>
+Increase Maximum Life 5%<BR>
+Damage Reduced By 8%<BR>
++14 Life After Each Kill<BR>
+15% Damage Taken Goes To Mana<BR>
++ (1 Per Character Level) +1-99% Better Chance of Getting Magic Items (Based On Character Level)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Eternity</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>5 Socket Melee Weapons</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Amn + Ber + Ist + Sol + Sur</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+Indestructible<BR>
++260-310% Enhanced Damage (varies)<BR>
++9 To Minimum Damage<BR>
+7% Life Stolen Per Hit<BR>
+20% Chance of Crushing Blow<BR>
+Hit Blinds Target<BR>
+Slows Target By 33%<BR>
+Regenerate Mana 16%<BR>
+Replenish Life +16<BR>
+Cannot Be Frozen<BR>
+30% Better Chance Of Getting Magic Items<BR>
+Level 8 Revive (88 Charges)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+
+
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Exile</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Paladin Shields (only)</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Vex + Ohm + Ist + Dol</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+15% Chance To Cast Level 5 Life Tap On Striking<BR>
+Level 13-16 Defiance Aura When Equipped (varies)<BR>
++2 To Offensive Auras (Paladin Only)<BR>
++30% Faster Block Rate<BR>
+Freezes Target<BR>
++220-260% Enhanced Defense (varies)<BR>
+Replenish Life +7<BR>
++5% To Maximum Cold Resist<BR>
++5% To Maximum Fire Resist<BR>
+25% Better Chance Of Getting Magic Items<BR>
+Repairs 1 Durability in 4 Seconds
+</font>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Famine</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Axes/Hammers</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Fal + Ohm + Ort + Jah</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++30% Increased Attack Speed<BR>
++320-370% Enhanced Damage (varies)<BR>
+Ignore Target's Defense<BR>
+Adds 180-200 Magic Damage<BR>
+Adds 50-200 Fire Damage<BR>
+Adds 51-250 Lightning Damage<BR>
+Adds 50-200 Cold Damage<BR>
+12% Life Stolen Per Hit<BR>
+Prevent Monster Heal<BR>
++10 To Strength
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Gloom</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Fal + Um + Pul</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+15% Chance To Cast Level 3 Dim Vision When Struck<BR>
++10% Faster Hit Recovery<BR>
++200-260% Enhanced Defense (varies)<BR>
++10 To Strength<BR>
+All Resistances +45<BR>
+Half Freeze Duration<BR>
+5% Damage Taken Goes To Mana<BR>
+-3 To Light Radius
+</font>
+</span></font></TD>
+</TR>
+
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Hand of Justice*</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Weapons</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Sur + Cham + Amn + Lo</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+100% Chance To Cast Level 36 Blaze When You Level-Up<BR>
+100% Chance To Cast Level 48 Meteor When You Die<BR>
+Level 16 Holy Fire Aura When Equipped<BR>
++33% Increased Attack Speed<BR>
++280-330% Enhanced Damage (varies)<BR>
+Ignore Target's Defense<BR>
+7% Life Stolen Per Hit<BR>
+-20% To Enemy Fire Resistance<BR>
+20% Deadly Strike<BR>
+Hit Blinds Target<BR>
+Freezes Target +3
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Heart of the Oak</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Staves/Maces*</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Ko + Vex + Pul + Thul</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++3 To All Skills<BR>
++40% Faster Cast Rate<BR>
++75% Damage To Demons<BR>
++100 To Attack Rating Against Demons<BR>
+Adds 3-14 Cold Damage, 3 sec. Duration (Normal)<BR>
+7% Mana Stolen Per Hit<BR>
++10 To Dexterity<BR>
+Replenish Life +20<BR>
+Increase Maximum Mana 15%<BR>
+All Resistances +30-40 (varies)<BR>
+Level 4 Oak Sage (25 Charges)<BR>
+Level 14 Raven (60 Charges)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Kingslayer</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Swords/Axes</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Mal + Um + Gul + Fal</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++30% Increased Attack Speed<BR>
++230-270% Enhanced Damage (varies)<BR>
+-25% Target Defense<BR>
+20% Bonus To Attack Rating<BR>
+33% Chance of Crushing Blow<BR>
+50% Chance of Open Wounds<BR>
++1 To Vengeance<BR>
+Prevent Monster Heal<BR>
++10 To Strength<BR>
+40% Extra Gold From Monsters
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Passion</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Weapons</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Dol + Ort + Eld + Lem</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++25% Increased Attack Speed<BR>
++160-210% Enhanced Damage (varies)<BR>
+50-80% Bonus To Attack Rating (varies)<BR>
++75% Damage To Undead<BR>
++50 To Attack Rating Against Undead<BR>
+Adds 1-50 Lightning Damage<BR>
++1 To Berserk<BR>
++1 To Zeal<BR>
+Hit Blinds Target +10<BR>
+Hit Causes Monster To Flee 25%<BR>
+75% Extra Gold From Monsters<BR>
+Level 3 Heart of Wolverine (12 Charges)<BR>
+
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Prudence</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>2 Socket Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Mal + Tir</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++25% Faster Hit Recovery<BR>
++140-170% Enhanced Defense (varies)<BR>
+All Resistances +25-35 (varies)<BR>
+Damage Reduced by 3<BR>
+Magic Damage Reduced by 17<BR>
++2 To Mana After Each Kill<BR>
++1 To Light Radius<BR>
+Repairs Durability 1 In 4 Seconds<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Sanctuary</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Shields</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Ko + Ko + Mal</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++20% Faster Hit Recovery<BR>
++20% Faster Block Rate<BR>
+20% Increased Chance of Blocking<BR>
++130-160% Enhanced Defense (varies)<BR>
++250 Defense vs. Missile<BR>
++20 To Dexterity<BR>
+All Resistances +50-70 (varies)<BR>
+Magic Damage Reduced By 7<BR>
+Level 12 Slow Missiles (60 Charges)<BR>
+</span></font></TD>
+</TR>
+
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Splendor</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>2 Socket Shields</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Eth + Lum</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++1 To All Skills<BR>
++10% Faster Cast Rate<BR>
++20% Faster Block Rate<BR>
++60-100% Enhanced Defense (varies)<BR>
++10 To Energy<BR>
+Regenerate Mana 15%<BR>
+50% Extra Gold From Monsters<BR>
+20% Better Chance of Getting Magic Items<BR>
++3 To Light Radius<BR>
+</span></font></TD>
+</TR>
+
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Stone</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Shael + Um + Pul + Lum</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
++60% Faster Hit Recovery<BR>
++250-290% Enhanced Defense (varies)<BR>
++300 Defense Vs. Missile<BR>
++16 To Strength<BR>
++16 To Vitality<BR>
++10 To Energy<BR>
+All Resistances +15<BR>
+Level 16 Molten Boulder (80 Charges)<BR>
+Level 16 Clay Golem (16 Charges)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Wind</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>2 Socket Melee Weapons</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Sur + El</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+10% Chance To Cast Level 9 Tornado On Striking<BR>
++20% Faster Run/Walk<BR>
++40% Increased Attack Speed<BR>
++15% Faster Hit Recovery<BR>
++120-160% Enhanced Damage (varies)<BR>
+-50% Target Defense<BR>
++50 To Attack Rating<BR>
+Hit Blinds Target<BR>
++1 To Light Radius<BR>
+Level 13 Twister (127 Charges)
+</font>
+</span></font></TD>
+</TR>
+
+
+
+</TABLE>
+</CENTER>
+<P>
+
+
+<B>The following Rune Words will only work on the Battle.net Realms for Ladder Characters only. They will not work for single or
+open characters or non-ladder characters</B>
+<P>
+
+<a name="110 ladder only"></a>
+<!----REALM ONLY/LADDER ONLY------------->
+
+<CENTER>
+<TABLE Border=0 Cellpadding=5>
+<TR>
+<TH align=center><font face="arial,helvetica" size=-1><span>Ladder Rune Words</span></font></TH>
+<TH align=center><font face="arial,helvetica" size=-1><span>Allowed Items</span></font></TH>
+<TH align=center><font face="arial,helvetica" size=-1><span>Rune Order</span></font></TH>
+<TH align=center><font face="arial,helvetica" size=-1><span>Completed Stats</span></font></TH>
+<TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Brand</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Missile Weapons</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Jah + Lo + Mal + Gul</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+35% Chance To Cast Level 14 Amplify Damage When Struck<BR>
+100% Chance To Cast Level 18 Bone Spear On Striking<BR>
++260-340% Enhanced Damage (varies)<BR>
+Ignore Target's Defense<BR>
+20% Bonus to Attack Rating<BR>
++280-330% Damage To Demons (varies)<BR>
+20% Deadly Strike<BR>
+Prevent Monster Heal<BR>
+Knockback<BR>
+Fires Explosive Arrows or Bolts (15)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Death</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>5 Socket Swords/Axes</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Hel + El + Vex + Ort + Gul</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+100% Chance To Cast Level 44 Chain Lightning When You Die<BR>
+25% Chance To Cast Level 18 Glacial Spike On Attack<BR>
+Indestructible<BR>
++300-385% Enhanced Damage (varies)<BR>
+20% Bonus To Attack Rating<BR>
++50 To Attack Rating<BR>
+Adds 1-50 Lightning Damage<BR>
+7% Mana Stolen Per Hit<BR>
+50% Chance of Crushing Blow<BR>
++(0.5 per Character Level) 0.5-49.5% Deadly Strike (Based on Character Level)<BR>
++1 To Light Radius<BR>
+Level 22 Blood Golem  (15 Charges)<BR>
+Requirements -20%
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Destruction</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>5 Socket Polearms/Swords</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Vex + Lo + Ber + Jah + Ko</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+23% Chance To Cast Level 12 Volcano On Striking<BR>
+5% Chance To Cast Level 23 Molten Boulder On Striking<BR>
+100% Chance To Cast level 45 Meteor When You Die<BR>
+15% Chance To Cast Level 22 Nova On Attack<BR>
++350% Enhanced Damage<BR>
+Ignore Target's Defense<BR>
+Adds 100-180 Magic Damage<BR>
+7% Mana Stolen Per Hit<BR>
+20% Chance Of Crushing Blow<BR>
+20% Deadly Strike<BR>
+Prevent Monster Heal<BR>
++10 To Dexterity<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Dragon</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Body Armor/Shields</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Sur + Lo + Sol</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+20% Chance to Cast Level 18 Venom When Struck<BR>
+12% Chance To Cast Level 15 Hydra On Striking<BR>
+Level 14 Holy Fire Aura When Equipped<BR>
++360 Defense<BR>
++230 Defense Vs. Missile<BR>
++3-5 To All Attributes (varies)<BR>
++0.375-37.125 To Strength (Based on Character Level)<BR>
+Increase Maximum Mana 5% (Armor Only)<BR>
++50 To Mana (Shields Only)<BR>
++5% To Maximum Lightning Resist<BR>
+Damage Reduced by 7<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Dream</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Helms/Shields</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Io + Jah + Pul</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+10% Chance To Cast Level 15 Confuse When Struck<BR>
+Level 15 Holy Shock Aura When Equipped<BR>
++20-30% Faster Hit Recovery (varies)<BR>
++30% Enhanced Defense<BR>
++150-220 Defense (varies)<BR>
++10 To Vitality<BR>
+Increase Maximum Life 5% (Helms Only)<BR>
++50 To Life (Shields Only)<BR>
++0.625-61.875 To Mana (Based On Character Level)<BR>
+All Resistances +5-20 (varies)<BR>
+12-25% Better Chance of Getting Magic Items (varies)
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Edge</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Missile Weapons</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Tir + Tal + Amn</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+Level 15 Thorns Aura When Equipped<BR>
++35% Increased Attack Speed<BR>
++320-380% Damage To Demons (varies)<BR>
++280% Damage To Undead<BR>
++75 Poison Damage Over 5 Seconds<BR>
+7% Life Stolen Per Hit<BR>
+Prevent Monster Heal<BR>
++5-10 To All Attributes (varies)<BR>
++2 To Mana After Each Kill<BR>
+Reduces All Vendor Prices 15%!!!*
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Faith</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Missile Weapons</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Ohm + Jah + Lem + Eld</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+Level 12-15 Fanaticism Aura When Equipped (varies)<BR>
++1-2 To All Skills (varies)<BR>
++330% Enhanced Damage<BR>
+Ignore Target's Defense<BR>
+300% Bonus To Attack Rating<BR>
++75% Damage To Undead<BR>
++50 To Attack Rating Against Undead<BR>
++120 Fire Damage<BR>
+All Resistances +15<BR>
+10% Reanimate As: Returned<BR>
+75% Extra Gold From Monsters
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Fortitude</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Weapons/Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>El + Sol + Dol + Lo</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+<B>Weapons</B><BR>
+20% Chance To Cast Level 15 Chilling Armor when Struck<BR>
++25% Faster Cast Rate<BR>
++300% Enhanced Damage<BR>
++9 To Minimum Damage<BR>
++50 To Attack Rating<BR>
+20% Deadly Strike<BR>
+Hit Causes Monster To Flee 25%<BR>
++200% Enhanced Defense<BR>
++X To Life (Based on Character Level)*<BR>
+All Resistances +25-30 (varies)<BR>
+12% Damage Taken Goes To Mana<BR>
++1 To Light Radius<BR>
+<BR>
+
+<B>Body Armor</B><BR>
+20% Chance To Cast Level 15 Chilling Armor when Struck<BR>
++25% Faster Cast Rate<BR>
++300% Enhanced Damage<BR>
++200% Enhanced Defense<BR>
++15 Defense<BR>
++X To Life (Based on Character Level)*<BR>
+Replenish Life +7<BR>
++5% To Maximum Lightning Resist<BR>
+All Resistances +25-30 (varies)<BR>
+Damage Reduced By 7<BR>
+12% Damage Taken Goes To Mana<BR>
++1 To Light Radius
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Grief</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>5 Socket Swords/Axes</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Eth + Tir + Lo + Mal + Ral</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+35% Chance To Cast Level 15 Venom On Striking<BR>
++30-40% Increased Attack Speed (varies)<BR>
+Damage +340-400 (varies)<BR>
+Ignore Target's Defense<BR>
+-25% Target Defense<BR>
++(1.875 per character level) 1.875-185.625% Damage To Demons (Based on Character Level) <BR>
+Adds 5-30 Fire Damage<BR>
+-20-25% To Enemy Poison Resistance (varies)<BR>
+20% Deadly Strike<BR>
+Prevent Monster Heal<BR>
++2 To Mana After Each Kill<BR>
++10-15 Life After Each Kill (varies)
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Harmony</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Missile Weapons</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Tir + Ith + Sol + Ko</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+Level 10 Vigor Aura When Equipped<BR>
++200-275% Enhanced Damage (varies)<BR>
++9 To Minimum Damage<BR>
++9 To Maximum Damage<BR>
+Adds 55-160 Lightning Damage<BR>
+Adds 55-160 Fire Damage<BR>
+Adds 55-160 Cold Damage<BR>
++2-6 To Valkyrie (varies)<BR>
++10 To Dexterity<BR>
+Regenerate Mana 20%<BR>
++2 To Mana After Each Kill<BR>
++2 To Light Radius<BR>
+Level 20 Revive (25 Charges)
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Ice</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Missile Weapons</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Amn + Shael + Jah + Lo</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+100% Chance To Cast Level 40 Blizzard When You Level-up<BR>
+25% Chance To Cast Level 22 Frost Nova On Striking<BR>
+Level 18 Holy Freeze Aura When Equipped<BR>
++20% Increased Attack Speed<BR>
++140-210% Enhanced Damage (varies)<BR>
+Ignore Target's Defense<BR>
++25-30% To Cold Skill Damage (varies)<BR>
+-20% To Enemy Cold Resistance<BR>
+7% Life Stolen Per Hit<BR>
+20% Deadly Strike<BR>
+3.125-309.375 Extra Gold From Monsters (Based on Character Level)
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Infinity</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Polearms</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Ber + Mal + Ber + Ist</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+50% Chance To Cast Level 20 Chain Lightning When You Kill An Enemy<BR>
+Level 12 Conviction Aura When Equipped<BR>
++35% Faster Run/Walk<BR>
++255-325% Enhanced Damage (varies)<BR>
+-(45-55)% To Enemy Lightning Resistance (varies)<BR>
+40% Chance of Crushing Blow<BR>
+Prevent Monster Heal<BR>
+0.5-49.5 To Vitality (Based on Character Level)<BR>
+30% Better Chance of Getting Magic Items<BR>
+Level 21 Cyclone Armor (30 Charges)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Insight</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Polearms/Staves</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Ral + Tir + Tal + Sol</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+Level 12-17 Meditation Aura When Equipped (varies)<BR>
++35% Faster Cast Rate<BR>
++200-260% Enhanced Damage (varies)<BR>
++9 To Minimum Damage<BR>
+180-250% Bonus to Attack Rating (varies)<BR>
+Adds 5-30 Fire Damage<BR>
++75 Poison Damage Over 5 Seconds<BR>
++1-6 To Critical Strike (varies)<BR>
++5 To All Attributes<BR>
++2 To Mana After Each Kill<BR>
+23% Better Chance of Getting Magic Items<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Last Wish</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>6 Socket Swords/Hammers/Axes</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Jah + Mal + Jah + Sur + Jah + Ber</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+6% Chance To Cast Level 11 Fade When Struck<BR>
+10% Chance To Cast Level 18 Life Tap On Striking<BR>
+20% Chance To Cast Level 20 Charged Bolt On Attack<BR>
+Level 17 Might Aura When Equipped<BR>
++330-375% Enhanced Damage (varies)<BR>
+Ignore Target's Defense<BR>
+60-70% Chance of Crushing Blow (varies)<BR>
+Prevent Monster Heal<BR>
+Hit Blinds Target<BR>
++(0.5 per character level) 0.5-49.5% Chance of Getting Magic Items (Based on Character Level) 
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Lawbringer</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Swords/Hammers/Scepters </span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Amn + Lem + Ko</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+20% Chance To Cast Level 15 Decrepify On Striking<BR>
+Level 16-18 Sanctuary Aura When Equipped (varies)<BR>
+-50% Target Defense<BR>
+Adds 150-210 Fire Damage<BR>
+Adds 130-180 Cold Damage<BR>
+7% Life Stolen Per Hit<BR>
+Slain Monsters Rest In Peace<BR>
++200-250 Defense Vs. Missile (varies)<BR>
++10 To Dexterity<BR>
+75% Extra Gold From Monsters
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Oath</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Swords/Axes/Maces</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Shael + Pul + Mal + Lum</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+30% Chance To Cast Level 20 Bone Spirit On Striking<BR>
+Indestructible<BR>
++50% Increased Attack Speed<BR>
++210-340% Enhanced Damage (varies)<BR>
++75% Damage To Demons<BR>
++100 To Attack Rating Against Demons<BR>
+Prevent Monster Heal<BR>
++10 To Energy<BR>
++10-15 Magic Absorb (varies)<BR>
+Level 16 Heart Of Wolverine (20 Charges)<BR>
+Level 17 Iron Golem (14 Charges)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Obedience</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>5 Socket Polearms</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Hel + Ko + Thul + Eth + Fal</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+30% Chance To Cast Level 21 Enchant When You Kill An Enemy<BR>
+40% Faster Hit Recovery<BR>
++370% Enhanced Damage<BR>
+-25% Target Defense<BR>
+Adds 3-14 Cold Damage 3 Second Duration (Normal)<BR>
+-25% To Enemy Fire Resistance<BR>
+40% Chance of Crushing Blow<BR>
++200-300 Defense (varies)<BR>
++10 To Strength<BR>
++10 To Dexterity<BR>
+All Resistances +20-30 (varies)<BR>
+Requirements -20%
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Phoenix</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Weapons/Shields</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Vex + Vex + Lo + Jah</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+<B>Weapons</B><BR>
+100% Chance To Cast level 40 Blaze When You Level-up<BR>
+40% Chance To Cast Level 22 Firestorm On Striking<BR>
+Level 10-15 Redemption Aura When Equipped (varies)<BR>
++350-400% Enhanced Damage (varies)<BR>
+Ignores Target's Defense<BR>
+14% Mana Stolen Per Hit<BR>
+-28% To Enemy Fire Resistance<BR>
+20% Deadly Strike<BR>
++350-400 Defense Vs. Missile (varies)<BR>
++15-21 Fire Absorb (varies)<BR>
+<BR>
+
+<B>Shields</B><BR>
+100% Chance To Cast level 40 Blaze When You Level-up<BR>
+40% Chance To Cast Level 22 Firestorm On Striking<BR>
+Level 10-15 Redemption Aura When Equipped (varies)<BR>
++350-400 Defense Vs. Missile (varies)<BR>
++350-400% Enhanced Damage (varies)<BR>
+-28% To Enemy Fire Resistance<BR>
++50 To Life<BR>
++5% To Maximum Lightning Resist<BR>
++10% To Maximum Fire Resist<BR>
++15-21 Fire Absorb (varies)<BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Pride</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Polearms</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Cham + Sur + Io + Lo</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+25% Chance To Cast Level 17 Fire Wall When Struck<BR>
+Level 16-20 Concentration Aura When Equipped (varies)<BR>
+260-300% Bonus To Attack Rating (varies)<BR>
++1-99% Damage To Demons (Based on Character Level)<BR>
+Adds 50-280 Lightning Damage<BR>
+20% Deadly Strike<BR>
+Hit Blinds Target<BR>
+Freezes Target +3<BR>
++10 To Vitality<BR>
+Replenish Life +8<BR>
+1.875-185.625% Extra Gold From Monsters (Based on Character Level)
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Rift</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Polearms/Scepters</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Hel + Ko + Lem + Gul</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+20% Chance To Cast Level 16 Tornado On Striking<BR>
+16% Chance To Cast Level 21 Frozen Orb On Attack<BR>
+20% Bonus To Attack Rating<BR>
+Adds 160-250 Magic Damage<BR>
+Adds 60-180 Fire Damage<BR>
++5-10 To All Stats (varies)<BR>
++10 To Dexterity<BR>
+38% Damage Taken Goes To Mana<BR>
+75% Extra Gold From Monsters<BR>
+Level 15 Iron Maiden (40 Charges)<BR>
+Requirements -20%
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Spirit</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Swords/Shields</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Tal + Thul + Ort + Amn</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+
+<B>Weapons</B><BR>
++2 To All Skills<BR>
++25-35% Faster Cast Rate (varies)<BR>
++55% Faster Hit Recovery<BR>
+Adds 1-50 Lightning Damage<BR>
+Adds 3-14 Cold Damage 3 Second Duration (Normal)<BR>
++75 Poison Damage Over 5 Seconds<BR>
+7% Life Stolen Per Hit<BR>
++250 Defense Vs. Missile<BR>
++22 To Vitality<BR>
++89-112 To Mana (varies)<BR>
++3-8 Magic Absorb (varies)<BR>
+<BR>
+<B>Shields</B><BR>
++2 To All Skills<BR>
++25-35% Faster Cast Rate (varies)<BR>
++55% Faster Hit Recovery<BR>
++250 Defense Vs. Missile<BR>
++22 To Vitality<BR>
++89-112 To Mana (varies)<BR>
+Cold Resist +35%<BR>
+Lightning Resist +35%<BR>
+Poison Resist +35%<BR>
++3-8 Magic Absorb (varies)<BR>
+Attacker Takes Damage of 14
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Voice of Reason</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Swords/Maces</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Lem + Ko + El + Eld</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+15% Chance To Cast Level 13 Frozen Orb On Striking<BR>
+18% Chance To Cast Level 20 Ice Blast On Striking<BR>
++50 To Attack Rating<BR>
++220-350% Damage To Demons<BR>
++355-375% Damage To Undead (varies)<BR>
++50 To Attack Rating Against Undead<BR>
+Adds 100-220 Cold Damage<BR>
+-24% To Enemy Cold Resistance<BR>
++10 To Dexterity<BR>
+Cannot Be Frozen<BR>
+75% Extra Gold From Monsters<BR>
++1 To Light Radius
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Wrath</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Missile Weapons</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Pul + Lum + Ber + Mal</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
+30% Chance To Cast Level 1 Decrepify On Striking<BR>
+5% Chance To Cast Level 10 Life Tap On Striking<BR>
++375% Damage To Demons<BR>
++100 To Attack Rating Against Demons<BR>
++250-300% Damage To Undead (varies)<BR>
+Adds 85-120 Magic Damage<BR>
+Adds 41-240 Lightning Damage<BR>
+20% Chance of Crushing Blow<BR>
+Prevent Monster Heal<BR>
++10 To Energy<BR>
+Cannot Be Frozen
+</font>
+</span></font></TD>
+</TR>
+
+
+</TABLE>
+</CENTER>
+<P>
+
+
+
+</CENTER>
+
+
+<!------------NOTES---------------------------------->
+<B>Notes:</B><BR>
+
+*Maces: Maces doesn't mean all Mace class weapons. As the top of the page 
+says: Maces = Mace, Morning Star, Flail, and Exceptional/Elite versions.<BR>
+<BR>
+
+*1.10 Rune Words allow players of other classes to use certain skills that are previously only for 
+a certain class. That is why, for example, you don't see +1 To Zeal (Paladin Only). 
+Any class can use that ability once they have completed the Rune Word.<BR>
+<BR>
+
+*<B>Call to Arms:</B> Barbarians are capped at +3 to the skills Battle Command, Battle Orders,
+and Battle Cry. For more information, go here to learn about <a href="/diablo2exp/skills/basics.shtml">"oskill" Skill Points</a> (yes oskill
+is correct)
+<P>
+
+*<B>Delirium:</B> this ability morphs your character into a <a href="/diablo2exp/monsters/act3-bonefetish.shtml">
+Bone Fetish</a> for a period of about 1 minute. 
+You can also do normal attacks in the form of a headbutt.
+<P>
+
+
+
+<center>
+<table border=0 cellpadding=5 cellspacing=0 width=100%>
+<tr>
+<td valign=top align=center width=50%>
+<a href="/diablo2exp/images/items/delirium01.jpg" target="new_window">
+<img src="/diablo2exp/images/items/delirium01.gif" border=0 width=200 height=150>
+</a>
+</td>
+
+<td valign=top align=center width=50%>
+<a href="/diablo2exp/images/items/delirium02.jpg" target="new_window">
+<img src="/diablo2exp/images/items/delirium02.gif" border=0 width=200 height=150>
+</a>
+</td>
+</tr>
+
+<tr>
+<td valign=top align=center width=50%>
+<font size=-1 face="arial,helvetica">
+<P>
+<small><font color="#ffffff">
+[ Click to Enlarge - 105 KB ]
+</font>
+</small>
+<br>
+Bone Fetish!
+</td>
+
+<td valign=top align=center width=50%>
+<font size=-1 face="arial,helvetica">
+<P>
+<small><font color="#ffffff">
+[ Click to Enlarge - 101 KB ]
+</font>
+</small>
+<br>
+Bone Fetish!
+</td>
+</tr>
+</table>
+</center>
+
+<P>
+
+*<B>Fortitude:</B> The life per clvl (character level) varies according to the following table:
+<P>
+
+<table border=0 cellpadding=0 cellspacing=0 width=240>
+ <col width=80 span=3>
+ <tr>
+  <th rowspan=2 align=center><span><font size=-1 face="arial,helvetica">X</span></th>
+  <th colspan=2 align=center><span><font size=-1 face="arial,helvetica">Life at Level</span></th>
+ </tr>
+ <tr>
+  <th valign=center><span>1<font color=black></span></th>
+  <th valign=center><span>99<font color=black></span></th>
+ </tr>
+ <tr>
+  <td bgcolor="#20100a" align=center>1</td>
+  <td bgcolor="#20100a" align=center>1</td>
+  <td bgcolor="#20100a" align=center><font size=-1 face="arial,helvetica">99</td>
+ </tr>
+ <tr>
+  <td align=center><font size=-1 face="arial,helvetica">&nbsp; 1.125</td>
+  <td align=center><font size=-1 face="arial,helvetica">&nbsp; 1.125</td>
+  <td align=center><font size=-1 face="arial,helvetica">&nbsp; 111.375</td>
+ </tr>
+ <tr>
+  <td bgcolor="#20100a" align=center><font size=-1 face="arial,helvetica">&nbsp; 1.25<font color="#20100a"><font size=-1 face="arial,helvetica">0</font></td>
+  <td bgcolor="#20100a" align=center><font size=-1 face="arial,helvetica">&nbsp; 1.25<font color="#20100a"><font size=-1 face="arial,helvetica">0</font></td>
+  <td bgcolor="#20100a" align=center><font size=-1 face="arial,helvetica">&nbsp; 123.75<font color="#20100a"><font size=-1 face="arial,helvetica">0</font></td>
+ </tr>
+ <tr>
+  <td align=center><font size=-1 face="arial,helvetica" align=center>&nbsp; 1.375</td>
+  <td align=center><font size=-1 face="arial,helvetica" align=center>&nbsp; 1.375</td>
+  <td align=center><font size=-1 face="arial,helvetica" align=center>&nbsp; 136.125</td>
+ </tr>
+ <tr>
+  <td bgcolor="#20100a" align=center><font size=-1 face="arial,helvetica">&nbsp; 1.5<font color="#20100a">00</font></td>
+  <td bgcolor="#20100a" align=center><font size=-1 face="arial,helvetica">&nbsp; 1.5<font color="#20100a">00</font></td>
+  <td bgcolor="#20100a" align=center><font size=-1 face="arial,helvetica">&nbsp; 148.5<font color="#20100a">00</font></td>
+ </tr>
+</table>
+<P>
+
+
+** X is randomly set in the range of 1 to 1.5 when the runeword is made and adds that fixed amount of life for each clvl.
+<P>
+
+*<b>Edge:</b> Does not reduce the price for resurrecting hirelings. 
+<p>
+
+*<B>Hand of Justice:</B> Make sure you use the LO Rune not IO.
+<P>
+
+<a href="runewords.shtml">Rune Words Index</a>
+<P>
+
+<!--- END MAIN CONTENT ----------------------------------------------------------------------->
+<p>
+<center>
+<a href="//privacy-policy.truste.com/click-with-confidence/ctv/en/us.battle.net/seal_m" target="_blank">
+<img src="//privacy-policy.truste.com/certified-seal/wps/en/us.battle.net/seal_m.png" border="0" />
+</a><br/>
+<br>
+<font face="arial,helvetica" size=1><small>
+<a class="tiny" href="http://us.blizzard.com/en-us/company/about/privacy.html">Online Privacy Policy</a><br>
+<a class="tiny" href="/tou.shtml">Battle.net Terms of Use Agreement</a><br>
+<a class="tiny" href="http://us.blizzard.com/en-us/company/about/legal-faq.html">&copy;2017 Blizzard Entertainment. All rights reserved.</a>
+</small></font>
+</center>
+<!--- Google Analytics -------------------------------->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-544112-16");
+pageTracker._setDomainName("battle.net");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<div style="display:none;">
+<iframe src="http://view.atdmt.com/NTB/iview/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01?click=" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" width="1" height="1">
+<script language="JavaScript" type="text/javascript">
+document.write('<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" target="_blank"><img src="http://view.atdmt.com/NTB/view/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/"/></a>');
+</script>
+<noscript>
+<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" target="_blank">
+<img border="0" src="http://view.atdmt.com/NTB/view/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" />
+</a>
+</noscript>
+</iframe>
+</div>
+			</span></font>
+		</td>
+		</tr>
+		</table>
+
+	</td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxright.gif"><img src="/images/shared/blank.gif" border=0 width=21 height=5></td>
+	</tr>
+	</table>
+
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/images/battle/diablo2exp/images/mid-textboxbot-back.gif" align=left width=50%><img src="/images/battle/diablo2exp/images/mid-textboxbot-left.gif" border=0 width=132 height=98></td>
+	<td background="/images/battle/diablo2exp/images/mid-textboxbot-back.gif" align=right width=50%><img src="/images/battle/diablo2exp/images/mid-textboxbot-right.gif" border=0 width=106 height=98></td>
+	</tr>
+	</table>
+
+<!--- NAVIGATION BAR ------------------------------------------------------------------------->
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background=0 align=left width=100%><br><a href="/"  onMouseOut="offImg('exit')" onMouseOver="ovrImg('exit')"><img src="/images/battle/diablo2exp/images/botmenu-close-off.gif" name="exit" alt="Exit" border=0 width=43 height=43></a></td>
+	<td background=0><br><a href="runewords-original.shtml" onMouseOut="offImg('prev')" onMouseOver="ovrImg('prev')"><img src="/images/battle/diablo2exp/images/botmenu-prev-off.gif" name="prev" alt="Previous" border=0 width=44 height=43></a></td>
+	<td background=0><br><a href="runewords-111.shtml" onMouseOut="offImg('next')" onMouseOver="ovrImg('next')"><img src="/images/battle/diablo2exp/images/botmenu-next-off.gif" name="next" alt="Next" border=0 width=45 height=43></a></td>
+	</tr>
+	</table>
+
+	<br>
+</td>
+
+<td background=0 valign=top width=10%>
+	<img src="/images/shared/blank.gif" border=0 width=10 height=1>
+</td>
+</tr>
+</table>
+
+
+</body>
+</html>
