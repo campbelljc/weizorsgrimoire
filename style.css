@@ -124,6 +124,7 @@ table {
 .unique { color: #908858 !important; }
 .set { color: #00c400 !important; }
 .attr { color: #4850B8; }
+.runeword { color: white !important; }
 
 /* normalize monospace sizing 
  * meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/ */

@@ -12,6 +12,7 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/items")
         os.makedirs(HTML_DIR + "/sets")
         os.makedirs(HTML_DIR + "/attrs")
+        os.makedirs(HTML_DIR + "/rws")
     shutil.copyfile("style.css", HTML_DIR + "/style.css")
 
 def get_link(dirname, item_name):
@@ -37,6 +38,7 @@ def get_html_for_attrs(attr_dict, selection_fn):
 
 def output_item_files(items):
     for item in items:
+        if isinstance(item, Runeword): continue
         base_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in start_atts)
         end_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in end_atts)
         attrs = get_html_for_attrs(item.attr_dict, lambda name: name not in start_atts and name not in end_atts)
@@ -47,7 +49,8 @@ def output_item_files(items):
                     </head><body>'.format(item.name, SITENAME)
     
         if isinstance(item, UniqueItem):
-            typeinfo = item.tier + " " if len(item.tier) > 0 else "", item.type
+            typeinfo = item.tier + (" " if len(item.tier) > 0 else "")
+            typeinfo += item.type
         elif isinstance(item, SetItem):
             typeinfo = "<a href='../../"+get_link('sets', item.set_name)+"'>"+item.set_name+"</a>"
     
@@ -75,6 +78,43 @@ def output_item_files(items):
     
         html = header + body + footer
         with open(get_link('items', item.name), 'w') as itemfile:
+            itemfile.write(html)
+
+def output_runeword_files(items):
+    for item in items:
+        if not isinstance(item, Runeword): continue
+        base_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in start_atts)
+        end_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in end_atts)
+        attrs = get_html_for_attrs(item.attr_dict, lambda name: name not in start_atts and name not in end_atts)
+    
+        header = '<html><head>\
+                    <title>{0} -- {1}</title>\
+                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    </head><body>'.format(item.name, SITENAME)
+            
+        body = "<div id='container'>\
+          <div id='headerContainer'>\
+            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
+        	<div id='navContainer'>\
+        	  <table class='centerTable' id='navTable'><tr>\
+        	    <td><a href='/items/'>items directory</a></td>\
+        	  </tr></table><br />\
+            </div>\
+          </div>\
+          <div class='item_container'>\
+            <p class='item_name runeword'>{0}</p>\
+            <p class='item_stype'>{1}</p>\
+            <p class='item_type'>{2}</p>\
+            <p class='item_attrs_small'>{3}</p>\
+            <p class='item_attrs attr'>{4}</p>\
+            <p class='item_attrs_small'>{5}</p>\
+          </div>\
+        </div>".format(item.name, item.runes, item.allowed_items, base_attrs, attrs, end_attrs)
+    
+        footer = '</body></html>' 
+    
+        html = header + body + footer
+        with open(get_link('rws', item.name), 'w') as itemfile:
             itemfile.write(html)
 
 def output_set_files(sets):
@@ -147,6 +187,10 @@ def output_attribute_files(items, sets):
                 name = item.name
                 quality = item.quality
                 link = get_link('items', item.name)
+            elif isinstance(item, Runeword):
+                name = item.name
+                quality = item.quality
+                link = get_link('rws', item.name)
             
             itemrows += '<tr class="attr_row"><td><a href="{0}" class="{3}">{1}</a></td><td>{2}</td></tr>'.format('../../' + link, name, item_attr.value_text, quality)
     
@@ -191,6 +235,7 @@ def make_website():
     
     setup_dirs()
     output_item_files(items)
+    output_runeword_files(items)
     output_set_files(sets)
     output_attribute_files(items, sets)
 

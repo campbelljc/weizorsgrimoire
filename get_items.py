@@ -101,7 +101,7 @@ def get_items_from_summit():
             if len(general_type) == 0:
                 continue
             else:
-                general_type = ''.join(general_type[0].text_content().split("Unique "))
+                general_type = general_type[0].text_content().split("Unique ")
 
             if len(general_type) > 1:
                 item_tier = general_type[0][:-1]
@@ -109,6 +109,7 @@ def get_items_from_summit():
             else:
                 item_tier = None
                 item_type = general_type[0]
+            print(item_tier, item_type)
         
             quality = tree.xpath('//tr/td/font/span/center[1]/font/b')[0].text_content().split()
             if 'Unique' in quality:
@@ -142,7 +143,8 @@ def get_items_from_summit():
             assert len(names) == len(set_names)
 
         for item_index, (iname, itype, idesc, image) in enumerate(zip(names, types, descs, images)):
-            print(iname.text_content())
+            iname = iname.text_content().replace("*", "")
+            print(iname)
             
             attrs = idesc.text_content().replace("\r", "").split("\n")
             attrs = [attr for attr in attrs if len(attr) > 0]
@@ -170,11 +172,11 @@ def get_items_from_summit():
                 input("")
             
             if quality == 'Unique':
-                item = UniqueItem(iname.text_content(), 'http://classic.battle.net'+image, item_tier, item_type, itype, attr_dict)
+                item = UniqueItem(iname, 'http://classic.battle.net'+image, item_tier, item_type, itype, attr_dict)
             elif quality == 'Set':
-                item = SetItem(iname.text_content(), 'http://classic.battle.net'+image, item_tier, item_type, itype, attr_dict, set_names[item_index], set_bonuses[item_index])
+                item = SetItem(iname, 'http://classic.battle.net'+image, item_tier, item_type, itype, attr_dict, set_names[item_index], set_bonuses[item_index])
             elif quality == 'Runeword':
-                item = Runeword(iname.text_content(), itype, image, attr_dict)
+                item = Runeword(iname, itype, image, attr_dict)
             else:
                 raise Exception(quality)
             items.append(item)
