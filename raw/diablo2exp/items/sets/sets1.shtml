@@ -274,7 +274,8 @@
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Angelic Mantle</font></b><br>Ring Mail
-</span></font>
+</span></font><br />
+<span class="setname">Angelic Raiment</span>
 </center>
 </td>
 <td width=40%>
@@ -295,16 +296,16 @@ Durability: 26<br>
 <td rowspan=5 width=35%>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 <B>Partial Set Bonus</B><BR>
-+10 Dexterity (2 Items)<BR>
-+50 Mana (3 Items)<BR><BR>
++10 to Dexterity (2 Items)<BR>
++50 to Mana (3 Items)<BR><BR>
 
 <B>Complete Set Bonus</B><BR>
 Half Freeze Duration<br>
 All Resistances +25<br>
-40% Better Chance of Getting Magic Item<BR>
+40% Better Chance of Getting Magic Items<BR>
 Regenerate Mana 8%<BR>
-+10 Dexterity<BR>
-+50 Mana
++10 to Dexterity<BR>
++50 to Mana
 </span></font>
 </td>
 </tr>
@@ -316,7 +317,8 @@ Regenerate Mana 8%<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Angelic Sickle</font></b><br>Sabre
-</span></font>
+</span></font><br />
+<span class="setname">Angelic Raiment</span>
 </center>
 </td>
 <td>
@@ -343,7 +345,8 @@ Base Weapon Speed: [-10]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Angelic Halo</font></b><br>Ring
-</span></font>
+</span></font><br />
+<span class="setname">Angelic Raiment</span>
 </center>
 </td>
 <td>
@@ -364,7 +367,8 @@ Required Level: 12<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Angelic Wings</font></b><br>Amulet
-</span></font>
+</span></font><br />
+<span class="setname">Angelic Raiment</span>
 </center>
 </td>
 <td>
@@ -416,7 +420,8 @@ Required Level: 12<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Arcanna's Head</font></b><br>Skull Cap
-</span></font>
+</span></font><br />
+<span class="setname">Arcanna's Tricks</span>
 </center>
 </td>
 <td width=40%>
@@ -456,7 +461,8 @@ Durability: 18<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Arcanna's Flesh</font></b><br>Light Plate
-</span></font>
+</span></font><br />
+<span class="setname">Arcanna's Tricks</span>
 </center>
 </td>
 <td>
@@ -481,7 +487,8 @@ Durability: 60<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Arcanna's Deathwand</font></b><br>War Staff
-</span></font>
+</span></font><br />
+<span class="setname">Arcanna's Tricks</span>
 </center>
 </td>
 <td>
@@ -506,7 +513,8 @@ Base Weapon Speed: [20]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Arcanna's Sign</font></b><br>Amulet
-</span></font>
+</span></font><br />
+<span class="setname">Arcanna's Tricks</span>
 </center>
 </td>
 <td>
@@ -557,7 +565,8 @@ Required Level: 15<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Arctic Furs</font></b><br>Quilted Armor
-</span></font>
+</span></font><br />
+<span class="setname">Arctic Gear</span>
 </center>
 </td>
 <td width=40%>
@@ -586,8 +595,7 @@ Durability: 20<br>
 +5 To Strength<BR>
 +50 To Life<BR>
 Cannot Be Frozen<br>
-Adds 6-14 Cold Damage<br>
-Cold Duration: 4 seconds<BR>
+Adds 6-14 Cold Damage, 4 sec. duration<br>
 </span></font>
 </td>
 </tr>
@@ -599,7 +607,8 @@ Cold Duration: 4 seconds<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Arctic Binding</font></b><br>Light Belt
-</span></font>
+</span></font><br />
+<span class="setname">Arctic Gear</span>
 </center>
 </td>
 <td>
@@ -622,7 +631,8 @@ Durability: 14<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Arctic Mitts</font></b><br>Light Gauntlets
-</span></font>
+</span></font><br />
+<span class="setname">Arctic Gear</span>
 </center>
 </td>
 <td>
@@ -646,7 +656,8 @@ Durability: 18<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Arctic Horn</font></b><br>Short War Bow
-</span></font>
+</span></font><br />
+<span class="setname">Arctic Gear</span>
 </center>
 </td>
 <td>
@@ -702,7 +713,8 @@ Base Weapon Speed: [0]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Berserker's Headgear</font></b><br>Helm
-</span></font>
+</span></font><br />
+<span class="setname">Berserker's Garb</span>
 </center>
 </td>
 <td width=40%>
@@ -740,7 +752,8 @@ Poison Length Reduced by 75%<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Berserker's Hauberk</font></b><br>Splint Mail
-</span></font>
+</span></font><br />
+<span class="setname">Berserker's Garb</span>
 </center>
 </td>
 <td>
@@ -764,7 +777,8 @@ Durability: 30<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Berserker's Hatchet</font></b><br>Double Axe
-</span></font>
+</span></font><br />
+<span class="setname">Berserker's Garb</span>
 </center>
 </td>
 <td>
@@ -820,7 +834,8 @@ Base Weapon Speed: [10]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cathan's Visage</font></b><br>Mask
-</span></font>
+</span></font><br />
+<span class="setname">Cathan's Traps</span>
 </center>
 </td>
 <td width=40%>
@@ -841,12 +856,12 @@ Durability: 20<br>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 
 <B>Partial Set Bonus</B><BR>
-+15-20 Fire Damage (2 Items)<BR>
-Resist Lightning +25% (3 Items)<BR><BR>
+Adds 15-20 Fire Damage (2 Items)<BR>
+Lightning Resist +25% (3 Items)<BR><BR>
 
 <B>Complete Set Bonus</B><BR>
-+15-20 Fire Damage<BR>
-Resist Lightning +25%<BR>
+Adds 15-20 Fire Damage<BR>
+Lightning Resist +25%<BR>
 10% Faster Cast Rate<br>
 Magic Damage Reduced by 3<br>
 All Resistances +25<br>
@@ -863,7 +878,8 @@ All Resistances +25<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cathan's Mesh</font></b><br>Chain Mail
-</span></font>
+</span></font><br />
+<span class="setname">Cathan's Traps</span>
 </center>
 </td>
 <td>
@@ -887,7 +903,8 @@ Durability: 45<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cathan's Rule</font></b><br>Battle Staff
-</span></font>
+</span></font><br />
+<span class="setname">Cathan's Traps</span>
 </center>
 </td>
 <td>
@@ -912,7 +929,8 @@ Base Weapon Speed: [0]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cathan's Sigil</font></b><br>Amulet
-</span></font>
+</span></font><br />
+<span class="setname">Cathan's Traps</span>
 </center>
 </td>
 <td>
@@ -933,7 +951,8 @@ Required Level: 11<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cathan's Seal</font></b><br>Ring
-</span></font>
+</span></font><br />
+<span class="setname">Cathan's Traps</span>
 </center>
 </td>
 <td>

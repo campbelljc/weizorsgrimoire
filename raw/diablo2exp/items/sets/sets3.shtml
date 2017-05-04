@@ -274,7 +274,8 @@
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Iratha's Coil</font></b><br>Crown
-</span></font>
+</span></font><br />
+<span class="setname">Iratha's Finery</span>
 </center>
 </td>
 <td width=40%>
@@ -294,11 +295,11 @@ Durability: 50<br>
 <td rowspan=4 width=35%>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 <B>Partial Set Bonus</B><BR>
-+50 To Defense (2 Items)<BR>
++50 Defense (2 Items)<BR>
 20% Faster Run/Walk (3 Items)<BR><BR>
 
 <B>Complete Set Bonus</B><BR>
-+50 To Defense<BR>
++50 Defense<BR>
 20% Faster Run/Walk<BR>
 +15 To Dexterity<BR>
 +10% To Maximum Poison Resist<br>
@@ -317,7 +318,8 @@ All Resistances +20<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Iratha's Collar</font></b><br>Amulet
-</span></font>
+</span></font><br />
+<span class="setname">Iratha's Finery</span>
 </center>
 </td>
 <td>
@@ -337,7 +339,8 @@ Required Level: 15<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Iratha's Cord</font></b><br>Heavy Belt
-</span></font>
+</span></font><br />
+<span class="setname">Iratha's Finery</span>
 </center>
 </td>
 <td>
@@ -361,7 +364,8 @@ Durability: 18<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Iratha's Cuff</font></b><br>Light Gauntlets
-</span></font>
+</span></font><br />
+<span class="setname">Iratha's Finery</span>
 </center>
 </td>
 <td>
@@ -415,7 +419,8 @@ Durability: 18<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Isenhart's Lightbrand</font></b><br>Broad Sword
-</span></font>
+</span></font><br />
+<span class="setname">Isenhart's Armory</span>
 </center>
 </td>
 <td width=40%>
@@ -457,7 +462,8 @@ All Resistances +10
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Isenhart's Horns</font></b><br>Full Helm
-</span></font>
+</span></font><br />
+<span class="setname">Isenhart's Armory</span>
 </center>
 </td>
 <td>
@@ -480,7 +486,8 @@ Durability: 30<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Isenhart's Case</font></b><br>Breast Plate
-</span></font>
+</span></font><br />
+<span class="setname">Isenhart's Armory</span>
 </center>
 </td>
 <td>
@@ -504,13 +511,16 @@ Durability: 50<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Isenhart's Parry</font></b><br>Gothic Shield
-</span></font>
+</span></font><br />
+<span class="setname">Isenhart's Armory</span>
 </center>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
 Defense: <font color="#4850b8">70-75</font> (Base Defense: 30-35)<br>
-Chance to Block: Pal: <font color="#4850b8">46%</font>, Ama/Asn/Bar: <font color="#4850b8">41%</font><br> Dru/Nec/Sor: <font color="#4850B8">36%</font><br>
+Chance to Block: Pal: <font color="#4850b8">46%</font><br />
+Chance to Block: Ama/Asn/Bar: <font color="#4850b8">41%</font><br />
+Chance to Block: Dru/Nec/Sor: <font color="#4850B8">36%</font><br>
 Paladin Smite Damage: 2 to 6<br>
 Required Level: 8<BR>
 Required Strength: 60<br>
@@ -560,7 +570,8 @@ Durability: 40<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Milabrega's Diadem</font></b><br>Crown
-</span></font>
+</span></font><br />
+<span class="setname">Milabrega's Regalia</span>
 </center>
 </td>
 <td width=40%>
@@ -599,7 +610,8 @@ Poison Resist +15%
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Milabrega's Robe</font></b><br>Ancient Armor
-</span></font>
+</span></font><br />
+<span class="setname">Milabrega's Regalia</span>
 </center>
 </td>
 <td>
@@ -623,14 +635,17 @@ Durability: 60<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Milabrega's Orb</font></b><br>Kite Shield
-</span></font>
+</span></font><br />
+<span class="setname">Milabrega's Regalia</span>
 </center>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
 Defense: <font color="#4850b8">44</font> (Base Defense: 16-18)<br>
 Defense: <font color="#00C400">53</font> (Base Defense: 16-18)<br>
-Chance to Block: Pal: <font color="#4850b8">38%</font>, Ama/Asn/Bar: <font color="#4850b8">33%</font><br> Dru/Nec/Sor: <font color="#4850b8">28%</font><br>
+Chance to Block: Pal: <font color="#4850b8">38%</font><br />
+Chance to Block: Ama/Asn/Bar: <font color="#4850b8">33%</font><br />
+Chance to Block: Dru/Nec/Sor: <font color="#4850b8">28%</font><br>
 Paladin Smite Damage: 2 to 5<br>
 Required Level: 17<BR>
 Required Strength: 47<br>
@@ -650,7 +665,8 @@ Durability: 30<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Milabrega's Rod</font></b><br>War Scepter
-</span></font>
+</span></font><br />
+<span class="setname">Milabrega's Regalia</span>
 </center>
 </td>
 <td>
@@ -706,7 +722,8 @@ Base Weapon Speed: [-10]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sigon's Visor</font></b><br>Great Helm
-</span></font>
+</span></font><br />
+<span class="setname">Sigon's Complete Steel</span>
 </center>
 </td>
 <td width=40%>
@@ -725,15 +742,15 @@ Durability: 40<br>
 <td rowspan=6 width=35%>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 <B>Partial Set Bonus</B><BR>
-+10% Life Stolen Per Hit (2 Items)<BR>
+10% Life Stolen Per Hit (2 Items)<BR>
 +100 Defense (3 Items)<BR><BR>
 
 <B>Complete Set Bonus</B><BR>
-+10% Life Stolen Per Hit<BR>
+10% Life Stolen Per Hit<BR>
 +100 Defense<BR>
 +20 To Mana<BR>
 Fire Resist +12%<BR>
-+24 To Max Fire Damage<br>
++24 To Maximum Fire Damage<br>
 Attacker Takes Damage of 12<BR>
 Damage Reduced By 7<BR.
 +20 To Mana
@@ -748,7 +765,8 @@ Damage Reduced By 7<BR.
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sigon's Shelter</font></b><br>Gothic Plate
-</span></font>
+</span></font><br />
+<span class="setname">Sigon's Complete Steel</span>
 </center>
 </td>
 <td>
@@ -771,7 +789,8 @@ Durability: 55<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sigon's Sabot</font></b><br>Greaves
-</span></font>
+</span></font><br />
+<span class="setname">Sigon's Complete Steel</span>
 </center>
 </td>
 <td>
@@ -796,13 +815,16 @@ Assassin Kick Damage: 10-20<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sigon's Guard</font></b><br>Tower Shield
-</span></font>
+</span></font><br />
+<span class="setname">Sigon's Complete Steel</span>
 </center>
 </td>
 <td>
 <font face="arial,helvetica" size=-1><span>
 Defense: 22-25 (varies)<br>
-Chance to Block: Pal: <font color="#4850b8">74%</font>, Ama/Asn/Bar: <font color="#4850b8">69%</font><br> Dru/Nec/Sor: <font color="#4850b8">64%</font><br>
+Chance to Block: Pal: <font color="#4850b8">74%</font><br />
+Chance to Block: Ama/Asn/Bar: <font color="#4850b8">69%</font><br />
+Chance to Block: Dru/Nec/Sor: <font color="#4850b8">64%</font><br>
 Paladin Smite Damage: 1 to 5<br>
 Required Level: 6<BR>
 Required Strength: 75<br>
@@ -820,7 +842,8 @@ Durability: 60<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sigon's Wrap</font></b><br>Plated Belt
-</span></font>
+</span></font><br />
+<span class="setname">Sigon's Complete Steel</span>
 </center>
 </td>
 <td>
@@ -845,7 +868,8 @@ Durability: 24<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sigon's Gage</font></b><br>Gauntlets
-</span></font>
+</span></font><br />
+<span class="setname">Sigon's Complete Steel</span>
 </center>
 </td>
 <td>
@@ -899,7 +923,8 @@ Durability: 24<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Tancred's Skull</font></b><br>Bone Helm
-</span></font>
+</span></font><br />
+<span class="setname">Tancred's Battlegear</span>
 </center>
 </td>
 <td width=40%>
@@ -918,13 +943,13 @@ Durability: 40<br>
 <td rowspan=5 width=35%>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 <B>Partial Set Bonus</B><BR>
-+15 Lightning Damage (2 Items)<BR>
-+5% Life Stolen Per Hit (3 Items)<BR><BR>
+Adds 15 Lightning Damage (2 Items)<BR>
+5% Life Stolen Per Hit (3 Items)<BR><BR>
 
 <B>Complete Set Bonus</B><BR>
-+15 Lightning Damage<BR>
-+5% Life Stolen Per Hit<BR>
-Slows Targets by 35%<br>
+Adds 15 Lightning Damage<BR>
+5% Life Stolen Per Hit<BR>
+Slows Target by 35%<br>
 5% Mana Stolen Per Hit<br>
 All Resistances +10<br>
 75% Extra Gold From Monsters
@@ -940,7 +965,8 @@ All Resistances +10<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Tancred's Spine</font></b><br>Full Plate Mail
-</span></font>
+</span></font><br />
+<span class="setname">Tancred's Battlegear</span>
 </center>
 </td>
 <td>
@@ -964,7 +990,8 @@ Durability: 70<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Tancred's Hobnails</font></b><br>Boots
-</span></font>
+</span></font><br />
+<span class="setname">Tancred's Battlegear</span>
 </center>
 </td>
 <td>
@@ -988,7 +1015,8 @@ Assassin Kick Damage: 3-8<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Tancred's Crowbill</font></b><br>Military Pick
-</span></font>
+</span></font><br />
+<span class="setname">Tancred's Battlegear</span>
 </center>
 </td>
 <td>
@@ -1014,7 +1042,8 @@ Base Weapon Speed: [-10]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Tancred's Weird</font></b><br>Amulet
-</span></font>
+</span></font><br />
+<span class="setname">Tancred's Battlegear</span>
 </center>
 </td>
 <td>
@@ -1066,7 +1095,8 @@ Required Level: 20<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Vidala's Barb</font></b><br>Long Battle Bow
-</span></font>
+</span></font><br />
+<span class="setname">Vidala's Rig</span>
 </center>
 </td>
 <td width=40%>
@@ -1093,7 +1123,7 @@ Base Weapon Speed: [10]<BR>
 +75 To Attack Rating<BR>
 Adds 15-20 Cold Damage, 2 sec. Duration (Normal)<BR>
 Piercing Attack (50)<br>
-Freezes Target<br>
+Freezes Target +1<br>
 +15 To Dexterity<BR>
 +10 To Strength
 </span></font>
@@ -1108,7 +1138,8 @@ Freezes Target<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Vidala's Ambush</font></b><br>Leather Armor
-</span></font>
+</span></font><br />
+<span class="setname">Vidala's Rig</span>
 </center>
 </td>
 <td>
@@ -1133,7 +1164,8 @@ Durability: 24<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Vidala's Fetlock</font></b><br>Light Plated Boots
-</span></font>
+</span></font><br />
+<span class="setname">Vidala's Rig</span>
 </center>
 </td>
 <td>
@@ -1157,7 +1189,8 @@ Assassin Kick Damage: 8-16<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Vidala's Snare</font></b><br>Amulet
-</span></font>
+</span></font><br />
+<span class="setname">Vidala's Rig</span>
 </center>
 </td>
 <td>

@@ -209,7 +209,8 @@
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Aldur's Stony Gaze</font></b><br>Hunter's Guise
-</span></font>
+</span></font><br />
+<span class="setname">Aldur's Watchtower</span>
 </center>
 </td>
 <td width=40%>
@@ -227,7 +228,7 @@ Durability: 20<br>
 <font color="#4850b8">+5 To Light Radius</font><br>
 <font color="#00C400">+15 To Energy</font> (2 Item)<BR>
 <font color="#00C400">+15 To Energy</font> (3 Items)<BR>
-<font color="#00C400">+15 To Energy</font> (Completed Set)
+<font color="#00C400">+15 To Energy</font> (Complete Set)
 </span></font>
 </td>
 
@@ -260,7 +261,8 @@ Display Aura<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Aldur's Advance</font></b><br>Battle Boots
-</span></font>
+</span></font><br />
+<span class="setname">Aldur's Watchtower</span>
 </center>
 </td>
 <td>
@@ -278,7 +280,7 @@ Assassin Kick Damage: 37-64<BR>
 <font color="#4850b8">Fire Resist +40-50%</font> (varies)<br>
 <font color="#00C400">+15 To Dexterity</font> (2 Item)<BR>
 <font color="#00C400">+15 To Dexterity</font> (3 Items)<BR>
-<font color="#00C400">+15 To Dexterity</font> (Completed Set)
+<font color="#00C400">+15 To Dexterity</font> (Complete Set)
 </span></font>
 </td>
 </tr>
@@ -290,7 +292,8 @@ Assassin Kick Damage: 37-64<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Aldur's Deception</font></b><br>Shadow Plate
-</span></font>
+</span></font><br />
+<span class="setname">Aldur's Watchtower</span>
 </center>
 </td>
 <td>
@@ -308,7 +311,7 @@ Durability: 70<br>
 <font color="#4850b8">+1 To Shape Shifting Skills (Druid Only)</font><br>
 <font color="#00C400">+15 To Vitality</font> (2 Item)<BR>
 <font color="#00C400">+15 To Vitality</font> (3 Items)<BR>
-<font color="#00C400">+15 To Vitality</font> (Completed Set)
+<font color="#00C400">+15 To Vitality</font> (Complete Set)
 </span></font>
 </td></tr>
 
@@ -319,7 +322,8 @@ Durability: 70<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Aldur's Rhythm</font></b><br>Jagged Star
-</span></font>
+</span></font><br />
+<span class="setname">Aldur's Watchtower</span>
 </center>
 </td>
 <td>
@@ -339,7 +343,7 @@ Base Weapon Speed: [10]<BR>
 <font color="#4850b8">Socketed (2-3)</font> (varies)*<br>
 <font color="#00C400">+15 To Strength</font> (2 Item)<BR>
 <font color="#00C400">+15 To Strength</font> (3 Items)<BR>
-<font color="#00C400">+15 To Strength</font> (Completed Set)
+<font color="#00C400">+15 To Strength</font> (Complete Set)
 </span></font>
 </td></tr>
 
@@ -388,7 +392,8 @@ This is really not very significant, but it's not a bug, just a balance issue.
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Bul-Kathos' Sacred Charge</font></b><br>Colossus Blade
-</span></font>
+</span></font><br />
+<span class="setname">Bul-Kathos' Children</span>
 </center>
 </td>
 <td width=40%>
@@ -418,7 +423,7 @@ Base Weapon Speed: [5]<BR>
 +200 To Attack Rating<BR>
 +200% Damage To Demons<BR>
 +200% Damage To Undead<BR>
-+20 Fire Damage<BR>
+Adds 20 Fire Damage<BR>
 +25 Defense<BR>
 </span></font>
 </td>
@@ -431,7 +436,8 @@ Base Weapon Speed: [5]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Bul-Kathos' Tribal Guardian</font></b><br>Mythical Sword
-</span></font>
+</span></font><br />
+<span class="setname">Bul-Kathos' Children</span>
 </center>
 </td>
 <td>
@@ -481,7 +487,8 @@ they meet the requirements. Only the Barbarian can complete this Set.
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cow King's Horns</font></b><br>War Hat
-</span></font>
+</span></font><br />
+<span class="setname">Cow King's Leather</span>
 </center>
 </td>
 <td width=40%>
@@ -524,7 +531,8 @@ Poison Resist +25%<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cow King's Hide</font></b><br>Studded Leather
-</span></font>
+</span></font><br />
+<span class="setname">Cow King's Leather</span>
 </center>
 </td>
 <td>
@@ -548,7 +556,8 @@ Durability: 32<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cow King's Hooves</font></b><br>Heavy Boots
-</span></font>
+</span></font><br />
+<span class="setname">Cow King's Leather</span>
 </center>
 </td>
 <td>
@@ -597,7 +606,8 @@ Assassin Kick Damage: 4-10<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Telling of Beads</font></b><br>Amulet
-</span></font>
+</span></font><br />
+<span class="setname">The Disciple</span>
 </center>
 </td>
 <td>
@@ -637,7 +647,8 @@ All Resistances +50<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Laying of Hands</font></b><br>Bramble Mitts
-</span></font>
+</span></font><br />
+<span class="setname">The Disciple</span>
 </center>
 </td>
 <td>
@@ -662,7 +673,8 @@ Durability: 12<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Dark Adherent</font></b><br>Dusk Shroud
-</span></font>
+</span></font><br />
+<span class="setname">The Disciple</span>
 </center>
 </td>
 <td>
@@ -685,7 +697,8 @@ Durability: 20<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Rite of Passage</font></b><br>Demonhide Boots
-</span></font>
+</span></font><br />
+<span class="setname">The Disciple</span>
 </center>
 </td>
 <td>
@@ -709,7 +722,8 @@ Assassin Kick Damage: 26-46<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Credendum</font></b><br>Mithril Coil
-</span></font>
+</span></font><br />
+<span class="setname">The Disciple</span>
 </center>
 </td>
 <td>

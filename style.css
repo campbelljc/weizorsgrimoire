@@ -53,22 +53,56 @@ table {
 	font-size: 1em;
 }
 
-#item_name
+.item_name
 {
 	font-size: 1.25em;
 }
 
-#item_type
+.item_name_small
+{
+	font-size: 1em;
+}
+
+.set_bonuses_title
+{
+	font-size: 1em;
+	font-variant: small-caps;
+}
+
+/* src: https://codepen.io/ibrahimjabbari/pen/ozinB */
+.item_seperator { 
+  height: 30px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+  width: 200px;
+  margin-top: 45px;
+} 
+.item_seperator:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+
+
+.item_type
 {
 	font-size: 0.75em;
 }
 
-#item_attrs_small
+.item_attrs_small
 {
 	font-size: 0.8em;
 }
 
-#attr_title
+.attr_title
 {
 	padding-top: 20px;
 }

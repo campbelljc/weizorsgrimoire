@@ -278,7 +278,8 @@
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Griswold's Heart</font></b><br>Ornate Plate
-</span></font>
+</span></font><br />
+<span class="setname">Griswold's Legacy</span>
 </center>
 </td>
 <td>
@@ -323,7 +324,8 @@ Display Aura<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Griswold's Valor</font></b><br>Corona
-</span></font>
+</span></font><br />
+<span class="setname">Griswold's Legacy</span>
 </center>
 </td>
 <td>
@@ -350,7 +352,8 @@ Durability: 50<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Griswold's Redemption</font></b><br>Caduceus
-</span></font>
+</span></font><br />
+<span class="setname">Griswold's Legacy</span>
 </center>
 </td>
 <td>
@@ -382,7 +385,8 @@ Base Weapon Speed: [-10]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Griswold's Honor</font></b><br>Vortex Shield
-</span></font>
+</span></font><br />
+<span class="setname">Griswold's Legacy</span>
 </center>
 </td>
 <td>
@@ -438,7 +442,8 @@ your character look unique.
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Haemosu's Adamant</font></b><br>Cuirass
-</span></font>
+</span></font><br />
+<span class="setname">Heaven's Brethren</span>
 </center>
 </td>
 <td>
@@ -481,7 +486,8 @@ Cannot Be Frozen<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Dangoon's Teaching</font></b><br>Reinforced Mace
-</span></font>
+</span></font><br />
+<span class="setname">Heaven's Brethren</span>
 </center>
 </td>
 <td>
@@ -508,7 +514,8 @@ Base Weapon Speed: [0]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Taebaek's Glory</font></b><br>Ward
-</span></font>
+</span></font><br />
+<span class="setname">Heaven's Brethren</span>
 </center>
 </td>
 <td>
@@ -516,7 +523,9 @@ Base Weapon Speed: [0]<BR>
 Defense: <font color="#4850b8">203-220</font> (varies) (Base Defense: 153-170)<br>
 Required Level: 81<br>
 Required Strength: 185<br>
-Chance to Block: Pal: 79% Ama/Asn/Bar: 74% Dru/Nec/Sor: 69%<BR>
+Chance to Block: Pal: 79%<br />
+Chance to Block: Ama/Asn/Bar: 74%<br />
+Chance to Block: Dru/Nec/Sor: 69%<BR>
 Paladin Smite Damage: 11 to 35<BR> 
 <font color="#4850b8">+50 Defense</font><br>
 <font color="#4850b8">25% Increased Chance Of Blocking</font><br>
@@ -536,7 +545,8 @@ Paladin Smite Damage: 11 to 35<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Ondal's Almighty</font></b><br>Spired Helm
-</span></font>
+</span></font><br />
+<span class="setname">Heaven's Brethren</span>
 </center>
 </td>
 <td>
@@ -582,7 +592,8 @@ Durability: 40<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Hwanin's Splendor</font></b><br>Grand Crown
-</span></font>
+</span></font><br />
+<span class="setname">Hwanin's Majesty</span>
 </center>
 </td>
 <td>
@@ -623,7 +634,8 @@ All Resistances +30<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Hwanin's Justice</font></b><br>Bill
-</span></font>
+</span></font><br />
+<span class="setname">Hwanin's Majesty</span>
 </center>
 </td>
 <td>
@@ -649,7 +661,8 @@ Base Weapon Speed: [0]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Hwanin's Refuge</font></b><br>Tigulated Mail
-</span></font>
+</span></font><br />
+<span class="setname">Hwanin's Majesty</span>
 </center>
 </td>
 <td>
@@ -673,7 +686,8 @@ Durability: 36<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Hwanin's Blessing</font></b><br>Belt
-</span></font>
+</span></font><br />
+<span class="setname">Hwanin's Majesty</span>
 </center>
 </td>
 <td>
@@ -718,7 +732,8 @@ Durability: 16<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Immortal King's Will</font></b><br>Avenger Guard
-</span></font>
+</span></font><br />
+<span class="setname">Immortal King</span>
 </center>
 </td>
 <td>
@@ -742,9 +757,9 @@ Durability: 55<BR>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 <B>Partial Set Bonus</B><BR>
 +50 To Attack Rating (2 Items)<BR>
-Additional +75 To Attack Rating (3 Items)<BR>
-Additional +125 To Attack Rating (4 Items)<BR>
-Additional +200 To Attack Rating (5 Items)<BR>
++75 To Attack Rating (3 Items)<BR>
++125 To Attack Rating (4 Items)<BR>
++200 To Attack Rating (5 Items)<BR>
 <BR>
 
 
@@ -766,7 +781,8 @@ Display Aura<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Immortal King's Stone Crusher</font></b><br>Ogre Maul
-</span></font>
+</span></font><br />
+<span class="setname">Immortal King</span>
 </center>
 </td>
 <td>
@@ -798,7 +814,8 @@ Base Weapon Speed: [10]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Immortal King's Soul Cage</font></b><br>Sacred Armor
-</span></font>
+</span></font><br />
+<span class="setname">Immortal King</span>
 </center>
 </td>
 <td>
@@ -828,7 +845,8 @@ Durability: 60<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Immortal King's Detail</font></b><br>War Belt
-</span></font>
+</span></font><br />
+<span class="setname">Immortal King</span>
 </center>
 </td>
 <td>
@@ -860,7 +878,8 @@ Durability: 24<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Immortal King's Forge</font></b><br>War Gauntlets
-</span></font>
+</span></font><br />
+<span class="setname">Immortal King</span>
 </center>
 </td>
 <td>
@@ -890,7 +909,8 @@ Durability: 24<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Immortal King's Pillar</font></b><br>War Boots
-</span></font>
+</span></font><br />
+<span class="setname">Immortal King</span>
 </center>
 </td>
 <td>

@@ -274,7 +274,8 @@
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Civerb's Cudgel</font></b><br>Grand Scepter
-</span></font>
+</span></font><br />
+<span class="setname">Civerb's Vestments</span>
 </center>
 </td>
 <td width=40%>
@@ -312,7 +313,8 @@ Lightning Resist +25%<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Civerb's Icon</font></b><br>Amulet 
-</span></font>
+</span></font><br />
+<span class="setname">Civerb's Vestments</span>
 </center>
 </td>
 <td>
@@ -333,7 +335,8 @@ Required Level: 9<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Civerb's Ward</font></b><br>Large Shield
-</span></font>
+</span></font><br />
+<span class="setname">Civerb's Vestments</span>
 </center>
 </td>
 <td>
@@ -342,7 +345,9 @@ Defense: <font color="#4850b8">27-29</font> (varies) (Base Defense: 12-14)<br>
 Required Level: 9<BR>
 Required Strength: 34<br>
 Durability: 24<br>
-Chance to Block: Pal: <font color=4850B8>57%</font>, Ama/Asn/Bar: <font color=4850B8>52</font>%<br> Dru/Nec/Sor: <font color=4850B8>47%</font><br>
+Chance to Block: Pal: <font color=4850B8>57%</font><br />
+Chance to Block: Ama/Asn/Bar: <font color=4850B8>52</font>%<br/ >
+Chance to Block: Dru/Nec/Sor: <font color=4850B8>47%</font><br>
 Paladin Smite Damage: 2 to 4<br>
 <font color="#4850b8">+15 Defense</font><br>
 <font color="#4850b8">15% Increased Chance of Blocking</font><br>
@@ -405,7 +410,8 @@ You will only receive these specific item partial bonuses if you're wearing that
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cleglaw's Tooth</font></b><br>Long Sword
-</span></font>
+</span></font><br />
+<span class="setname">Cleglaw's Brace</span>
 </center>
 </td>
 <td width=40%>
@@ -444,7 +450,8 @@ Base Weapon Speed: [-10]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cleglaw's Pincers</font></b><br>Chain Gloves
-</span></font>
+</span></font><br />
+<span class="setname">Cleglaw's Brace</span>
 </center>
 </td>
 <td>
@@ -467,7 +474,8 @@ Durability: 16<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Cleglaw's Claw</font></b><br>Small Shield
-</span></font>
+</span></font><br />
+<span class="setname">Cleglaw's Brace</span>
 </center>
 </td>
 <td>
@@ -477,7 +485,9 @@ Required Level: 4<BR>
 Required Strength: 22<br>
 Durability: 16<br>
 Paladin Smite Damage: 2 to 3<br>
-Chance to Block: Pal: <font color=4850B8>35%</font>, Ama/Asn/Bar: <font color=4850B8>30%</font><br> Dru/Nec/Sor: <font color=4850B8>25%</font><br>
+Chance to Block: Pal: <font color=4850B8>35%</font><br />
+Chance to Block: Ama/Asn/Bar: <font color=4850B8>30%</font><br>
+Chance to Block: Dru/Nec/Sor: <font color=4850B8>25%</font><br>
 <font color="#4850b8">Poison Length Reduced by 75%</font><br>
 <font color="#4850b8">+17 Defense</font><br>
 <font color="#00C400">All Resistances +15</font> (2 Items)<br>
@@ -523,7 +533,8 @@ Chance to Block: Pal: <font color=4850B8>35%</font>, Ama/Asn/Bar: <font color=48
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Death's Touch</font></b><br>War Sword
-</span></font>
+</span></font><br />
+<span class="setname">Death's Disguise</span>
 </center>
 </td>
 <td width=40%>
@@ -544,10 +555,10 @@ Base Weapon Speed: [0]<BR>
 <td rowspan=3 width=35%>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 <B>Partial Set Bonus</B><BR>
-+8% Life Steal (2 Items)<BR><BR>
+8% Life Stolen Per Hit (2 Items)<BR><BR>
 
 <B>Complete Set Bonus</B><BR>
-+8% Life Steal<BR>
+8% Life Stolen Per Hit<BR>
 40% Bonus to Attack Rating<br>
 All Resistances +25<br>
 +10 to Minimum Damage
@@ -562,7 +573,8 @@ All Resistances +25<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Death's Hand</font></b><br>Leather Gloves
-</span></font>
+</span></font><br />
+<span class="setname">Death's Disguise</span>
 </center>
 </td>
 <td>
@@ -584,7 +596,8 @@ Durability: 12<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Death's Guard</font></b><br>Sash
-</span></font>
+</span></font><br />
+<span class="setname">Death's Disguise</span>
 </center>
 </td>
 <td>
@@ -638,7 +651,8 @@ Durability: 12<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Hsarus' Iron Fist</font></b><br>Buckler
-</span></font>
+</span></font><br />
+<span class="setname">Hsarus' Defense</span>
 </center>
 </td>
 <td width=40%>
@@ -678,7 +692,8 @@ Lightning Resist +25%<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Hsarus' Iron Stay</font></b><br>Belt
-</span></font>
+</span></font><br />
+<span class="setname">Hsarus' Defense</span>
 </center>
 </td>
 <td>
@@ -704,7 +719,8 @@ Durability: 16<br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Hsarus' Iron Heel</font></b><br>
 Chain Boots
-</span></font>
+</span></font><br />
+<span class="setname">Hsarus' Defense</span>
 </center>
 </td>
 <td>
@@ -759,7 +775,8 @@ Assassin Kick Damage: 6-12<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Infernal Cranium</font></b><br>Cap
-</span></font>
+</span></font><br />
+<span class="setname">Infernal Tools</span>
 </center>
 </td>
 <td width=40%>
@@ -797,7 +814,8 @@ Durability: 12<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Infernal Sign</font></b><br>Heavy Belt
-</span></font>
+</span></font><br />
+<span class="setname">Infernal Tools</span>
 </center>
 </td>
 <td>
@@ -822,7 +840,8 @@ Durability: 18<br>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Infernal Torch</font></b><br>Grim Wand
-</span></font>
+</span></font><br />
+<span class="setname">Infernal Tools</span>
 </center>
 </td>
 <td>

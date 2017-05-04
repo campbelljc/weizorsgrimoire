@@ -276,7 +276,8 @@
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sander's Paragon</font></b><br>Cap
-</span></font>
+</span></font><br />
+<span class="setname">Sander's Folly</span>
 </center>
 </td>
 <td>
@@ -317,7 +318,8 @@ Durability: 12<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sander's Superstition</font></b><br>Bone Wand
-</span></font>
+</span></font><br />
+<span class="setname">Sander's Folly</span>
 </center>
 </td>
 <td>
@@ -343,7 +345,8 @@ Base Weapon Speed: [-20]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sander's Taboo</font></b><br>Heavy Gloves
-</span></font>
+</span></font><br />
+<span class="setname">Sander's Folly</span>
 </center>
 </td>
 <td>
@@ -366,7 +369,8 @@ Durability: 14<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sander's Riprap</font></b><br>Heavy Boots
-</span></font>
+</span></font><br />
+<span class="setname">Sander's Folly</span>
 </center>
 </td>
 <td>
@@ -410,7 +414,8 @@ Assassin Kick Damage: 4-10<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sazabi's Mental Sheath</font></b><br>Basinet
-</span></font>
+</span></font><br />
+<span class="setname">Sazabi's Grand Tribute</span>
 </center>
 </td>
 <td>
@@ -450,7 +455,8 @@ All Resistances +30<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sazabi's Cobalt Redeemer</font></b><br>Cryptic Sword
-</span></font>
+</span></font><br />
+<span class="setname">Sazabi's Grand Tribute</span>
 </center>
 </td>
 <td>
@@ -478,7 +484,8 @@ Base Weapon Speed: [-10]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Sazabi's Ghost Liberator</font></b><br>Balrog Skin
-</span></font>
+</span></font><br />
+<span class="setname">Sazabi's Grand Tribute</span>
 </center>
 </td>
 <td>
@@ -524,7 +531,8 @@ Durability: 30<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Tal Rasha's Lidless Eye</font></b><br>Swirling Crystal
-</span></font>
+</span></font><br />
+<span class="setname">Tal Rasha's Wrappings</span>
 </center>
 </td>
 <td>
@@ -578,7 +586,8 @@ Display Aura<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Tal Rasha's Horadric Crest</font></b><br>Death Mask
-</span></font>
+</span></font><br />
+<span class="setname">Tal Rasha's Wrappings</span>
 </center>
 </td>
 <td>
@@ -606,7 +615,8 @@ Durability: 20<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Tal Rasha's Guardianship</font></b><br>Lacquered Plate
-</span></font>
+</span></font><br />
+<span class="setname">Tal Rasha's Wrappings</span>
 </center>
 </td>
 <td>
@@ -634,7 +644,8 @@ Durability: 55<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Tal Rasha's Fine-Spun Cloth</font></b><br>Mesh Belt
-</span></font>
+</span></font><br />
+<span class="setname">Tal Rasha's Wrappings</span>
 </center>
 </td>
 <td>
@@ -663,7 +674,8 @@ Durability: 16<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Tal Rasha's Adjudication</font></b><br>Amulet
-</span></font>
+</span></font><br />
+<span class="setname">Tal Rasha's Wrappings</span>
 </center>
 </td>
 <td>
@@ -712,7 +724,8 @@ When you complete this set you get a special aura that, although it does not do 
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Trang-Oul's Guise</font></b><br>Bone Visage
-</span></font>
+</span></font><br />
+<span class="setname">Trang-Oul's Avatar</span>
 </center>
 </td>
 <td>
@@ -733,11 +746,11 @@ Durability: 40<BR>
 <td rowspan=5 width=35%>
 <font face="arial,helvetica" color="#908858" size=-1><span>
 <B>Partial Set Bonus</B><BR>
-+18 To Fire Ball (2 Items)*<BR>
++18 To Fireball (2 Items)*<BR>
 Regenerate Mana 15% (2 Items)<BR>
 +13 To Fire Wall (3 Items)<BR>
-Additional Regenerate Mana 15% (3 Items)<BR>
-Additional Regenerate Mana 15% (4 Items)<BR>
+Regenerate Mana 15% (3 Items)<BR>
+Regenerate Mana 15% (4 Items)<BR>
 +10 To Meteor (4 Items)<BR>
 <BR>
 
@@ -747,12 +760,12 @@ Additional Regenerate Mana 15% (4 Items)<BR>
 +3 To Fire Mastery<BR>
 +10 To Meteor<BR>
 +13 To Fire Wall<BR>
-+18 To Fire Ball*<BR>
++18 To Fireball*<BR>
 +200 Defense<BR>
 +100 To Mana<BR>
 Regenerate Mana 60%<BR>
 All Resistances +50<BR>
-Transforms into <a href="/diablo2exp/monsters/act1-vampire.shtml">Vampire</a>
+Transforms into <a href="http://classic.battle.net/diablo2exp/monsters/act1-vampire.shtml">Vampire</a>
 </span></font>
 </td>
 </tr>
@@ -768,7 +781,8 @@ Transforms into <a href="/diablo2exp/monsters/act1-vampire.shtml">Vampire</a>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Trang-Oul's Scales</font></b><br>Chaos Armor
-</span></font>
+</span></font><br />
+<span class="setname">Trang-Oul's Avatar</span>
 </center>
 </td>
 <td>
@@ -796,7 +810,8 @@ Durability: 70<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Trang-Oul's Wing</font></b><br>Cantor Trophy
-</span></font>
+</span></font><br />
+<span class="setname">Trang-Oul's Avatar</span>
 </center>
 </td>
 <td>
@@ -827,7 +842,8 @@ Chance to Block: <font color="#4850b8">60%</font><BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Trang-Oul's Girth</font></b><br>Troll Belt
-</span></font>
+</span></font><br />
+<span class="setname">Trang-Oul's Avatar</span>
 </center>
 </td>
 <td>
@@ -856,7 +872,8 @@ Durability: 18<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Trang-Oul's Claws</font></b><br>Heavy Bracers
-</span></font>
+</span></font><br />
+<span class="setname">Trang-Oul's Avatar</span>
 </center>
 </td>
 <td>

@@ -105,7 +105,7 @@ attribute_matches += [
     
     AttributeMatch('addsdmg', r'adds [\(]*(?P<r11>\d+)[\-]*(?P<r12>\d+)*[\)]*-[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]* damage', 'damage'),
     AttributeMatch('magicdmg', r'adds (?P<r1>\d+)[\-]*[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]* magic damage', 'magic damage'),
-    AttributeMatch('firedmg', r'adds [\(]*(?P<r11>\d+)[\-]*(?P<r12>\d+)*[\)]*-[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]* fire damage', 'fire damage'),
+    AttributeMatch('firedmg', r'adds [\(]*(?P<r11>\d+)([\-]*(?P<r12>\d+)*[\)]*-[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]*)* fire damage', 'fire damage'),
     AttributeMatch('colddmg', r'adds [\(]*(?P<r11>\d+)([\-]*(?P<r12>\d+)*[\)]*-[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]*)* cold damage(, (?P<d1>\d+)[\-]*(?P<d2>\d+)* sec. duration)*', 'cold damage'),
     AttributeMatch('lightdmg', r'adds (?P<r1>\d+)[\-]*[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]* lightning damage', 'lightning damage'),
     AttributeMatch('psndmg', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)* poison damage over (?P<d>\d+) seconds', 'poison damage'),
@@ -247,6 +247,9 @@ for classname, trees in class_skills:
             attribute_matches.append(AttributeMatch('charges_'+skill.replace(" ", "_"), r'level (?P<v>\d+) '+skill+r' \((?P<c>\d+) charges\)', skill))
 
 attribute_matches += [
+    AttributeMatch('fade', r'fade', 'fade'),
+    AttributeMatch('dispaura', r'display aura', 'display aura'),
+    AttributeMatch('vamp', r'transforms into vampire', 'transforms into vampire'),
     AttributeMatch('sockets', r'socketed \((?P<r1>\d+)[\-]*(?P<r2>\d+)*\)', 'socketed'),
     AttributeMatch('repdura', r'repairs (?P<v>\d+) durability in (?P<d>\d+) seconds', r'repairs (?P<v>\d+) durability'),
     AttributeMatch('indestructible', r'indestructible', 'indestructible'),

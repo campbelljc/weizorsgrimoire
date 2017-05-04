@@ -277,7 +277,8 @@
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">M'avina's True Sight</font></b><br>Diadem
-</span></font>
+</span></font><br />
+<span class="setname">M'avina's Battle Hymn</span>
 </center>
 </td>
 <td>
@@ -324,7 +325,8 @@ Display Aura
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">M'avina's Caster</font></b><br>Grand Matron Bow
-</span></font>
+</span></font><br />
+<span class="setname">M'avina's Battle Hymn</span>
 </center>
 </td>
 <td>
@@ -353,7 +355,8 @@ Base Weapon Speed: [10]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">M'avina's Embrace</font></b><br>Kraken Shell
-</span></font>
+</span></font><br />
+<span class="setname">M'avina's Battle Hymn</span>
 </center>
 </td>
 <td>
@@ -380,7 +383,8 @@ Durability: 48<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">M'avina's Icy Clutch</font></b><br>Battle Gauntlets
-</span></font>
+</span></font><br />
+<span class="setname">M'avina's Battle Hymn</span>
 </center>
 </td>
 <td>
@@ -408,7 +412,8 @@ Durability: 18<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">M'avina's Tenet</font></b><br>Sharkskin Belt
-</span></font>
+</span></font><br />
+<span class="setname">M'avina's Battle Hymn</span>
 </center>
 </td>
 <td>
@@ -462,7 +467,8 @@ When you complete this set you get a special aura that, although it does not do 
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Natalya's Totem</font></b><br>Grim Helm
-</span></font>
+</span></font><br />
+<span class="setname">Natalya's Odium</span>
 </center>
 </td>
 <td>
@@ -508,7 +514,8 @@ Fade*<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Natalya's Mark</font></b><br>Scissors Suwayyah
-</span></font>
+</span></font><br />
+<span class="setname">Natalya's Odium</span>
 </center>
 </td>
 <td>
@@ -540,7 +547,8 @@ Base Weapon Speed: [0]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Natalya's Shadow</font></b><br>Loricated Mail
-</span></font>
+</span></font><br />
+<span class="setname">Natalya's Odium</span>
 </center>
 </td>
 <td>
@@ -566,7 +574,8 @@ Durability: 36<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Natalya's Soul</font></b><br>Mesh Boots
-</span></font>
+</span></font><br />
+<span class="setname">Natalya's Odium</span>
 </center>
 </td>
 <td>
@@ -618,7 +627,8 @@ beyond looking very cool and making other players jealous.
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Naj's Circlet</font></b><br>Circlet
-</span></font>
+</span></font><br />
+<span class="setname">Naj's Ancient Vestige</span>
 </center>
 </td>
 <td>
@@ -660,7 +670,8 @@ Replenish Life +10
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Naj's Light Plate</font></b><br>Hellforge Plate
-</span></font>
+</span></font><br />
+<span class="setname">Naj's Ancient Vestige</span>
 </center>
 </td>
 <td>
@@ -686,7 +697,8 @@ Durability: 60<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Naj's Puzzler</font></b><br>Elder Staff
-</span></font>
+</span></font><br />
+<span class="setname">Naj's Ancient Vestige</span>
 </center>
 </td>
 <td>
@@ -735,7 +747,8 @@ Base Weapon Speed: [0]<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Guillaume's Face</font></b><br>Winged Helm
-</span></font>
+</span></font><br />
+<span class="setname">Orphan's Call</span>
 </center>
 </td>
 <td>
@@ -782,7 +795,8 @@ All Resistances +15<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Whitstan's Guard</font></b><br>Round Shield
-</span></font>
+</span></font><br />
+<span class="setname">Orphan's Call</span>
 </center>
 </td>
 <td>
@@ -791,7 +805,9 @@ Defense: <font color="#4850b8">154</font> (Base Defense: 47-55)<br>
 Required Level: 29<br>
 Required Strength: 53<br>
 Durability: 64<BR>
-Chance To Block: <font color="#4850b8">Pal: 97% Ama/Asn/Bar: 92% Dru/Nec/Sor: 87%</font><BR>
+Chance To Block: <font color="#4850b8">Pal: 97%<br />
+Chance to Block: Ama/Asn/Bar: 92%<br />
+Chance to Block: Dru/Nec/Sor: 87%</font><BR>
 Paladin Smite Damage: 7 to 14<BR>
 <font color="#4850b8">+175% Enhanced Defense</font><br>
 <font color="#4850b8">Half Freeze Duration</font><br>
@@ -809,7 +825,8 @@ Paladin Smite Damage: 7 to 14<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Magnus' Skin</font></b><br>Sharkskin Gloves
-</span></font>
+</span></font><br />
+<span class="setname">Orphan's Call</span>
 </center>
 </td>
 <td>
@@ -834,7 +851,8 @@ Durability: 14<BR>
 <br>
 <font face="arial,helvetica" size=-1><span>
 <b><font color="#00c400">Wilhelm's Pride</font></b><br>Battle Belt
-</span></font>
+</span></font><br />
+<span class="setname">Orphan's Call</span>
 </center>
 </td>
 <td>
