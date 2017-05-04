@@ -90,7 +90,12 @@ table {
   border-radius: 20px; 
 }
 
-
+.ui-autocomplete {
+	max-height: 120px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+}
 
 .item_type
 {

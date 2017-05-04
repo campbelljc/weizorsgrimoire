@@ -28,8 +28,9 @@ class Runeword(Item):
         super().__init__(name, '', 'Runeword', '', '', '', attr_dict)
 
 class ItemSet():
-    def __init__(self, set_name, set_items, set_bonuses):
-        self.set_name = set_name
+    def __init__(self, name, set_items, set_bonuses):
+        self.quality = 'set'
+        self.name = name
         self.set_items = set_items
         self.set_bonuses = set_bonuses
 
@@ -43,4 +44,11 @@ def get_sets_from_items(items):
     for set_name in items_per_set:
         sets.append(ItemSet(set_name, items_per_set[set_name], items_per_set[set_name][0].set_bonuses))
     
-    return sets
+    for item in items:
+        if isinstance(item, SetItem):
+            for itemset in sets:
+                if item.set_name == itemset.name:
+                    item.set = itemset
+                    break
+    
+    return sets, items
