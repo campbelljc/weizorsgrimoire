@@ -13,6 +13,7 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/set")
         os.makedirs(HTML_DIR + "/attribute")
         os.makedirs(HTML_DIR + "/runeword")
+        os.makedirs(HTML_DIR + "/rune")
     shutil.copyfile("style.css", HTML_DIR + "/style.css")
     if not os.path.exists(HTML_DIR + "/js"):
         shutil.copytree("js", HTML_DIR + "/js")
@@ -182,14 +183,7 @@ def output_attribute_files(items_per_attribute):
     
         itemrows = ''
         for item, item_attr in items_per_attribute[attribute]:
-            if isinstance(item, ItemSet):
-                quality = 'set'
-            elif isinstance(item, SetItem) or isinstance(item, UniqueItem):
-                quality = item.quality
-            elif isinstance(item, Runeword):
-                quality = item.quality
-            
-            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td>'.format('../../' + get_link(item), item.name, quality)
+            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td>'.format('../../' + get_link(item), item.name, item.quality)
             if display_value_column:
                 itemrows += "<td>{0}</td>".format(item_attr.value_text)
             itemrows += "</tr>"

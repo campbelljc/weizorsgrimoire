@@ -924,12 +924,11 @@ All Resistances +15<BR>
 </TR>
 
 <TR>
-<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Fortitude</B></span></font></TD>
-<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Weapons/Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Fortitude (Weapon)</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Weapons</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>El + Sol + Dol + Lo</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-<B>Weapons</B><BR>
 20% Chance To Cast Level 15 Chilling Armor when Struck<BR>
 25% Faster Cast Rate<BR>
 +300% Enhanced Damage<BR>
@@ -942,9 +941,16 @@ Hit Causes Monster To Flee 25%<BR>
 All Resistances +25-30 (varies)<BR>
 12% Damage Taken Goes To Mana<BR>
 +1 To Light Radius<BR>
-<BR>
+</font>
+</span></font></TD>
+</TR>
 
-<B>Body Armor</B><BR>
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Fortitude (Armor)</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>El + Sol + Dol + Lo</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
 20% Chance To Cast Level 15 Chilling Armor when Struck<BR>
 25% Faster Cast Rate<BR>
 +300% Enhanced Damage<BR>
@@ -1152,12 +1158,11 @@ Requirements -20%
 </TR>
 
 <TR>
-<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Phoenix</B></span></font></TD>
-<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Weapons/Shields</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Phoenix (weapons)</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Weapons</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>Vex + Vex + Lo + Jah</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-<B>Weapons</B><BR>
 100% Chance To Cast level 40 Blaze When You Level-up<BR>
 40% Chance To Cast Level 22 Firestorm On Striking<BR>
 Level 10-15 Redemption Aura When Equipped (varies)<BR>
@@ -1168,9 +1173,16 @@ Ignore Target's Defense<BR>
 20% Deadly Strike<BR>
 +350-400 Defense Vs. Missile (varies)<BR>
 +15-21 Fire Absorb (varies)<BR>
-<BR>
+</font>
+</span></font></TD>
+</TR>
 
-<B>Shields</B><BR>
+<TR>
+<TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Phoenix (shields)</B></span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Shields</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>Vex + Vex + Lo + Jah</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
 100% Chance To Cast level 40 Blaze When You Level-up<BR>
 40% Chance To Cast Level 22 Firestorm On Striking<BR>
 Level 10-15 Redemption Aura When Equipped (varies)<BR>
@@ -1228,13 +1240,11 @@ Requirements -20%
 </TR>
 
 <TR>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Spirit</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Swords/Shields</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Spirit (swords)</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Swords</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Tal + Thul + Ort + Amn</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
-
-<B>Weapons</B><BR>
 +2 To All Skills<BR>
 25-35% Faster Cast Rate (varies)<BR>
 55% Faster Hit Recovery<BR>
@@ -1246,8 +1256,16 @@ Adds 3-14 Cold Damage 3 Second Duration (Normal)<BR>
 +22 To Vitality<BR>
 +89-112 To Mana (varies)<BR>
 +3-8 Magic Absorb (varies)<BR>
-<BR>
-<B>Shields</B><BR>
+</font>
+</span></font></TD>
+</TR>
+
+<TR>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Spirit (shields)</B></span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Shields</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Tal + Thul + Ort + Amn</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
+<font color=4850B8>
 +2 To All Skills<BR>
 25-35% Faster Cast Rate (varies)<BR>
 55% Faster Hit Recovery<BR>

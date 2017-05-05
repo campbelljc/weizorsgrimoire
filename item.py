@@ -14,7 +14,7 @@ class Item():
 class Rune(Item):
     def __init__(self, name, imagepath, rlvl, attr_dict):
         self.rlvl = rlvl
-        super().__init(name, imagepath, 'Rune', '', 'Socketable', '', attr_dict)
+        super().__init__(name + " Rune", imagepath, 'Rune', '', 'Socketable', '', attr_dict)
 
 class UniqueItem(Item):
     def __init__(self, name, imagepath, tier, itype, stype, attr_dict):

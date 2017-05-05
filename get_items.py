@@ -132,11 +132,11 @@ def get_items_from_summit():
             
             descs = []
             for weap_desc, ahs_desc in zip(weap_descs, ahs_descs):
-                rune_desc = weap_desc.replace(",", "\n") + " (weapons)\n"
+                rune_desc = weap_desc.replace(", ", "\n") + " (weapons)\n"
                 
                 temp = ahs_desc.split("/")
                 if len(temp) == 1:
-                    rune_desc += ahs_desc.replace(",", "\n") + " (armor/helms/shields)\n"
+                    rune_desc += ahs_desc.replace(", ", "\n") + " (armor/helms/shields)\n"
                 elif len(temp) == 2 and 'Shields' in temp[1]:
                     rune_desc += temp[0] + " (armor/helms)\n" + temp[1] + "\n"
                 descs.append(rune_desc)

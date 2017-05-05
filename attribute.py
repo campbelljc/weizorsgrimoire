@@ -135,10 +135,10 @@ for classname in classes:
     attribute_matches.append(AttributeMatch('+ to '+classname+' Skills', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)* to '+classname+' skill levels', classname+' skill levels'))
 
 attribute_matches += [    
-    AttributeMatch('+ to attack rating', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* to attack rating( \(based on character level\))*', 'attack rating'),
     AttributeMatch('% Bonus to Attack Rating', r'(?P<r1>\d+)[\-]*(?P<r2>\d+)*% bonus to attack rating', 'bonus to attack rating'),
     AttributeMatch('+ to Attack Rating Against Demons', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)* to attack rating against demons', 'attack rating against demons'),
     AttributeMatch('+ to Attack Rating Against Undead', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)* to attack rating against undead', 'attack rating against undead'),
+    AttributeMatch('+ to attack rating', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* to attack rating( \(based on character level\))*', 'attack rating'),
     AttributeMatch('% Increased Attack Speed', r'(?P<r1>\d+)[\-]*(?P<r2>\d+)*% increased attack speed', 'increased attack speed'),
     AttributeMatch('% Deadly Strike', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(?P<r1>[\d\.]+)[\-]*(?P<r2>[\d\.]+)*% deadly strike( \(based on character level\))*', 'deadly strike'),
     AttributeMatch('% Chance of Crushing Blow', r'(?P<r1>\d+)[\-]*(?P<r2>\d+)*% chance of crushing blow', 'chance of crushing blow'),
