@@ -88,7 +88,11 @@ def output_runeword_files(items):
         base_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in start_atts)
         end_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in end_atts)
         attrs = get_html_for_attrs(item.attr_dict, lambda name: name not in start_atts and name not in end_atts)
-    
+        
+        rune_images = ""
+        for rune in item.runes:
+            rune_images += "<img src='http://classic.battle.net/images/battle/diablo2exp/images/runes/rune"+rune.replace("Jah", "Jo").replace("Shael", "Shae")+".gif' alt='"+rune+"'/>"
+            
         header = '<html><head>\
                     <title>{0} -- {1}</title>\
                     <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
@@ -106,12 +110,13 @@ def output_runeword_files(items):
           <div class='item_container'>\
             <p class='item_name runeword'>{0}</p>\
             <p class='item_stype'>{1}</p>\
+            <p class='item_runes'>{6}</p>\
             <p class='item_type'>{2}</p>\
             <p class='item_attrs_small'>{3}</p>\
             <p class='item_attrs attr'>{4}</p>\
             <p class='item_attrs_small'>{5}</p>\
           </div>\
-        </div>".format(item.name, item.runes, item.allowed_items, base_attrs, attrs, end_attrs)
+        </div>".format(item.name, item.runes, item.allowed_items, base_attrs, attrs, end_attrs, rune_images)
     
         footer = '</body></html>' 
     
@@ -281,7 +286,7 @@ def output_index_file(items, sets, attributes):
         </div>\
       </div>\
       <div id='contentContainer'>\
-        type an item/set/attribute name<br />\
+        <p>type an item/set/attribute name</p>\
         <div class='ui-widget'>\
           <input spellcheck='false' id='tags' />\
         </div>\

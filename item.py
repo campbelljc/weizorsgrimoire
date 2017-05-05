@@ -11,6 +11,11 @@ class Item():
         self.stype = stype
         self.attr_dict = attr_dict
 
+class Rune(Item):
+    def __init__(self, name, imagepath, rlvl, attr_dict):
+        self.rlvl = rlvl
+        super().__init(name, imagepath, 'Rune', '', 'Socketable', '', attr_dict)
+
 class UniqueItem(Item):
     def __init__(self, name, imagepath, tier, itype, stype, attr_dict):
         super().__init__(name, imagepath, 'Unique', tier, itype, stype, attr_dict)
@@ -22,9 +27,9 @@ class SetItem(Item):
         super().__init__(name, imagepath, 'Set', '', '', stype, attr_dict)
 
 class Runeword(Item):
-    def __init__(self, name, allowed_items, runes, attr_dict):
+    def __init__(self, name, allowed_items, rune_string, attr_dict):
         self.allowed_items = allowed_items
-        self.runes = runes
+        self.runes = rune_string.split(" + ")
         super().__init__(name, '', 'Runeword', '', '', '', attr_dict)
 
 class ItemSet():

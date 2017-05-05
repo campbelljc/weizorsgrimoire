@@ -10,7 +10,7 @@ from attribute import *
 
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.1 Safari/603.1.30'}
 
-start_links = [('http://classic.battle.net/diablo2exp/items/uniques.shtml', '//tr/td//span//a/@href', 'http://classic.battle.net'), ('http://classic.battle.net/diablo2exp/items/sets/index.shtml', '//tr/td/font/span//table//tr/td//span/a/@href', 'http://classic.battle.net/diablo2exp/items/sets/'), ('http://classic.battle.net/diablo2exp/items/runewords-original.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/runewords-110.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/runewords-111.shtml', '', '')]
+start_links = [('http://classic.battle.net/diablo2exp/items/runes.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/uniques.shtml', '//tr/td//span//a/@href', 'http://classic.battle.net'), ('http://classic.battle.net/diablo2exp/items/sets/index.shtml', '//tr/td/font/span//table//tr/td//span/a/@href', 'http://classic.battle.net/diablo2exp/items/sets/'), ('http://classic.battle.net/diablo2exp/items/runewords-original.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/runewords-110.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/runewords-111.shtml', '', '')]
 
 def get_items_from_summit():
     links = []
@@ -92,9 +92,15 @@ def get_items_from_summit():
             item_tier = ''
             item_type = ''
             quality = 'Set'
+            
+            types = [typ for typ in tree.xpath('//tr/td//font//center//font/span/text()[normalize-space()]') if len(typ) > 0]
         
         elif 'runewords' in link:
             quality = 'Runeword'
+            types = tree.xpath('//table//tr/td[2]/font/span/text()')
+        
+        elif 'runes' in link:
+            quality = 'Rune'
         
         else:
             general_type = tree.xpath('//tr/td/font/span/center[1]/font/b')
@@ -112,27 +118,42 @@ def get_items_from_summit():
             print(item_tier, item_type)
         
             quality = tree.xpath('//tr/td/font/span/center[1]/font/b')[0].text_content().split()
-            if 'Unique' in quality:
-                quality = 'Unique'
-            else:
-                raise Exception(quality)
-        
-        names = tree.xpath('//tr/td//font//center//span/b')
-        if 'sets' in link:
-            types = [typ for typ in tree.xpath('//tr/td//font//center//font/span/text()[normalize-space()]') if len(typ) > 0]
-        elif 'runewords' in link:
-            types = tree.xpath('//table//tr/td[2]/font/span/text()')
-        else:
+            assert 'Unique' in quality
+            quality = 'Unique'
+            
             types = [typ.text_content() for typ in tree.xpath('//tr/td//font//center[2]')[:-1]]
-        if 'runewords' in link:
-            descs = tree.xpath('//tr/td[4]/font/span')
+        
+        if 'runes' in link:
+            names = tree.xpath('//tr/td[2]/font')[1:]
+            
+            weap_descs = [typ.text_content() for typ in tree.xpath('//tr/td[3]/font')]
+            ahs_descs = [typ.text_content() for typ in tree.xpath('//tr/td[4]/font')]
+            assert len(weap_descs) == len(ahs_descs)
+            
+            descs = []
+            for weap_desc, ahs_desc in zip(weap_descs, ahs_descs):
+                rune_desc = weap_desc.replace(",", "\n") + " (weapons)\n"
+                
+                temp = ahs_desc.split("/")
+                if len(temp) == 1:
+                    rune_desc += ahs_desc.replace(",", "\n") + " (armor/helms/shields)\n"
+                elif len(temp) == 2 and 'Shields' in temp[1]:
+                    rune_desc += temp[0] + " (armor/helms)\n" + temp[1] + "\n"
+                descs.append(rune_desc)
+            
+            images = [typ.text_content() for typ in tree.xpath('//tr/td[1]/font//img')[:-2]]
+            types = [typ.text_content() for typ in tree.xpath('//tr/td[5]/font')] # rlvls
         else:
-            descs = tree.xpath('//tr/td[2]/font/span')[1:]
-        if 'runewords' in link:
-            images = [typ.text_content() for typ in tree.xpath('//tr/td[3]/font/span')]
-        else:
-            images = [img for img in tree.xpath('//tr/td[1]/font/span//img/@src') if '/diablo2exp/images' in img and ('jewels' in img or 'items' in img)]
-        if len(descs) == 0: descs = tree.xpath('//tr/td[3]/font/span')
+            names = tree.xpath('//tr/td//font//center//span/b')
+        
+            if 'runewords' in link:
+                descs = [typ.text_content() for typ in tree.xpath('//tr/td[4]/font/span')]
+                images = [typ.text_content() for typ in tree.xpath('//tr/td[3]/font/span')]
+            else:
+                descs = [typ.text_content() for typ in tree.xpath('//tr/td[2]/font/span')[1:]]
+                images = [img for img in tree.xpath('//tr/td[1]/font/span//img/@src') if '/diablo2exp/images' in img and ('jewels' in img or 'items' in img)]
+            if len(descs) == 0: descs = [typ.text_content() for typ in tree.xpath('//tr/td[3]/font/span')]
+                
         print(link)
         print(len(names), len(types), len(descs), len(images))
 
@@ -146,7 +167,7 @@ def get_items_from_summit():
             iname = iname.text_content().replace("*", "")
             print(iname)
             
-            attrs = idesc.text_content().replace("\r", "").split("\n")
+            attrs = idesc.replace("\r", "").split("\n")
             attrs = [attr for attr in attrs if len(attr) > 0]
             assert len(attrs) > 0
 
@@ -177,6 +198,8 @@ def get_items_from_summit():
                 item = SetItem(iname, 'http://classic.battle.net'+image, item_tier, item_type, itype, attr_dict, set_names[item_index], set_bonuses[item_index])
             elif quality == 'Runeword':
                 item = Runeword(iname, itype, image, attr_dict)
+            elif quality == 'Rune':
+                item = Rune(iname, image, itype, attr_dict)
             else:
                 raise Exception(quality)
             items.append(item)
