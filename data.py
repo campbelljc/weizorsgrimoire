@@ -32,7 +32,7 @@ class_skills = [
     ]),
     ('sorceress', [
         ('cold spells', ['ice bolt', 'frozen armor', 'frost nova', 'ice blast', 'shiver armor', 'glacial spike', 'blizzard', 'chilling armor', 'frozen orb', 'cold mastery']),
-        ('lightning spells', ['charged bolt', 'telekinesis', 'static field', 'lightning', 'nova', 'chain lightning', 'teleport', 'thunder storm', 'energy shield', 'lightning mastery']),
+        ('lightning spells', ['charged bolt', 'telekinesis', 'static field', 'nova', 'chain lightning', 'teleport', 'thunder storm', 'energy shield', 'lightning mastery', 'lightning']),
         ('fire spells', ['fire bolt', 'warmth', 'inferno', 'blaze', 'fireball', 'fire wall', 'enchant', 'meteor', 'fire mastery', 'hydra'])
     ]),
 ]

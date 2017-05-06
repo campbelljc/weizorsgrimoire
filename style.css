@@ -154,7 +154,7 @@ th[data-sort]
 .unique { color: #908858 !important; }
 .set { color: #00c400 !important; }
 .attr { color: #4850B8; }
-.runeword { color: white !important; }
+.runeword, .white { color: white !important; }
 .rune { color: orange !important; }
 
 /* normalize monospace sizing 

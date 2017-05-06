@@ -10,10 +10,12 @@ def setup_dirs():
     if not os.path.exists(HTML_DIR):
         os.makedirs(HTML_DIR)
         os.makedirs(HTML_DIR + "/unique")
+        os.makedirs(HTML_DIR + "/white")
         os.makedirs(HTML_DIR + "/set")
         os.makedirs(HTML_DIR + "/attribute")
         os.makedirs(HTML_DIR + "/runeword")
         os.makedirs(HTML_DIR + "/rune")
+        os.makedirs(HTML_DIR + "/tier")
     shutil.copyfile("style.css", HTML_DIR + "/style.css")
     if not os.path.exists(HTML_DIR + "/js"):
         shutil.copytree("js", HTML_DIR + "/js")
@@ -39,9 +41,9 @@ def get_html_for_attrs(attr_dict, selection_fn):
         html += attr_text + "<br />"
     return html[:-6].lower()
 
-def output_item_files(items):
+def output_item_files(items, indexes):
     for item in items:
-        if isinstance(item, Runeword) or isinstance(item, WhiteItem) or item.type == 'socketable': continue
+        if isinstance(item, Runeword) or item.type == 'socketable': continue
         base_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in start_atts)
         end_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in end_atts)
         attrs = get_html_for_attrs(item.attr_dict, lambda name: name not in start_atts and name not in end_atts)
@@ -52,8 +54,19 @@ def output_item_files(items):
                     </head><body>'.format(item.name, SITENAME)
     
         #if isinstance(item, UniqueItem):
-        typeinfo = item.tier + (" " if len(item.tier) > 0 else "")
-        typeinfo += item.type
+        matched_link = None
+        for item_type, index_link in indexes:
+            if item_type.lower().split()[0] == item.quality.lower():
+                matched_link = index_link
+        
+        quality = item.quality
+        if matched_link is not None:
+            quality = '<a href="../../'+matched_link+'">'+quality+'</a>'
+        
+        typeinfo = item.type
+        if item.tier is not None:
+            typeinfo = '<a href="../../'+get_link(item.tier)+'">'+item.tier.name+'</a> ' + typeinfo
+        
         set_info = ""
         if isinstance(item, SetItem):
             set_info = "<p class='item_type'>(<a href='../../"+get_link(item.set)+"'>"+item.set_name+"</a>)</p>"
@@ -68,7 +81,7 @@ def output_item_files(items):
             </div>\
           </div>\
           <div class='item_container'>\
-            <p class='item_name {4}'>{0}</p>\
+            <p class='item_name {9}'>{0}</p>\
             {8}\
             <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
             <p class='item_stype'>{4} {3}</p>\
@@ -77,7 +90,7 @@ def output_item_files(items):
             <p class='item_attrs attr'>{6}</p>\
             <p class='item_attrs_small'>{7}</p>\
           </div>\
-        </div>".format(item.name, item.imagepath, typeinfo, item.stype, item.quality, base_attrs, attrs, end_attrs, set_info)
+        </div>".format(item.name, item.imagepath, typeinfo, item.stype, quality, base_attrs, attrs, end_attrs, set_info, item.quality)
     
         footer = '</body></html>' 
     
@@ -302,11 +315,59 @@ def output_attribute_files(items_per_attribute):
         with open(get_link(attribute), 'w') as itemfile:
             itemfile.write(html)
 
-def output_main_page(items, sets, attributes, index_links):
+def output_tier_files(items_per_tier):
+    for tier in items_per_tier:
+        print(tier.name)
+        items_per_tier[tier].sort(key=lambda tup: tup.name)
+        
+        itemrows = ''
+        for item in items_per_tier[tier]:
+            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format('../../' + get_link(item), item.name, item.quality)
+        
+        table_headers = "<th class='attr_table_header' data-sort='string'>item</th>"
+                
+        # save file...
+        # ref sorting: https://github.com/joequery/Stupid-Table-Plugin#readme
+        # ref sort(a,b): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+        header = '<html><head>\
+                    <title>{0} -- {1}</title>\
+                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>\
+                    <script type="text/javascript" src="../js/stupidtable.min.js"></script>\
+                    <script type="text/javascript">\
+                    $(function(){{\
+                      $("#attr_table").stupidtable();\
+                    }});\
+                    </script>\
+                    </head><body>'.format(tier.name, SITENAME)
+    
+        body = "<div id='container'>\
+          <div id='headerContainer'>\
+            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
+        	<div id='navContainer'>\
+        	  <table class='centerTable' id='navTable'><tr>\
+        	    <td><a href='../index.html'>items directory</a></td>\
+        	  </tr></table><br />\
+            </div>\
+          </div>\
+          <p class='attr_title'><strong>{1}</strong></p>\
+          <table class='centerTable' id='attr_table'>\
+          <thead><tr>{2}</tr></thead><tbody>\
+          {0}\
+          </tbody></table>\
+        </div>".format(itemrows, tier.name, table_headers)
+    
+        footer = '</body></html>' 
+    
+        html = header + body + footer
+        with open(get_link(tier), 'w') as itemfile:
+            itemfile.write(html)
+
+def output_main_page(items, sets, attributes, tiers, index_links):
     names = ""
     for item in items + sets:
         names += '{ value: "' + item.name + '", link: "../' + get_link(item) + '", category: "' + item.quality +'" },'
-    for attr in attributes:
+    for attr in {**attributes, **tiers}:
         names += '{ value: "' + attr.name + '", link: "../' + get_link(attr) + '", category: "' + attr.quality +'" },'
     
     header = '<html><head>\
@@ -360,11 +421,12 @@ def output_main_page(items, sets, attributes, index_links):
     with open(HTML_DIR + "/index.html", 'w') as itemfile:
         itemfile.write(html)
 
-def output_index_pages(items, sets, attributes):
+def output_index_pages(items, sets, attributes, tiers):
     unique_items = [item for item in items if isinstance(item, UniqueItem)]
     set_items = [item for item in items if isinstance(item, SetItem)]
     rw_items = [item for item in items if isinstance(item, Runeword)]
     runes = [item for item in items if isinstance(item, Rune)]
+    white_items = [item for item in items if isinstance(item, WhiteItem)]
     item_sets = sets
     
     #unique_attributes = []
@@ -372,7 +434,7 @@ def output_index_pages(items, sets, attributes):
     #    if len(attributes[attribute]) == 1:
     #        unique_attributes.append(attribute)
     
-    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (list(attributes), 'Attributes')]
+    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (list(attributes), 'Attributes'), (white_items, 'White Items'), (list(tiers), 'Item Tiers')]
     #, (unique_attributes, 'Rarely-occurring attributes')]
     
     links = []
@@ -392,7 +454,7 @@ def output_index_pages(items, sets, attributes):
             <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
         	<div id='navContainer'>\
         	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='../index.html'>items directory</a></td>\
+        	    <td><a href='./index.html'>items directory</a></td>\
         	  </tr></table><br />\
             </div>\
           </div>\
@@ -424,15 +486,17 @@ def make_website():
     items = fill_in_tiers(items)
     sets, items = get_sets_from_items(items)
     attributes = get_global_attr_dict(items, sets)
+    tiers = get_tier_dict(items)
     
     setup_dirs()
-    output_item_files(items)
+    index_links = output_index_pages(items, sets, attributes, tiers)
+    output_item_files(items, index_links)
     output_runeword_files(items)
     output_set_files(sets)
     output_rune_files(items)
     output_attribute_files(attributes)
-    index_links = output_index_pages(items, sets, attributes)
-    output_main_page(items, sets, attributes, index_links)
+    output_tier_files(tiers)
+    output_main_page(items, sets, attributes, tiers, index_links)
 
 if __name__ == '__main__':
     make_website()

@@ -2,12 +2,28 @@ import re
 from attribute import *
 from collections import namedtuple, defaultdict
 
+class Tier():
+    def __init__(self, tier):
+        self.name = tier
+        self.quality = 'tier'
+    def __hash__(self):
+        return hash((self.name))
+    def __eq__(self, other):
+        return (self.name) == (other.name)
+
+def get_tier_dict(items):
+    items_per_tier = defaultdict(list)
+    for item in items:
+        if item.tier is not None:
+            items_per_tier[item.tier].append(item)
+    return items_per_tier
+
 class Item():
     def __init__(self, name, imagepath, quality, tier, itype, stype, attr_dict):
         self.name = name
         self.imagepath = imagepath
         self.quality = quality # "Unique"
-        self.tier = tier # "Elite"
+        self.tier = Tier(tier) if len(tier) > 0 else None # "Elite"
         self.type = (itype[:-1] if itype[-1] == 's' else itype) if len(itype) > 0 else None # "Armor"
         self.stype = stype # "Balrog Skin"
         self.attr_dict = attr_dict
@@ -57,7 +73,7 @@ def fill_in_tiers(items):
         assert len(item.quality) > 0
         assert len(item.stype) > 0
         
-        if item.tier == "" or item.type == "":
+        if item.tier is None or item.type == "":
             # find item tier by scanning through white items.
             found = False
             for white_item in white_items:
@@ -67,8 +83,10 @@ def fill_in_tiers(items):
                     item.type = white_item.type
                     break
             if not found:
-                if item.stype.lower() in ['ring', 'amulet', 'small charm', 'large charm', 'grand charm', 'jewel']:
-                    item.type = 'Jewelry/Charms'
+                if item.stype.lower() in ['ring', 'amulet', 'jewel']:
+                    item.type = item.stype
+                elif item.stype.lower() in ['small charm', 'large charm', 'grand charm']:
+                    item.type = 'Charm'
                 else:
                     print("Couldn't find <", item.stype, ">")
                     assert False
