@@ -13,8 +13,9 @@ class Item():
 
 class Rune(Item):
     def __init__(self, name, imagepath, rlvl, attr_dict):
+        self.attr_dict_weap, self.attr_dict_armor, self.attr_dict_helm, self.attr_dict_shield = attr_dict
         self.rlvl = rlvl
-        super().__init__(name + " Rune", imagepath, 'Rune', '', 'Socketable', '', attr_dict)
+        super().__init__(name + " Rune", imagepath, 'Rune', '', 'socketable', '', {**self.attr_dict_weap, **self.attr_dict_armor, **self.attr_dict_helm, **self.attr_dict_shield})
 
 class UniqueItem(Item):
     def __init__(self, name, imagepath, tier, itype, stype, attr_dict):

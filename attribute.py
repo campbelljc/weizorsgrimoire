@@ -61,6 +61,31 @@ class AttributeMatch():
         self.regex = re.compile(regex)
         self.highlight_regex = re.compile(highlight_regex)
 
+def match_attributes(idesc):
+    #print(idesc)
+    attrs = idesc.replace("\r", "").split("\n")
+    attrs = [attr for attr in attrs if len(attr) > 0]
+    assert len(attrs) > 0
+    
+    attr_dict = {}
+    unmatched_strs = []
+    for i, attr in enumerate(attrs):
+        attr = attr.replace(" (varies)", "").replace("*", "")
+        if len(attr) == 0:
+            continue
+        attr_lower = attr.lower()
+        
+        matched = False
+        for attr_index, attr_matcher in enumerate(attribute_matches):
+            m = re.match(attr_matcher.regex, attr_lower)
+            if m:
+                matched = True
+                attr_dict[attr_matcher] = Attribute(attr_matcher.name, m.groupdict(), attr)
+                break
+        if not matched:
+            unmatched_strs.append(attr)
+    return attr_dict, unmatched_strs
+
 def get_global_attr_dict(items, sets):
     items_per_attribute = defaultdict(list)
     for item in items:

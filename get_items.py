@@ -127,22 +127,38 @@ def get_items_from_summit():
             names = tree.xpath('//tr/td[2]/font')[1:]
             
             weap_descs = [typ.text_content() for typ in tree.xpath('//tr/td[3]/font')]
-            ahs_descs = [typ.text_content() for typ in tree.xpath('//tr/td[4]/font')]
-            assert len(weap_descs) == len(ahs_descs)
-            
-            descs = []
-            for weap_desc, ahs_desc in zip(weap_descs, ahs_descs):
-                rune_desc = weap_desc.replace(", ", "\n") + " (weapons)\n"
-                
+            ahs_descs_temp = [typ.text_content() for typ in tree.xpath('//tr/td[4]/font')]
+            armorhelm_descs = []
+            shield_descs = []
+            for ahs_desc in ahs_descs_temp:
                 temp = ahs_desc.split("/")
                 if len(temp) == 1:
-                    rune_desc += ahs_desc.replace(", ", "\n") + " (armor/helms/shields)\n"
-                elif len(temp) == 2 and 'Shields' in temp[1]:
-                    rune_desc += temp[0] + " (armor/helms)\n" + temp[1] + "\n"
-                descs.append(rune_desc)
+                    armorhelm_descs.append(temp[0])
+                    shield_descs.append(temp[0])
+                elif len(temp) == 2:
+                    armorhelm_descs.append(temp[0])
+                    shield_descs.append(temp[1].replace("(Shields)", ""))
+            assert len(weap_descs) == len(armorhelm_descs) == len(shield_descs)
             
-            images = [typ.text_content() for typ in tree.xpath('//tr/td[1]/font//img')[:-2]]
+            descs = []
+            for weap_desc, armorhelm_desc, shield_desc in zip(weap_descs, armorhelm_descs, shield_descs):
+                descs.append((weap_desc.replace(", ", "\n"), armorhelm_desc.replace(", ", "\n"), armorhelm_desc.replace(", ", "\n"), shield_desc.replace(", ", "\n")))
+            
+            #descs = (weap_descs, armorhelm_descs, shield_descs)
+            #for weap_desc, ahs_desc in zip(weap_descs, ahs_descs):
+            #    rune_desc = weap_desc.replace(", ", " (weapons)\n") + " (weapons)\n"
+            #    
+            #    temp = ahs_desc.split("/")
+            #    if len(temp) == 1:
+            #        rune_desc += ahs_desc.replace(", ", " (armor/helms/shields)\n") + " (armor/helms/shields)\n"
+            #    elif len(temp) == 2 and 'Shields' in temp[1]:
+            #        rune_desc += temp[0] + " (armor/helms)\n" + temp[1] + "\n"
+            #    descs.append(rune_desc)
+            
+            images = tree.xpath('//tr/td[1]/font//img/@src')[:-2]
             types = [typ.text_content() for typ in tree.xpath('//tr/td[5]/font')] # rlvls
+            print(len(names), len(types), len(weap_descs), len(images))
+            assert len(names) == len(types) == len(weap_descs) == len(images)
         else:
             names = tree.xpath('//tr/td//font//center//span/b')
         
@@ -154,42 +170,28 @@ def get_items_from_summit():
                 images = [img for img in tree.xpath('//tr/td[1]/font/span//img/@src') if '/diablo2exp/images' in img and ('jewels' in img or 'items' in img)]
             if len(descs) == 0: descs = [typ.text_content() for typ in tree.xpath('//tr/td[3]/font/span')]
                 
-        print(link)
-        print(len(names), len(types), len(descs), len(images))
-
-        assert len(names) > 0
-        assert len(names) == len(types) == len(descs) == len(images)
+            print(len(names), len(types), len(descs), len(images))
+            assert len(names) == len(types) == len(descs) == len(images)
+        
         if 'sets' in link:
             print(len(set_names))
             assert len(names) == len(set_names)
 
         for item_index, (iname, itype, idesc, image) in enumerate(zip(names, types, descs, images)):
             iname = iname.text_content().replace("*", "")
-            print(iname)
             
-            attrs = idesc.replace("\r", "").split("\n")
-            attrs = [attr for attr in attrs if len(attr) > 0]
-            assert len(attrs) > 0
-
-            attr_dict = {}
+            if quality == 'Rune':
+                attr_dict_weap, unmatched_strs_weap = match_attributes(idesc[0])
+                attr_dict_armor, unmatched_strs_armor = match_attributes(idesc[1])
+                attr_dict_helm, unmatched_strs_helm = match_attributes(idesc[2])
+                attr_dict_shield, unmatched_strs_shield = match_attributes(idesc[3])
+                attr_dict = (attr_dict_weap, attr_dict_armor, attr_dict_helm, attr_dict_shield)
+                unmatched_strs = unmatched_strs_weap + unmatched_strs_armor + unmatched_strs_helm + unmatched_strs_shield
+            else:
+                attr_dict, unmatched_strs = match_attributes(idesc)
             
-            discard_attr_indices = []
-            for i, attr in enumerate(attrs):
-                attr = attr.replace(" (varies)", "").replace("*", "")
-                if len(attr) == 0:
-                    discard_attr_indices.append(i)
-                    continue
-                attr_lower = attr.lower()
-                for attr_index, attr_matcher in enumerate(attribute_matches):
-                    m = re.match(attr_matcher.regex, attr_lower)
-                    if m:
-                        discard_attr_indices.append(i)
-                        attr_dict[attr_matcher] = Attribute(attr_matcher.name, m.groupdict(), attr)
-                        break
-        
-            attrs = [attr for i, attr in enumerate(attrs) if i not in discard_attr_indices]
-            if len(attrs) > 0:
-                print("Remaining:", attrs)
+            if len(unmatched_strs) > 0:
+                print("Remaining:", unmatched_strs)
                 input("")
             
             if quality == 'Unique':
@@ -199,7 +201,7 @@ def get_items_from_summit():
             elif quality == 'Runeword':
                 item = Runeword(iname, itype, image, attr_dict)
             elif quality == 'Rune':
-                item = Rune(iname, image, itype, attr_dict)
+                item = Rune(iname, 'http://classic.battle.net'+image.replace("Jah", "Jo").replace("Shael", "Shae"), itype, attr_dict)
             else:
                 raise Exception(quality)
             items.append(item)

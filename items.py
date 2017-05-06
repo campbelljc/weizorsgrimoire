@@ -41,7 +41,7 @@ def get_html_for_attrs(attr_dict, selection_fn):
 
 def output_item_files(items):
     for item in items:
-        if isinstance(item, Runeword): continue
+        if isinstance(item, Runeword) or item.type == 'socketable': continue
         base_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in start_atts)
         end_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in end_atts)
         attrs = get_html_for_attrs(item.attr_dict, lambda name: name not in start_atts and name not in end_atts)
@@ -83,6 +83,57 @@ def output_item_files(items):
         with open(get_link(item), 'w') as itemfile:
             itemfile.write(html)
 
+def output_rune_files(items):
+    for item in items:
+        if item.quality != 'Rune': continue
+        
+        header = '<html><head>\
+                    <title>{0} -- {1}</title>\
+                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    </head><body>'.format(item.name, SITENAME)
+        
+        weap_attrs = get_html_for_attrs(item.attr_dict_weap, lambda name: True)
+        armor_attrs = get_html_for_attrs(item.attr_dict_armor, lambda name: True)
+        helm_attrs = get_html_for_attrs(item.attr_dict_helm, lambda name: True)
+        shield_attrs = get_html_for_attrs(item.attr_dict_shield, lambda name: True)
+        
+        runewords = ""
+        for rw_item in items:
+            if isinstance(rw_item, Runeword) and item.name.split(" ")[0] in rw_item.runes:
+                runewords += "<a href='../../"+get_link(rw_item)+"'>"+rw_item.name+"</a><br />"
+        runewords = runewords[:-6]
+        
+        body = "<div id='container'>\
+          <div id='headerContainer'>\
+            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
+        	<div id='navContainer'>\
+        	  <table class='centerTable' id='navTable'><tr>\
+        	    <td><a href='../index.html'>items directory</a></td>\
+        	  </tr></table><br />\
+            </div>\
+          </div>\
+          <div class='item_container'>\
+            <p class='item_name rune'>{0}</p>\
+            <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
+            <p class='item_type'>(Rune)</p>\
+            <p class='item_attrs_small'>Required Level: {2}</p>\
+            <table class='centerTable' id='rune_table'>\
+            <tr><td class='attr_restriction'>Weapons</td><td>{3}</td></tr>\
+            <tr><td class='attr_restriction'>Armor</td><td>{4}</td></tr>\
+            <tr><td class='attr_restriction'>Helms</td><td>{5}</td></tr>\
+            <tr><td class='attr_restriction'>Shields</td><td>{6}</td></tr>\
+            </table>\
+            <p>Runewords that use this rune:</p>\
+            <p>{7}</p>\
+          </div>\
+        </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs, runewords)
+    
+        footer = '</body></html>' 
+    
+        html = header + body + footer
+        with open(get_link(item), 'w') as itemfile:
+            itemfile.write(html)
+
 def output_runeword_files(items):
     for item in items:
         if not isinstance(item, Runeword): continue
@@ -90,9 +141,12 @@ def output_runeword_files(items):
         end_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in end_atts)
         attrs = get_html_for_attrs(item.attr_dict, lambda name: name not in start_atts and name not in end_atts)
         
+        rune_links = ""
         rune_images = ""
         for rune in item.runes:
-            rune_images += "<img src='http://classic.battle.net/images/battle/diablo2exp/images/runes/rune"+rune.replace("Jah", "Jo").replace("Shael", "Shae")+".gif' alt='"+rune+"'/>"
+            rune_links += "<a href='../../"+get_link([i for i in items if rune+" Rune"==i.name][0])+"'>"+rune+"</a> + "
+            rune_images += "<a href='../../"+get_link([i for i in items if rune+" Rune"==i.name][0])+"'><img src='http://classic.battle.net/images/battle/diablo2exp/images/runes/rune"+rune.replace("Jah", "Jo").replace("Shael", "Shae")+".gif' alt='"+rune+"'/></a>"
+        rune_links = rune_links[:-3]
             
         header = '<html><head>\
                     <title>{0} -- {1}</title>\
@@ -117,7 +171,7 @@ def output_runeword_files(items):
             <p class='item_attrs attr'>{4}</p>\
             <p class='item_attrs_small'>{5}</p>\
           </div>\
-        </div>".format(item.name, item.runes, item.allowed_items, base_attrs, attrs, end_attrs, rune_images)
+        </div>".format(item.name, rune_links, item.allowed_items, base_attrs, attrs, end_attrs, rune_images)
     
         footer = '</body></html>' 
     
@@ -310,6 +364,7 @@ def make_website():
     output_item_files(items)
     output_runeword_files(items)
     output_set_files(sets)
+    output_rune_files(items)
     output_attribute_files(attributes)
     output_index_file(items, sets, attributes)
 

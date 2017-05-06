@@ -112,6 +112,16 @@ table {
 	padding-top: 20px;
 }
 
+#rune_table tr, #rune_table td
+{
+	padding: 10px;
+}
+
+.attr_restriction
+{
+	text-decoration: underline;
+}
+
 #attr_table
 {
 	padding-top: 10px;
