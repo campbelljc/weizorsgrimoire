@@ -146,6 +146,11 @@ th[data-sort]
 	text-decoration: underline;
 }
 
+.header
+{
+	text-decoration: underline;
+}
+
 .unique { color: #908858 !important; }
 .set { color: #00c400 !important; }
 .attr { color: #4850B8; }
@@ -181,12 +186,13 @@ button { width: auto; overflow: visible; }
 	margin: 0px auto;
 	padding-bottom: 50px;
 	width: auto;
-	max-width: 768px;
+	max-width: 512px;
 	text-align: center;
 	border-right: 1px solid #fff;
 	border-left: 1px solid #fff;
 	position: relative;
 	background: black;
+	border-bottom: 1px solid #fff;
 }
 
 #headerContainer {

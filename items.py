@@ -234,6 +234,9 @@ def output_attribute_files(items_per_attribute):
         for item, item_attr in items_per_attribute[attribute]:
             has_val_text.append(len(item_attr.value_text) > 0)
         display_value_column = sum(has_val_text) > 0
+        
+        if not display_value_column:
+            items_per_attribute[attribute].sort(key=lambda tup: tup[0].name)
     
         itemrows = ''
         for item, item_attr in items_per_attribute[attribute]:
@@ -297,7 +300,7 @@ def output_attribute_files(items_per_attribute):
         with open(get_link(attribute), 'w') as itemfile:
             itemfile.write(html)
 
-def output_index_file(items, sets, attributes):
+def output_main_page(items, sets, attributes, index_links):
     names = ""
     for item in items + sets:
         names += '{ value: "' + item.name + '", link: "../' + get_link(item) + '", category: "' + item.quality +'" },'
@@ -319,10 +322,15 @@ def output_index_file(items, sets, attributes):
                       window.location.href = ui.item.link;\
                       return false;\
                     }}\
-                  }})\
+                  }});\
+                  $("#tags").focus();\
                 }});\
                 </script>\
                 </head><body>'.format(SITENAME, names)
+    
+    index_pages = ""
+    for item_type, index_link in index_links:
+        index_pages += '<p><a href="../{0}">{1}</a></p>'.format(index_link, item_type)
     
     body = "<div id='container'>\
       <div id='headerContainer'>\
@@ -338,14 +346,62 @@ def output_index_file(items, sets, attributes):
         <div class='ui-widget'>\
           <input spellcheck='false' id='tags' />\
         </div>\
+        <hr class='item_seperator' />\
+        <p class='header'>indexes</p>\
+        {0}\
       </div>\
-    </div>".format()
+    </div>".format(index_pages)
 
     footer = '</body></html>' 
 
     html = header + body + footer
     with open(HTML_DIR + "/index.html", 'w') as itemfile:
         itemfile.write(html)
+
+def output_index_pages(items, sets, attributes):
+    unique_items = [item for item in items if isinstance(item, UniqueItem)]
+    set_items = [item for item in items if isinstance(item, SetItem)]
+    rw_items = [item for item in items if isinstance(item, Runeword)]
+    runes = [item for item in items if isinstance(item, Rune)]
+    item_sets = sets
+    
+    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (list(attributes), 'Attributes')]
+    
+    links = []
+    for items, item_type in items_types:
+        header = '<html><head>\
+                    <title>{0} -- {1}</title>\
+                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    </head><body>'.format(item_type, SITENAME)
+        
+        itemrows = ''
+        items.sort(key=lambda item: item.name)
+        for item in items:
+            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format('../' + get_link(item), item.name, item.quality)
+        
+        body = "<div id='container'>\
+          <div id='headerContainer'>\
+            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
+        	<div id='navContainer'>\
+        	  <table class='centerTable' id='navTable'><tr>\
+        	    <td><a href='../index.html'>items directory</a></td>\
+        	  </tr></table><br />\
+            </div>\
+          </div>\
+          <p class='attr_title'><strong>{0}</strong></p>\
+          <table class='centerTable' id='attr_table'>\
+          {1}\
+          </table>\
+        </div>".format(item_type, itemrows)
+    
+        footer = '</body></html>' 
+    
+        html = header + body + footer
+        links.append((item_type, HTML_DIR + "/" + item_type.lower().replace(" ", "_")+'.html'))
+        with open(links[-1][1], 'w') as itemfile:
+            itemfile.write(html)
+    
+    return links
 
 def make_website():
     if not os.path.exists("items.dll"):
@@ -366,7 +422,8 @@ def make_website():
     output_set_files(sets)
     output_rune_files(items)
     output_attribute_files(attributes)
-    output_index_file(items, sets, attributes)
+    index_links = output_index_pages(items, sets, attributes)
+    output_main_page(items, sets, attributes, index_links)
 
 if __name__ == '__main__':
     make_website()

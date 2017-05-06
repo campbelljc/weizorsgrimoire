@@ -128,7 +128,7 @@ for classname, trees in class_skills:
     for treename, tree in trees:
         for skill in tree:
             for proc_type in proc_types:
-                attribute_matches.append(AttributeMatch('Chance to Cast '+proc_type.replace(" ", "_")+'_'+skill.replace(" ", "_"), r'(?P<p>\d+)% chance to cast level (?P<r1>\d+)[\-]*(?P<r2>\d+)* '+skill+' '+proc_type, r'chance to cast level (?P<r1>\d+)[\-]*(?P<r2>\d+)* '+skill+' '+proc_type))
+                attribute_matches.append(AttributeMatch('Chance to Cast '+skill.replace(" ", "_")+' '+proc_type.replace(" ", "_"), r'(?P<p>\d+)% chance to cast level (?P<r1>\d+)[\-]*(?P<r2>\d+)* '+skill+' '+proc_type, r'chance to cast level (?P<r1>\d+)[\-]*(?P<r2>\d+)* '+skill+' '+proc_type))
 
 attribute_matches += [
     AttributeMatch('Firestorm', r'1% chance to cast level 50 delirium when struck', r'1% chance to cast level 50 delirium when struck'),
@@ -199,8 +199,6 @@ attribute_matches += [
     AttributeMatch('+ to Dexterity', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* to dexterity( \(based on character level\))*', 'dexterity'),
     AttributeMatch('+ to Vitality', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>[\d\.]+)[\-]*(?P<r2>[\d\.]+)* to vitality( \(based on character level\))*', 'vitality'),
     AttributeMatch('+ to Energy', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>\d+)[\-]*(?P<r2>\d+)* to energy( \(based on character level\))*', 'energy'),
-    AttributeMatch('+ to Life', r'(\+ \((?P<perclvl>[\d\.]+[\-]*(?P<perclvl2>[\d\.]+)*) per character level\) )*(\+)*(?P<r1>[\d\.]+)[\-]*(?P<r2>[\d\.]+)* to life( \(based on character level\))*', 'life'),
-    AttributeMatch('+ to Mana', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>[\-]*[\d\.]+)[\-]*(?P<r2>[\d\.]+)* to mana( \(based on character level\))*', 'mana')
 ]
 
 for classname, trees in class_skills:
@@ -263,11 +261,14 @@ attribute_matches += [
     
     AttributeMatch('+ to Life After Each Kill', r'\+(?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)* life after each kill', 'life after each kill'),
     AttributeMatch('+ to Life After Each Demon Kill', r'\+(?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)* life after each demon kill', 'life after each demon kill'),
+    AttributeMatch('+ to Life', r'(\+ \((?P<perclvl>[\d\.]+[\-]*(?P<perclvl2>[\d\.]+)*) per character level\) )*(\+)*(?P<r1>[\d\.]+)[\-]*(?P<r2>[\d\.]+)* to life( \(based on character level\))*', 'life'),
+    
     AttributeMatch('Increase Maximum Life', r'increase maximum life (?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)*%', 'increase maximum life'),
     AttributeMatch('% Damage Taken Goes to Mana', r'(?P<v>\d+)% damage taken goes to mana', 'damage taken goes to mana'),
     AttributeMatch('Regenerate Mana', r'regenerate mana (?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)*%', 'regenerate mana'),
     AttributeMatch('Increase Maximum Mana', r'increase maximum mana (?P<v>\d+)%', 'increase maximum mana'),
     AttributeMatch('+ to Mana After Each Kill', r'\+(?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)* to mana after each kill', 'mana after each kill'),
+    AttributeMatch('+ to Mana', r'(\+ \((?P<perclvl>[\d\.]+) per character level\) )*(\+)*(?P<r1>[\-]*[\d\.]+)[\-]*(?P<r2>[\d\.]+)* to mana( \(based on character level\))*', 'mana'),
     AttributeMatch('+ to Light Radius', r'(\+)*(?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)* to light radius', 'light radius'),
     AttributeMatch('+ to Durability', r'(\+)*(?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)* durability', 'durability'),
     AttributeMatch('Attacker Takes Damage', r'attacker takes damage of (\((?P<perclvl>[\d\.]+) per character level\) )*(?P<r1>[\-]*\d+)[\-]*(?P<r2>\d+)*( \(based on character level\))*', 'attacker takes damage of'),
