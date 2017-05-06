@@ -41,7 +41,7 @@ def get_html_for_attrs(attr_dict, selection_fn):
 
 def output_item_files(items):
     for item in items:
-        if isinstance(item, Runeword) or item.type == 'socketable': continue
+        if isinstance(item, Runeword) or isinstance(item, WhiteItem) or item.type == 'socketable': continue
         base_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in start_atts)
         end_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in end_atts)
         attrs = get_html_for_attrs(item.attr_dict, lambda name: name not in start_atts and name not in end_atts)
@@ -51,11 +51,12 @@ def output_item_files(items):
                     <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
                     </head><body>'.format(item.name, SITENAME)
     
-        if isinstance(item, UniqueItem):
-            typeinfo = item.tier + (" " if len(item.tier) > 0 else "")
-            typeinfo += item.type
-        elif isinstance(item, SetItem):
-            typeinfo = "<a href='../../"+get_link(item.set)+"'>"+item.set_name+"</a>"
+        #if isinstance(item, UniqueItem):
+        typeinfo = item.tier + (" " if len(item.tier) > 0 else "")
+        typeinfo += item.type
+        set_info = ""
+        if isinstance(item, SetItem):
+            set_info = "<p class='item_type'>(<a href='../../"+get_link(item.set)+"'>"+item.set_name+"</a>)</p>"
     
         body = "<div id='container'>\
           <div id='headerContainer'>\
@@ -68,6 +69,7 @@ def output_item_files(items):
           </div>\
           <div class='item_container'>\
             <p class='item_name {4}'>{0}</p>\
+            {8}\
             <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
             <p class='item_stype'>{4} {3}</p>\
             <p class='item_type'>({2})</p>\
@@ -75,7 +77,7 @@ def output_item_files(items):
             <p class='item_attrs attr'>{6}</p>\
             <p class='item_attrs_small'>{7}</p>\
           </div>\
-        </div>".format(item.name, item.imagepath, typeinfo, item.stype, item.quality, base_attrs, attrs, end_attrs)
+        </div>".format(item.name, item.imagepath, typeinfo, item.stype, item.quality, base_attrs, attrs, end_attrs, set_info)
     
         footer = '</body></html>' 
     
@@ -115,8 +117,8 @@ def output_rune_files(items):
           <div class='item_container'>\
             <p class='item_name rune'>{0}</p>\
             <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
-            <p class='item_type'>(Rune)</p>\
-            <p class='item_attrs_small'>Required Level: {2}</p>\
+            <p class='item_type'>(<a href='../runes.html'>Rune</a>)</p>\
+            <p class='item_attrs_small'><a href='../attribute/required_level.html'>Required Level</a>: {2}</p>\
             <table class='centerTable' id='rune_table'>\
             <tr><td class='attr_restriction'>Weapons</td><td>{3}</td></tr>\
             <tr><td class='attr_restriction'>Armor</td><td>{4}</td></tr>\
@@ -365,7 +367,13 @@ def output_index_pages(items, sets, attributes):
     runes = [item for item in items if isinstance(item, Rune)]
     item_sets = sets
     
+    #unique_attributes = []
+    #for attribute in attributes:
+    #    if len(attributes[attribute]) == 1:
+    #        unique_attributes.append(attribute)
+    
     items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (list(attributes), 'Attributes')]
+    #, (unique_attributes, 'Rarely-occurring attributes')]
     
     links = []
     for items, item_type in items_types:
@@ -413,6 +421,7 @@ def make_website():
     
     print("Num items:", len(items))
     
+    items = fill_in_tiers(items)
     sets, items = get_sets_from_items(items)
     attributes = get_global_attr_dict(items, sets)
     
