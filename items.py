@@ -16,6 +16,8 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/runeword")
         os.makedirs(HTML_DIR + "/rune")
         os.makedirs(HTML_DIR + "/tier")
+        os.makedirs(HTML_DIR + "/type")
+        os.makedirs(HTML_DIR + "/subtype")
     shutil.copyfile("style.css", HTML_DIR + "/style.css")
     if not os.path.exists(HTML_DIR + "/js"):
         shutil.copytree("js", HTML_DIR + "/js")
@@ -43,7 +45,7 @@ def get_html_for_attrs(attr_dict, selection_fn):
 
 def output_item_files(items, indexes):
     for item in items:
-        if isinstance(item, Runeword) or item.type == 'socketable': continue
+        if isinstance(item, Runeword) or item.type.name == 'socketable': continue
         base_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in start_atts)
         end_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in end_atts)
         attrs = get_html_for_attrs(item.attr_dict, lambda name: name not in start_atts and name not in end_atts)
@@ -63,9 +65,14 @@ def output_item_files(items, indexes):
         if matched_link is not None:
             quality = '<a href="../../'+matched_link+'">'+quality+'</a>'
         
-        typeinfo = item.type
+        typeinfo = ""
         if item.tier is not None:
             typeinfo = '<a href="../../'+get_link(item.tier)+'">'+item.tier.name+'</a> ' + typeinfo
+        typeinfo += '<a href="../../'+get_link(item.type)+'">'+item.type.name+'</a>'
+        
+        stypeinfo = ""
+        if item.stype is not None:
+            stypeinfo += '<a href="../../'+get_link(item.stype)+'">'+item.stype.name+'</a>'            
         
         set_info = ""
         if isinstance(item, SetItem):
@@ -90,7 +97,7 @@ def output_item_files(items, indexes):
             <p class='item_attrs attr'>{6}</p>\
             <p class='item_attrs_small'>{7}</p>\
           </div>\
-        </div>".format(item.name, item.imagepath, typeinfo, item.stype, quality, base_attrs, attrs, end_attrs, set_info, item.quality)
+        </div>".format(item.name, item.imagepath, typeinfo, stypeinfo, quality, base_attrs, attrs, end_attrs, set_info, item.quality)
     
         footer = '</body></html>' 
     
@@ -320,12 +327,15 @@ def output_cat_files(items_per_cat):
         
         write_html_for_table(cat, table_headers, itemrows)
 
-def output_main_page(items, sets, attributes, tiers, index_links):
+def output_main_page(items, sets, attributes, cat_dicts, index_links):
     names = ""
     for item in items + sets:
         names += '{ value: "' + item.name + '", link: "../' + get_link(item) + '", category: "' + item.quality +'" },'
-    for attr in {**attributes, **tiers}:
+    for attr in attributes:
         names += '{ value: "' + attr.name + '", link: "../' + get_link(attr) + '", category: "' + attr.quality +'" },'
+    for cat_dict, _ in cat_dicts:
+        for cat in cat_dict:
+            names += '{ value: "' + cat.name + '", link: "../' + get_link(cat) + '", category: "' + cat.quality +'" },'
     
     header = '<html><head>\
                 <title>{0}</title>\
@@ -378,7 +388,7 @@ def output_main_page(items, sets, attributes, tiers, index_links):
     with open(HTML_DIR + "/index.html", 'w') as itemfile:
         itemfile.write(html)
 
-def output_index_pages(items, sets, attributes, tiers):
+def output_index_pages(items, sets, attributes, cat_dicts):
     unique_items = [item for item in items if isinstance(item, UniqueItem)]
     set_items = [item for item in items if isinstance(item, SetItem)]
     rw_items = [item for item in items if isinstance(item, Runeword)]
@@ -391,7 +401,7 @@ def output_index_pages(items, sets, attributes, tiers):
     #    if len(attributes[attribute]) == 1:
     #        unique_attributes.append(attribute)
     
-    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (list(attributes), 'Attributes'), (white_items, 'White Items'), (list(tiers), 'Item Tiers')]
+    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (list(attributes), 'Attributes'), (white_items, 'White Items'), *[(list(d), n) for d, n in cat_dicts]]
     #, (unique_attributes, 'Rarely-occurring attributes')]
     
     links = []
@@ -443,17 +453,22 @@ def make_website():
     items = fill_in_tiers(items)
     sets, items = get_sets_from_items(items)
     attributes = get_global_attr_dict(items, sets)
-    tiers = get_tier_dict(items)
     
     setup_dirs()
-    index_links = output_index_pages(items, sets, attributes, tiers)
+    
+    cat_dicts = []
+    for cat_name, disp_name in [('tier', 'Item Tiers'), ('type', 'Item Types'), ('stype', 'Item Subtypes')]:
+        cat_dict = get_cat_dict(items, cat_name)
+        output_cat_files(cat_dict)
+        cat_dicts.append((cat_dict, disp_name))
+    
+    index_links = output_index_pages(items, sets, attributes, cat_dicts)
     output_item_files(items, index_links)
     output_runeword_files(items)
     output_set_files(sets)
     output_rune_files(items)
     output_attribute_files(attributes)
-    output_cat_files(tiers)
-    output_main_page(items, sets, attributes, tiers, index_links)
+    output_main_page(items, sets, attributes, cat_dicts, index_links)
 
 if __name__ == '__main__':
     make_website()

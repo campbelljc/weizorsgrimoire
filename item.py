@@ -2,32 +2,33 @@ import re
 from attribute import *
 from collections import namedtuple, defaultdict
 
-class Tier():
-    def __init__(self, tier):
-        self.name = tier
-        self.quality = 'tier'
+class Category():
+    def __init__(self, name, quality):
+        self.name = name
+        self.quality = quality
     def __hash__(self):
         return hash((self.name))
     def __eq__(self, other):
         return (self.name) == (other.name)
 
-def get_tier_dict(items):
-    items_per_tier = defaultdict(list)
+def get_cat_dict(items, cat_name):
+    items_per_cat = defaultdict(list)
     for item in items:
-        if item.tier is not None:
-            items_per_tier[item.tier].append(item)
-    for tier in items_per_tier:
-        items_per_tier[tier].sort(key=lambda tup: tup.name)
-    return items_per_tier
+        cat_obj = getattr(item, cat_name)
+        if cat_obj is not None:
+            items_per_cat[cat_obj].append(item)
+    for cat in items_per_cat:
+        items_per_cat[cat].sort(key=lambda tup: tup.name)
+    return items_per_cat
 
 class Item():
     def __init__(self, name, imagepath, quality, tier, itype, stype, attr_dict):
         self.name = name
         self.imagepath = imagepath
         self.quality = quality # "Unique"
-        self.tier = Tier(tier) if len(tier) > 0 else None # "Elite"
-        self.type = (itype[:-1] if itype[-1] == 's' else itype) if len(itype) > 0 else None # "Armor"
-        self.stype = stype # "Balrog Skin"
+        self.tier = Category(tier, 'tier') if len(tier) > 0 else None # "Elite"
+        self.type = Category(itype[:-1] if itype[-1] == 's' else itype, 'type') if len(itype) > 0 else None # "Armor"
+        self.stype = Category(stype, 'subtype') # "Balrog Skin"
         self.attr_dict = attr_dict
 
 class WhiteItem(Item):
@@ -66,31 +67,29 @@ class ItemSet():
 
 def fill_in_tiers(items):
     white_items = [item for item in items if item.quality == 'White']
-    print([w.name for w in white_items])
     
     for item in items:
         if isinstance(item, Runeword) or isinstance(item, Rune): continue
         
-        print(item.name)
         assert len(item.quality) > 0
-        assert len(item.stype) > 0
+        assert len(item.stype.name) > 0
         
-        if item.tier is None or item.type == "":
+        if item.tier is None or item.type is None:
             # find item tier by scanning through white items.
             found = False
             for white_item in white_items:
-                if item.stype.lower() == white_item.name.lower():
+                if item.stype.name.lower() == white_item.name.lower():
                     found = True
                     item.tier = white_item.tier
                     item.type = white_item.type
                     break
             if not found:
-                if item.stype.lower() in ['ring', 'amulet', 'jewel']:
+                if item.stype.name.lower() in ['ring', 'amulet', 'jewel']:
                     item.type = item.stype
-                elif item.stype.lower() in ['small charm', 'large charm', 'grand charm']:
-                    item.type = 'Charm'
+                elif item.stype.name.lower() in ['small charm', 'large charm', 'grand charm']:
+                    item.type = Category('Charm', 'type')
                 else:
-                    print("Couldn't find <", item.stype, ">")
+                    print("Couldn't find <", item.stype.name, ">")
                     assert False
     
     return items

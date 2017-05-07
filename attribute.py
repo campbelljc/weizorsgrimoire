@@ -62,7 +62,6 @@ class AttributeMatch():
         self.highlight_regex = re.compile(highlight_regex)
 
 def match_attributes(idesc):
-    #print(idesc)
     attrs = idesc.replace("\r", "").split("\n")
     attrs = [attr for attr in attrs if len(attr) > 0]
     assert len(attrs) > 0

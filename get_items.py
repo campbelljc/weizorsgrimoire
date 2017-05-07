@@ -97,7 +97,6 @@ def get_items_from_summit():
                     j += 1
                 set_bonuses.append(set_bonus_attrs[j])
             assert len(set_names) == len(set_bonuses)
-            print(set_bonuses)
             
             item_tier = ''
             item_type = ''
@@ -118,10 +117,8 @@ def get_items_from_summit():
                 general_type = tree.xpath('//tr/td/font/span/center/b')
                 if len(general_type) == 0:
                     continue
-                print([x.text_content() for x in general_type])
                 general_type = [general_type[-1]]
             general_type = general_type[0].text_content()
-            print(general_type)
             if 'Unique' in general_type:
                 general_type.split("Unique ")
                 if len(general_type) > 1:
@@ -140,9 +137,7 @@ def get_items_from_summit():
                 item_type = ' '.join(general_type.split(" ")[1:])
                 quality = 'White'
                 types = [typ.text_content() for typ in tree.xpath('//table//tr/td[1]//center//font//b')]
-            
-            print(item_tier, item_type, quality, types)
-        
+                
         if 'runes' in link:
             names = tree.xpath('//tr/td[2]/font')[1:]
             types = [typ.text_content() for typ in tree.xpath('//tr/td[5]/font')] # rlvls
@@ -185,7 +180,6 @@ def get_items_from_summit():
             assert len(names) == len(types) == len(descs) == len(images)
         
         if 'sets' in link:
-            print(len(set_names))
             assert len(names) == len(set_names)
 
         for item_index, (iname, itype, idesc, image) in enumerate(zip(names, types, descs, images)):

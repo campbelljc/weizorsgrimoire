@@ -91,7 +91,7 @@ table {
 }
 
 .ui-autocomplete {
-	max-height: 140px;
+	max-height: 240px;
 	overflow-y: auto;
 	/* prevent horizontal scrollbar */
 	overflow-x: hidden;
