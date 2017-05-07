@@ -53,3 +53,5 @@ attribute_infos = [
     ('rip', "Means that the bodies can't be resurrected or they can't be used to raise skeletons (Necromancer). They can't be used for Corpse Explosion either. It will work only if you kill the enemy with a physical damage or elemental (Blizzard or Fireball) and not magical damage. The ring will work for the Paladin's Blessed Hammer skill."),
     ('maek', 'Will not work when the killing blow is made by a minion.')
 ]
+
+SOCKETABLE_TYPES = ['Amazon Bows, Spears and Javelin', 'Armor', 'Assassin Katar', 'Axe', 'Barbarian Helm', 'Bow', 'Circlet', 'Crossbow', 'Dagger', 'Druid Pelt', 'Helm', 'Javelin', 'Mace Classes: Clubs, Maces and Hammer', 'Necromancer Shrunken Head', 'Paladin Shield', 'Polearm', 'Scepter', 'Shield', 'Sorceress Orb', 'Spear', 'Stave', 'Sword', 'Throwing Weapon', 'Wand']

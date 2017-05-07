@@ -159,7 +159,7 @@ attribute_matches += [
     AttributeMatch('Adds Damage', r'adds [\(]*(?P<r11>\d+)[\-]*(?P<r12>\d+)*[\)]*-[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]* damage', 'damage'),
     AttributeMatch('Adds Magic Damage', r'adds (?P<r1>\d+)[\-]*[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]* magic damage', 'magic damage'),
     AttributeMatch('Adds Fire Damage', r'adds [\(]*(?P<r11>\d+)([\-]*(?P<r12>\d+)*[\)]*-[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]*)* fire damage', 'fire damage'),
-    AttributeMatch('Adds Cold Damage', r'adds [\(]*(?P<r11>\d+)([\-]*(?P<r12>\d+)*[\)]*-[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]*)* cold damage(, (?P<d1>\d+)[\-]*(?P<d2>\d+)* sec. duration)*', 'cold damage'),
+    AttributeMatch('Adds Cold Damage', r'adds [\(]*(?P<r11>\d+)([\-]*(?P<r12>\d+)*[\)]*-[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]*)* cold damage((,)*(--)* (?P<d1>[\d\.]+)[\-]*(?P<d2>\d+)* sec. duration)*', 'cold damage'),
     AttributeMatch('Adds Light Damage', r'adds (?P<r1>\d+)[\-]*[\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]* lightning damage', 'lightning damage'),
     AttributeMatch('Adds Poison Damage', r'\+(?P<r1>\d+)[\-]*(?P<r2>\d+)* poison damage over (?P<d>\d+) seconds', 'poison damage'),
     

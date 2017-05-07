@@ -10,7 +10,7 @@ from attribute import *
 
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.1 Safari/603.1.30'}
 
-start_links = [('http://classic.battle.net/diablo2exp/items/runes.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/uniques.shtml', '//tr/td//span//a/@href', 'http://classic.battle.net'), ('http://classic.battle.net/diablo2exp/items/sets/index.shtml', '//tr/td/font/span//table//tr/td//span/a/@href', 'http://classic.battle.net/diablo2exp/items/sets/'), ('http://classic.battle.net/diablo2exp/items/runewords-original.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/runewords-110.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/runewords-111.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/weaponsandarmor.shtml', '//tr//td//font//span//a/@href', 'http://classic.battle.net/diablo2exp/items/')]
+start_links = [('http://classic.battle.net/diablo2exp/items/runes.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/uniques.shtml', '//tr/td//span//a/@href', 'http://classic.battle.net'), ('http://classic.battle.net/diablo2exp/items/sets/index.shtml', '//tr/td/font/span//table//tr/td//span/a/@href', 'http://classic.battle.net/diablo2exp/items/sets/'), ('http://classic.battle.net/diablo2exp/items/runewords-original.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/runewords-110.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/runewords-111.shtml', '', ''), ('http://classic.battle.net/diablo2exp/items/weaponsandarmor.shtml', '//tr//td//font//span//a/@href', 'http://classic.battle.net/diablo2exp/items/'), ('http://classic.battle.net/diablo2exp/items/gems.shtml', '', '')]
 
 words = ['items', 'sets', 'normal/', 'exceptional/', 'elite/']
 def get_items_from_summit():
@@ -111,6 +111,9 @@ def get_items_from_summit():
         elif 'runes' in link:
             quality = 'Rune'
         
+        elif 'gems' in link:
+            quality = "Gem"
+        
         else:
             general_type = tree.xpath('//tr/td/font/span/center[1]/font/b')
             if len(general_type) == 0:
@@ -165,6 +168,23 @@ def get_items_from_summit():
             images = tree.xpath('//tr/td[1]/font//img/@src')[:-2]
             print(len(names), len(types), len(weap_descs), len(images))
             assert len(names) == len(types) == len(weap_descs) == len(images)
+        elif 'gems' in link:
+            names = tree.xpath('//tr/td[2]/font')[1:]
+            types = [typ.text_content() for typ in tree.xpath('//tr/td[3]/font')] # rlvls
+            
+            weap_descs = [typ.text_content() for typ in tree.xpath('//tr/td[4]/font')]
+            shield_descs = [typ.text_content() for typ in tree.xpath('//tr/td[5]/font')]
+            armorhelm_descs = [typ.text_content() for typ in tree.xpath('//tr/td[6]/font')]
+            rlvl_descs = ["Required Level: " + rlvl for rlvl in types]
+            assert len(weap_descs) == len(armorhelm_descs) == len(shield_descs) == len(rlvl_descs)
+            
+            descs = []
+            for weap_desc, armorhelm_desc, shield_desc, rlvl_desc in zip(weap_descs, armorhelm_descs, shield_descs, rlvl_descs):
+                descs.append((weap_desc.replace(", ", "\n"), armorhelm_desc.replace(", ", "\n"), armorhelm_desc.replace(", ", "\n"), shield_desc.replace(", ", "\n"), rlvl_desc))
+            
+            images = tree.xpath('//tr/td[1]/font//img/@src')[:-2]
+            print(len(names), len(types), len(weap_descs), len(images))
+            assert len(names) == len(types) == len(weap_descs) == len(images)
         else:
             names = tree.xpath('//tr/td//font//center//span/b')
         
@@ -183,10 +203,10 @@ def get_items_from_summit():
             assert len(names) == len(set_names)
 
         for item_index, (iname, itype, idesc, image) in enumerate(zip(names, types, descs, images)):
-            iname = iname.text_content().replace("*", "")
+            iname = iname.text_content().replace("*", "").replace("\r", "").replace("\n", "")
             
             unmatched_strs = ""
-            if quality == 'Rune':
+            if quality == 'Rune' or quality == 'Gem':
                 attr_dict_weap, unmatched_strs_weap = match_attributes(idesc[0])
                 attr_dict_armor, unmatched_strs_armor = match_attributes(idesc[1])
                 attr_dict_helm, unmatched_strs_helm = match_attributes(idesc[2])
@@ -209,6 +229,8 @@ def get_items_from_summit():
                 item = Runeword(iname, itype, image, attr_dict)
             elif quality == 'Rune':
                 item = Rune(iname, 'http://classic.battle.net'+image.replace("Jah", "Jo").replace("Shael", "Shae"), itype, attr_dict)
+            elif quality == 'Gem':
+                item = Gem(iname, 'http://classic.battle.net'+image, itype, attr_dict)
             elif quality == 'White':
                 item = WhiteItem(iname, 'http://classic.battle.net'+image, item_tier, item_type)
             else:

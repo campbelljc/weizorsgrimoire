@@ -15,6 +15,7 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/attribute")
         os.makedirs(HTML_DIR + "/runeword")
         os.makedirs(HTML_DIR + "/rune")
+        os.makedirs(HTML_DIR + "/gem")
         os.makedirs(HTML_DIR + "/tier")
         os.makedirs(HTML_DIR + "/type")
         os.makedirs(HTML_DIR + "/subtype")
@@ -45,7 +46,7 @@ def get_html_for_attrs(attr_dict, selection_fn):
 
 def output_item_files(items, indexes):
     for item in items:
-        if isinstance(item, Runeword) or item.type.name == 'socketable': continue
+        if isinstance(item, Runeword) or isinstance(item, Socketable): continue
         base_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in start_atts)
         end_attrs = get_html_for_attrs(item.attr_dict, lambda name: name in end_atts)
         attrs = get_html_for_attrs(item.attr_dict, lambda name: name not in start_atts and name not in end_atts)
@@ -55,7 +56,6 @@ def output_item_files(items, indexes):
                     <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
                     </head><body>'.format(item.name, SITENAME)
     
-        #if isinstance(item, UniqueItem):
         matched_link = None
         for item_type, index_link in indexes:
             if item_type.lower().split()[0] == item.quality.lower():
@@ -149,6 +149,49 @@ def output_rune_files(items):
             <p>{7}</p>\
           </div>\
         </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs, runewords)
+    
+        footer = '</body></html>' 
+    
+        html = header + body + footer
+        with open(get_link(item), 'w') as itemfile:
+            itemfile.write(html)
+
+def output_gem_files(items):
+    for item in items:
+        if item.quality != 'Gem': continue
+        
+        header = '<html><head>\
+                    <title>{0} -- {1}</title>\
+                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    </head><body>'.format(item.name, SITENAME)
+        
+        weap_attrs = get_html_for_attrs(item.attr_dict_weap, lambda name: True)
+        armor_attrs = get_html_for_attrs(item.attr_dict_armor, lambda name: True)
+        helm_attrs = get_html_for_attrs(item.attr_dict_helm, lambda name: True)
+        shield_attrs = get_html_for_attrs(item.attr_dict_shield, lambda name: True)
+                
+        body = "<div id='container'>\
+          <div id='headerContainer'>\
+            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
+        	<div id='navContainer'>\
+        	  <table class='centerTable' id='navTable'><tr>\
+        	    <td><a href='../index.html'>items directory</a></td>\
+        	  </tr></table><br />\
+            </div>\
+          </div>\
+          <div class='item_container'>\
+            <p class='item_name gem'>{0}</p>\
+            <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
+            <p class='item_type'>(<a href='../gems.html'>Gem</a>)</p>\
+            <p class='item_attrs_small'><a href='../attribute/required_level.html'>Required Level</a>: {2}</p>\
+            <table class='centerTable' id='rune_table'>\
+            <tr><td class='attr_restriction'>Weapons</td><td>{3}</td></tr>\
+            <tr><td class='attr_restriction'>Armor</td><td>{4}</td></tr>\
+            <tr><td class='attr_restriction'>Helms</td><td>{5}</td></tr>\
+            <tr><td class='attr_restriction'>Shields</td><td>{6}</td></tr>\
+            </table>\
+          </div>\
+        </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs)
     
         footer = '</body></html>' 
     
@@ -393,6 +436,7 @@ def output_index_pages(items, sets, attributes, cat_dicts):
     set_items = [item for item in items if isinstance(item, SetItem)]
     rw_items = [item for item in items if isinstance(item, Runeword)]
     runes = [item for item in items if isinstance(item, Rune)]
+    gems = [item for item in items if isinstance(item, Gem)]
     white_items = [item for item in items if isinstance(item, WhiteItem)]
     item_sets = sets
     
@@ -401,7 +445,7 @@ def output_index_pages(items, sets, attributes, cat_dicts):
     #    if len(attributes[attribute]) == 1:
     #        unique_attributes.append(attribute)
     
-    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (list(attributes), 'Attributes'), (white_items, 'White Items'), *[(list(d), n) for d, n in cat_dicts]]
+    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (gems, 'Gems'), (list(attributes), 'Attributes'), (white_items, 'White Items'), *[(list(d), n) for d, n in cat_dicts]]
     #, (unique_attributes, 'Rarely-occurring attributes')]
     
     links = []
@@ -467,6 +511,7 @@ def make_website():
     output_runeword_files(items)
     output_set_files(sets)
     output_rune_files(items)
+    output_gem_files(items)
     output_attribute_files(attributes)
     output_main_page(items, sets, attributes, cat_dicts, index_links)
 

@@ -156,6 +156,7 @@ th[data-sort]
 .attr { color: #4850B8; }
 .runeword, .white { color: white !important; }
 .rune { color: orange !important; }
+.gem { color: purple !important; }
 
 /* normalize monospace sizing 
  * meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/ */

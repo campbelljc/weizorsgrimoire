@@ -30,17 +30,32 @@ class Item():
         self.type = Category(itype[:-1] if itype[-1] == 's' else itype, 'type') if len(itype) > 0 else None # "Armor"
         self.stype = Category(stype, 'subtype') # "Balrog Skin"
         self.attr_dict = attr_dict
+        
+        self.num_possible_sockets = '0'
+        for attr in self.attr_dict:
+            if 'socket' in attr.name:
+                self.num_possible_sockets = self.attr_dict[attr].sort_value
+        if self.num_possible_sockets == '0' and 'quality' == 'Unique' and self.type.name in SOCKETABLE_TYPES:
+            self.num_possible_sockets = 1
 
 class WhiteItem(Item):
     def __init__(self, name, imagepath, tier, item_type):
         super().__init__(name, imagepath, 'White', tier, item_type, name, dict())
 
-class Rune(Item):
-    def __init__(self, name, imagepath, rlvl, attr_dict):
+class Socketable(Item):
+    def __init__(self, name, imagepath, socketable_type, rlvl, attr_dict):
         self.attr_dict_weap, self.attr_dict_armor, self.attr_dict_helm, self.attr_dict_shield, rlvl_dict = attr_dict
         self.rlvl = rlvl
         attr_dict_expanded = {**self.attr_dict_weap, **self.attr_dict_armor, **self.attr_dict_helm, **self.attr_dict_shield, **rlvl_dict}
-        super().__init__(name + " Rune", imagepath, 'Rune', '', 'socketable', '', attr_dict_expanded)
+        super().__init__(name, imagepath, socketable_type, '', 'Socketable', '', attr_dict_expanded)
+
+class Rune(Socketable):
+    def __init__(self, name, imagepath, rlvl, attr_dict):
+        super().__init__(name + " Rune", imagepath, 'Rune', rlvl, attr_dict)
+
+class Gem(Socketable):
+    def __init__(self, name, imagepath, rlvl, attr_dict):
+        super().__init__(name, imagepath, 'Gem', rlvl, attr_dict)
 
 class UniqueItem(Item):
     def __init__(self, name, imagepath, tier, itype, stype, attr_dict):
@@ -69,7 +84,7 @@ def fill_in_tiers(items):
     white_items = [item for item in items if item.quality == 'White']
     
     for item in items:
-        if isinstance(item, Runeword) or isinstance(item, Rune): continue
+        if isinstance(item, Runeword) or isinstance(item, Socketable): continue
         
         assert len(item.quality) > 0
         assert len(item.stype.name) > 0
