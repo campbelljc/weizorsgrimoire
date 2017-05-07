@@ -16,6 +16,8 @@ def get_tier_dict(items):
     for item in items:
         if item.tier is not None:
             items_per_tier[item.tier].append(item)
+    for tier in items_per_tier:
+        items_per_tier[tier].sort(key=lambda tup: tup.name)
     return items_per_tier
 
 class Item():

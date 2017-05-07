@@ -95,6 +95,18 @@ def get_global_attr_dict(items, sets):
     for itemset in sets:
         for attr in itemset.set_bonuses:
             items_per_attribute[attr].append((itemset, itemset.set_bonuses[attr]))
+    
+    for attribute in items_per_attribute:        
+        has_val_text = []
+        for item, item_attr in items_per_attribute[attribute]:
+            has_val_text.append(len(item_attr.value_text) > 0)
+        display_value_column = sum(has_val_text) > 0
+        
+        if not display_value_column:
+            items_per_attribute[attribute].sort(key=lambda tup: tup[0].name)
+        else:
+            items_per_attribute[attribute].sort(key=lambda tup: tup[1].sort_value, reverse=True)
+    
     return items_per_attribute
 
 start_atts = ['Damage', 'Throw Damage', 'One-Hand Damage', 'Two-Hand Damage', 'Defense', 'Required Level', 'Required Strength', 'Required Dexterity', 'Max Stack', 'Range', 'Durability', 'Weapon Speed', 'Boxes', 'Chance to Block', 'Chance to Block (Pal)', 'Chance to Block (Ama/Asn/Bar)', 'Chance to Block (Dru/Nec/Sor)', 'Kick Damage', 'Smite Damage']

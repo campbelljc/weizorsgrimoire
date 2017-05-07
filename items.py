@@ -238,20 +238,64 @@ def output_set_files(sets):
         with open(get_link(itemset), 'w') as itemfile:
             itemfile.write(html)
 
+def write_html_for_table(cat, table_headers, itemrows):
+    # save file...
+    # ref sorting: https://github.com/joequery/Stupid-Table-Plugin#readme
+    # ref sort(a,b): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+    header = '<html><head>\
+                <title>{0} -- {1}</title>\
+                <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>\
+                <script type="text/javascript" src="../js/stupidtable.min.js"></script>\
+                <script type="text/javascript">\
+                $(function(){{\
+                  $("#attr_table").stupidtable({{\
+                    "range_string":function(a,b){{\
+                      var valA = a;\
+                      if (a.indexOf("-") > -1)\
+                      {{\
+                        valA = a.split("-")[1];\
+                      }}\
+                      var valB = b;\
+                      if (b.indexOf("-") > -1)\
+                      {{\
+                        valB = b.split("-")[1];\
+                      }}\
+                      return parseInt(valA,10) - parseInt(valB,10);\
+                    }}\
+                  }});\
+                }});\
+                </script>\
+                </head><body>'.format(cat.name, SITENAME)
+
+    body = "<div id='container'>\
+      <div id='headerContainer'>\
+        <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
+    	<div id='navContainer'>\
+    	  <table class='centerTable' id='navTable'><tr>\
+    	    <td><a href='../index.html'>items directory</a></td>\
+    	  </tr></table><br />\
+        </div>\
+      </div>\
+      <p class='attr_title'><strong>{1}</strong></p>\
+      <table class='centerTable' id='attr_table'>\
+      <thead><tr>{2}</tr></thead><tbody>\
+      {0}\
+      </tbody></table>\
+    </div>".format(itemrows, cat.name, table_headers)
+
+    footer = '</body></html>' 
+
+    html = header + body + footer
+    with open(get_link(cat), 'w') as itemfile:
+        itemfile.write(html)
+
 def output_attribute_files(items_per_attribute):
     for attribute in items_per_attribute:
-        if len(items_per_attribute[attribute]) == 0:
-            continue
-        
-        items_per_attribute[attribute].sort(key=lambda tup: tup[1].sort_value, reverse=True)
-        
         has_val_text = []
         for item, item_attr in items_per_attribute[attribute]:
             has_val_text.append(len(item_attr.value_text) > 0)
         display_value_column = sum(has_val_text) > 0
-        
-        if not display_value_column:
-            items_per_attribute[attribute].sort(key=lambda tup: tup[0].name)
     
         itemrows = ''
         for item, item_attr in items_per_attribute[attribute]:
@@ -264,104 +308,17 @@ def output_attribute_files(items_per_attribute):
         if display_value_column:
             table_headers += "<th class='attr_table_header' data-sort='range_string'>value</th>"
         
-        # save file...
-        # ref sorting: https://github.com/joequery/Stupid-Table-Plugin#readme
-        # ref sort(a,b): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-        header = '<html><head>\
-                    <title>{0} -- {1}</title>\
-                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>\
-                    <script type="text/javascript" src="../js/stupidtable.min.js"></script>\
-                    <script type="text/javascript">\
-                    $(function(){{\
-                      $("#attr_table").stupidtable({{\
-                        "range_string":function(a,b){{\
-                          var valA = a;\
-                          if (a.indexOf("-") > -1)\
-                          {{\
-                            valA = a.split("-")[1];\
-                          }}\
-                          var valB = b;\
-                          if (b.indexOf("-") > -1)\
-                          {{\
-                            valB = b.split("-")[1];\
-                          }}\
-                          return parseInt(valA,10) - parseInt(valB,10);\
-                        }}\
-                      }});\
-                    }});\
-                    </script>\
-                    </head><body>'.format(attribute.name, SITENAME)
-    
-        body = "<div id='container'>\
-          <div id='headerContainer'>\
-            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
-        	<div id='navContainer'>\
-        	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='../index.html'>items directory</a></td>\
-        	  </tr></table><br />\
-            </div>\
-          </div>\
-          <p class='attr_title'><strong>{1}</strong></p>\
-          <table class='centerTable' id='attr_table'>\
-          <thead><tr>{2}</tr></thead><tbody>\
-          {0}\
-          </tbody></table>\
-        </div>".format(itemrows, attribute.name, table_headers)
-    
-        footer = '</body></html>' 
-    
-        html = header + body + footer
-        with open(get_link(attribute), 'w') as itemfile:
-            itemfile.write(html)
+        write_html_for_table(attribute, table_headers, itemrows)
 
-def output_tier_files(items_per_tier):
-    for tier in items_per_tier:
-        print(tier.name)
-        items_per_tier[tier].sort(key=lambda tup: tup.name)
-        
+def output_cat_files(items_per_cat):
+    for cat in items_per_cat:        
         itemrows = ''
-        for item in items_per_tier[tier]:
+        for item in items_per_cat[cat]:
             itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format('../../' + get_link(item), item.name, item.quality)
         
         table_headers = "<th class='attr_table_header' data-sort='string'>item</th>"
-                
-        # save file...
-        # ref sorting: https://github.com/joequery/Stupid-Table-Plugin#readme
-        # ref sort(a,b): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-        header = '<html><head>\
-                    <title>{0} -- {1}</title>\
-                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>\
-                    <script type="text/javascript" src="../js/stupidtable.min.js"></script>\
-                    <script type="text/javascript">\
-                    $(function(){{\
-                      $("#attr_table").stupidtable();\
-                    }});\
-                    </script>\
-                    </head><body>'.format(tier.name, SITENAME)
-    
-        body = "<div id='container'>\
-          <div id='headerContainer'>\
-            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
-        	<div id='navContainer'>\
-        	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='../index.html'>items directory</a></td>\
-        	  </tr></table><br />\
-            </div>\
-          </div>\
-          <p class='attr_title'><strong>{1}</strong></p>\
-          <table class='centerTable' id='attr_table'>\
-          <thead><tr>{2}</tr></thead><tbody>\
-          {0}\
-          </tbody></table>\
-        </div>".format(itemrows, tier.name, table_headers)
-    
-        footer = '</body></html>' 
-    
-        html = header + body + footer
-        with open(get_link(tier), 'w') as itemfile:
-            itemfile.write(html)
+        
+        write_html_for_table(cat, table_headers, itemrows)
 
 def output_main_page(items, sets, attributes, tiers, index_links):
     names = ""
@@ -495,7 +452,7 @@ def make_website():
     output_set_files(sets)
     output_rune_files(items)
     output_attribute_files(attributes)
-    output_tier_files(tiers)
+    output_cat_files(tiers)
     output_main_page(items, sets, attributes, tiers, index_links)
 
 if __name__ == '__main__':
