@@ -6,8 +6,10 @@ class Category():
     def __init__(self, name, quality):
         self.name = name
         self.quality = quality
+    
     def __hash__(self):
         return hash((self.name))
+    
     def __eq__(self, other):
         return (self.name) == (other.name)
 
@@ -16,7 +18,11 @@ def get_cat_dict(items, cat_name):
     for item in items:
         cat_obj = getattr(item, cat_name)
         if cat_obj is not None:
-            items_per_cat[cat_obj].append(item)
+            if isinstance(cat_obj, list):
+                for c_obj in cat_obj:
+                    items_per_cat[c_obj].append(item)
+            else:
+                items_per_cat[cat_obj].append(item)
     for cat in items_per_cat:
         items_per_cat[cat].sort(key=lambda tup: tup.name)
     return items_per_cat
@@ -27,15 +33,26 @@ class Item():
         self.imagepath = imagepath
         self.quality = quality # "Unique"
         self.tier = Category(tier, 'tier') if len(tier) > 0 else None # "Elite"
-        self.type = Category(itype[:-1] if itype[-1] == 's' else itype, 'type') if len(itype) > 0 else None # "Armor"
+        if isinstance(itype, list):
+            self.type = [Category(t[:-1] if t[-1] == 's' else t, 'type') for t in itype]
+        else:
+            self.type = Category(itype[:-1] if itype[-1] == 's' else itype, 'type') if len(itype) > 0 else None # "Armor"
         self.stype = Category(stype, 'subtype') # "Balrog Skin"
         self.attr_dict = attr_dict
         
-        self.num_possible_sockets = '0'
+        self.num_possible_sockets = 0
+        self.class_restriction = None
+    
+    def update_info(self):
+        for classname, item_type in class_specific_item_types:
+            if isinstance(self.type.name, str) and self.type.name == item_type:
+                self.class_restriction = classname
+                break
+        
         for attr in self.attr_dict:
-            if 'socket' in attr.name:
-                self.num_possible_sockets = self.attr_dict[attr].sort_value
-        if self.num_possible_sockets == '0' and 'quality' == 'Unique' and self.type.name in SOCKETABLE_TYPES:
+            if 'Socket' in attr.name:
+                self.num_possible_sockets = self.attr_dict[attr].max_value
+        if self.num_possible_sockets == 0 and self.quality in ['Unique', 'Set'] and self.type is not None and self.type.name in SOCKETABLE_TYPES:
             self.num_possible_sockets = 1
 
 class WhiteItem(Item):
@@ -69,9 +86,9 @@ class SetItem(Item):
 
 class Runeword(Item):
     def __init__(self, name, allowed_items, rune_string, attr_dict):
-        self.allowed_items = allowed_items
+        types = allowed_items.split("Socket ")[1].split("/")
         self.runes = rune_string.split(" + ")
-        super().__init__(name, '', 'Runeword', '', '', '', attr_dict)
+        super().__init__(name, '', 'Runeword', '', types, '', attr_dict)
 
 class ItemSet():
     def __init__(self, name, set_items, set_bonuses):
@@ -106,6 +123,7 @@ def fill_in_tiers(items):
                 else:
                     print("Couldn't find <", item.stype.name, ">")
                     assert False
+        item.update_info()
     
     return items
 

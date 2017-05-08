@@ -151,6 +151,24 @@ th[data-sort]
 	text-decoration: underline;
 }
 
+.item_selection
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.item_input
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.field_name
+{
+	font-size: 0.8em;
+}
+
 .unique { color: #908858 !important; }
 .set { color: #00c400 !important; }
 .attr { color: #4850B8; }

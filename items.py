@@ -217,7 +217,13 @@ def output_runeword_files(items):
                     <title>{0} -- {1}</title>\
                     <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
                     </head><body>'.format(item.name, SITENAME)
-            
+        
+        typeinfo = ""
+        types = item.type if isinstance(item.type, list) else [item.type]
+        for typ in types:
+            typeinfo += '<a href="../../'+get_link(typ)+'">'+typ.name+'</a> / '
+        typeinfo = typeinfo[:-3]
+        
         body = "<div id='container'>\
           <div id='headerContainer'>\
             <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
@@ -236,7 +242,7 @@ def output_runeword_files(items):
             <p class='item_attrs attr'>{4}</p>\
             <p class='item_attrs_small'>{5}</p>\
           </div>\
-        </div>".format(item.name, rune_links, item.allowed_items, base_attrs, attrs, end_attrs, rune_images)
+        </div>".format(item.name, rune_links, typeinfo, base_attrs, attrs, end_attrs, rune_images)
     
         footer = '</body></html>' 
     
@@ -361,7 +367,7 @@ def output_attribute_files(items_per_attribute):
         write_html_for_table(attribute, table_headers, itemrows)
 
 def output_cat_files(items_per_cat):
-    for cat in items_per_cat:        
+    for cat in items_per_cat:
         itemrows = ''
         for item in items_per_cat[cat]:
             itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format('../../' + get_link(item), item.name, item.quality)
@@ -484,6 +490,121 @@ def output_index_pages(items, sets, attributes, cat_dicts):
     
     return links
 
+def output_guide_creation_page(items, sets, attributes):
+    classnames = ""
+    for classname in classes:
+        classnames += '{ value: "' + classname + '" },'
+    
+    item_types = [('weapon1', weapon_and_offhand_types), ('weapon2', weapon_and_offhand_types), ('helm', helm_types), ('bodyarmor', body_armor_types), ('belt', belt_types), ('gloves', glove_types), ('boots', boot_types), ('amulet', amulet_types), ('ring1', ring_types), ('ring2', ring_types), ('charm1', charm_types), ('sockets', ['Socketable'])]
+    
+    Field = namedtuple('Field', 'id type_vals')
+    
+    fields = []
+    for idname, item_type_list in item_types:
+        type_vals = ""
+        for item in items:
+            if isinstance(item, WhiteItem): continue
+            types = item.type if isinstance(item.type, list) else [item.type]
+            for typ in types:
+                if typ.name in item_type_list:
+                    type_vals += '{ value: "' + item.name + '", sockets: ' + str(item.num_possible_sockets) + ' },'
+                    break
+        fields.append(Field(idname, type_vals))
+    
+    sockets = fields[-1]
+    fields = fields[:-1]
+    
+    field_js = ""
+    for field in fields:
+        field_js += "var {0} = [{1}];\n\
+                     $('#{0}').autocomplete({{ source: {0},\n\
+                       select: function(event, ui) {{\n\
+                         for(i=0; i<ui.item.sockets; i++){{\n\
+                           $('#socket'+i+'{0}').show();\n\
+                         }}\n\
+                         for(i=ui.item.sockets; i<5; i++){{\n\
+                           $('#socket'+i+'{0}').hide();\n\
+                           $('#socket'+i+'{0}').val('');\n\
+                         }}\n\
+                       }}\n\
+                     }});\n\
+                     $('#custom_item_{0}').change(function() {{\n\
+                        if($(this).is(':checked')) {{\n\
+                           $('#{0}').hide();\n\
+                           $('#{0}').val('');\n\
+                           $('.{0}').hide();\n\
+                           $('.custom_{0}').hide();\n\
+                           // actually, just destroy all the custom attribute fields.\
+                           return;\n\
+                        }}\n\
+                        $('#{0}').show();\n\
+                        // show (create) the custom attribute field (+ value field).\
+                        // on selection of an attribute, create and display a new attribute field below.\
+                     }});\n".format(field.id, field.type_vals)
+    
+    field_js += "var sockets = [{0}];\n".format(sockets.type_vals)
+    field_js += "$('.socket').autocomplete({source: sockets});\n"
+    
+    header = '<html><head>\n\
+                <title>{0} -- {1}</title>\n\
+                <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />\n\
+                <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">\n\
+                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>\n\
+                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>\n\
+                <script>\n\
+                $(function(){{\n\
+                  var classnames = [{2}];\n\
+                  $("#classname").autocomplete({{ source: classnames }});\n\
+                  {3}\n\
+                  $("#name").focus();\n\
+                  $(".socket").hide();\n\
+                }});\n\
+                </script>\n\
+                </head><body>'.format("Create a Gear Guide", SITENAME, classnames, field_js)
+    
+    field_inputs = ""
+    for field in fields:
+        if 'socket' in field.id: continue
+        socket_inputs = ""
+        for i in range(5):
+            socket_inputs += "<input spellcheck='false' placeholder='socket{1}{0}' id='socket{1}{0}' name='socket{1}{0}' class='socket item_input {0}' />".format(field.id, i)
+        field_inputs += "<div class='ui-widget'>\n\
+                          <p class='item_selection'>\n\
+                            <input spellcheck='false' placeholder='{0}' id='{0}' name='{0}' class='item_input {0}' />\n\
+                            {1}\n\
+                            <span class='field_name'><input type='checkbox' id='custom_item_{0}' /> Custom item</span>\n\
+                          </p>\n\
+                        </div>".format(field.id, socket_inputs)
+    
+    body = "<div id='container'>\n\
+      <div id='headerContainer'>\n\
+        <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\n\
+    	<div id='navContainer'>\n\
+    	  <table class='centerTable' id='navTable'><tr>\n\
+    	    <td><a href='./index.html'>items directory</a></td>\n\
+    	  </tr></table><br />\n\
+        </div>\n\
+      </div>\n\
+      <div id='contentContainer'>\n\
+        <form action='create_guide.py'>\n\
+          <div id='guide_form'>\n\
+            <p><input type='text' placeholder='Gear Guide Name' name='name' id='name' /></p>\n\
+            <div class='ui-widget'>\n\
+              <p><input spellcheck='false' placeholder='classname' id='classname' name='classname' /></p>\n\
+            </div>\n\
+            {0}\n\
+            <button type='submit'>Submit</button>\n\
+          </div>\n\
+        </form>\n\
+      </div>\n\
+    </div>".format(field_inputs)
+    
+    footer = '</body></html>'
+    
+    html = header + body + footer
+    with open(HTML_DIR + "/create_guide.html", 'w') as itemfile:
+        itemfile.write(html)
+
 def make_website():
     if not os.path.exists("items.dll"):
         items = get_items_from_summit()
@@ -513,6 +634,7 @@ def make_website():
     output_rune_files(items)
     output_gem_files(items)
     output_attribute_files(attributes)
+    output_guide_creation_page(items, sets, attributes)
     output_main_page(items, sets, attributes, cat_dicts, index_links)
 
 if __name__ == '__main__':

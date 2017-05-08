@@ -54,4 +54,25 @@ attribute_infos = [
     ('maek', 'Will not work when the killing blow is made by a minion.')
 ]
 
+class_specific_item_types = [
+    ('amazon', 'Amazon Bows, Spears and Javelin'),
+    ('assassin', 'Assassin Katar'),
+    ('barbarian', 'Barbarian Helm'),
+    ('druid', 'Druid Pelt'),
+    ('necromancer', 'Necromancer Shrunken Head'),
+    ('paladin', 'Paladin Shield'),
+    ('sorceress', 'Sorceress Orb')
+]
+
 SOCKETABLE_TYPES = ['Amazon Bows, Spears and Javelin', 'Armor', 'Assassin Katar', 'Axe', 'Barbarian Helm', 'Bow', 'Circlet', 'Crossbow', 'Dagger', 'Druid Pelt', 'Helm', 'Javelin', 'Mace Classes: Clubs, Maces and Hammer', 'Necromancer Shrunken Head', 'Paladin Shield', 'Polearm', 'Scepter', 'Shield', 'Sorceress Orb', 'Spear', 'Stave', 'Sword', 'Throwing Weapon', 'Wand']
+
+weapon_and_offhand_types = ['Amazon Bows, Spears and Javelin', 'Assassin Katar', 'Axe', 'Bow', 'Crossbow', 'Dagger', 'Javelin', 'Hammer', 'Mace', 'Mace Classes: Clubs, Maces and Hammer', 'Melee Weapon', 'Missile Weapon', 'Necromancer Shrunken Head', 'Paladin Shield', 'Polearm', 'Scepter', 'Shield', 'Sorceress Orb', 'Spear', 'Stave', 'Sword', 'Throwing Weapon', 'Wand', 'Weapon']
+
+helm_types = ['Barbarian Helm', 'Circlet', 'Druid Pelt', 'Helm']
+amulet_types = ['Amulet']
+ring_types = ['Ring']
+body_armor_types = ['Armor']
+belt_types = ['Belt']
+boot_types = ['Boot']
+charm_types = ['Charm']
+glove_types = ['Glove']

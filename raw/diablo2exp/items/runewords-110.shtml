@@ -274,7 +274,7 @@ Level 13 Summon Grizzly (5 Charges)
 
 <TR>
 <TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Bramble</B></span></font></TD>
-<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Armor</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>Ral + Ohm + Sur + Eth</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -342,7 +342,7 @@ Replenish Life +12<BR>
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Chains of Honor</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Armor</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Dol + Um + Ber + Ist</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -363,7 +363,7 @@ Damage Reduced By 8%<BR>
 
 <TR>
 <TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Chaos</B></span></font></TD>
-<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Claws</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Assassin Katars</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>Fal + Ohm + Um</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -446,7 +446,7 @@ Requirements -20%
 
 <TR>
 <TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Duress</B></span></font></TD>
-<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Armor</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>Shael + Um + Thul</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -467,7 +467,7 @@ Poison Resist +15%<BR>
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Enigma</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Armor</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Jah + Ith + Ber</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -512,7 +512,7 @@ Level 8 Revive (88 Charges)<BR>
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Exile</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Paladin Shields (only)</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Paladin Shields</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Vex + Ohm + Ist + Dol</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -552,7 +552,7 @@ Prevent Monster Heal<BR>
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Gloom</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Armor</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Fal + Um + Pul</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -592,7 +592,7 @@ Freezes Target +3
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Heart of the Oak</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Staves/Maces*</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Staves/Maces</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Ko + Vex + Pul + Thul</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -657,7 +657,7 @@ Level 3 Heart of Wolverine (12 Charges)<BR>
 
 <TR>
 <TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Prudence</B></span></font></TD>
-<TD align=center><font face="arial,helvetica" size=-1><span>2 Socket Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>2 Socket Armor</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>Mal + Tir</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -713,7 +713,7 @@ Regenerate Mana 15%<BR>
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Stone</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Armor</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Shael + Um + Pul + Lum</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -842,7 +842,7 @@ Prevent Monster Heal<BR>
 
 <TR>
 <TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Dragon</B></span></font></TD>
-<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Body Armor/Shields</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>3 Socket Armor/Shields</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>Sur + Lo + Sol</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -947,7 +947,7 @@ All Resistances +25-30 (varies)<BR>
 
 <TR>
 <TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Fortitude (Armor)</B></span></font></TD>
-<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>4 Socket Armor</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>El + Sol + Dol + Lo</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -1096,7 +1096,7 @@ Hit Blinds Target +1<BR>
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Lawbringer</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Swords/Hammers/Scepters </span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Swords/Hammers/Scepters</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Amn + Lem + Ko</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>

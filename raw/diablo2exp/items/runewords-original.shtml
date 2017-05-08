@@ -263,7 +263,7 @@ Poison Resist +48%<BR>
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858" ><span><B>Black</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Clubs/Hammers/Maces</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Mace Classes: Clubs, Maces and Hammer</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Thul + Io + Nef</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -362,7 +362,7 @@ Adds 3-14 Cold Damage - 3 Second Duration<BR>
 
 <TR>
 <TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Leaf</B></span></font></TD>
-<TD align=center><font face="arial,helvetica" size=-1><span>2 Socket Staves* (Not Orbs)</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>2 Socket Staves</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>Tir + Ral</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -382,7 +382,7 @@ Cold Resist +33%<BR>
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Lionheart</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Armor</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Hel + Lum + Fal</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -454,7 +454,7 @@ Knockback
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Memory</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Staves (Not Orbs)</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>4 Socket Staves</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Lum + Io + Sol + Eth</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -552,7 +552,7 @@ Hit Blinds Target +33<BR>
 
 <TR>
 <TD align=center><font face="arial,helvetica" size=-1 color="#908858"><span><B>Smoke</B></span></font></TD>
-<TD align=center><font face="arial,helvetica" size=-1><span>2 Socket Body Armor</span></font></TD>
+<TD align=center><font face="arial,helvetica" size=-1><span>2 Socket Armor</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>Nef + Lum</span></font></TD>
 <TD align=center><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -569,7 +569,7 @@ Level 6 Weaken (18 Charges)<BR>
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Stealth</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>2 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>2 Socket Armor</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Tal + Eth</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>
@@ -638,7 +638,7 @@ Level 13 Poison Nova (11 Charges)<BR>
 
 <TR>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1 color="#908858"><span><B>Wealth</B></span></font></TD>
-<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Body Armor</span></font></TD>
+<TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>3 Socket Armor</span></font></TD>
 <TD align=center bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>Lem + Ko + Tir</span></font></TD>
 <TD align=center  bgcolor="#20100a"><font face="arial,helvetica" size=-1><span>
 <font color=4850B8>

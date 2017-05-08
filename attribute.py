@@ -10,6 +10,7 @@ class Attribute():
         self.text = text
         
         self.sort_value = None
+        self.max_value = None
         if len(values) == 0:
             self.sort_value = True
             self.value_text = ""
@@ -53,6 +54,7 @@ class Attribute():
             else:
                 print("value dict:", self.value_dict)
                 raise Exception
+            self.max_value = int(self.sort_value+0.0001)
 
 class AttributeMatch():
     def __init__(self, attr_name, regex, highlight_regex):
