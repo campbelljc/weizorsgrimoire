@@ -44,6 +44,24 @@ def get_html_for_attrs(attr_dict, selection_fn):
         html += attr_text + "<br />"
     return html[:-6].lower()
 
+def get_footer():
+    return "</div>\n\
+            <div id='lowerContainer'>\n\
+	          <div id='blurContainer'></div>\n\
+                 <div id='footer'>\n\
+                   <p class='centerText'>all content on this site is &copy; 2001-2017 blizzard entertainment.</p>\n\
+                 </div>\n\
+              </div>\n\
+            </div>\n\
+            </body></html>"
+
+def get_body_header():
+    return "<div id='container'>\n\
+          <div id='headerContainer'>\n\
+            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\n\
+          </div>\n\
+          <div id='contentContainer'>"
+
 def output_item_files(items, indexes):
     for item in items:
         if isinstance(item, Runeword) or isinstance(item, Socketable): continue
@@ -78,16 +96,8 @@ def output_item_files(items, indexes):
         if isinstance(item, SetItem):
             set_info = "<p class='item_type'>(<a href='../../"+get_link(item.set)+"'>"+item.set_name+"</a>)</p>"
     
-        body = "<div id='container'>\
-          <div id='headerContainer'>\
-            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
-        	<div id='navContainer'>\
-        	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='../index.html'>items directory</a></td>\
-        	  </tr></table><br />\
-            </div>\
-          </div>\
-          <div class='item_container'>\
+        body = get_body_header() + \
+        "<div class='item_container'>\
             <p class='item_name {9}'>{0}</p>\
             {8}\
             <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
@@ -98,10 +108,8 @@ def output_item_files(items, indexes):
             <p class='item_attrs_small'>{7}</p>\
           </div>\
         </div>".format(item.name, item.imagepath, typeinfo, stypeinfo, quality, base_attrs, attrs, end_attrs, set_info, item.quality)
-    
-        footer = '</body></html>' 
-    
-        html = header + body + footer
+        
+        html = header + body + get_footer()
         with open(get_link(item), 'w') as itemfile:
             itemfile.write(html)
 
@@ -125,16 +133,8 @@ def output_rune_files(items):
                 runewords += "<a href='../../"+get_link(rw_item)+"'>"+rw_item.name+"</a><br />"
         runewords = runewords[:-6]
         
-        body = "<div id='container'>\
-          <div id='headerContainer'>\
-            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
-        	<div id='navContainer'>\
-        	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='../index.html'>items directory</a></td>\
-        	  </tr></table><br />\
-            </div>\
-          </div>\
-          <div class='item_container'>\
+        body = get_body_header() + \
+        "<div class='item_container'>\
             <p class='item_name rune'>{0}</p>\
             <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
             <p class='item_type'>(<a href='../runes.html'>Rune</a>)</p>\
@@ -150,9 +150,7 @@ def output_rune_files(items):
           </div>\
         </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs, runewords)
     
-        footer = '</body></html>' 
-    
-        html = header + body + footer
+        html = header + body + get_footer()
         with open(get_link(item), 'w') as itemfile:
             itemfile.write(html)
 
@@ -170,16 +168,8 @@ def output_gem_files(items):
         helm_attrs = get_html_for_attrs(item.attr_dict_helm, lambda name: True)
         shield_attrs = get_html_for_attrs(item.attr_dict_shield, lambda name: True)
                 
-        body = "<div id='container'>\
-          <div id='headerContainer'>\
-            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
-        	<div id='navContainer'>\
-        	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='../index.html'>items directory</a></td>\
-        	  </tr></table><br />\
-            </div>\
-          </div>\
-          <div class='item_container'>\
+        body = get_body_header() + \
+        "<div class='item_container'>\
             <p class='item_name gem'>{0}</p>\
             <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
             <p class='item_type'>(<a href='../gems.html'>Gem</a>)</p>\
@@ -192,10 +182,8 @@ def output_gem_files(items):
             </table>\
           </div>\
         </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs)
-    
-        footer = '</body></html>' 
-    
-        html = header + body + footer
+        
+        html = header + body + get_footer()
         with open(get_link(item), 'w') as itemfile:
             itemfile.write(html)
 
@@ -224,16 +212,8 @@ def output_runeword_files(items):
             typeinfo += '<a href="../../'+get_link(typ)+'">'+typ.name+'</a> / '
         typeinfo = typeinfo[:-3]
         
-        body = "<div id='container'>\
-          <div id='headerContainer'>\
-            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
-        	<div id='navContainer'>\
-        	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='../index.html'>items directory</a></td>\
-        	  </tr></table><br />\
-            </div>\
-          </div>\
-          <div class='item_container'>\
+        body = get_body_header() + \
+        "<div class='item_container'>\
             <p class='item_name runeword'>{0}</p>\
             <p class='item_stype'>{1}</p>\
             <p class='item_runes'>{6}</p>\
@@ -243,10 +223,8 @@ def output_runeword_files(items):
             <p class='item_attrs_small'>{5}</p>\
           </div>\
         </div>".format(item.name, rune_links, typeinfo, base_attrs, attrs, end_attrs, rune_images)
-    
-        footer = '</body></html>' 
-    
-        html = header + body + footer
+        
+        html = header + body + get_footer()
         with open(get_link(item), 'w') as itemfile:
             itemfile.write(html)
 
@@ -273,24 +251,14 @@ def output_set_files(sets):
     
         set_bonuses = get_html_for_attrs(itemset.set_bonuses, lambda name: True)
     
-        body = "<div id='container'>\
-          <div id='headerContainer'>\
-            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
-        	<div id='navContainer'>\
-        	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='../index.html'>items directory</a></td>\
-        	  </tr></table><br />\
-            </div>\
-          </div>\
-          <p class='item_name set'>{0}</p>\
+        body = get_body_header() + \
+        "<p class='item_name set'>{0}</p>\
           {2}\
           <p class='set_bonuses_title'>Set Bonuses</p>\
           <p class='set_bonuses'>{1}</p>\
         </div>".format(itemset.name, set_bonuses, setitemrows)
-    
-        footer = '</body></html>' 
-    
-        html = header + body + footer
+        
+        html = header + body + get_footer()
         with open(get_link(itemset), 'w') as itemfile:
             itemfile.write(html)
 
@@ -324,25 +292,15 @@ def write_html_for_table(cat, table_headers, itemrows):
                 </script>\
                 </head><body>'.format(cat.name, SITENAME)
 
-    body = "<div id='container'>\
-      <div id='headerContainer'>\
-        <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
-    	<div id='navContainer'>\
-    	  <table class='centerTable' id='navTable'><tr>\
-    	    <td><a href='../index.html'>items directory</a></td>\
-    	  </tr></table><br />\
-        </div>\
-      </div>\
-      <p class='attr_title'><strong>{1}</strong></p>\
+    body = get_body_header() + \
+    "<p class='attr_title'><strong>{1}</strong></p>\
       <table class='centerTable' id='attr_table'>\
       <thead><tr>{2}</tr></thead><tbody>\
       {0}\
       </tbody></table>\
     </div>".format(itemrows, cat.name, table_headers)
 
-    footer = '</body></html>' 
-
-    html = header + body + footer
+    html = header + body + get_footer()
     with open(get_link(cat), 'w') as itemfile:
         itemfile.write(html)
 
@@ -411,16 +369,8 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
     for item_type, index_link in index_links:
         index_pages += '<p><a href="../{0}">{1}</a></p>'.format(index_link, item_type)
     
-    body = "<div id='container'>\
-      <div id='headerContainer'>\
-        <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
-    	<div id='navContainer'>\
-    	  <table class='centerTable' id='navTable'><tr>\
-    	    <td><a href='#'>items directory</a></td>\
-    	  </tr></table><br />\
-        </div>\
-      </div>\
-      <div id='contentContainer'>\
+    body = get_body_header() + \
+    "<div id='contentContainer'>\
         <p>type an item/set/attribute name</p>\
         <div class='ui-widget'>\
           <input spellcheck='false' id='tags' />\
@@ -431,9 +381,7 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
       </div>\
     </div>".format(index_pages)
 
-    footer = '</body></html>' 
-
-    html = header + body + footer
+    html = header + body + get_footer()
     with open(HTML_DIR + "/index.html", 'w') as itemfile:
         itemfile.write(html)
 
@@ -466,24 +414,14 @@ def output_index_pages(items, sets, attributes, cat_dicts):
         for item in items:
             itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format('../' + get_link(item), item.name, item.quality)
         
-        body = "<div id='container'>\
-          <div id='headerContainer'>\
-            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\
-        	<div id='navContainer'>\
-        	  <table class='centerTable' id='navTable'><tr>\
-        	    <td><a href='./index.html'>items directory</a></td>\
-        	  </tr></table><br />\
-            </div>\
-          </div>\
-          <p class='attr_title'><strong>{0}</strong></p>\
+        body = get_body_header() + \
+        "<p class='attr_title'><strong>{0}</strong></p>\
           <table class='centerTable' id='attr_table'>\
           {1}\
           </table>\
         </div>".format(item_type, itemrows)
-    
-        footer = '</body></html>' 
-    
-        html = header + body + footer
+        
+        html = header + body + get_footer()
         links.append((item_type, HTML_DIR + "/" + item_type.lower().replace(" ", "_")+'.html'))
         with open(links[-1][1], 'w') as itemfile:
             itemfile.write(html)
@@ -619,16 +557,8 @@ def output_guide_creation_page(items, sets, attributes):
                 </script>\n\
                 </head><body>'.format("Create a Gear Guide", SITENAME, classnames, field_js, fn_defs)
     
-    body = "<div id='container'>\n\
-      <div id='headerContainer'>\n\
-        <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\n\
-    	<div id='navContainer'>\n\
-    	  <table class='centerTable' id='navTable'><tr>\n\
-    	    <td><a href='./index.html'>items directory</a></td>\n\
-    	  </tr></table><br />\n\
-        </div>\n\
-      </div>\n\
-      <div id='contentContainer'>\n\
+    body = get_body_header() + \
+    "<div id='contentContainer'>\n\
         <form action='create_guide.py'>\n\
           <div id='guide_form'>\n\
             <p><input type='text' placeholder='Gear Guide Name' name='name' id='name' /></p>\n\
@@ -641,10 +571,8 @@ def output_guide_creation_page(items, sets, attributes):
         </form>\n\
       </div>\n\
     </div>".format(field_inputs)
-    
-    footer = '</body></html>'
-    
-    html = header + body + footer
+        
+    html = header + body + get_footer()
     with open(HTML_DIR + "/create_guide.html", 'w') as itemfile:
         itemfile.write(html)
 
