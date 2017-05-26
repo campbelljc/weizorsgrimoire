@@ -495,7 +495,7 @@ def output_guide_creation_page(items, sets, attributes):
     for classname in classes:
         classnames += '{ value: "' + classname + '" },'
     
-    item_types = [('weapon1', weapon_and_offhand_types), ('weapon2', weapon_and_offhand_types), ('helm', helm_types), ('bodyarmor', body_armor_types), ('belt', belt_types), ('gloves', glove_types), ('boots', boot_types), ('amulet', amulet_types), ('ring1', ring_types), ('ring2', ring_types), ('charm1', charm_types), ('sockets', ['Socketable'])]
+    item_types = [('weapon1', weapon_and_offhand_types), ('weapon2', weapon_and_offhand_types), ('helm', helm_types), ('bodyarmor', body_armor_types), ('belt', belt_types), ('gloves', glove_types), ('boots', boot_types), ('amulet', amulet_types), ('ring1', ring_types), ('ring2', ring_types), ('charms', charm_types), ('sockets', ['Socketable'])]
     
     Field = namedtuple('Field', 'id type_vals')
     
@@ -514,7 +514,31 @@ def output_guide_creation_page(items, sets, attributes):
     sockets = fields[-1]
     fields = fields[:-1]
     
-    field_js = ""
+    charms = fields[-1]
+    fields = fields[:-1]
+    
+    attr_type_vals = ""
+    for attr in attributes:
+        attr_type_vals += '{ value: "' + attr.name + '", link: "../' + get_link(attr) + '", category: "' + attr.quality +'" },'
+    
+    fn_defs = "var attr_type_vals = [{0}];\n".format(attr_type_vals)
+    fn_defs += "function new_field(type_vals, attr_name, field_id, val_field)\n\
+               {\n\
+                 var field_container_id = '#custom_fields_'+field_id;\n\
+                 var new_field_name = attr_name + '_'+field_id+'_' + Math.ceil($(field_container_id + ' > input').length/2);\n\
+                 var new_field_html = \"<input spellcheck='false' placeholder='\"+new_field_name+\"' class='item_input \"+attr_name+\"' id='\" + new_field_name + \"' name='\" + new_field_name + \"' />\";\n\
+                 if (val_field) {{\n\
+                   new_field_html += \"<input placeholder='\"+new_field_name+\"_val' class='item_input' name='\"+new_field_name+\"_val' />\"\n\
+                 }}\n\
+                 $(field_container_id).append(new_field_html);\n\
+                 $('#'+new_field_name).autocomplete({ source: type_vals,\n\
+                                                      select: function(event, ui) {\n\
+                                                        new_field(type_vals, attr_name, field_id, val_field);\n\
+                                                      }\n\
+                                                    });\n\
+               }\n"
+    
+    field_js = ""    
     for field in fields:
         field_js += "var {0} = [{1}];\n\
                      $('#{0}').autocomplete({{ source: {0},\n\
@@ -533,34 +557,28 @@ def output_guide_creation_page(items, sets, attributes):
                            $('#{0}').hide();\n\
                            $('#{0}').val('');\n\
                            $('.{0}').hide();\n\
-                           $('.custom_{0}').hide();\n\
-                           // actually, just destroy all the custom attribute fields.\
+                           new_field(attr_type_vals, 'attribute', '{0}', true);\n\
                            return;\n\
                         }}\n\
                         $('#{0}').show();\n\
-                        // show (create) the custom attribute field (+ value field).\
-                        // on selection of an attribute, create and display a new attribute field below.\
+                        $('#custom_fields_{0}').empty();\n\
+                        \n\
                      }});\n".format(field.id, field.type_vals)
     
     field_js += "var sockets = [{0}];\n".format(sockets.type_vals)
     field_js += "$('.socket').autocomplete({source: sockets});\n"
-    
-    header = '<html><head>\n\
-                <title>{0} -- {1}</title>\n\
-                <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />\n\
-                <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">\n\
-                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>\n\
-                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>\n\
-                <script>\n\
-                $(function(){{\n\
-                  var classnames = [{2}];\n\
-                  $("#classname").autocomplete({{ source: classnames }});\n\
-                  {3}\n\
-                  $("#name").focus();\n\
-                  $(".socket").hide();\n\
-                }});\n\
-                </script>\n\
-                </head><body>'.format("Create a Gear Guide", SITENAME, classnames, field_js)
+    field_js += 'var {0} = [{1}];\n\
+                 new_field({0}, "charm", "{0}", false);\n\
+                 var cbox = "<span class=\'field_name\'><input type=\'checkbox\' id=\'custom_item_{0}\' /> Custom item</span>";\n\
+                 var field_ids = "<div id=\'custom_fields_{0}\'></div>";\n\
+                 var new_div = "<div id=\'charm_"+$("#custom_fields_charms > div").length+"\'></div>";\n\
+                 $("#custom_fields_charms").append(new_div);\n\
+                 \n\
+                 $("#{0}").autocomplete({{ source: {0},\n\
+                   select: function(event, ui) {{\n\
+                     new_field({0}, "charm", "{0}");\n\
+                   }}\n\
+                 }});\n'.format(charms.id, charms.type_vals)
     
     field_inputs = ""
     for field in fields:
@@ -573,8 +591,33 @@ def output_guide_creation_page(items, sets, attributes):
                             <input spellcheck='false' placeholder='{0}' id='{0}' name='{0}' class='item_input {0}' />\n\
                             {1}\n\
                             <span class='field_name'><input type='checkbox' id='custom_item_{0}' /> Custom item</span>\n\
+                            <div id='custom_fields_{0}'></div>\n\
                           </p>\n\
-                        </div>".format(field.id, socket_inputs)
+                        </div>\n".format(field.id, socket_inputs)
+    
+    field_inputs += "<div class='ui-widget'>\n\
+                       <p class='item_selection' id='custom_fields_charms'>\n\
+                         \n\
+                       </p>\n\
+                     </div>\n"
+    
+    header = '<html><head>\n\
+                <title>{0} -- {1}</title>\n\
+                <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />\n\
+                <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">\n\
+                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>\n\
+                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>\n\
+                <script>\n\
+                {4}\n\
+                $(function(){{\n\
+                  var classnames = [{2}];\n\
+                  $("#classname").autocomplete({{ source: classnames }});\n\
+                  {3}\n\
+                  $("#name").focus();\n\
+                  $(".socket").hide();\n\
+                }});\n\
+                </script>\n\
+                </head><body>'.format("Create a Gear Guide", SITENAME, classnames, field_js, fn_defs)
     
     body = "<div id='container'>\n\
       <div id='headerContainer'>\n\
