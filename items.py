@@ -433,12 +433,12 @@ def output_guide_creation_page(items, sets, attributes):
     for classname in classes:
         classnames += '{ value: "' + classname + '" },'
     
-    item_types = [('weapon1', weapon_and_offhand_types), ('weapon2', weapon_and_offhand_types), ('helm', helm_types), ('bodyarmor', body_armor_types), ('belt', belt_types), ('gloves', glove_types), ('boots', boot_types), ('amulet', amulet_types), ('ring1', ring_types), ('ring2', ring_types), ('charms', charm_types), ('sockets', ['Socketable'])]
+    item_types = [('Weapon/Off-hand 1', 'weapon1', weapon_and_offhand_types), ('Weapon/Off-hand 2', 'weapon2', weapon_and_offhand_types), ('Helm', 'helm', helm_types), ('Body armor', 'bodyarmor', body_armor_types), ('Belt', 'belt', belt_types), ('Gloves', 'gloves', glove_types), ('Boots', 'boots', boot_types), ('Amulet', 'amulet', amulet_types), ('Ring 1', 'ring1', ring_types), ('Ring 2', 'ring2', ring_types), ('Charms', 'charms', charm_types), ('Sockets', 'sockets', ['Socketable'])]
     
-    Field = namedtuple('Field', 'id type_vals')
+    Field = namedtuple('Field', 'name id type_vals')
     
     fields = []
-    for idname, item_type_list in item_types:
+    for title, idname, item_type_list in item_types:
         type_vals = ""
         for item in items:
             if isinstance(item, WhiteItem): continue
@@ -447,7 +447,7 @@ def output_guide_creation_page(items, sets, attributes):
                 if typ.name in item_type_list:
                     type_vals += '{ value: "' + item.name + '", sockets: ' + str(item.num_possible_sockets) + ' },'
                     break
-        fields.append(Field(idname, type_vals))
+        fields.append(Field(title, idname, type_vals))
     
     sockets = fields[-1]
     fields = fields[:-1]
@@ -460,7 +460,8 @@ def output_guide_creation_page(items, sets, attributes):
         attr_type_vals += '{ value: "' + attr.name + '", link: "../' + get_link(attr) + '", category: "' + attr.quality +'" },'
     
     fn_defs = "var attr_type_vals = [{0}];\n".format(attr_type_vals)
-    fn_defs += "function new_field(type_vals, attr_name, field_id, val_field)\n\
+    fn_defs += "var sockets = [{0}];\n".format(sockets.type_vals)
+    fn_defs += "function new_field(type_vals, attr_name, field_id, val_field, qty_field)\n\
                {\n\
                  var field_container_id = '#custom_fields_'+field_id;\n\
                  var new_field_name = attr_name + '_'+field_id+'_' + Math.ceil($(field_container_id + ' > input').length/2);\n\
@@ -468,12 +469,43 @@ def output_guide_creation_page(items, sets, attributes):
                  if (val_field) {{\n\
                    new_field_html += \"<input placeholder='\"+new_field_name+\"_val' class='item_input' name='\"+new_field_name+\"_val' />\"\n\
                  }}\n\
+                 if (qty_field) {{\n\
+                   new_field_html += \"<input placeholder='\"+new_field_name+\"_qty' class='item_input' name='\"+new_field_name+\"_qty' />\"\n\
+                 }}\n\
                  $(field_container_id).append(new_field_html);\n\
                  $('#'+new_field_name).autocomplete({ source: type_vals,\n\
                                                       select: function(event, ui) {\n\
-                                                        new_field(type_vals, attr_name, field_id, val_field);\n\
-                                                      }\n\
-                                                    });\n\
+                                                        new_field(type_vals, attr_name, field_id, val_field, qty_field);\n\
+                                                      }});\n\
+               }\n\
+               function new_item_div(field_id, name, type_vals, spawn_new_field, qty_field)\n\
+               {\n\
+                 var plural = name + 's'; \n\
+                 var field_container_id = '#'+plural+'_'+field_id;\n\
+                 var field_num = $(field_container_id + ' > input').length;\n\
+                 var new_field_name = name+'_'+field_id+'_' + field_num;\n\
+                 var new_field_html = \"<input spellcheck='false' placeholder='\"+new_field_name+\"' class='item_input \"+name+\"' id='\" + new_field_name + \"' name='\" + new_field_name + \"' />\";\n\
+                 var checkboxId = 'custom_'+name+field_num+'_'+field_id;\n\
+                 new_field_html += \"<span class='field_name'><input type='checkbox' id='\"+checkboxId+\"' /> Custom \"+name+\"</span>\";\n\
+                 $(field_container_id).append(new_field_html);\n\
+                 if (spawn_new_field)\n\
+                    $('#'+new_field_name).autocomplete({ source: type_vals,\n\
+                                                         select: function(event, ui) {\n\
+                                                           new_item_div(field_id, name, type_vals, spawn_new_field, qty_field);\n\
+                                                         }});\n\
+                 else\n\
+                    $('#'+new_field_name).autocomplete({ source: type_vals });\n\
+                 $('#'+checkboxId).change(function() {{\n\
+                    if($(this).is(':checked')) {{\n\
+                       $('#'+new_field_name).hide();\n\
+                       $('#'+new_field_name).val('');\n\
+                       new_field(attr_type_vals, 'attribute',plural+'_'+field_id, true, qty_field);\n\
+                       return;\n\
+                    }}\n\
+                    $('#'+new_field_name).show();\n\
+                    $('#custom_fields_'+plural+'_'+field_id).empty();\n\
+                    \n\
+                 }});\n\
                }\n"
     
     field_js = ""    
@@ -481,12 +513,10 @@ def output_guide_creation_page(items, sets, attributes):
         field_js += "var {0} = [{1}];\n\
                      $('#{0}').autocomplete({{ source: {0},\n\
                        select: function(event, ui) {{\n\
+                         $('#sockets_{0}').empty();\n\
                          for(i=0; i<ui.item.sockets; i++){{\n\
-                           $('#socket'+i+'{0}').show();\n\
-                         }}\n\
-                         for(i=ui.item.sockets; i<5; i++){{\n\
-                           $('#socket'+i+'{0}').hide();\n\
-                           $('#socket'+i+'{0}').val('');\n\
+                           // here we add fields for each socket.\n\
+                           new_item_div('{0}', 'socket', sockets, false, false);\n\
                          }}\n\
                        }}\n\
                      }});\n\
@@ -495,7 +525,9 @@ def output_guide_creation_page(items, sets, attributes):
                            $('#{0}').hide();\n\
                            $('#{0}').val('');\n\
                            $('.{0}').hide();\n\
-                           new_field(attr_type_vals, 'attribute', '{0}', true);\n\
+                           $('#sockets_{0}').empty();\n\
+                           $('#custom_fields_sockets_{0}').empty();\n\
+                           new_field(attr_type_vals, 'attribute', '{0}', true, false);\n\
                            return;\n\
                         }}\n\
                         $('#{0}').show();\n\
@@ -503,41 +535,31 @@ def output_guide_creation_page(items, sets, attributes):
                         \n\
                      }});\n".format(field.id, field.type_vals)
     
-    field_js += "var sockets = [{0}];\n".format(sockets.type_vals)
-    field_js += "$('.socket').autocomplete({source: sockets});\n"
     field_js += 'var {0} = [{1}];\n\
-                 new_field({0}, "charm", "{0}", false);\n\
-                 var cbox = "<span class=\'field_name\'><input type=\'checkbox\' id=\'custom_item_{0}\' /> Custom item</span>";\n\
-                 var field_ids = "<div id=\'custom_fields_{0}\'></div>";\n\
-                 var new_div = "<div id=\'charm_"+$("#custom_fields_charms > div").length+"\'></div>";\n\
-                 $("#custom_fields_charms").append(new_div);\n\
-                 \n\
-                 $("#{0}").autocomplete({{ source: {0},\n\
-                   select: function(event, ui) {{\n\
-                     new_field({0}, "charm", "{0}");\n\
-                   }}\n\
-                 }});\n'.format(charms.id, charms.type_vals)
+                 new_item_div("charm", "charm", charms, true, true);'.format(charms.id, charms.type_vals)
+    field_js += "$('.socket').autocomplete({source: sockets});\n"
     
     field_inputs = ""
     for field in fields:
         if 'socket' in field.id: continue
-        socket_inputs = ""
-        for i in range(5):
-            socket_inputs += "<input spellcheck='false' placeholder='socket{1}{0}' id='socket{1}{0}' name='socket{1}{0}' class='socket item_input {0}' />".format(field.id, i)
         field_inputs += "<div class='ui-widget'>\n\
+                          <p class='item_header'>{1}</p>\n\
                           <p class='item_selection'>\n\
                             <input spellcheck='false' placeholder='{0}' id='{0}' name='{0}' class='item_input {0}' />\n\
-                            {1}\n\
                             <span class='field_name'><input type='checkbox' id='custom_item_{0}' /> Custom item</span>\n\
                             <div id='custom_fields_{0}'></div>\n\
+                            <div id='sockets_{0}'></div>\n\
+                            <div id='custom_fields_sockets_{0}'></div>\n\
                           </p>\n\
-                        </div>\n".format(field.id, socket_inputs)
+                        </div>\n\
+                        <p><input type='text' placeholder='Description' name='{0}_desc' id='{0}_desc' class='item_desc' /></p>\n".format(field.id, field.name)
     
     field_inputs += "<div class='ui-widget'>\n\
-                       <p class='item_selection' id='custom_fields_charms'>\n\
-                         \n\
-                       </p>\n\
-                     </div>\n"
+                       <p class='item_header'>Charms</p>\n\
+                       <div id='charms_charm'></div>\n\
+                       <div id='custom_fields_charms_charm'></div>\n\
+                     </div>\n\
+                     <p><input type='text' placeholder='Description' name='charms_desc' id='charms_desc' class='item_desc' /></p>"
     
     header = '<html><head>\n\
                 <title>{0} -- {1}</title>\n\
@@ -565,7 +587,9 @@ def output_guide_creation_page(items, sets, attributes):
             <div class='ui-widget'>\n\
               <p><input spellcheck='false' placeholder='classname' id='classname' name='classname' /></p>\n\
             </div>\n\
+            <p><input type='text' placeholder='Link to guide (optional)' name='link' id='link' /></p>\n\
             {0}\n\
+            <p></p>\n\
             <button type='submit'>Submit</button>\n\
           </div>\n\
         </form>\n\

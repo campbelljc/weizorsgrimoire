@@ -102,6 +102,11 @@ table {
 	font-size: 0.75em;
 }
 
+.item_desc
+{
+	width: 300px;
+}
+
 .item_attrs_small
 {
 	font-size: 0.8em;
@@ -162,6 +167,11 @@ th[data-sort]
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
+}
+
+.item_header
+{
+	font-variant: small-caps;
 }
 
 .field_name
