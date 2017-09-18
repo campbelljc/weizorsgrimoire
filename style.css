@@ -169,7 +169,7 @@ th[data-sort]
 	margin-right:auto;
 }
 
-.item_header
+.item_header, .item_type
 {
 	font-variant: small-caps;
 }
@@ -185,6 +185,15 @@ th[data-sort]
 .runeword, .white { color: white !important; }
 .rune { color: orange !important; }
 .gem { color: purple !important; }
+
+.ui-widget fieldset {
+	width: 100px;
+	margin: auto;
+}
+
+textarea.item_desc {
+	resize: vertical;
+}
 
 /* normalize monospace sizing 
  * meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/ */

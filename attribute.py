@@ -108,6 +108,11 @@ def get_global_attr_dict(items, sets):
         else:
             items_per_attribute[attribute].sort(key=lambda tup: tup[1].sort_value, reverse=True)
     
+    for attribute in attribute_matches:
+        if attribute.name not in [a.name for a in items_per_attribute]:
+        #if len(items_per_attribute[attribute]) == 0: #attribute not in items_per_attribute:
+            items_per_attribute[attribute] = []
+    
     return items_per_attribute
 
 start_atts = ['Damage', 'Throw Damage', 'One-Hand Damage', 'Two-Hand Damage', 'Defense', 'Required Level', 'Required Strength', 'Required Dexterity', 'Max Stack', 'Range', 'Durability', 'Weapon Speed', 'Boxes', 'Chance to Block', 'Chance to Block (Pal)', 'Chance to Block (Ama/Asn/Bar)', 'Chance to Block (Dru/Nec/Sor)', 'Kick Damage', 'Smite Damage']

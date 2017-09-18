@@ -4,7 +4,8 @@ from get_items import *
 from collections import defaultdict
 
 SITENAME = "Weizor's Grimoire"
-HTML_DIR = './html'
+HTML_DIR = '/Users/jcampbell/Sites/root/d2'
+ROOT_DIR = '/d2/'
 
 def setup_dirs():
     if not os.path.exists(HTML_DIR):
@@ -20,11 +21,17 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/type")
         os.makedirs(HTML_DIR + "/subtype")
     shutil.copyfile("style.css", HTML_DIR + "/style.css")
+    shutil.copyfile("create_guide.py", "/Library/WebServer/CGI-Executables/create_guide.py")
+    os.system("chmod 755 /Library/WebServer/CGI-Executables/create_guide.py")
     if not os.path.exists(HTML_DIR + "/js"):
         shutil.copytree("js", HTML_DIR + "/js")
 
-def get_link(item):
-    return HTML_DIR + "/" + item.quality.lower() + "/" + item.name.lower().replace("%", "pct").replace("+", "plus").replace("-", "neg").replace("(", "").replace(")", "").replace(" ", "_").replace("'", "").replace("/", "_").replace(":", "") + ".html"
+def get_link(item, root=True):
+    link = "/" + item.quality.lower() + "/" + item.name.lower().replace("%", "pct").replace("+", "plus").replace("-", "neg").replace("(", "").replace(")", "").replace(" ", "_").replace("'", "").replace("/", "_").replace(":", "") + ".html"
+    if root:
+        return ROOT_DIR + link
+    else:
+        return HTML_DIR + link
 
 def get_html_for_attrs(attr_dict, selection_fn):
     html = ""
@@ -39,7 +46,7 @@ def get_html_for_attrs(attr_dict, selection_fn):
             raise Exception
         
         text_match = attr_text[match.span()[0]:match.span()[1]]
-        text_match_link = '<a href="../../' + get_link(attr) + '">' + text_match + '</a>'
+        text_match_link = '<a href="' + get_link(attr) + '">' + text_match + '</a>'
         attr_text = attr_text.replace(text_match, text_match_link)
         html += attr_text + "<br />"
     return html[:-6].lower()
@@ -71,7 +78,7 @@ def output_item_files(items, indexes):
     
         header = '<html><head>\
                     <title>{0} -- {1}</title>\
-                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\
                     </head><body>'.format(item.name, SITENAME)
     
         matched_link = None
@@ -85,16 +92,16 @@ def output_item_files(items, indexes):
         
         typeinfo = ""
         if item.tier is not None:
-            typeinfo = '<a href="../../'+get_link(item.tier)+'">'+item.tier.name+'</a> ' + typeinfo
-        typeinfo += '<a href="../../'+get_link(item.type)+'">'+item.type.name+'</a>'
+            typeinfo = '<a href="'+get_link(item.tier)+'">'+item.tier.name+'</a> ' + typeinfo
+        typeinfo += '<a href="'+get_link(item.type)+'">'+item.type.name+'</a>'
         
         stypeinfo = ""
         if item.stype is not None:
-            stypeinfo += '<a href="../../'+get_link(item.stype)+'">'+item.stype.name+'</a>'            
+            stypeinfo += '<a href="'+get_link(item.stype)+'">'+item.stype.name+'</a>'            
         
         set_info = ""
         if isinstance(item, SetItem):
-            set_info = "<p class='item_type'>(<a href='../../"+get_link(item.set)+"'>"+item.set_name+"</a>)</p>"
+            set_info = "<p class='item_type'>(<a href='"+get_link(item.set)+"'>"+item.set_name+"</a>)</p>"
     
         body = get_body_header() + \
         "<div class='item_container'>\
@@ -110,7 +117,7 @@ def output_item_files(items, indexes):
         </div>".format(item.name, item.imagepath, typeinfo, stypeinfo, quality, base_attrs, attrs, end_attrs, set_info, item.quality)
         
         html = header + body + get_footer()
-        with open(get_link(item), 'w') as itemfile:
+        with open(get_link(item, False), 'w') as itemfile:
             itemfile.write(html)
 
 def output_rune_files(items):
@@ -119,7 +126,7 @@ def output_rune_files(items):
         
         header = '<html><head>\
                     <title>{0} -- {1}</title>\
-                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\
                     </head><body>'.format(item.name, SITENAME)
         
         weap_attrs = get_html_for_attrs(item.attr_dict_weap, lambda name: True)
@@ -130,7 +137,7 @@ def output_rune_files(items):
         runewords = ""
         for rw_item in items:
             if isinstance(rw_item, Runeword) and item.name.split(" ")[0] in rw_item.runes:
-                runewords += "<a href='../../"+get_link(rw_item)+"'>"+rw_item.name+"</a><br />"
+                runewords += "<a href='"+get_link(rw_item)+"'>"+rw_item.name+"</a><br />"
         runewords = runewords[:-6]
         
         body = get_body_header() + \
@@ -151,7 +158,7 @@ def output_rune_files(items):
         </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs, runewords)
     
         html = header + body + get_footer()
-        with open(get_link(item), 'w') as itemfile:
+        with open(get_link(item, False), 'w') as itemfile:
             itemfile.write(html)
 
 def output_gem_files(items):
@@ -160,7 +167,7 @@ def output_gem_files(items):
         
         header = '<html><head>\
                     <title>{0} -- {1}</title>\
-                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\
                     </head><body>'.format(item.name, SITENAME)
         
         weap_attrs = get_html_for_attrs(item.attr_dict_weap, lambda name: True)
@@ -184,7 +191,7 @@ def output_gem_files(items):
         </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs)
         
         html = header + body + get_footer()
-        with open(get_link(item), 'w') as itemfile:
+        with open(get_link(item, False), 'w') as itemfile:
             itemfile.write(html)
 
 def output_runeword_files(items):
@@ -197,19 +204,19 @@ def output_runeword_files(items):
         rune_links = ""
         rune_images = ""
         for rune in item.runes:
-            rune_links += "<a href='../../"+get_link([i for i in items if rune+" Rune"==i.name][0])+"'>"+rune+"</a> + "
-            rune_images += "<a href='../../"+get_link([i for i in items if rune+" Rune"==i.name][0])+"'><img src='http://classic.battle.net/images/battle/diablo2exp/images/runes/rune"+rune.replace("Jah", "Jo").replace("Shael", "Shae")+".gif' alt='"+rune+"'/></a>"
+            rune_links += "<a href='"+get_link([i for i in items if rune+" Rune"==i.name][0])+"'>"+rune+"</a> + "
+            rune_images += "<a href='"+get_link([i for i in items if rune+" Rune"==i.name][0])+"'><img src='http://classic.battle.net/images/battle/diablo2exp/images/runes/rune"+rune.replace("Jah", "Jo").replace("Shael", "Shae")+".gif' alt='"+rune+"'/></a>"
         rune_links = rune_links[:-3]
             
         header = '<html><head>\
                     <title>{0} -- {1}</title>\
-                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\
                     </head><body>'.format(item.name, SITENAME)
         
         typeinfo = ""
         types = item.type if isinstance(item.type, list) else [item.type]
         for typ in types:
-            typeinfo += '<a href="../../'+get_link(typ)+'">'+typ.name+'</a> / '
+            typeinfo += '<a href="'+get_link(typ)+'">'+typ.name+'</a> / '
         typeinfo = typeinfo[:-3]
         
         body = get_body_header() + \
@@ -225,14 +232,14 @@ def output_runeword_files(items):
         </div>".format(item.name, rune_links, typeinfo, base_attrs, attrs, end_attrs, rune_images)
         
         html = header + body + get_footer()
-        with open(get_link(item), 'w') as itemfile:
+        with open(get_link(item, False), 'w') as itemfile:
             itemfile.write(html)
 
 def output_set_files(sets):
     for itemset in sets:
         header = '<html><head>\
                     <title>{0} -- {1}</title>\
-                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\
                     </head><body>'.format(itemset.name, SITENAME)
     
         setitemrows = ''
@@ -247,7 +254,7 @@ def output_set_files(sets):
                     <p class='item_attrs_small'>{3}</p>\
                     <p class='item_attrs attr'>{4}</p>\
                     <p class='item_attrs_small'>{5}</p>\
-                </div><hr class='item_seperator' />".format(item.name, item.imagepath, item.quality, base_attrs, attrs, end_attrs, "<a href='../../"+get_link(item)+"'>"+item.name+"</a>")
+                </div><hr class='item_seperator' />".format(item.name, item.imagepath, item.quality, base_attrs, attrs, end_attrs, "<a href='"+get_link(item)+"'>"+item.name+"</a>")
     
         set_bonuses = get_html_for_attrs(itemset.set_bonuses, lambda name: True)
     
@@ -259,7 +266,7 @@ def output_set_files(sets):
         </div>".format(itemset.name, set_bonuses, setitemrows)
         
         html = header + body + get_footer()
-        with open(get_link(itemset), 'w') as itemfile:
+        with open(get_link(itemset, False), 'w') as itemfile:
             itemfile.write(html)
 
 def write_html_for_table(cat, table_headers, itemrows):
@@ -268,7 +275,7 @@ def write_html_for_table(cat, table_headers, itemrows):
     # ref sort(a,b): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
     header = '<html><head>\
                 <title>{0} -- {1}</title>\
-                <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>\
                 <script type="text/javascript" src="../js/stupidtable.min.js"></script>\
                 <script type="text/javascript">\
@@ -301,7 +308,7 @@ def write_html_for_table(cat, table_headers, itemrows):
     </div>".format(itemrows, cat.name, table_headers)
 
     html = header + body + get_footer()
-    with open(get_link(cat), 'w') as itemfile:
+    with open(get_link(cat, False), 'w') as itemfile:
         itemfile.write(html)
 
 def output_attribute_files(items_per_attribute):
@@ -313,7 +320,7 @@ def output_attribute_files(items_per_attribute):
     
         itemrows = ''
         for item, item_attr in items_per_attribute[attribute]:
-            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td>'.format('../../' + get_link(item), item.name, item.quality)
+            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}<br /><span class="item_type">{3}</span></a></td>'.format(get_link(item), item.name, item.quality, str(item.type))
             if display_value_column:
                 itemrows += "<td>{0}</td>".format(item_attr.value_text)
             itemrows += "</tr>"
@@ -328,7 +335,7 @@ def output_cat_files(items_per_cat):
     for cat in items_per_cat:
         itemrows = ''
         for item in items_per_cat[cat]:
-            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format('../../' + get_link(item), item.name, item.quality)
+            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format(get_link(item), item.name, item.quality)
         
         table_headers = "<th class='attr_table_header' data-sort='string'>item</th>"
         
@@ -337,16 +344,16 @@ def output_cat_files(items_per_cat):
 def output_main_page(items, sets, attributes, cat_dicts, index_links):
     names = ""
     for item in items + sets:
-        names += '{ value: "' + item.name + '", link: "../' + get_link(item) + '", category: "' + item.quality +'" },'
+        names += '{ value: "' + item.name + '", link: "' + get_link(item) + '", category: "' + item.quality +'" },'
     for attr in attributes:
-        names += '{ value: "' + attr.name + '", link: "../' + get_link(attr) + '", category: "' + attr.quality +'" },'
+        names += '{ value: "' + attr.name + '", link: "' + get_link(attr) + '", category: "' + attr.quality +'" },'
     for cat_dict, _ in cat_dicts:
         for cat in cat_dict:
-            names += '{ value: "' + cat.name + '", link: "../' + get_link(cat) + '", category: "' + cat.quality +'" },'
+            names += '{ value: "' + cat.name + '", link: "' + get_link(cat) + '", category: "' + cat.quality +'" },'
     
     header = '<html><head>\
                 <title>{0}</title>\
-                <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\
                 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">\
                 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>\
                 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>\
@@ -406,13 +413,13 @@ def output_index_pages(items, sets, attributes, cat_dicts):
     for items, item_type in items_types:
         header = '<html><head>\
                     <title>{0} -- {1}</title>\
-                    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />\
+                    <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\
                     </head><body>'.format(item_type, SITENAME)
         
         itemrows = ''
         items.sort(key=lambda item: item.name)
         for item in items:
-            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format('../' + get_link(item), item.name, item.quality)
+            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format(get_link(item, True), item.name, item.quality)
         
         body = get_body_header() + \
         "<p class='attr_title'><strong>{0}</strong></p>\
@@ -422,8 +429,8 @@ def output_index_pages(items, sets, attributes, cat_dicts):
         </div>".format(item_type, itemrows)
         
         html = header + body + get_footer()
-        links.append((item_type, HTML_DIR + "/" + item_type.lower().replace(" ", "_")+'.html'))
-        with open(links[-1][1], 'w') as itemfile:
+        links.append((item_type, ROOT_DIR + "/" + item_type.lower().replace(" ", "_")+'.html'))
+        with open(HTML_DIR + "/" + item_type.lower().replace(" ", "_")+'.html', 'w') as itemfile:
             itemfile.write(html)
     
     return links
@@ -433,7 +440,7 @@ def output_guide_creation_page(items, sets, attributes):
     for classname in classes:
         classnames += '{ value: "' + classname + '" },'
     
-    item_types = [('Weapon/Off-hand 1', 'weapon1', weapon_and_offhand_types), ('Weapon/Off-hand 2', 'weapon2', weapon_and_offhand_types), ('Helm', 'helm', helm_types), ('Body armor', 'bodyarmor', body_armor_types), ('Belt', 'belt', belt_types), ('Gloves', 'gloves', glove_types), ('Boots', 'boots', boot_types), ('Amulet', 'amulet', amulet_types), ('Ring 1', 'ring1', ring_types), ('Ring 2', 'ring2', ring_types), ('Charms', 'charms', charm_types), ('Sockets', 'sockets', ['Socketable'])]
+    item_types = [('Primary Weapon', 'weapon1', weapon_and_offhand_types), ('Shield/Other Weapon', 'weapon2', weapon_and_offhand_types), ('Off-hand Weapon', 'weapon3', weapon_and_offhand_types), ('Off-hand shield/Other Weapon', 'weapon4', weapon_and_offhand_types), ('Helm', 'helm', helm_types), ('Body armor', 'bodyarmor', body_armor_types), ('Belt', 'belt', belt_types), ('Gloves', 'gloves', glove_types), ('Boots', 'boots', boot_types), ('Amulet', 'amulet', amulet_types), ('Ring 1', 'ring1', ring_types), ('Ring 2', 'ring2', ring_types), ('Mercenary Weapon', 'mercweap', weapon_and_offhand_types), ('Mercenary Helm', 'merchelm', helm_types), ('Charms', 'charms', charm_types), ('Sockets', 'sockets', ['Socketable', 'Jewel'])]
     
     Field = namedtuple('Field', 'name id type_vals')
     
@@ -445,7 +452,7 @@ def output_guide_creation_page(items, sets, attributes):
             types = item.type if isinstance(item.type, list) else [item.type]
             for typ in types:
                 if typ.name in item_type_list:
-                    type_vals += '{ value: "' + item.name + '", sockets: ' + str(item.num_possible_sockets) + ' },'
+                    type_vals += '{ value: "' + item.name + '", sockets: ' + str(item.num_possible_sockets) + ', ethereal: ' + str(item.can_spawn_ethereal).lower() + ', runeword: ' + str(item.quality == 'Runeword').lower() + ' },'
                     break
         fields.append(Field(title, idname, type_vals))
     
@@ -457,7 +464,7 @@ def output_guide_creation_page(items, sets, attributes):
     
     attr_type_vals = ""
     for attr in attributes:
-        attr_type_vals += '{ value: "' + attr.name + '", link: "../' + get_link(attr) + '", category: "' + attr.quality +'" },'
+        attr_type_vals += '{ value: "' + attr.name + '", link: "' + get_link(attr) + '", category: "' + attr.quality +'" },'
     
     fn_defs = "var attr_type_vals = [{0}];\n".format(attr_type_vals)
     fn_defs += "var sockets = [{0}];\n".format(sockets.type_vals)
@@ -518,6 +525,16 @@ def output_guide_creation_page(items, sets, attributes):
                            // here we add fields for each socket.\n\
                            new_item_div('{0}', 'socket', sockets, false, false);\n\
                          }}\n\
+                         if (ui.item.runeword === true){{\n\
+                           $('#runeword_base_{0}').show();\n\
+                         }} else {{\n\
+                           $('#runeword_base_{0}').hide();\n\
+                         }}\n\
+                         if (ui.item.ethereal === true){{\n\
+                           $('#ethereal_{0}').show();\n\
+                         }} else {{\n\
+                           $('#ethereal_{0}').hide();\n\
+                         }}\n\
                        }}\n\
                      }});\n\
                      $('#custom_item_{0}').change(function() {{\n\
@@ -525,6 +542,8 @@ def output_guide_creation_page(items, sets, attributes):
                            $('#{0}').hide();\n\
                            $('#{0}').val('');\n\
                            $('.{0}').hide();\n\
+                           $('#ethereal_{0}').hide();\n\
+                           $('#runeword_base_{0}').hide();\n\
                            $('#sockets_{0}').empty();\n\
                            $('#custom_fields_sockets_{0}').empty();\n\
                            new_field(attr_type_vals, 'attribute', '{0}', true, false);\n\
@@ -537,33 +556,40 @@ def output_guide_creation_page(items, sets, attributes):
     
     field_js += 'var {0} = [{1}];\n\
                  new_item_div("charm", "charm", charms, true, true);'.format(charms.id, charms.type_vals)
-    field_js += "$('.socket').autocomplete({source: sockets});\n"
+    field_js += "$('.socket').autocomplete({source: sockets});\n\
+                 $('.ethereal').hide();\n\
+                 $('.runeword_base').hide();\n"
     
     field_inputs = ""
     for field in fields:
         if 'socket' in field.id: continue
-        field_inputs += "<div class='ui-widget'>\n\
-                          <p class='item_header'>{1}</p>\n\
+        field_inputs += "<div class='ui-widget'><fieldset>\n\
+                          <legend class='item_header'>{1}</legend>\n\
                           <p class='item_selection'>\n\
                             <input spellcheck='false' placeholder='{0}' id='{0}' name='{0}' class='item_input {0}' />\n\
+                            <span class='field_name runeword_base' id='runeword_base_{0}'><input spellcheck='false' placeholder='runeword_base_{0}' id='runeword_base_{0}_field' name='runeword_base_{0}_field' class='item_input {0}' /></span>\n\
                             <span class='field_name'><input type='checkbox' id='custom_item_{0}' /> Custom item</span>\n\
                             <div id='custom_fields_{0}'></div>\n\
                             <div id='sockets_{0}'></div>\n\
                             <div id='custom_fields_sockets_{0}'></div>\n\
+                            <span class='field_name ethereal' id='ethereal_{0}'><input type='checkbox' name='ethereal_{0}' /> Ethereal</span>\n\
                           </p>\n\
-                        </div>\n\
-                        <p><input type='text' placeholder='Description' name='{0}_desc' id='{0}_desc' class='item_desc' /></p>\n".format(field.id, field.name)
+                          <textarea name='{0}_desc' id='{0}_desc' class='item_desc' rows='1' />Description</textarea>\n\
+                        </fieldset></div>\n".format(field.id, field.name)
     
-    field_inputs += "<div class='ui-widget'>\n\
-                       <p class='item_header'>Charms</p>\n\
+    field_inputs += "<div class='ui-widget'><fieldset>\n\
+                       <legend class='item_header'>Charms</legend>\n\
                        <div id='charms_charm'></div>\n\
                        <div id='custom_fields_charms_charm'></div>\n\
-                     </div>\n\
-                     <p><input type='text' placeholder='Description' name='charms_desc' id='charms_desc' class='item_desc' /></p>"
+                       <p></p><p></p>\n\
+                       <textarea name='charms_desc' id='charms_desc' class='item_desc' rows='1' />Description</textarea>\n\
+                     </fieldset></div>\n"
     
+    # auto resizing textarea
+    # ref: https://stackoverflow.com/questions/454202/creating-a-textarea-with-auto-resize
     header = '<html><head>\n\
                 <title>{0} -- {1}</title>\n\
-                <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />\n\
+                <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\n\
                 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">\n\
                 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>\n\
                 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>\n\
@@ -575,13 +601,19 @@ def output_guide_creation_page(items, sets, attributes):
                   {3}\n\
                   $("#name").focus();\n\
                   $(".socket").hide();\n\
+                  $("textarea").each(function(){{\n\
+                    this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");\n\
+                  }}).on("input", function(){{\n\
+                    this.style.height = "auto";\n\
+                    this.style.height = (this.scrollHeight) + "px";\n\
+                  }});\n\
                 }});\n\
                 </script>\n\
                 </head><body>'.format("Create a Gear Guide", SITENAME, classnames, field_js, fn_defs)
     
     body = get_body_header() + \
     "<div id='contentContainer'>\n\
-        <form action='create_guide.py'>\n\
+        <form action='/cgi-bin/create_guide.py' method='post'>\n\
           <div id='guide_form'>\n\
             <p><input type='text' placeholder='Gear Guide Name' name='name' id='name' /></p>\n\
             <div class='ui-widget'>\n\
@@ -600,7 +632,7 @@ def output_guide_creation_page(items, sets, attributes):
     with open(HTML_DIR + "/create_guide.html", 'w') as itemfile:
         itemfile.write(html)
 
-def make_website():
+def load_data():
     if not os.path.exists("items.dll"):
         items = get_items_from_summit()
         with open("items.dll", 'wb') as output:
@@ -613,6 +645,11 @@ def make_website():
     items = fill_in_tiers(items)
     sets, items = get_sets_from_items(items)
     attributes = get_global_attr_dict(items, sets)
+    
+    return items, sets, attributes
+
+def make_website():
+    items, sets, attributes = load_data()
     
     setup_dirs()
     

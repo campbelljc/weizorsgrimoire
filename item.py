@@ -12,6 +12,9 @@ class Category():
     
     def __eq__(self, other):
         return (self.name) == (other.name)
+    
+    def __repr__(self):
+        return self.name
 
 def get_cat_dict(items, cat_name):
     items_per_cat = defaultdict(list)
@@ -42,6 +45,8 @@ class Item():
         
         self.num_possible_sockets = 0
         self.class_restriction = None
+        self.spawns_ethereal = False
+        self.can_spawn_ethereal = False
     
     def update_info(self):
         for classname, item_type in class_specific_item_types:
@@ -54,6 +59,14 @@ class Item():
                 self.num_possible_sockets = self.attr_dict[attr].max_value
         if self.num_possible_sockets == 0 and self.quality in ['Unique', 'Set'] and self.type is not None and self.type.name in SOCKETABLE_TYPES:
             self.num_possible_sockets = 1
+        
+        self.spawns_ethereal = False
+        if any('Ethereal' in attr.name for attr in self.attr_dict):
+            self.spawns_ethereal = True
+        
+        self.can_spawn_ethereal = not self.spawns_ethereal
+        if any('Indestructible' in attr.name for attr in self.attr_dict):
+            self.can_spawn_ethereal = False
 
 class WhiteItem(Item):
     def __init__(self, name, imagepath, tier, item_type):
@@ -96,6 +109,7 @@ class ItemSet():
         self.name = name
         self.set_items = set_items
         self.set_bonuses = set_bonuses
+        self.type = 'Set Bonus'
 
 def fill_in_tiers(items):
     white_items = [item for item in items if item.quality == 'White']
