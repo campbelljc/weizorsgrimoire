@@ -2,7 +2,7 @@ import re
 from data import *
 from collections import defaultdict
 
-class Attribute():
+class Attribute(object):
     def __init__(self, name, values, text):
         self.quality = 'attribute'
         self.name = name
@@ -56,7 +56,7 @@ class Attribute():
                 raise Exception
             self.max_value = int(self.sort_value+0.0001)
 
-class AttributeMatch():
+class AttributeMatch(object):
     def __init__(self, attr_name, regex, highlight_regex):
         self.quality = 'attribute'
         self.name = attr_name

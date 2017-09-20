@@ -2,7 +2,7 @@ import re
 from attribute import *
 from collections import namedtuple, defaultdict
 
-class Category():
+class Category(object):
     def __init__(self, name, quality):
         self.name = name
         self.quality = quality
@@ -30,7 +30,7 @@ def get_cat_dict(items, cat_name):
         items_per_cat[cat].sort(key=lambda tup: tup.name)
     return items_per_cat
 
-class Item():
+class Item(object):
     def __init__(self, name, imagepath, quality, tier, itype, stype, attr_dict):
         self.name = name
         self.imagepath = imagepath
@@ -76,7 +76,13 @@ class Socketable(Item):
     def __init__(self, name, imagepath, socketable_type, rlvl, attr_dict):
         self.attr_dict_weap, self.attr_dict_armor, self.attr_dict_helm, self.attr_dict_shield, rlvl_dict = attr_dict
         self.rlvl = rlvl
-        attr_dict_expanded = {**self.attr_dict_weap, **self.attr_dict_armor, **self.attr_dict_helm, **self.attr_dict_shield, **rlvl_dict}
+        #attr_dict_expanded = {**self.attr_dict_weap, **self.attr_dict_armor, **self.attr_dict_helm, **self.attr_dict_shield, **rlvl_dict}
+        attr_dict_expanded = {}
+        attr_dict_expanded.update(self.attr_dict_weap)
+        attr_dict_expanded.update(self.attr_dict_armor)
+        attr_dict_expanded.update(self.attr_dict_helm)
+        attr_dict_expanded.update(self.attr_dict_shield)
+        attr_dict_expanded.update(rlvl_dict)
         super().__init__(name, imagepath, socketable_type, '', 'Socketable', '', attr_dict_expanded)
 
 class Rune(Socketable):
@@ -103,7 +109,7 @@ class Runeword(Item):
         self.runes = rune_string.split(" + ")
         super().__init__(name, '', 'Runeword', '', types, '', attr_dict)
 
-class ItemSet():
+class ItemSet(object):
     def __init__(self, name, set_items, set_bonuses):
         self.quality = 'set'
         self.name = name

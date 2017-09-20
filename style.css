@@ -185,6 +185,7 @@ th[data-sort]
 .runeword, .white { color: white !important; }
 .rune { color: orange !important; }
 .gem { color: purple !important; }
+.ethereal { color: gray !important; }
 
 .ui-widget fieldset {
 	width: 100px;

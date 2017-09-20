@@ -1,5 +1,7 @@
-import re, shutil
+import re, glob, shutil
+from utils import load_data, load_guides
 from item import *
+from guide import *
 from get_items import *
 from collections import defaultdict
 
@@ -21,7 +23,9 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/type")
         os.makedirs(HTML_DIR + "/subtype")
     shutil.copyfile("style.css", HTML_DIR + "/style.css")
-    shutil.copyfile("create_guide.py", "/Library/WebServer/CGI-Executables/create_guide.py")
+    for file in glob.glob(r'*.py'):
+        shutil.copy(file, "/Library/WebServer/CGI-Executables")
+    shutil.copy("items.dll", "/Library/WebServer/CGI-Executables")
     os.system("chmod 755 /Library/WebServer/CGI-Executables/create_guide.py")
     if not os.path.exists(HTML_DIR + "/js"):
         shutil.copytree("js", HTML_DIR + "/js")
@@ -385,6 +389,8 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
         <hr class='item_seperator' />\
         <p class='header'>indexes</p>\
         {0}\
+        <p class='header'>tools</p>\
+        <p><a href='./create_guide.html'>create gear guide</a></p>\
       </div>\
     </div>".format(index_pages)
 
@@ -392,7 +398,7 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
     with open(HTML_DIR + "/index.html", 'w') as itemfile:
         itemfile.write(html)
 
-def output_index_pages(items, sets, attributes, cat_dicts):
+def output_index_pages(items, sets, attributes, cat_dicts, guides):
     unique_items = [item for item in items if isinstance(item, UniqueItem)]
     set_items = [item for item in items if isinstance(item, SetItem)]
     rw_items = [item for item in items if isinstance(item, Runeword)]
@@ -406,7 +412,7 @@ def output_index_pages(items, sets, attributes, cat_dicts):
     #    if len(attributes[attribute]) == 1:
     #        unique_attributes.append(attribute)
     
-    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (gems, 'Gems'), (list(attributes), 'Attributes'), (white_items, 'White Items'), *[(list(d), n) for d, n in cat_dicts]]
+    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (gems, 'Gems'), (list(attributes), 'Attributes'), (white_items, 'White Items'), *[(list(d), n) for d, n in cat_dicts], (guides, 'Guides')]
     #, (unique_attributes, 'Rarely-occurring attributes')]
     
     links = []
@@ -440,7 +446,7 @@ def output_guide_creation_page(items, sets, attributes):
     for classname in classes:
         classnames += '{ value: "' + classname + '" },'
     
-    item_types = [('Primary Weapon', 'weapon1', weapon_and_offhand_types), ('Shield/Other Weapon', 'weapon2', weapon_and_offhand_types), ('Off-hand Weapon', 'weapon3', weapon_and_offhand_types), ('Off-hand shield/Other Weapon', 'weapon4', weapon_and_offhand_types), ('Helm', 'helm', helm_types), ('Body armor', 'bodyarmor', body_armor_types), ('Belt', 'belt', belt_types), ('Gloves', 'gloves', glove_types), ('Boots', 'boots', boot_types), ('Amulet', 'amulet', amulet_types), ('Ring 1', 'ring1', ring_types), ('Ring 2', 'ring2', ring_types), ('Mercenary Weapon', 'mercweap', weapon_and_offhand_types), ('Mercenary Helm', 'merchelm', helm_types), ('Charms', 'charms', charm_types), ('Sockets', 'sockets', ['Socketable', 'Jewel'])]
+    item_types = [('Primary Weapon', 'weapon1', weapon_and_offhand_types), ('Shield/Other Weapon', 'weapon2', weapon_and_offhand_types), ('Off-hand Weapon', 'weapon3', weapon_and_offhand_types), ('Off-hand shield/Other Weapon', 'weapon4', weapon_and_offhand_types), ('Helm', 'helm', helm_types), ('Body armor', 'bodyarmor', body_armor_types), ('Belt', 'belt', belt_types), ('Gloves', 'gloves', glove_types), ('Boots', 'boots', boot_types), ('Amulet', 'amulet', amulet_types), ('Ring 1', 'ring1', ring_types), ('Ring 2', 'ring2', ring_types), ('Mercenary Weapon', 'mercweap', weapon_and_offhand_types), ('Mercenary Helm', 'merchelm', helm_types), ('Charms', 'charms', charm_types), ('Sockets', 'sockets', ['Socketable', 'Jewel']), ('White Items', 'white_items', [weapon_and_offhand_types + body_armor_types + helm_types])]
     
     Field = namedtuple('Field', 'name id type_vals')
     
@@ -448,13 +454,16 @@ def output_guide_creation_page(items, sets, attributes):
     for title, idname, item_type_list in item_types:
         type_vals = ""
         for item in items:
-            if isinstance(item, WhiteItem): continue
+            if isinstance(item, WhiteItem) and idname != 'white_items': continue
             types = item.type if isinstance(item.type, list) else [item.type]
             for typ in types:
                 if typ.name in item_type_list:
                     type_vals += '{ value: "' + item.name + '", sockets: ' + str(item.num_possible_sockets) + ', ethereal: ' + str(item.can_spawn_ethereal).lower() + ', runeword: ' + str(item.quality == 'Runeword').lower() + ' },'
                     break
         fields.append(Field(title, idname, type_vals))
+    
+    white_items = fields[-1]
+    fields = fields[:-1]
     
     sockets = fields[-1]
     fields = fields[:-1]
@@ -468,6 +477,7 @@ def output_guide_creation_page(items, sets, attributes):
     
     fn_defs = "var attr_type_vals = [{0}];\n".format(attr_type_vals)
     fn_defs += "var sockets = [{0}];\n".format(sockets.type_vals)
+    fn_defs += "var white_items = [{0}];\n".format(white_items.type_vals)
     fn_defs += "function new_field(type_vals, attr_name, field_id, val_field, qty_field)\n\
                {\n\
                  var field_container_id = '#custom_fields_'+field_id;\n\
@@ -537,6 +547,7 @@ def output_guide_creation_page(items, sets, attributes):
                          }}\n\
                        }}\n\
                      }});\n\
+                     $('#runeword_base_{0}_field').autocomplete({{ source: white_items }});\n\
                      $('#custom_item_{0}').change(function() {{\n\
                         if($(this).is(':checked')) {{\n\
                            $('#{0}').hide();\n\
@@ -632,24 +643,48 @@ def output_guide_creation_page(items, sets, attributes):
     with open(HTML_DIR + "/create_guide.html", 'w') as itemfile:
         itemfile.write(html)
 
-def load_data():
-    if not os.path.exists("items.dll"):
-        items = get_items_from_summit()
-        with open("items.dll", 'wb') as output:
-            dill.dump(items, output)
-    else:
-        items = dill.load(open("items.dll", 'rb'))
+def output_guides(guides):
+    for guide in guides:
+        header = '<html><head>\
+                    <title>{0} -- {1}</title>\
+                    <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\
+                    </head><body>'.format(guide.name, SITENAME)
     
-    print("Num items:", len(items))
-    
-    items = fill_in_tiers(items)
-    sets, items = get_sets_from_items(items)
-    attributes = get_global_attr_dict(items, sets)
-    
-    return items, sets, attributes
+        body = "<div class='item_container'>\n\
+                  <p class='item_name'>{0}</p>\n\
+                  <p class='item_type'>{1}</p>\n".format(guide.name, guide.classname)
+        if guide.link is not None:
+            body += "<p class='item_type'><a href='{0}'>more details</a></p>".format(guide.link)
+        
+        for gear_piece in guide.gear_pieces:
+            body += "<div class='item_container'>\n"
+            if gear_piece.matched_item is not None:
+                body += "<p class='item_name {0}'>{1}</p>\n".format(gear_piece.matched_item.quality, "<a href='"+get_link(gear_piece.matched_item)+"'>"+gear_piece.matched_item.name+"</a>")
+            else:
+                body += "<p class='item_attrs attr'>{0}</p>\n".format(get_html_for_attrs(gear_piece.custom_atts, lambda name: True))
+            if gear_piece.ethereal:
+                body += "<p class='ethereal'>(Ethereal)</p>\n"
+            if gear_piece.runeword_base is not None:
+                body += "<p class='item_name_small white>{0}</p>\n".format("<a href='"+get_link(gear_piece.runeword_base)+"'>"+gear_piece.runeword_base.name+"</a>")
+            if len(gear_piece.sockets) > 0 or len(gear_piece.custom_socket_atts) > 0:
+                body += "<p>Sockets</p>\n"
+            for socket in gear_piece.matched_sockets:
+                body += "<p class='item_name_small {0}'>{1}</p>\n".format(socket.quality, "<a href='"+get_link(socket)+"'>"+socket.name+"</a>")
+            if len(gear_piece.custom_socket_atts) > 0:
+                body += "<p class='item_attrs attr'>{0}</p>\n".format(get_html_for_attrs(gear_piece.custom_socket_atts, lambda name: True))
+            if len(gear_piece.desc) > 0:
+                body += "<p>{0}</p>\n".format(gear_piece.desc)
+            body += "</div>"
+        
+        body += "</div>"
+        
+        html = header + body + get_footer()
+        with open(get_link(guide, False), 'w') as itemfile:
+            itemfile.write(html)
 
 def make_website():
     items, sets, attributes = load_data()
+    guides = load_guides()
     
     setup_dirs()
     
@@ -659,7 +694,8 @@ def make_website():
         output_cat_files(cat_dict)
         cat_dicts.append((cat_dict, disp_name))
     
-    index_links = output_index_pages(items, sets, attributes, cat_dicts)
+    index_links = output_index_pages(items, sets, attributes, cat_dicts, guides)
+    output_guides(guides)
     output_item_files(items, index_links)
     output_runeword_files(items)
     output_set_files(sets)

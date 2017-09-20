@@ -1,23 +1,21 @@
 #!/usr/bin/env python
 
-import cgi
+import MySQLdb
+import cgi, json
 from item import *
-from items import load_data
+from guide import *
+from utils import load_data
 from collections import namedtuple
 
 form = cgi.FieldStorage()
 
 vals = {}
 for key in form.keys():
-    assert key not in params
+    #assert key not in params
     vals[ key ] = form[ key ].value
-return vals
+#return vals
 
-item_types = [('Primary Weapon', 'weapon1', weapon_and_offhand_types), ('Shield/Other Weapon', 'weapon2', weapon_and_offhand_types), ('Off-hand Weapon', 'weapon3', weapon_and_offhand_types), ('Off-hand shield/Other Weapon', 'weapon4', weapon_and_offhand_types), ('Helm', 'helm', helm_types), ('Body armor', 'bodyarmor', body_armor_types), ('Belt', 'belt', belt_types), ('Gloves', 'gloves', glove_types), ('Boots', 'boots', boot_types), ('Amulet', 'amulet', amulet_types), ('Ring 1', 'ring1', ring_types), ('Ring 2', 'ring2', ring_types), ('Charms', 'charms', charm_types), ('Sockets', 'sockets', ['Socketable'])]
-
-Socket = namedtuple('Socket', 'socket_name, custom_atts')
-GearPiece = namedtuple('GearPiece', 'type shorttype gear_name custom_atts sockets ethereal desc')
-GearGuide = namedtuple('GearGuide', 'name link class gear_pieces')
+item_types = [('Primary Weapon', 'weapon1', weapon_and_offhand_types), ('Shield/Other Weapon', 'weapon2', weapon_and_offhand_types), ('Off-hand Weapon', 'weapon3', weapon_and_offhand_types), ('Off-hand shield/Other Weapon', 'weapon4', weapon_and_offhand_types), ('Helm', 'helm', helm_types), ('Body armor', 'bodyarmor', body_armor_types), ('Belt', 'belt', belt_types), ('Gloves', 'gloves', glove_types), ('Boots', 'boots', boot_types), ('Amulet', 'amulet', amulet_types), ('Ring 1', 'ring1', ring_types), ('Ring 2', 'ring2', ring_types), ('Mercenary Weapon', 'mercweap', weapon_and_offhand_types), ('Mercenary Helm', 'merchelm', helm_types), ('Charms', 'charms', charm_types), ('Sockets', 'sockets', ['Socketable', 'Jewel'])]
 
 items, sets, attributes = load_data()
 
@@ -25,15 +23,14 @@ gear_pieces = []
 for typename, typeid, typelist in item_types:
     gear_name = None
     custom_atts = []
-    socket_name = None
-    custom_socket_atts = []
     ethereal = False
+    runeword_base = None
     desc = ""
     
     if typeid in vals:
         gear_name = vals[typeid]
     else:
-        assert 'custom_item_{0}'.format(typeid) in vals
+        #assert 'custom_item_{0}'.format(typeid) in vals
         # dealing with a custom item, parse its attributes with names: attribute_typeid_# // attribute_typeid_#_val
         cur_att = 0
         
@@ -47,20 +44,53 @@ for typename, typeid, typelist in item_types:
                     custom_atts.append(Attribute(attr.name, [att_val], att_val))
                     break
     
+    sockets = []
+    custom_socket_atts = []
+    
+    cur_soc = 0
+    while 'socket_{0}_{1}'.format(typeid, cur_soc) in vals:
+        sockets.append(vals['socket_{0}_{1}'.format(typeid, cur_soc)])
+    
+    cur_soc = 0
+    while 'attribute_sockets_{0}_{1}'.format(typeid, cur_soc) in vals:
+        att_name = vals['attribute_sockets_{0}_{1}'.format(typeid, cur_soc)]
+        att_val = vals['attribute_sockets_{0}_{1}_val'.format(typeid, cur_soc)]
+        
+        # now match the att. name...
+        for attr in attributes:
+            if attr.name == att_name:
+                custom_socket_atts.append(Attribute(attr.name, [att_val], att_val))
+                break
+    
     if 'ethereal_{0}'.format(typeid) in vals:
         ethereal = vals['ethereal_{0}'.format(typeid)]
+    
+    if 'runeword_base_{0}'.format(typeid) in vals:
+        runeword_base = vals['runeword_base_{0}'.format(typeid)]
     
     if 'desc_{0}'.format(typeid) in vals:
         desc = vals['desc_{0}'.format(typeid)]
     
-    gear_pieces.append(GearPiece(typename, typeid, gear_name, custom_atts, socket_name, custom_socket_atts))
+    gear_pieces.append(GearPiece(typename, typeid, gear_name, custom_atts, sockets, custom_socket_atts, ethereal, runeword_base, desc))
 
-guide = GearGuide(vals['name'], vals['link'], vals['classname'], gear_pieces)
+guide = GearGuide(vals['name'], vals['link'] if 'link' in vals else '', vals['classname'], gear_pieces)
+guide_json = json.dumps(guide)
 
+db = MySQLdb.connect(host=DBHOST, user=DBUSER, passwd=DBPASSWORD, db=DBNAME)
+cur = db.cursor()
+
+cur.execute("INSERT INTO guides (data) VALUES (%s)", (guide_json,))
+
+db.commit()
+#cur.close()
+db.close()
+
+#print('HTTP/1.0 200 OK\r\n')
 print("Content-type:text/html\r\n\r\n")
+#print("Content-type:text/html\r\n\r\n")
 print("<html><head>\
          <title>Gear Guide Creation</title>\
          <link rel='stylesheet' type='text/css' media='screen' href='/d2/style.css' />\
        </head><body>")
-print("<h2> Entered Text Content is {0}</h2>".format(form))
+print("<h2>Guide saved successfully</h2>".format(form))
 print("</body></html>")
