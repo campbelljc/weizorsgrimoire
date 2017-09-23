@@ -102,6 +102,12 @@ table {
 	font-size: 0.75em;
 }
 
+.gear_type
+{
+	font-size: 1em;
+	font-variant: small-caps;
+}
+
 .item_desc
 {
 	width: 300px;
@@ -190,6 +196,14 @@ th[data-sort]
 .ui-widget fieldset {
 	width: 100px;
 	margin: auto;
+}
+
+.item_container fieldset {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 textarea.item_desc {

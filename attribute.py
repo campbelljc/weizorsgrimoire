@@ -52,7 +52,7 @@ class Attribute(object):
             elif 'r11' in self.value_dict and self.value_dict['r11'] is not None:
                 self.sort_value = float(self.value_dict['r11'])
             else:
-                print("value dict:", self.value_dict)
+                #print("value dict:", self.value_dict)
                 raise Exception
             self.max_value = int(self.sort_value+0.0001)
 

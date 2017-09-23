@@ -22,6 +22,7 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/tier")
         os.makedirs(HTML_DIR + "/type")
         os.makedirs(HTML_DIR + "/subtype")
+        os.makedirs(HTML_DIR + "/guide")
     shutil.copyfile("style.css", HTML_DIR + "/style.css")
     for file in glob.glob(r'*.py'):
         shutil.copy(file, "/Library/WebServer/CGI-Executables")
@@ -446,7 +447,7 @@ def output_guide_creation_page(items, sets, attributes):
     for classname in classes:
         classnames += '{ value: "' + classname + '" },'
     
-    item_types = [('Primary Weapon', 'weapon1', weapon_and_offhand_types), ('Shield/Other Weapon', 'weapon2', weapon_and_offhand_types), ('Off-hand Weapon', 'weapon3', weapon_and_offhand_types), ('Off-hand shield/Other Weapon', 'weapon4', weapon_and_offhand_types), ('Helm', 'helm', helm_types), ('Body armor', 'bodyarmor', body_armor_types), ('Belt', 'belt', belt_types), ('Gloves', 'gloves', glove_types), ('Boots', 'boots', boot_types), ('Amulet', 'amulet', amulet_types), ('Ring 1', 'ring1', ring_types), ('Ring 2', 'ring2', ring_types), ('Mercenary Weapon', 'mercweap', weapon_and_offhand_types), ('Mercenary Helm', 'merchelm', helm_types), ('Charms', 'charms', charm_types), ('Sockets', 'sockets', ['Socketable', 'Jewel']), ('White Items', 'white_items', [weapon_and_offhand_types + body_armor_types + helm_types])]
+    item_types = [('Primary Weapon', 'weapon1', weapon_and_offhand_types), ('Shield/Other Weapon', 'weapon2', weapon_and_offhand_types), ('Off-hand Weapon', 'weapon3', weapon_and_offhand_types), ('Off-hand shield/Other Weapon', 'weapon4', weapon_and_offhand_types), ('Helm', 'helm', helm_types), ('Body armor', 'bodyarmor', body_armor_types), ('Belt', 'belt', belt_types), ('Gloves', 'gloves', glove_types), ('Boots', 'boots', boot_types), ('Amulet', 'amulet', amulet_types), ('Ring 1', 'ring1', ring_types), ('Ring 2', 'ring2', ring_types), ('Mercenary Weapon', 'mercweap', weapon_and_offhand_types), ('Mercenary Helm', 'merchelm', helm_types), ('Charms', 'charms', charm_types), ('Sockets', 'sockets', ['Socketable', 'Jewel']), ('White Items', 'white_items', weapon_and_offhand_types + body_armor_types + helm_types)]
     
     Field = namedtuple('Field', 'name id type_vals')
     
@@ -454,7 +455,7 @@ def output_guide_creation_page(items, sets, attributes):
     for title, idname, item_type_list in item_types:
         type_vals = ""
         for item in items:
-            if isinstance(item, WhiteItem) and idname != 'white_items': continue
+            if (isinstance(item, WhiteItem) and idname != 'white_items') or (not isinstance(item, WhiteItem) and idname == 'white_items'): continue
             types = item.type if isinstance(item.type, list) else [item.type]
             for typ in types:
                 if typ.name in item_type_list:
@@ -481,7 +482,9 @@ def output_guide_creation_page(items, sets, attributes):
     fn_defs += "function new_field(type_vals, attr_name, field_id, val_field, qty_field)\n\
                {\n\
                  var field_container_id = '#custom_fields_'+field_id;\n\
-                 var new_field_name = attr_name + '_'+field_id+'_' + Math.ceil($(field_container_id + ' > input').length/2);\n\
+                 var div = 2;\n\
+                 if (qty_field) div = 3;\n\
+                 var new_field_name = attr_name + '_'+field_id+'_' + Math.ceil($(field_container_id + ' > input').length/div);\n\
                  var new_field_html = \"<input spellcheck='false' placeholder='\"+new_field_name+\"' class='item_input \"+attr_name+\"' id='\" + new_field_name + \"' name='\" + new_field_name + \"' />\";\n\
                  if (val_field) {{\n\
                    new_field_html += \"<input placeholder='\"+new_field_name+\"_val' class='item_input' name='\"+new_field_name+\"_val' />\"\n\
@@ -495,20 +498,23 @@ def output_guide_creation_page(items, sets, attributes):
                                                         new_field(type_vals, attr_name, field_id, val_field, qty_field);\n\
                                                       }});\n\
                }\n\
-               function new_item_div(field_id, name, type_vals, spawn_new_field, qty_field)\n\
+               function new_item_div(field_id, name, type_vals, spawn_new_field, qty_field, desc_field)\n\
                {\n\
-                 var plural = name + 's'; \n\
+                 var plural = name; // + 's'; \n\
                  var field_container_id = '#'+plural+'_'+field_id;\n\
                  var field_num = $(field_container_id + ' > input').length;\n\
                  var new_field_name = name+'_'+field_id+'_' + field_num;\n\
                  var new_field_html = \"<input spellcheck='false' placeholder='\"+new_field_name+\"' class='item_input \"+name+\"' id='\" + new_field_name + \"' name='\" + new_field_name + \"' />\";\n\
                  var checkboxId = 'custom_'+name+field_num+'_'+field_id;\n\
-                 new_field_html += \"<span class='field_name'><input type='checkbox' id='\"+checkboxId+\"' /> Custom \"+name+\"</span>\";\n\
+                 new_field_html += \"<span class='field_name'><input type='checkbox' id='\"+checkboxId+\"' /> Custom \"+name+\"</span><br />\";\n\
+                 var desc_field_name = new_field_name + '_desc'; \n\
+                 if (desc_field)\n\
+                    new_field_html += \"<textarea name='\"+desc_field_name+\"' id='\"+desc_field_name+\"' class='item_desc' rows='1' placeholder='Description' /></textarea>\"\n\
                  $(field_container_id).append(new_field_html);\n\
                  if (spawn_new_field)\n\
                     $('#'+new_field_name).autocomplete({ source: type_vals,\n\
                                                          select: function(event, ui) {\n\
-                                                           new_item_div(field_id, name, type_vals, spawn_new_field, qty_field);\n\
+                                                           new_item_div(field_id, name, type_vals, spawn_new_field, qty_field, desc_field);\n\
                                                          }});\n\
                  else\n\
                     $('#'+new_field_name).autocomplete({ source: type_vals });\n\
@@ -516,7 +522,7 @@ def output_guide_creation_page(items, sets, attributes):
                     if($(this).is(':checked')) {{\n\
                        $('#'+new_field_name).hide();\n\
                        $('#'+new_field_name).val('');\n\
-                       new_field(attr_type_vals, 'attribute',plural+'_'+field_id, true, qty_field);\n\
+                       new_field(attr_type_vals, 'attribute', plural+'_'+field_id, true, qty_field);\n\
                        return;\n\
                     }}\n\
                     $('#'+new_field_name).show();\n\
@@ -533,7 +539,7 @@ def output_guide_creation_page(items, sets, attributes):
                          $('#sockets_{0}').empty();\n\
                          for(i=0; i<ui.item.sockets; i++){{\n\
                            // here we add fields for each socket.\n\
-                           new_item_div('{0}', 'socket', sockets, false, false);\n\
+                           new_item_div('{0}', 'socket', sockets, false, false, false);\n\
                          }}\n\
                          if (ui.item.runeword === true){{\n\
                            $('#runeword_base_{0}').show();\n\
@@ -566,7 +572,7 @@ def output_guide_creation_page(items, sets, attributes):
                      }});\n".format(field.id, field.type_vals)
     
     field_js += 'var {0} = [{1}];\n\
-                 new_item_div("charm", "charm", charms, true, true);'.format(charms.id, charms.type_vals)
+                 new_item_div("charm", "charm", charms, true, true, true);'.format(charms.id, charms.type_vals)
     field_js += "$('.socket').autocomplete({source: sockets});\n\
                  $('.ethereal').hide();\n\
                  $('.runeword_base').hide();\n"
@@ -585,15 +591,14 @@ def output_guide_creation_page(items, sets, attributes):
                             <div id='custom_fields_sockets_{0}'></div>\n\
                             <span class='field_name ethereal' id='ethereal_{0}'><input type='checkbox' name='ethereal_{0}' /> Ethereal</span>\n\
                           </p>\n\
-                          <textarea name='{0}_desc' id='{0}_desc' class='item_desc' rows='1' />Description</textarea>\n\
+                          <textarea name='{0}_desc' id='{0}_desc' class='item_desc' rows='1' placeholder='Description' /></textarea>\n\
                         </fieldset></div>\n".format(field.id, field.name)
     
     field_inputs += "<div class='ui-widget'><fieldset>\n\
                        <legend class='item_header'>Charms</legend>\n\
-                       <div id='charms_charm'></div>\n\
-                       <div id='custom_fields_charms_charm'></div>\n\
+                       <div id='charm_charm'></div>\n\
+                       <div id='custom_fields_charm_charm'></div>\n\
                        <p></p><p></p>\n\
-                       <textarea name='charms_desc' id='charms_desc' class='item_desc' rows='1' />Description</textarea>\n\
                      </fieldset></div>\n"
     
     # auto resizing textarea
@@ -650,14 +655,14 @@ def output_guides(guides):
                     <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />\
                     </head><body>'.format(guide.name, SITENAME)
     
-        body = "<div class='item_container'>\n\
+        body = get_body_header() + "<div class='item_container'>\n\
                   <p class='item_name'>{0}</p>\n\
                   <p class='item_type'>{1}</p>\n".format(guide.name, guide.classname)
-        if guide.link is not None:
+        if len(guide.link) > 0:
             body += "<p class='item_type'><a href='{0}'>more details</a></p>".format(guide.link)
         
         for gear_piece in guide.gear_pieces:
-            body += "<div class='item_container'>\n"
+            body += "<div class='item_container'><fieldset><legend class='gear_type'>{0}</legend>\n".format(gear_piece.type)
             if gear_piece.matched_item is not None:
                 body += "<p class='item_name {0}'>{1}</p>\n".format(gear_piece.matched_item.quality, "<a href='"+get_link(gear_piece.matched_item)+"'>"+gear_piece.matched_item.name+"</a>")
             else:
@@ -672,11 +677,13 @@ def output_guides(guides):
                 body += "<p class='item_name_small {0}'>{1}</p>\n".format(socket.quality, "<a href='"+get_link(socket)+"'>"+socket.name+"</a>")
             if len(gear_piece.custom_socket_atts) > 0:
                 body += "<p class='item_attrs attr'>{0}</p>\n".format(get_html_for_attrs(gear_piece.custom_socket_atts, lambda name: True))
+            if gear_piece.qty > 1:
+                body += "<p>Quantity: {0}</p>\n".format(gear_piece.qty)
             if len(gear_piece.desc) > 0:
                 body += "<p>{0}</p>\n".format(gear_piece.desc)
-            body += "</div>"
+            body += "</fieldset></div>"
         
-        body += "</div>"
+        body += "</div></div>"
         
         html = header + body + get_footer()
         with open(get_link(guide, False), 'w') as itemfile:

@@ -2,7 +2,7 @@ from utils import load_data
 items, sets, attributes = load_data()
 
 class GearPiece(object):
-    def __init__(self, type, shorttype, gear_name, custom_atts, sockets, custom_socket_atts, ethereal, runeword_base, desc):
+    def __init__(self, type, shorttype, gear_name, custom_atts, sockets, custom_socket_atts, ethereal, runeword_base, desc, qty):
         self.type = type
         self.shorttype = shorttype
         self.gear_name = gear_name
@@ -12,6 +12,7 @@ class GearPiece(object):
         self.ethereal = ethereal
         self.runeword_base = runeword_base
         self.desc = desc
+        self.qty = qty
         
         self.matched_item = None
         if len(self.custom_atts) == 0:
@@ -25,7 +26,7 @@ class GearPiece(object):
         for socket in self.sockets:
             for item in items:
                 if item.name == socket:
-                    self.matched_sockets.append(socket)
+                    self.matched_sockets.append(item)
                     break
         
         for item in items:

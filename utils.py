@@ -1,5 +1,5 @@
 import MySQLdb
-import os, dill, json
+import os, dill, json, jsonpickle
 from item import *
 from data import *
 
@@ -29,7 +29,7 @@ def load_guides():
     guides = []
     for row in cur.fetchall():
         guide_json = row[1]
-        guide = json.loads(guide_json)
+        guide = jsonpickle.decode(guide_json)
         guides.append(guide)
     
     db.close()
