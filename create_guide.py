@@ -6,6 +6,7 @@ from item import *
 from guide import *
 from utils import load_data
 from collections import namedtuple
+from config import *
 
 form = cgi.FieldStorage()
 
