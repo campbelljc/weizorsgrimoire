@@ -28,6 +28,8 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/guide")
         if PRODUCTION_BUILD:
             os.makedirs(CGI_DIR)
+            with open(CGI_DIR+"/.htaccess", 'w') as f:
+                f.write('AddHandler cgi-script .cgi\nOptions +ExecCGI\n')
     shutil.copyfile("style.css", HTML_DIR + "/style.css")
     for file in glob.glob(r'*.py'):
         shutil.copy(file, CGI_DIR)
@@ -75,7 +77,7 @@ def get_footer():
 def get_body_header():
     return "<div id='container'>\n\
           <div id='headerContainer'>\n\
-            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\n\
+            <p id='headerText'><a href='/d2/index.html'>weizor's grimoire</a></p>\n\
           </div>\n\
           <div id='contentContainer'>"
 

@@ -114,7 +114,7 @@ print("<html><head>\
        </head><body>")
 print("<div id='container'>\n\
           <div id='headerContainer'>\n\
-            <p id='headerText'><a href='/d2/'>weizor's grimoire</a></p>\n\
+            <p id='headerText'><a href='/d2/index.html'>weizor's grimoire</a></p>\n\
           </div>\n\
           <div id='contentContainer'>\n\
             <h2>Guide saved successfully.</h2>\n\
