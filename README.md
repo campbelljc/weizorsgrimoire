@@ -1,5 +1,5 @@
 # Weizor's Grimoire
-A cool looking Diablo 2 item info site. You can access a (live version here)[http://campbelljc.com/d2/index.html].
+A cool looking Diablo 2 item info site. You can access a [live version here](http://campbelljc.com/d2/index.html).
 
 ### Requirements
 * Python3
