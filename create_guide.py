@@ -26,7 +26,7 @@ items, sets, attributes = load_data()
 gear_pieces = []
 for typename, typeid, typelist in item_types:
     gear_name = None
-    custom_atts = []
+    custom_atts = [] # TODO - fix bug here, should be dict type with attr as key.(?)
     ethereal = False
     runeword_base = None
     desc = ""

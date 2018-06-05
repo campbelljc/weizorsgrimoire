@@ -6,8 +6,11 @@ from get_items import *
 from collections import defaultdict
 
 SITENAME = "Weizor's Grimoire"
-HTML_DIR = '/Users/jcampbell/Sites/root/d2'
-ROOT_DIR = '/d2/'
+
+PRODUCTION_BUILD = True # set to False if testing on local mac webserver, to put cgi files in right place for default apache installation
+HTML_DIR = 'html/' # the directory in which the html files will be created (make sure you have write privileges)
+CGI_DIR = '/Library/WebServer/CGI-Executables' if not PRODUCTION_BUILD else HTML_DIR+'cgi'
+ROOT_DIR = '/d2/' # the site path that all links will start with. e.g. "/d2" for http://www.campbelljc.com/d2
 
 def setup_dirs():
     if not os.path.exists(HTML_DIR):
@@ -23,11 +26,13 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/type")
         os.makedirs(HTML_DIR + "/subtype")
         os.makedirs(HTML_DIR + "/guide")
+        if PRODUCTION_BUILD:
+            os.makedirs(CGI_DIR)
     shutil.copyfile("style.css", HTML_DIR + "/style.css")
     for file in glob.glob(r'*.py'):
-        shutil.copy(file, "/Library/WebServer/CGI-Executables")
-    shutil.copy("items.dll", "/Library/WebServer/CGI-Executables")
-    os.system("chmod 755 /Library/WebServer/CGI-Executables/create_guide.py")
+        shutil.copy(file, CGI_DIR)
+    shutil.copy("items.dll", CGI_DIR)
+    os.system("chmod 755 "+CGI_DIR+"/create_guide.py")
     if not os.path.exists(HTML_DIR + "/js"):
         shutil.copytree("js", HTML_DIR + "/js")
 

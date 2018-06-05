@@ -1,5 +1,6 @@
 
 *.pyc
 html/*
+d2/*
 items.dll
 config.py

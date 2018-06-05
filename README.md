@@ -8,6 +8,8 @@ A cool looking Diablo 2 item info site.
 
 ### How to build
 * Create config.py and define DBHOST, DBUSER, DBPASSWORD and DBNAME.
+* Edit items.py lines 10-13 (follow the comments).
 * python3 items.py
 
 Site will be created within 'html' directory.
+Builds will go faster after the first time when the items cache is created.
