@@ -115,7 +115,8 @@ def get_html_for_attributes(item_name, item_attrs, selection_fns):
                             attrs[{0}] = $('#attr_{0}').val();\n
                             db.items.put({{\n
                                 name: '{1}',\n
-                                attributes: attrs\n
+                                attributes: attrs,\n
+                                characters: item.characters\n
                             }});\n
                         }});\n
             """.format(tag_id, item_name);
@@ -176,9 +177,9 @@ def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stup
                    <script type="text/javascript">
                        var db = new Dexie("grimoire");
                        db.version(1).stores({
-                           items: 'name, *attributes',
+                           items: 'name, *attributes, *characters',
                            config: 'show_fields, status',
-                           characters: '++id, account, name'
+                           characters: '++id, account, &name'
                        });
                    </script>"""
     if table:
@@ -257,63 +258,88 @@ def output_item_files(items, indexes):
             </p>
         """
         
-        script = """
-                var table = new Table({
-                    id: "character_table",
-                    fields: {
-                        "Account": {
-                            "class": "edit",
-                            "type:": "string"
+        body += """<script>
+                db.items.where('name').equals('"""+item.name.replace("'", "")+"""').toArray().then( function(item_arr) {\n
+                    item = item_arr[0];
+                    char_data = item.characters;
+                    
+                    var table = new Table({
+                        id: "character_table",
+                        fields: {
+                            "Account": {
+                                "class": "edit",
+                                "type:": "string"
+                            },
+                            "Character": {
+                                "class": "edit",
+                                "type:": "string"
+                            },
+                            "Notes": {
+                                "class": "edit",
+                                "type:": "string"
+                            }
                         },
-                        "Character": {
-                            "class": "edit",
-                            "type:": "string"
-                        },
-                        "Notes": {
-                            "class": "edit",
-                            "type:": "string"
-                        }
-                    },
-                    data: [
-                        ['-', '-', '-']
-                    ],
-                    direction: "desc",
-                    debug: true
-                });
-                table.render();
+                        data: char_data,
+                        direction: "desc",
+                        debug: true
+                    });
+                    table.render();
                 
-                // populate char input autocomplete
-                db.characters.toArray().then( function(chars) {
-                    var char_names = [];
-                    var char_accs = []
-                    chars.forEach(function(char) {
-                        char_names.push(char.name);
-                        char_accs.push(char.account);
-                    });
-                    $("#character_input").bind( "keydown", function( event ) {
-                        if ( event.keyCode === $.ui.keyCode.ENTER && !$(this).data("selectVisible") ) {
-                            // add current char input value to the DB and autocomplete list.
-                            table.addRow({ data: ["", $(this).val(), ""] });
-                        }
-                    });
-                    $("#character_input").autocomplete({
-                        source: char_names,
-                        select: function(event, ui) {
-                            ind = char_names.findIndex(ui.item.value);
-                            table.addRow({ data: [char_accs[ind], char_names[ind], ""] });
-                            return false;
-                        },
-                        open: function() {
-                            $(this).data("selectVisible", true);
-                        },
-                        close: function() {
-                            $(this).data("selectVisible", false);
-                        }
+                    // populate char input autocomplete
+                    db.characters.toArray().then( function(chars) {
+                        var char_names = [];
+                        var char_accs = []
+                        chars.forEach(function(char) {
+                            char_names.push(char.name);
+                            char_accs.push(char.account);
+                        });
+                        $("#character_input").bind( "keydown", function( event ) {
+                            if ( event.keyCode === $.ui.keyCode.ENTER && !$(this).data("selectVisible") ) {
+                                // add current char input value to the DB and autocomplete list.
+                                table.addRow({ data: ["", $(this).val(), ""] });
+                            }
+                        });
+                        $("#character_input").autocomplete({
+                            source: char_names,
+                            select: function(event, ui) {
+                                ind = char_names.findIndex(k => k==ui.item.value);
+                                table.addRow({ data: [char_accs[ind], char_names[ind], ""] });
+                                return false;
+                            },
+                            open: function() {
+                                $(this).data("selectVisible", true);
+                            },
+                            close: function() {
+                                $(this).data("selectVisible", false);
+                            }
+                        });
+                        $("#character_table").on("table_updated", function(event) {
+                            var table_data = table.serialize();
+                        
+                            // store char/acc/notes data in items db
+                            db.items.where('name').equals('"""+item.name.replace("'", "")+"""').toArray().then( function(item_arr) {\n
+                                item = item_arr[0];
+                                db.items.put({\n
+                                    name: item.name,\n
+                                    attributes: item.attributes,\n
+                                    characters: table_data\n
+                                });\n
+                            });
+                        
+                            // store char/acc data in chars db
+                            $.each(table_data, function(index, row) {
+                                db.characters.put({\n
+                                    account: row.Account,\n
+                                    name: row.Character
+                                });\n
+                            });
+                        });
                     });
                 });
+            </script>
         """
         
-        html = get_header(item.name, script, jquery=True, jquery_ui=True, dexie=True, table=True) + body + get_footer(dexie=True)
+        html = get_header(item.name, jquery=True, jquery_ui=True, dexie=True, table=True) + body + get_footer(dexie=True)
         with open(get_link(item, False), 'w') as itemfile:
             itemfile.write(html)
 

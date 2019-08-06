@@ -567,6 +567,8 @@ Table.prototype.saveCell = function(id) {
         $(cell).empty().text(val);
         self.renderCalc();
     }
+	
+	$('#'+id).trigger("table_updated");
 }
 
 // Calculate formula based cells
@@ -709,6 +711,8 @@ Table.prototype.addRow = function(o) {
         // Increment the cell id
         c++;
     }
+
+	$(this.id).trigger("table_updated");
 }
 
 Table.prototype.delRow = function (id) {
