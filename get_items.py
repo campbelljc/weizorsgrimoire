@@ -69,6 +69,7 @@ def get_items_from_summit():
             
                 discard_attr_indices = []
                 for i, attr in enumerate(attrs):
+                    varies = '(varies)' in attr
                     attr = attr.replace(" (varies)", "").replace("*", "")
                     if len(attr) == 0 or 'set bonus' in attr.lower():
                         discard_attr_indices.append(i)
@@ -78,7 +79,7 @@ def get_items_from_summit():
                         m = re.match(attr_matcher.regex, attr_lower)
                         if m:
                             discard_attr_indices.append(i)
-                            attr_dict[attr_matcher] = Attribute(attr_matcher.name, m.groupdict(), attr)
+                            attr_dict[attr_matcher] = Attribute(attr_matcher.name, m.groupdict(), attr, varies=varies)
                             break
         
                 attrs = [attr for i, attr in enumerate(attrs) if i not in discard_attr_indices]

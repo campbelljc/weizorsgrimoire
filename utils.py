@@ -2,6 +2,7 @@ import MySQLdb
 import os, dill, json, jsonpickle
 from item import *
 from data import *
+from config import *
 
 def load_data():
     if not os.path.exists("items.dll"):
@@ -21,7 +22,7 @@ def load_data():
     return items, sets, attributes
 
 def load_guides():
-    db = MySQLdb.connect(host='localhost', user='d2user', passwd='d2ec8329', db='d2')
+    db = MySQLdb.connect(host=DBHOST, user=DBUSER, passwd=DBPASSWORD, db=DBNAME)
     cur = db.cursor()
 
     cur.execute("SELECT * FROM guides")
@@ -70,3 +71,10 @@ Durability: 20<BR>
 </TR>\n
 """.format(skill.title())
     print(ormus_str)
+
+class dotdict(dict):
+    def __getattr__(self, name):
+        try:
+            return self[name]
+        except KeyError:
+            raise AttributeError

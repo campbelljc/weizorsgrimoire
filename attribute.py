@@ -3,11 +3,12 @@ from data import *
 from collections import defaultdict
 
 class Attribute(object):
-    def __init__(self, name, values, text):
+    def __init__(self, name, values, text, varies):
         self.quality = 'attribute'
         self.name = name
         self.value_dict = values
         self.text = text
+        self.varies = varies
         
         self.sort_value = None
         self.max_value = None
@@ -71,6 +72,7 @@ def match_attributes(idesc):
     attr_dict = {}
     unmatched_strs = []
     for i, attr in enumerate(attrs):
+        varies = "(varies)" in attr
         attr = attr.replace(" (varies)", "").replace("*", "")
         if len(attr) == 0:
             continue
@@ -81,7 +83,7 @@ def match_attributes(idesc):
             m = re.match(attr_matcher.regex, attr_lower)
             if m:
                 matched = True
-                attr_dict[attr_matcher] = Attribute(attr_matcher.name, m.groupdict(), attr)
+                attr_dict[attr_matcher] = Attribute(attr_matcher.name, m.groupdict(), attr, varies=varies)
                 break
         if not matched:
             unmatched_strs.append(attr)
