@@ -1,0 +1,110 @@
+table input {
+	color: white;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+table td, th {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding:2px 5px;
+    font-size: 16px; 
+    height: 30px;
+}
+table th {
+
+}
+
+table th.title {
+
+}
+
+table tr {
+    width: 100%; 
+}
+
+table td {
+    text-overflow: ellipsis;
+}
+
+table td.edit {
+    padding: 0px;
+    cursor: pointer;
+}
+
+td.edit input.editcell {
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+
+    border-radius: 5px; 
+    outline: none; 
+
+    width: 82%;
+    height: 25px;
+    line-height: 25px;
+    margin: 0px;
+    padding: 0px;
+	
+	
+	/* src: https://css-tricks.com/snippets/css/glowing-blue-input-highlights/ */
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	border: 1px solid black;
+	margin-left: 3px;
+	
+	background-color: black;
+}
+
+td.edit input.editcell:focus {
+    box-shadow: 0 0 5px red; /*rgba(81, 203, 238, 1);*/
+    border: 1px solid red; /*rgba(81, 203, 238, 1);*/
+}
+
+td.edit input.editcell::-webkit-input-placeholder { /* WebKit browsers */
+    box-shadow: 0 0 5px red; /*rgba(81, 203, 238, 1);*/
+    border: 1px solid red; /*rgba(81, 203, 238, 1);*/
+}
+td.edit input.editcell::-moz-placeholder { /* Mozilla Firefox 19+ */
+    box-shadow: 0 0 5px red; /*rgba(81, 203, 238, 1);*/
+    border: 1px solid red; /*rgba(81, 203, 238, 1);*/
+}
+td.edit input.editcell:-ms-input-placeholder { /* Internet Explorer 10+ */
+    box-shadow: 0 0 5px red; /*rgba(81, 203, 238, 1);*/
+    border: 1px solid red; /*rgba(81, 203, 238, 1);*/
+}
+
+td.edit input.error {
+    border: 1px solid red;
+}
+
+table td.money {
+    /*min-width: 330px;*/
+}
+
+table td.money:before {
+    content: '$ ';
+}
+
+table td.remove {
+    width: 30px;
+}
+
+table td.remove button {
+    font-size: 9px;
+    font-weight: bold;
+    color: red;
+    height: 26px;
+    width: 26px;
+}
+

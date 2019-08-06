@@ -206,6 +206,28 @@ th[data-sort]
 	margin-bottom: 20px;
 }
 
+
+input.attr_db {
+	color: white;
+	background-color: black;
+	text-align: center;
+	
+	/* src: https://css-tricks.com/snippets/css/glowing-blue-input-highlights/ */
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	border: 1px solid #DDDDDD;
+	margin-left: 3px;
+}
+ 
+input.attr_db:focus {
+  box-shadow: 0 0 5px red; /*rgba(81, 203, 238, 1);*/
+  border: 1px solid red; /*rgba(81, 203, 238, 1);*/
+}
+
+
 textarea.item_desc {
 	resize: vertical;
 }

@@ -33,13 +33,16 @@ def setup_dirs():
             os.makedirs(CGI_DIR)
             with open(CGI_DIR+"/.htaccess", 'w') as f:
                 f.write('AddHandler cgi-script .cgi\nOptions +ExecCGI\n')
-    shutil.copyfile("style.css", HTML_DIR + "/style.css")
+    if not os.path.exists(HTML_DIR + "/css"):
+        shutil.copytree("css", HTML_DIR + "/css")
     for file in glob.glob(r'*.py'):
         shutil.copy(file, CGI_DIR)
     shutil.copy("items.dll", CGI_DIR)
     os.system("chmod 755 "+CGI_DIR+"/create_guide.py")
-    if not os.path.exists(HTML_DIR + "/js"):
-        shutil.copytree("js", HTML_DIR + "/js")
+    #if not os.path.exists(HTML_DIR + "/js"):
+    if os.path.exists(HTML_DIR + "/js"):
+        shutil.rmtree(HTML_DIR + "/js")
+    shutil.copytree("js", HTML_DIR + "/js")
 
 def get_link(item, root=True):
     link = "/" + item.quality.lower() + "/" + item.name.lower().replace("%", "pct").replace("+", "plus").replace("-", "neg").replace("(", "").replace(")", "").replace(" ", "_").replace("'", "").replace("/", "_").replace(":", "") + ".html"
@@ -82,8 +85,8 @@ def get_html_for_attributes(item_name, item_attrs, selection_fns):
             attr_text = attr_text.replace(text_match, text_match_link)
             html += attr_text
             if attr_dict[attr].varies:
-                html += """ -- <input spellcheck='false' type='text' id='attr_{0}' class='attr_db' />""".format(len(attr_max_vals))
-                attr_max_vals.append(attr_dict[attr].max_value)
+                html += """ <input spellcheck='false' type='text' id='attr_{0}' class='attr_db' size="3" />""".format(len(attr_max_vals))
+                attr_max_vals.append('') #attr_dict[attr].max_value)
             html += "<br />"
         
         html = html[:-6].lower()
@@ -92,6 +95,7 @@ def get_html_for_attributes(item_name, item_attrs, selection_fns):
             continue
         
         # script for db/inputs
+        item_name = item_name.replace("'", "")
         script = """
                     <script type="text/javascript">\n
                     db.items.add({{\n
@@ -105,9 +109,9 @@ def get_html_for_attributes(item_name, item_attrs, selection_fns):
     
         for tag_id in range(len(attr_max_vals)):
             script += """
-                        $('#attr_{0}').val(item['attributes'][{0}]);\n
+                        $('#attr_{0}').val(item.attributes[{0}]);\n
                         $('#attr_{0}').change(function() {{\n
-                            attrs = item['attributes'];\n
+                            attrs = item.attributes;\n
                             attrs[{0}] = $('#attr_{0}').val();\n
                             db.items.put({{\n
                                 name: '{1}',\n
@@ -125,25 +129,39 @@ def get_html_for_attributes(item_name, item_attrs, selection_fns):
     
     return attr_htmls
 
-def get_footer():
-    return "</div>\n\
-            <div id='lowerContainer'>\n\
-	          <div id='blurContainer'></div>\n\
-                 <div id='footer'>\n\
-                   <p class='centerText'>all content on this site is &copy; 2001-2017 blizzard entertainment.</p>\n\
-                 </div>\n\
-              </div>\n\
-            </div>\n\
-            </body></html>"
+def get_footer(dexie=False):
+    footer = """
+        </div>\n\
+            <div id='lowerContainer'>\n
+	          <div id='blurContainer'></div>\n
+                 <div id='footer'>\n
+                   <p class='centerText'>all content on this site is &copy; 2001-2017 blizzard entertainment.</p>\n
+                 </div>\n
+              </div>\n
+        </div>\n"""
+    if dexie:
+        footer += """
+        <script>\n
+            db.config.toArray().then( function(arr) {{\n
+                show_fields = arr[0];
+                if (show_fields.status == 0) {
+                    $(".attr_db").hide();
+                }
+            }});
+        </script>\n"""
+    return footer + """</body></html>"""
 
-def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stupidtable=False, dexie=False):
+def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stupidtable=False, dexie=False, table=False):
     if page_title is None:
         page_title = SITENAME
     else:
         page_title = page_title + " -- " + SITENAME
-    header = '<html><head>\
-                    <title>'+page_title+'</title>\
-                    <link rel="stylesheet" type="text/css" media="screen" href="/d2/style.css" />'
+    header = """
+            <html><head>\n
+                <title>{0}</title>\n
+                <link rel="stylesheet" type="text/css" media="screen" href="/d2/css/style.css" />\n
+                <meta charset="utf-8"/>\n
+            """.format(page_title)
     if jquery:
         header += '<script src="https://code.jquery.com/jquery-1.12.4.js"></script>'
     if jquery_ui:
@@ -153,16 +171,25 @@ def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stup
     if stupidtable:
         header += '<script src="../js/stupidtable.min.js"></script>'
     if dexie:
-        header += """<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>\n
-                   <script type="text/javascript">\n
-                       var db = new Dexie("grimoire");\n
-                       db.version(1).stores({\n
-                           items: 'name, *attributes'\n
-                       });\n
+        assert jquery
+        header += """<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+                   <script type="text/javascript">
+                       var db = new Dexie("grimoire");
+                       db.version(1).stores({
+                           items: 'name, *attributes',
+                           config: 'show_fields, status',
+                           characters: '++id, account, name'
+                       });
                    </script>"""
+    if table:
+        header += """
+                    <script type="text/javascript" src="../js/table.js"></script>
+                    <link rel="stylesheet" type="text/css" href="/d2/css/table.css" />
+                  """
     if script:
         header += '<script type="text/javascript">' + script + '</script>'
-    header += '     </head><body>'
+    header += """
+            </head><body>"""
     return header
 
 def get_body_header():
@@ -213,7 +240,80 @@ def output_item_files(items, indexes):
           </div>\
         </div>".format(item.name, item.imagepath, typeinfo, stypeinfo, quality, base_attrs, attrs, end_attrs, set_info, item.quality)
         
-        html = get_header(item.name, jquery=True, dexie=True) + body + get_footer()
+        # collector info
+        body += """
+            <hr class='item_seperator' />
+            <p class="attr_db">
+                add new character
+                <div class='ui-widget'>
+                  <input spellcheck='false' id='character_input' />
+                </div>
+                
+                <table id="character_table"><thead><tr>
+                    <th>Account</th>
+                    <th>Character</th>
+                    <th>Notes</th>
+                </tr></thead></table>
+            </p>
+        """
+        
+        script = """
+                var table = new Table({
+                    id: "character_table",
+                    fields: {
+                        "Account": {
+                            "class": "edit",
+                            "type:": "string"
+                        },
+                        "Character": {
+                            "class": "edit",
+                            "type:": "string"
+                        },
+                        "Notes": {
+                            "class": "edit",
+                            "type:": "string"
+                        }
+                    },
+                    data: [
+                        ['-', '-', '-']
+                    ],
+                    direction: "desc",
+                    debug: true
+                });
+                table.render();
+                
+                // populate char input autocomplete
+                db.characters.toArray().then( function(chars) {
+                    var char_names = [];
+                    var char_accs = []
+                    chars.forEach(function(char) {
+                        char_names.push(char.name);
+                        char_accs.push(char.account);
+                    });
+                    $("#character_input").bind( "keydown", function( event ) {
+                        if ( event.keyCode === $.ui.keyCode.ENTER && !$(this).data("selectVisible") ) {
+                            // add current char input value to the DB and autocomplete list.
+                            table.addRow({ data: ["", $(this).val(), ""] });
+                        }
+                    });
+                    $("#character_input").autocomplete({
+                        source: char_names,
+                        select: function(event, ui) {
+                            ind = char_names.findIndex(ui.item.value);
+                            table.addRow({ data: [char_accs[ind], char_names[ind], ""] });
+                            return false;
+                        },
+                        open: function() {
+                            $(this).data("selectVisible", true);
+                        },
+                        close: function() {
+                            $(this).data("selectVisible", false);
+                        }
+                    });
+                });
+        """
+        
+        html = get_header(item.name, script, jquery=True, jquery_ui=True, dexie=True, table=True) + body + get_footer(dexie=True)
         with open(get_link(item, False), 'w') as itemfile:
             itemfile.write(html)
 
@@ -306,7 +406,7 @@ def output_runeword_files(items):
           </div>\
         </div>".format(item.name, rune_links, typeinfo, base_attrs, attrs, end_attrs, rune_images)
         
-        html = get_header(item.name) + body + get_footer()
+        html = get_header(item.name, jquery=True, dexie=True) + body + get_footer(dexie=True)
         with open(get_link(item, False), 'w') as itemfile:
             itemfile.write(html)
 
@@ -334,7 +434,7 @@ def output_set_files(sets):
           <p class='set_bonuses'>{1}</p>\
         </div>".format(itemset.name, set_bonuses, setitemrows)
         
-        html = get_header(itemset.name) + body + get_footer()
+        html = get_header(itemset.name, jquery=True, dexie=True) + body + get_footer(dexie=True)
         with open(get_link(itemset, False), 'w') as itemfile:
             itemfile.write(html)
 
@@ -342,23 +442,23 @@ def write_html_for_table(cat, table_headers, itemrows):
     # save file...
     # ref sorting: https://github.com/joequery/Stupid-Table-Plugin#readme
     # ref sort(a,b): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-    script = '$(function(){{\
-                  $("#attr_table").stupidtable({{\
-                    "range_string":function(a,b){{\
-                      var valA = a;\
-                      if (a.indexOf("-") > -1)\
-                      {{\
-                        valA = a.split("-")[1];\
-                      }}\
-                      var valB = b;\
-                      if (b.indexOf("-") > -1)\
-                      {{\
-                        valB = b.split("-")[1];\
-                      }}\
-                      return parseInt(valA,10) - parseInt(valB,10);\
-                    }}\
-                  }});\
-                }});'
+    script = """$(function(){\n
+                  $("#attr_table").stupidtable({\n
+                    "range_string":function(a,b){\n
+                      var valA = a;\n
+                      if (a.indexOf("-") > -1)\n
+                      {\n
+                        valA = a.split("-")[1];\n
+                      }\n
+                      var valB = b;\n
+                      if (b.indexOf("-") > -1)\n
+                      {\n
+                        valB = b.split("-")[1];\n
+                      }\n
+                      return parseInt(valA,10) - parseInt(valB,10);\n
+                    }\n
+                  });\n
+                });"""
 
     body = get_body_header() + \
     "<p class='attr_title'><strong>{1}</strong></p>\
@@ -428,21 +528,40 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
     for item_type, index_link in index_links:
         index_pages += '<p><a href="../{0}">{1}</a></p>'.format(index_link, item_type)
     
-    body = get_body_header() + \
-    "<div id='contentContainer'>\
-        <p>type an item/set/attribute name</p>\
-        <div class='ui-widget'>\
-          <input spellcheck='false' id='tags' />\
-        </div>\
-        <hr class='item_seperator' />\
-        <p class='header'>indexes</p>\
-        {0}\
-        <p class='header'>tools</p>\
-        <p><a href='./create_guide.html'>create gear guide</a></p>\
-      </div>\
-    </div>".format(index_pages)
+    body = get_body_header() + """
+    <div id='contentContainer'>\n
+        <p>type an item/set/attribute name</p>\n
+        <div class='ui-widget'>\n
+          <input spellcheck='false' id='tags' />\n
+        </div>\n
+        <p><input type="checkbox" id="show_col_info" />Show collector fields</p>\n
+        <script>\n
+            db.config.add({{\n
+                show_fields: 0,\n
+                status: 0
+            }});\n
+            \n
+            db.config.toArray().then( function(arr) {{\n
+                show_fields = arr[0];
+                $('#show_col_info').prop('checked', show_fields.status);\n
+                $('#show_col_info').change(function() {{\n
+                    show_fields_ = this.checked;
+                    db.config.put({{\n
+                        show_fields: 0,\n
+                        status: show_fields_ ? 1 : 0\n
+                    }});\n
+                }});\n
+            }});
+        </script>\n
+        <hr class='item_seperator' />\n
+        <p class='header'>indexes</p>\n
+        {0}\n
+        <p class='header'>tools</p>\n
+        <p><a href='./create_guide.html'>create gear guide</a></p>\n
+      </div>\n
+    </div>""".format(index_pages)
 
-    html = get_header(script=script, jquery=True, jquery_ui=True) + body + get_footer()
+    html = get_header(script=script, jquery=True, jquery_ui=True, dexie=True) + body + get_footer()
     with open(HTML_DIR + "/index.html", 'w') as itemfile:
         itemfile.write(html)
 
