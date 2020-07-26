@@ -11,7 +11,9 @@ class Category(object):
         return hash((self.name))
     
     def __eq__(self, other):
-        return (self.name) == (other.name)
+        if isinstance(other, Category):
+            return (self.name) == (other.name)
+        return self.name == other
     
     def __repr__(self):
         return self.name
@@ -47,6 +49,67 @@ class Item(object):
         self.class_restriction = None
         self.spawns_ethereal = False
         self.can_spawn_ethereal = False
+        self.eth_item = None
+    
+    def create_ethereal_version(self):
+        assert self.can_spawn_ethereal
+        print("Creating ethereal version of", self.name, self.type, self.stype)
+        new_item = Item(self.name, self.imagepath, self.quality, self.tier.name, self.type.name, self.stype.name, self.attr_dict.copy())
+        new_item.update_info()
+        
+        for i, attr in enumerate(new_item.attr_dict):
+            item_attr = new_item.attr_dict[attr]
+            if attr.name == "Defense":
+                values = item_attr.value_dict
+                text = item_attr.text
+
+                keys_to_update = ['r1', 'r2', 'r3', 'r4', 'base_min', 'base_max']
+                for key in keys_to_update:
+                    if key in values and values[key] is not None:
+                        values[key] = str(int(int(values[key]) * 1.5))
+                
+                # TODO: Make this work with straight +Def attributes.
+                if 'r3' in values and values['r3'] is not None:
+                    text = "Defense: (" + values['r1'] + "-" + values['r2'] + ") - (" + values['r3'] + "-" + values['r4'] + ")"
+                else:
+                    text = "Defense: " + str(values['r1'])
+                    if 'r2' in values and values['r2'] is not None:
+                        text += "-" + str(values['r2'])
+                
+                if 'base_min' in values and values['base_min'] is not None:
+                    text += " (Base Defense: " + str(values['base_min'])
+                    if 'base_max' in values and values['base_max'] is not None:
+                        text += "-" + str(values['base_max'])
+                    text += ")"
+            elif attr.name in ['Damage', 'Throw Damage', 'One-Hand Damage', 'Two-Hand Damage']:
+                values = item_attr.value_dict
+                text = item_attr.text
+                
+                # TODO
+                
+                print(text, values)
+                input("")
+            elif attr.name == "Durability":
+                assert len(item_attr.value_dict) == 1
+                values = item_attr.value_dict
+                values['v'] = str((int(item_attr.value_dict['v'])//2) + 1)
+                text = "Durability: " + values['v']
+            elif attr.name == "Required Strength":
+                values = item_attr.value_dict
+                values['v'] = str(max(int(item_attr.value_dict['v']) - 10, 0))
+                text = "Required Strength: " + values['v']
+            elif attr.name == "Required Dexterity":
+                values = item_attr.value_dict
+                values['v'] = str(max(int(item_attr.value_dict['v']) - 10, 0))
+                text = "Required Dexterity: " + values['v']
+            else:
+                continue
+        
+            new_item.attr_dict[attr] = Attribute(item_attr.name, values, text, item_attr.varies)
+        
+        new_item.attr_dict[AttributeMatch('Ethereal', r'ethereal \(cannot be repaired\)', 'ethereal')] = Attribute("Ethereal", {}, "ethereal (cannot be repaired)", False)
+        
+        self.eth_item = new_item
     
     def update_info(self):
         for classname, item_type in class_specific_item_types:
@@ -64,7 +127,7 @@ class Item(object):
         if any('Ethereal' in attr.name for attr in self.attr_dict):
             self.spawns_ethereal = True
         
-        self.can_spawn_ethereal = not self.spawns_ethereal
+        self.can_spawn_ethereal = not self.spawns_ethereal and self.quality != 'Set' and self.stype != 'Phase Blade' and self.type not in ['Amulet', 'Ring', 'Arrows', 'Bolts', 'Bow', 'Crossbow', 'Jewel', 'Charm']
         if any('Indestructible' in attr.name for attr in self.attr_dict):
             self.can_spawn_ethereal = False
 
@@ -119,7 +182,7 @@ class ItemSet(object):
 
 def fill_in_tiers(items):
     white_items = [item for item in items if item.quality == 'White']
-    
+        
     for item in items:
         if isinstance(item, Runeword) or isinstance(item, Socketable): continue
         
@@ -144,6 +207,9 @@ def fill_in_tiers(items):
                     print("Couldn't find <", item.stype.name, ">")
                     assert False
         item.update_info()
+        
+        if item.can_spawn_ethereal:
+            item.create_ethereal_version()
     
     return items
 

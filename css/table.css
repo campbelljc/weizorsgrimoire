@@ -13,7 +13,7 @@ table {
 
 table td, th {
     text-align: center;
-    border: 1px solid #ddd;
+    border: 0;
     padding:2px 5px;
     font-size: 16px; 
     height: 30px;

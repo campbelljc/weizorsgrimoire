@@ -206,6 +206,11 @@ th[data-sort]
 	margin-bottom: 20px;
 }
 
+#character_input {
+	color: white;
+	background-color: black;
+}
+
 
 input.attr_db {
 	color: white;
@@ -313,7 +318,7 @@ button { width: auto; overflow: visible; }
 	margin-left: 0px;
 	margin-right: 0px;
 	padding-top: 50px;
-	min-height: 385px;
+	/*min-height: 385px;*/
 }
 
 #contentContainer #content {

@@ -124,7 +124,7 @@ attribute_matches = [
     AttributeMatch('Throw Damage', r'throw damage: [\(]*(?P<r11>\d+)[\-]*(?P<r12>\d+)*[\)]* to [\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]* \([\(]*(?P<ravg1>[\d\.]+)[\-]*(?P<ravg2>[\d\.]+)*[\)]* avg\)', 'throw damage'),
     AttributeMatch('One-Hand Damage', r'one-hand damage: [\(]*(?P<r11>\d+)[\-]*(?P<r12>\d+)*[\)]* to [\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]* \([\(]*(?P<ravg1>[\d\.]+)[\-]*(?P<ravg2>[\d\.]+)*[\)]* avg\)', 'one-hand damage'),
     AttributeMatch('One-Hand Damage', r'two-hand damage: [\(]*(?P<r11>\d+)[\-]*(?P<r12>\d+)*[\)]* to [\(]*(?P<r21>\d+)[\-]*(?P<r22>\d+)*[\)]* \([\(]*(?P<ravg1>[\d\.]+)[\-]*(?P<ravg2>[\d\.]+)*[\)]* avg\)', 'two-hand damage'),
-    AttributeMatch('Defense', r'defense: [\(]*(?P<r1>\d+)[\-]*(?P<r2>\d+)*[\)]*( \(base defense: [\(]*(?P<br1>\d+)[\-]*(?P<br2>\d+)*[\)]*\))*', 'defense'),
+    AttributeMatch('Defense', r'defense: [\(]*(?P<r1>\d+)[\-]*(?P<r2>\d+)*[\)]*( - \((?P<r3>\d+)-(?P<r4>\d+)\))*( \(base defense: [\(]*(?P<base_min>\d+)[\-]*(?P<base_max>\d+)*[\)]*\))*', 'defense'),
     AttributeMatch('Required Level', r'required level: (?P<v>\d+)', 'required level'),
     AttributeMatch('Required Strength', r'required strength: (?P<v>\d+)', 'required strength'),
     AttributeMatch('Required Dexterity', r'required dexterity: (?P<v>\d+)', 'required dexterity'),

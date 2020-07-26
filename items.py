@@ -33,19 +33,21 @@ def setup_dirs():
             os.makedirs(CGI_DIR)
             with open(CGI_DIR+"/.htaccess", 'w') as f:
                 f.write('AddHandler cgi-script .cgi\nOptions +ExecCGI\n')
-    if not os.path.exists(HTML_DIR + "/css"):
-        shutil.copytree("css", HTML_DIR + "/css")
     for file in glob.glob(r'*.py'):
         shutil.copy(file, CGI_DIR)
     shutil.copy("items.dll", CGI_DIR)
     os.system("chmod 755 "+CGI_DIR+"/create_guide.py")
     #if not os.path.exists(HTML_DIR + "/js"):
+    if os.path.exists(HTML_DIR + "/css"):
+        shutil.rmtree(HTML_DIR + "/css")
+    shutil.copytree("css", HTML_DIR + "/css")
     if os.path.exists(HTML_DIR + "/js"):
         shutil.rmtree(HTML_DIR + "/js")
     shutil.copytree("js", HTML_DIR + "/js")
 
 def get_link(item, root=True):
-    link = "/" + item.quality.lower() + "/" + item.name.lower().replace("%", "pct").replace("+", "plus").replace("-", "neg").replace("(", "").replace(")", "").replace(" ", "_").replace("'", "").replace("/", "_").replace(":", "") + ".html"
+    link = "/" + item.quality.lower() + "/" + item.name.lower().replace("%", "pct").replace("+", "plus").replace("-", "neg").replace("(", "").replace(")", "").replace(" ", "_").replace("'", "").replace("/", "_").replace(":", "")
+    link += ".html"
     if root:
         return ROOT_DIR + link
     else:
@@ -181,6 +183,10 @@ def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stup
                            config: 'show_fields, status',
                            characters: '++id, account, &name'
                        });
+                       db.config.add({{
+                           show_fields: 0,
+                           status: 0
+                       }});
                    </script>"""
     if table:
         header += """
@@ -234,7 +240,9 @@ def output_item_files(items, indexes):
             {8}\
             <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
             <p class='item_stype'>{4} {3}</p>\
-            <p class='item_type'>({2})</p>\
+            <p class='item_type'>({2})</p>"
+        
+        body += "\
             <p class='item_attrs_small'>{5}</p>\
             <p class='item_attrs attr'>{6}</p>\
             <p class='item_attrs_small'>{7}</p>\
@@ -247,7 +255,7 @@ def output_item_files(items, indexes):
             <p class="attr_db">
                 add new character
                 <div class='ui-widget'>
-                  <input spellcheck='false' id='character_input' />
+                  <input spellcheck='false' id='character_input' class='attr_db' />
                 </div>
                 
                 <table id="character_table"><thead><tr>
@@ -560,13 +568,8 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
         <div class='ui-widget'>\n
           <input spellcheck='false' id='tags' />\n
         </div>\n
-        <p><input type="checkbox" id="show_col_info" />Show collector fields</p>\n
+        <p><input type="checkbox" id="show_col_info" style="margin-left: 5px" /> show collector fields</p>\n
         <script>\n
-            db.config.add({{\n
-                show_fields: 0,\n
-                status: 0
-            }});\n
-            \n
             db.config.toArray().then( function(arr) {{\n
                 show_fields = arr[0];
                 $('#show_col_info').prop('checked', show_fields.status);\n
