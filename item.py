@@ -2,6 +2,13 @@ import re
 from attribute import *
 from collections import namedtuple, defaultdict
 
+eth_attr_match = None
+for attr_match in attribute_matches:
+    if attr_match.name == 'Ethereal':
+        eth_attr_match = attr_match
+        break
+assert eth_attr_match is not None
+
 class Category(object):
     def __init__(self, name, quality):
         self.name = name
@@ -53,7 +60,7 @@ class Item(object):
     
     def create_ethereal_version(self):
         assert self.can_spawn_ethereal
-        print("Creating ethereal version of", self.name, self.type, self.stype)
+        #print("Creating ethereal version of", self.name, self.type, self.stype)
         new_item = Item(self.name, self.imagepath, self.quality, self.tier.name, self.type.name, self.stype.name, self.attr_dict.copy())
         new_item.update_info()
         
@@ -85,10 +92,31 @@ class Item(object):
                 values = item_attr.value_dict
                 text = item_attr.text
                 
+                print(text, values)
+                
                 # TODO
+                keys_to_update = ['r11', 'r12', 'r21', 'r22', 'ravg1', 'ravg2']
+                for key in keys_to_update:
+                    if key in values and values[key] is not None:
+                        values[key] = str(float(float(values[key]) * 1.5))
+                
+                damages = ['Damage', 'Throw Damage', 'One-Hand Damage', 'Two-Hand Damage']
+                
+                text = attr.name + ': '
+                if values['r12'] is not None:
+                    text += '({}-{})'.format(values['r11'], values['r12'])
+                else:
+                    text += '({})'.format(values['r11'])
+                text += ' to '
+                if values['r22'] is not None:
+                    text += '({}-{})'.format(values['r21'], values['r22'])
+                else:
+                    text += '({})'.format(values['r21'])
+                
+                text += ' ({}-{} avg)'.format(values['ravg1'], values['ravg2'])
                 
                 print(text, values)
-                input("")
+                #input("")
             elif attr.name == "Durability":
                 assert len(item_attr.value_dict) == 1
                 values = item_attr.value_dict
@@ -107,7 +135,7 @@ class Item(object):
         
             new_item.attr_dict[attr] = Attribute(item_attr.name, values, text, item_attr.varies)
         
-        new_item.attr_dict[AttributeMatch('Ethereal', r'ethereal \(cannot be repaired\)', 'ethereal')] = Attribute("Ethereal", {}, "ethereal (cannot be repaired)", False)
+        new_item.attr_dict[eth_attr_match] = Attribute(eth_attr_match.name, {}, "ethereal (cannot be repaired)", False)
         
         self.eth_item = new_item
     
@@ -209,6 +237,7 @@ def fill_in_tiers(items):
         item.update_info()
         
         if item.can_spawn_ethereal:
+            #print(item, "can spawn eth")
             item.create_ethereal_version()
     
     return items

@@ -12,7 +12,7 @@ SITENAME = "Weizor's Grimoire"
 PRODUCTION_BUILD = True # set to False if testing on local mac webserver, to put cgi files in right place for default apache installation
 #HTML_DIR = 'html/' # the directory in which the html files will be created (make sure you have write privileges)
 HTML_DIR = '/Users/jcampbell/Sites/root/d2/'
-CGI_DIR = '/Library/WebServer/CGI-Executables' if not PRODUCTION_BUILD else HTML_DIR+'cgi'
+CGI_DIR = '/Library/WebServer/CGI-Executables' if not PRODUCTION_BUILD else HTML_DIR+'cgi/'
 ROOT_DIR = '/d2/' # the site path that all links will start with. e.g. "/d2" for http://www.campbelljc.com/d2
 
 def setup_dirs():
@@ -183,10 +183,10 @@ def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stup
                            config: 'show_fields, status',
                            characters: '++id, account, &name'
                        });
-                       db.config.add({{
+                       db.config.add({
                            show_fields: 0,
                            status: 0
-                       }});
+                       });
                    </script>"""
     if table:
         header += """
@@ -251,7 +251,7 @@ def output_item_files(items, indexes):
         
         # collector info
         body += """
-            <hr class='item_seperator' />
+            <hr class='item_separator' />
             <p class="attr_db">
                 add new character
                 <div class='ui-widget'>
@@ -457,7 +457,7 @@ def output_set_files(sets):
                     <p class='item_attrs_small'>{3}</p>\
                     <p class='item_attrs attr'>{4}</p>\
                     <p class='item_attrs_small'>{5}</p>\
-                </div><hr class='item_seperator' />".format(item.name, item.imagepath, item.quality, base_attrs, attrs, end_attrs, "<a href='"+get_link(item)+"'>"+item.name+"</a>")
+                </div><hr class='item_separator' />".format(item.name, item.imagepath, item.quality, base_attrs, attrs, end_attrs, "<a href='"+get_link(item)+"'>"+item.name+"</a>")
     
         set_bonuses = get_html_for_attributes(itemset.name, itemset.set_bonuses, lambda name: True)
     
@@ -582,7 +582,7 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
                 }});\n
             }});
         </script>\n
-        <hr class='item_seperator' />\n
+        <hr class='item_separator' />\n
         <p class='header'>indexes</p>\n
         {0}\n
         <p class='header'>tools</p>\n
