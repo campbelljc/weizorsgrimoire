@@ -206,243 +206,231 @@ def get_body_header():
           </div>\n\
           <div id='contentContainer'>"
 
-def output_item_files(items, indexes):
-    for item in items:
-        if isinstance(item, Runeword) or isinstance(item, Socketable): continue
-        
-        base_attrs, attrs, end_attrs = get_html_for_attributes(item.name, item.attr_dict, [lambda name: name in start_atts, lambda name: name in end_atts, lambda name: name not in start_atts and name not in end_atts])
+def output_item_file(item, indexes):
+    base_attrs, attrs, end_attrs = get_html_for_attributes(item.name, item.attr_dict, [lambda name: name in start_atts, lambda name: name in end_atts, lambda name: name not in start_atts and name not in end_atts])
+
+    matched_link = None
+    for item_type, index_link in indexes:
+        if item_type.lower().split()[0] == item.quality.lower():
+            matched_link = index_link
     
-        matched_link = None
-        for item_type, index_link in indexes:
-            if item_type.lower().split()[0] == item.quality.lower():
-                matched_link = index_link
-        
-        quality = item.quality
-        if matched_link is not None:
-            quality = '<a href="../../'+matched_link+'">'+quality+'</a>'
-        
-        typeinfo = ""
-        if item.tier is not None:
-            typeinfo = '<a href="'+get_link(item.tier)+'">'+item.tier.name+'</a> ' + typeinfo
-        typeinfo += '<a href="'+get_link(item.type)+'">'+item.type.name+'</a>'
-        
-        stypeinfo = ""
-        if item.stype is not None:
-            stypeinfo += '<a href="'+get_link(item.stype)+'">'+item.stype.name+'</a>'            
-        
-        set_info = ""
-        if isinstance(item, SetItem):
-            set_info = "<p class='item_type'>(<a href='"+get_link(item.set)+"'>"+item.set_name+"</a>)</p>"
+    quality = item.quality
+    if matched_link is not None:
+        quality = '<a href="../../'+matched_link+'">'+quality+'</a>'
     
-        body = get_body_header() + \
-        "<div class='item_container'>\
-            <p class='item_name {9}'>{0}</p>\
-            {8}\
-            <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
-            <p class='item_stype'>{4} {3}</p>\
-            <p class='item_type'>({2})</p>"
-        
-        body += "\
-            <p class='item_attrs_small'>{5}</p>\
-            <p class='item_attrs attr'>{6}</p>\
-            <p class='item_attrs_small'>{7}</p>\
-          </div>\
-        </div>".format(item.name, item.imagepath, typeinfo, stypeinfo, quality, base_attrs, attrs, end_attrs, set_info, item.quality)
-        
-        # collector info
-        body += """
-            <hr class='item_separator' />
-            <p class="attr_db">
-                add new character
-                <div class='ui-widget'>
-                  <input spellcheck='false' id='character_input' class='attr_db' />
-                </div>
+    typeinfo = ""
+    if item.tier is not None:
+        typeinfo = '<a href="'+get_link(item.tier)+'">'+item.tier.name+'</a> ' + typeinfo
+    typeinfo += '<a href="'+get_link(item.type)+'">'+item.type.name+'</a>'
+    
+    stypeinfo = ""
+    if item.stype is not None:
+        stypeinfo += '<a href="'+get_link(item.stype)+'">'+item.stype.name+'</a>'            
+    
+    set_info = ""
+    if isinstance(item, SetItem):
+        set_info = "<p class='item_type'>(<a href='"+get_link(item.set)+"'>"+item.set_name+"</a>)</p>"
+
+    body = get_body_header() + \
+    "<div class='item_container'>\
+        <p class='item_name {9}'>{0}</p>\
+        {8}\
+        <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
+        <p class='item_stype'>{4} {3}</p>\
+        <p class='item_type'>({2})</p>"
+    
+    body += "\
+        <p class='item_attrs_small'>{5}</p>\
+        <p class='item_attrs attr'>{6}</p>\
+        <p class='item_attrs_small'>{7}</p>\
+      </div>\
+    </div>".format(item.name, item.imagepath, typeinfo, stypeinfo, quality, base_attrs, attrs, end_attrs, set_info, item.quality)
+    
+    # collector info
+    body += """
+        <hr class='item_separator' />
+        <p class="attr_db">
+            add new character
+            <div class='ui-widget'>
+              <input spellcheck='false' id='character_input' class='attr_db' />
+            </div>
+            
+            <table id="character_table"><thead><tr>
+                <th>Account</th>
+                <th>Character</th>
+                <th>Notes</th>
+            </tr></thead></table>
+        </p>
+    """
+    
+    body += """<script>
+            db.items.where('name').equals('"""+item.name.replace("'", "")+"""').toArray().then( function(item_arr) {\n
+                item = item_arr[0];
+                char_data = item.characters;
                 
-                <table id="character_table"><thead><tr>
-                    <th>Account</th>
-                    <th>Character</th>
-                    <th>Notes</th>
-                </tr></thead></table>
-            </p>
-        """
-        
-        body += """<script>
-                db.items.where('name').equals('"""+item.name.replace("'", "")+"""').toArray().then( function(item_arr) {\n
-                    item = item_arr[0];
-                    char_data = item.characters;
-                    
-                    var table = new Table({
-                        id: "character_table",
-                        fields: {
-                            "Account": {
-                                "class": "edit",
-                                "type:": "string"
-                            },
-                            "Character": {
-                                "class": "edit",
-                                "type:": "string"
-                            },
-                            "Notes": {
-                                "class": "edit",
-                                "type:": "string"
-                            }
+                var table = new Table({
+                    id: "character_table",
+                    fields: {
+                        "Account": {
+                            "class": "edit",
+                            "type:": "string"
                         },
-                        data: char_data,
-                        direction: "desc",
-                        debug: true
+                        "Character": {
+                            "class": "edit",
+                            "type:": "string"
+                        },
+                        "Notes": {
+                            "class": "edit",
+                            "type:": "string"
+                        }
+                    },
+                    data: char_data,
+                    direction: "desc",
+                    debug: true
+                });
+                table.render();
+            
+                // populate char input autocomplete
+                db.characters.toArray().then( function(chars) {
+                    var char_names = [];
+                    var char_accs = []
+                    chars.forEach(function(char) {
+                        char_names.push(char.name);
+                        char_accs.push(char.account);
                     });
-                    table.render();
-                
-                    // populate char input autocomplete
-                    db.characters.toArray().then( function(chars) {
-                        var char_names = [];
-                        var char_accs = []
-                        chars.forEach(function(char) {
-                            char_names.push(char.name);
-                            char_accs.push(char.account);
+                    $("#character_input").bind( "keydown", function( event ) {
+                        if ( event.keyCode === $.ui.keyCode.ENTER && !$(this).data("selectVisible") ) {
+                            // add current char input value to the DB and autocomplete list.
+                            table.addRow({ data: ["", $(this).val(), ""] });
+                        }
+                    });
+                    $("#character_input").autocomplete({
+                        source: char_names,
+                        select: function(event, ui) {
+                            ind = char_names.findIndex(k => k==ui.item.value);
+                            table.addRow({ data: [char_accs[ind], char_names[ind], ""] });
+                            return false;
+                        },
+                        open: function() {
+                            $(this).data("selectVisible", true);
+                        },
+                        close: function() {
+                            $(this).data("selectVisible", false);
+                        }
+                    });
+                    $("#character_table").on("table_updated", function(event) {
+                        var table_data = table.serialize();
+                    
+                        // store char/acc/notes data in items db
+                        db.items.where('name').equals('"""+item.name.replace("'", "")+"""').toArray().then( function(item_arr) {\n
+                            item = item_arr[0];
+                            db.items.put({\n
+                                name: item.name,\n
+                                attributes: item.attributes,\n
+                                characters: table_data\n
+                            });\n
                         });
-                        $("#character_input").bind( "keydown", function( event ) {
-                            if ( event.keyCode === $.ui.keyCode.ENTER && !$(this).data("selectVisible") ) {
-                                // add current char input value to the DB and autocomplete list.
-                                table.addRow({ data: ["", $(this).val(), ""] });
-                            }
-                        });
-                        $("#character_input").autocomplete({
-                            source: char_names,
-                            select: function(event, ui) {
-                                ind = char_names.findIndex(k => k==ui.item.value);
-                                table.addRow({ data: [char_accs[ind], char_names[ind], ""] });
-                                return false;
-                            },
-                            open: function() {
-                                $(this).data("selectVisible", true);
-                            },
-                            close: function() {
-                                $(this).data("selectVisible", false);
-                            }
-                        });
-                        $("#character_table").on("table_updated", function(event) {
-                            var table_data = table.serialize();
-                        
-                            // store char/acc/notes data in items db
-                            db.items.where('name').equals('"""+item.name.replace("'", "")+"""').toArray().then( function(item_arr) {\n
-                                item = item_arr[0];
-                                db.items.put({\n
-                                    name: item.name,\n
-                                    attributes: item.attributes,\n
-                                    characters: table_data\n
-                                });\n
-                            });
-                        
-                            // store char/acc data in chars db
-                            $.each(table_data, function(index, row) {
-                                db.characters.put({\n
-                                    account: row.Account,\n
-                                    name: row.Character
-                                });\n
-                            });
+                    
+                        // store char/acc data in chars db
+                        $.each(table_data, function(index, row) {
+                            db.characters.put({\n
+                                account: row.Account,\n
+                                name: row.Character
+                            });\n
                         });
                     });
                 });
-            </script>
-        """
-        
-        html = get_header(item.name, jquery=True, jquery_ui=True, dexie=True, table=True) + body + get_footer(dexie=True)
-        with open(get_link(item, False), 'w') as itemfile:
-            itemfile.write(html)
-
-def output_rune_files(items):
-    for item in items:
-        if item.quality != 'Rune': continue
-        
-        weap_attrs, armor_attrs, helm_attrs, shield_attrs = get_html_for_attributes(item.name, [item.attr_dict_weap, item.attr_dict_armor, item.attr_dict_helm, item.attr_dict_shield], lambda name: True)
-        
-        runewords = ""
-        for rw_item in items:
-            if isinstance(rw_item, Runeword) and item.name.split(" ")[0] in rw_item.runes:
-                runewords += "<a href='"+get_link(rw_item)+"'>"+rw_item.name+"</a><br />"
-        runewords = runewords[:-6]
-        
-        body = get_body_header() + \
-        "<div class='item_container'>\
-            <p class='item_name rune'>{0}</p>\
-            <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
-            <p class='item_type'>(<a href='../runes.html'>Rune</a>)</p>\
-            <p class='item_attrs_small'><a href='../attribute/required_level.html'>Required Level</a>: {2}</p>\
-            <table class='centerTable' id='rune_table'>\
-            <tr><td class='attr_restriction'>Weapons</td><td>{3}</td></tr>\
-            <tr><td class='attr_restriction'>Armor</td><td>{4}</td></tr>\
-            <tr><td class='attr_restriction'>Helms</td><td>{5}</td></tr>\
-            <tr><td class='attr_restriction'>Shields</td><td>{6}</td></tr>\
-            </table>\
-            <p>Runewords that use this rune:</p>\
-            <p>{7}</p>\
-          </div>\
-        </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs, runewords)
+            });
+        </script>
+    """
     
-        html = get_header(item.name) + body + get_footer()
-        with open(get_link(item, False), 'w') as itemfile:
-            itemfile.write(html)
+    html = get_header(item.name, jquery=True, jquery_ui=True, dexie=True, table=True) + body + get_footer(dexie=True)
+    with open(get_link(item, False), 'w') as itemfile:
+        itemfile.write(html)
 
-def output_gem_files(items):
-    for item in items:
-        if item.quality != 'Gem': continue
-        
-        weap_attrs, armor_attrs, helm_attrs, shield_attrs = get_html_for_attributes(item.name, [item.attr_dict_weap, item.attr_dict_armor, item.attr_dict_helm, item.attr_dict_shield], lambda name: True)
-                
-        body = get_body_header() + \
-        "<div class='item_container'>\
-            <p class='item_name gem'>{0}</p>\
-            <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
-            <p class='item_type'>(<a href='../gems.html'>Gem</a>)</p>\
-            <p class='item_attrs_small'><a href='../attribute/required_level.html'>Required Level</a>: {2}</p>\
-            <table class='centerTable' id='rune_table'>\
-            <tr><td class='attr_restriction'>Weapons</td><td>{3}</td></tr>\
-            <tr><td class='attr_restriction'>Armor</td><td>{4}</td></tr>\
-            <tr><td class='attr_restriction'>Helms</td><td>{5}</td></tr>\
-            <tr><td class='attr_restriction'>Shields</td><td>{6}</td></tr>\
-            </table>\
-          </div>\
-        </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs)
-        
-        html = get_header(item.name) + body + get_footer()
-        with open(get_link(item, False), 'w') as itemfile:
-            itemfile.write(html)
+def output_rune_file(item):
+    weap_attrs, armor_attrs, helm_attrs, shield_attrs = get_html_for_attributes(item.name, [item.attr_dict_weap, item.attr_dict_armor, item.attr_dict_helm, item.attr_dict_shield], lambda name: True)
+    
+    runewords = ""
+    for rw_item in items:
+        if isinstance(rw_item, Runeword) and item.name.split(" ")[0] in rw_item.runes:
+            runewords += "<a href='"+get_link(rw_item)+"'>"+rw_item.name+"</a><br />"
+    runewords = runewords[:-6]
+    
+    body = get_body_header() + \
+    "<div class='item_container'>\
+        <p class='item_name rune'>{0}</p>\
+        <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
+        <p class='item_type'>(<a href='../runes.html'>Rune</a>)</p>\
+        <p class='item_attrs_small'><a href='../attribute/required_level.html'>Required Level</a>: {2}</p>\
+        <table class='centerTable' id='rune_table'>\
+        <tr><td class='attr_restriction'>Weapons</td><td>{3}</td></tr>\
+        <tr><td class='attr_restriction'>Armor</td><td>{4}</td></tr>\
+        <tr><td class='attr_restriction'>Helms</td><td>{5}</td></tr>\
+        <tr><td class='attr_restriction'>Shields</td><td>{6}</td></tr>\
+        </table>\
+        <p>Runewords that use this rune:</p>\
+        <p>{7}</p>\
+      </div>\
+    </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs, runewords)
 
-def output_runeword_files(items):
-    for item in items:
-        if not isinstance(item, Runeword): continue
-        
-        base_attrs, attrs, end_attrs = get_html_for_attributes(item.name, item.attr_dict, [lambda name: name in start_atts, lambda name: name in end_atts, lambda name: name not in start_atts and name not in end_atts])
-        
-        rune_links = ""
-        rune_images = ""
-        for rune in item.runes:
-            rune_links += "<a href='"+get_link([i for i in items if rune+" Rune"==i.name][0])+"'>"+rune+"</a> + "
-            rune_images += "<a href='"+get_link([i for i in items if rune+" Rune"==i.name][0])+"'><img src='http://classic.battle.net/images/battle/diablo2exp/images/runes/rune"+rune.replace("Jah", "Jo").replace("Shael", "Shae")+".gif' alt='"+rune+"'/></a>"
-        rune_links = rune_links[:-3]
-        
-        typeinfo = ""
-        types = item.type if isinstance(item.type, list) else [item.type]
-        for typ in types:
-            typeinfo += '<a href="'+get_link(typ)+'">'+typ.name+'</a> / '
-        typeinfo = typeinfo[:-3]
-        
-        body = get_body_header() + \
-        "<div class='item_container'>\
-            <p class='item_name runeword'>{0}</p>\
-            <p class='item_stype'>{1}</p>\
-            <p class='item_runes'>{6}</p>\
-            <p class='item_type'>{2}</p>\
-            <p class='item_attrs_small'>{3}</p>\
-            <p class='item_attrs attr'>{4}</p>\
-            <p class='item_attrs_small'>{5}</p>\
-          </div>\
-        </div>".format(item.name, rune_links, typeinfo, base_attrs, attrs, end_attrs, rune_images)
-        
-        html = get_header(item.name, jquery=True, dexie=True) + body + get_footer(dexie=True)
-        with open(get_link(item, False), 'w') as itemfile:
-            itemfile.write(html)
+    html = get_header(item.name) + body + get_footer()
+    with open(get_link(item, False), 'w') as itemfile:
+        itemfile.write(html)
+
+def output_gem_file(item):
+    weap_attrs, armor_attrs, helm_attrs, shield_attrs = get_html_for_attributes(item.name, [item.attr_dict_weap, item.attr_dict_armor, item.attr_dict_helm, item.attr_dict_shield], lambda name: True)
+            
+    body = get_body_header() + \
+    "<div class='item_container'>\
+        <p class='item_name gem'>{0}</p>\
+        <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
+        <p class='item_type'>(<a href='../gems.html'>Gem</a>)</p>\
+        <p class='item_attrs_small'><a href='../attribute/required_level.html'>Required Level</a>: {2}</p>\
+        <table class='centerTable' id='rune_table'>\
+        <tr><td class='attr_restriction'>Weapons</td><td>{3}</td></tr>\
+        <tr><td class='attr_restriction'>Armor</td><td>{4}</td></tr>\
+        <tr><td class='attr_restriction'>Helms</td><td>{5}</td></tr>\
+        <tr><td class='attr_restriction'>Shields</td><td>{6}</td></tr>\
+        </table>\
+      </div>\
+    </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs)
+    
+    html = get_header(item.name) + body + get_footer()
+    with open(get_link(item, False), 'w') as itemfile:
+        itemfile.write(html)
+
+def output_runeword_file(item):
+    base_attrs, attrs, end_attrs = get_html_for_attributes(item.name, item.attr_dict, [lambda name: name in start_atts, lambda name: name in end_atts, lambda name: name not in start_atts and name not in end_atts])
+    
+    rune_links = ""
+    rune_images = ""
+    for rune in item.runes:
+        rune_links += "<a href='"+get_link([i for i in items if rune+" Rune"==i.name][0])+"'>"+rune+"</a> + "
+        rune_images += "<a href='"+get_link([i for i in items if rune+" Rune"==i.name][0])+"'><img src='http://classic.battle.net/images/battle/diablo2exp/images/runes/rune"+rune.replace("Jah", "Jo").replace("Shael", "Shae")+".gif' alt='"+rune+"'/></a>"
+    rune_links = rune_links[:-3]
+    
+    typeinfo = ""
+    types = item.type if isinstance(item.type, list) else [item.type]
+    for typ in types:
+        typeinfo += '<a href="'+get_link(typ)+'">'+typ.name+'</a> / '
+    typeinfo = typeinfo[:-3]
+    
+    body = get_body_header() + \
+    "<div class='item_container'>\
+        <p class='item_name runeword'>{0}</p>\
+        <p class='item_stype'>{1}</p>\
+        <p class='item_runes'>{6}</p>\
+        <p class='item_type'>{2}</p>\
+        <p class='item_attrs_small'>{3}</p>\
+        <p class='item_attrs attr'>{4}</p>\
+        <p class='item_attrs_small'>{5}</p>\
+      </div>\
+    </div>".format(item.name, rune_links, typeinfo, base_attrs, attrs, end_attrs, rune_images)
+    
+    html = get_header(item.name, jquery=True, dexie=True) + body + get_footer(dexie=True)
+    with open(get_link(item, False), 'w') as itemfile:
+        itemfile.write(html)
 
 def output_set_files(sets):
     for itemset in sets:
@@ -894,13 +882,21 @@ def make_website():
         cat_dicts.append((cat_dict, disp_name))
     
     index_links = output_index_pages(items, sets, attributes, cat_dicts, guides)
-    output_guides(guides)
-    output_item_files(items, index_links)
-    output_runeword_files(items)
+        
+    for item in items:
+        if isinstance(item, Runeword):
+            output_runeword_files(item)        
+        elif isinstance(item, Socketable):
+            if item.quality == 'Rune':
+                output_rune_file(item)
+            elif item.quality == 'Gem':
+                output_gem_file(item)
+        else:
+            output_item_file(item, index_links)
+    
     output_set_files(sets)
-    output_rune_files(items)
-    output_gem_files(items)
     output_attribute_files(attributes)
+    output_guides(guides)
     output_guide_creation_page(items, sets, attributes)
     output_main_page(items, sets, attributes, cat_dicts, index_links)
     
