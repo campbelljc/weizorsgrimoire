@@ -56,12 +56,14 @@ class Item(object):
         self.class_restriction = None
         self.spawns_ethereal = False
         self.can_spawn_ethereal = False
+        self.ethereal = False
         self.eth_item = None
     
     def create_ethereal_version(self):
         assert self.can_spawn_ethereal
         #print("Creating ethereal version of", self.name, self.type, self.stype)
-        new_item = Item(self.name, self.imagepath, self.quality, self.tier.name, self.type.name, self.stype.name, self.attr_dict.copy())
+        new_item = Item(self.name + " (ethereal)", self.imagepath, self.quality, self.tier.name, self.type.name, self.stype.name, self.attr_dict.copy())
+        new_item.ethereal = True
         new_item.update_info()
         
         for i, attr in enumerate(new_item.attr_dict):
@@ -154,6 +156,7 @@ class Item(object):
         self.spawns_ethereal = False
         if any('Ethereal' in attr.name for attr in self.attr_dict):
             self.spawns_ethereal = True
+            self.ethereal = True
         
         self.can_spawn_ethereal = not self.spawns_ethereal and self.quality != 'Set' and self.stype != 'Phase Blade' and self.type not in ['Amulet', 'Ring', 'Arrows', 'Bolts', 'Bow', 'Crossbow', 'Jewel', 'Charm']
         if any('Indestructible' in attr.name for attr in self.attr_dict):
@@ -239,6 +242,7 @@ def fill_in_tiers(items):
         if item.can_spawn_ethereal:
             #print(item, "can spawn eth")
             item.create_ethereal_version()
+            items.append(item.eth_item)
     
     return items
 

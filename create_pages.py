@@ -47,6 +47,8 @@ def setup_dirs():
 
 def get_link(item, root=True):
     link = "/" + item.quality.lower() + "/" + item.name.lower().replace("%", "pct").replace("+", "plus").replace("-", "neg").replace("(", "").replace(")", "").replace(" ", "_").replace("'", "").replace("/", "_").replace(":", "")
+    if type(item) is Item and item.ethereal:
+        link += '_eth'
     link += ".html"
     if root:
         return ROOT_DIR + link
@@ -237,9 +239,7 @@ def output_item_file(item, indexes):
         {8}\
         <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
         <p class='item_stype'>{4} {3}</p>\
-        <p class='item_type'>({2})</p>"
-    
-    body += "\
+        <p class='item_type'>({2})</p>\
         <p class='item_attrs_small'>{5}</p>\
         <p class='item_attrs attr'>{6}</p>\
         <p class='item_attrs_small'>{7}</p>\
@@ -885,7 +885,7 @@ def make_website():
         
     for item in items:
         if isinstance(item, Runeword):
-            output_runeword_files(item)        
+            output_runeword_file(item)        
         elif isinstance(item, Socketable):
             if item.quality == 'Rune':
                 output_rune_file(item)
@@ -893,6 +893,8 @@ def make_website():
                 output_gem_file(item)
         else:
             output_item_file(item, index_links)
+            if item.eth_item is not None:
+                output_item_file(item.eth_item, index_links)
     
     output_set_files(sets)
     output_attribute_files(attributes)
