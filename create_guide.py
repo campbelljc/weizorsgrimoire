@@ -110,7 +110,7 @@ db.close()
 print("Content-type:text/html\r\n\r\n")
 print("<html><head>\
          <title>Gear Guide Creation</title>\
-         <link rel='stylesheet' type='text/css' media='screen' href='/d2/style.css' />\
+         <link rel='stylesheet' type='text/css' media='screen' href='/d2/css/style.css' />\
          <meta http-equiv='refresh' content='2;url=http://localhost/d2/' />\
        </head><body>")
 print("<div id='container'>\n\

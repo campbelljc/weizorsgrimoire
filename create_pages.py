@@ -567,21 +567,24 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
         function ajaxify_links()
         {
             $('a').click(function(event) { 
-                event.preventDefault();
                 var page = $(this).attr('href');
-                $('#contentContainer').load(page, function(responseTxt, statusTxt, xhr){
-                    if (statusTxt == "success")
-                    {
-                        if (first)
+                if (page.includes("d2/"))
+                {
+                    event.preventDefault();
+                    $('#contentContainer').load(page, function(responseTxt, statusTxt, xhr){
+                        if (statusTxt == "success")
                         {
-                            first = false;
-                            window.history.pushState('site_map.html', null, 'site_map.html');
+                            if (first)
+                            {
+                                first = false;
+                                window.history.pushState('site_map.html', null, 'site_map.html');
+                            }
+                            window.history.pushState(page, null, page);
+                            ajaxify_links();
                         }
-                        window.history.pushState(page, null, page);
-                        ajaxify_links();
-                    }
-                });
-                return false;
+                    });
+                    return false;
+                }
             });
         }
         
@@ -821,6 +824,7 @@ def output_guide_creation_page(items, sets, attributes):
                      $('#runeword_base_{0}_field').autocomplete({{ source: white_items }});\n\
                      $('#custom_item_{0}').change(function() {{\n\
                         if($(this).is(':checked')) {{\n\
+                           // if custom item is selected, hide the other fields (ethereal, runeword base, sockets)\n\
                            $('#{0}').hide();\n\
                            $('#{0}').val('');\n\
                            $('.{0}').hide();\n\
@@ -917,7 +921,7 @@ def create_databases():
 
 def output_guides(guides):
     for guide in guides:
-        body = get_body_header() + "<div class='item_container'>\n\
+        body = "<div class='item_container'>\n\
                   <p class='item_name'>{0}</p>\n\
                   <p class='item_type'>{1}</p>\n".format(guide.name, guide.classname)
         if len(guide.link) > 0:
@@ -927,8 +931,8 @@ def output_guides(guides):
             body += "<div class='item_container'><fieldset><legend class='gear_type'>{0}</legend>\n".format(gear_piece.type)
             if gear_piece.matched_item is not None:
                 body += "<p class='item_name {0}'>{1}</p>\n".format(gear_piece.matched_item.quality, "<a href='"+get_link(gear_piece.matched_item)+"'>"+gear_piece.matched_item.name+"</a>")
-            else:
-                body += "<p class='item_attrs attr'>{0}</p>\n".format(get_html_for_attributes(gear_piece.name, gear_piece.custom_atts, lambda name: True))
+            elif len(gear_piece.custom_atts) > 0:
+                body += "<p class='item_attrs attr'>{0}</p>\n".format(get_html_for_attributes(gear_piece.gear_name, gear_piece.custom_atts, lambda name: True))
             if gear_piece.ethereal:
                 body += "<p class='ethereal'>(Ethereal)</p>\n"
             if gear_piece.runeword_base is not None:
@@ -938,18 +942,17 @@ def output_guides(guides):
             for socket in gear_piece.matched_sockets:
                 body += "<p class='item_name_small {0}'>{1}</p>\n".format(socket.quality, "<a href='"+get_link(socket)+"'>"+socket.name+"</a>")
             if len(gear_piece.custom_socket_atts) > 0:
-                body += "<p class='item_attrs attr'>{0}</p>\n".format(get_html_for_attributes(gear_piece.name, gear_piece.custom_socket_atts, lambda name: True))
+                body += "<p class='item_attrs attr'>{0}</p>\n".format(get_html_for_attributes(gear_piece.gear_name, gear_piece.custom_socket_atts, lambda name: True))
             if gear_piece.qty > 1:
                 body += "<p>Quantity: {0}</p>\n".format(gear_piece.qty)
             if len(gear_piece.desc) > 0:
                 body += "<p>{0}</p>\n".format(gear_piece.desc)
             body += "</fieldset></div>"
         
-        body += "</div></div>"
+        body += "</div>"
         
-        html = get_header(guide.name) + body + get_footer()
         with open(get_link(guide, False), 'w') as itemfile:
-            itemfile.write(html)
+            itemfile.write(body)
 
 def make_website():
     setup_dirs()
