@@ -253,7 +253,7 @@ a:focus { outline: thin dotted; }
 input[type="radio"] { vertical-align: text-bottom; }
 input[type="checkbox"] { vertical-align: bottom; }
 
-input[type="text"]::placeholder {  
+input[type="text"]::placeholder, input.ui-autocomplete-input::placeholder {  
 	/* Firefox, Chrome, Opera */ 
 	text-align: center; 
 } 
@@ -333,23 +333,23 @@ button { width: auto; overflow: visible; }
 }
 
 #lowerContainer {
-	position: fixed;
-    bottom: 0;
+	/*position: fixed;
+    bottom: 0;*/
 	left: 0;
 	right: 0;
-	z-index: 10;
+	/*z-index: 10;*/
 	margin: 0px auto;
 	width: auto;
 	max-width: 512px;
 }
 
 #blurContainer {	
- 	position: absolute;
-    height: 100%;
+ 	/*position: absolute;
+    height: 100%;*/
     width: 100%;
-    z-index: -10;
+    /*z-index: -10;
 	background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(188, 188, 188, 0.49), rgba(148, 147, 144, 1));
-	filter: blur(40px);
+	filter: blur(40px);*/
 }
 
 #footer
@@ -363,7 +363,7 @@ button { width: auto; overflow: visible; }
 		rgba(247, 247, 247, 0),
 		rgba(0, 0, 0, 0.15)
 	);
-	border-bottom: 1px solid white;
+	/*border-bottom: 1px solid white;*/
 }
 
 #footer p
@@ -372,7 +372,7 @@ button { width: auto; overflow: visible; }
 	margin: 0 auto;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	background: radial-gradient(farthest-side, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+	/*background: radial-gradient(farthest-side, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));*/
 }
 
 #footer table {

@@ -12,7 +12,7 @@ SITENAME = "Weizor's Grimoire"
 PRODUCTION_BUILD = True # set to False if testing on local mac webserver, to put cgi files in right place for default apache installation
 #HTML_DIR = 'html/' # the directory in which the html files will be created (make sure you have write privileges)
 HTML_DIR = '/Users/jcampbell/Sites/root/d2/'
-CGI_DIR = '/Library/WebServer/CGI-Executables' if not PRODUCTION_BUILD else HTML_DIR+'cgi/'
+CGI_DIR = '/Library/WebServer/CGI-Executables' if not PRODUCTION_BUILD else HTML_DIR+'cgi-bin/'
 ROOT_DIR = '/d2/' # the site path that all links will start with. e.g. "/d2" for http://www.campbelljc.com/d2
 
 def setup_dirs():
@@ -29,15 +29,17 @@ def setup_dirs():
         os.makedirs(HTML_DIR + "/type")
         os.makedirs(HTML_DIR + "/subtype")
         os.makedirs(HTML_DIR + "/guide")
-        if PRODUCTION_BUILD:
-            os.makedirs(CGI_DIR)
-            with open(CGI_DIR+"/.htaccess", 'w') as f:
-                f.write('AddHandler cgi-script .cgi\nOptions +ExecCGI\n')
+        os.makedirs(CGI_DIR)
+    with open(CGI_DIR+"/.htaccess", 'w') as f:
+        f.write('AddHandler cgi-script .cgi .py\nOptions +ExecCGI\n')
     for file in glob.glob(r'*.py'):
         shutil.copy(file, CGI_DIR)
-    shutil.copy("items.dll", CGI_DIR)
-    os.system("chmod 755 "+CGI_DIR+"/create_guide.py")
-    #if not os.path.exists(HTML_DIR + "/js"):
+    for file in glob.glob(r'*.dll'):
+        shutil.copy(file, CGI_DIR)
+    for file in glob.glob(r'*.pkl'):
+        shutil.copy(file, CGI_DIR)
+    #os.system("chmod -R 755 "+CGI_DIR)
+    #os.system("chmod a+rx "+CGI_DIR+"/create_guide.py")
     if os.path.exists(HTML_DIR + "/css"):
         shutil.rmtree(HTML_DIR + "/css")
     shutil.copytree("css", HTML_DIR + "/css")
@@ -48,8 +50,10 @@ def setup_dirs():
 def output_htaccess():
     contents = """RewriteEngine On
 
+RewriteCond %{REQUEST_URI} !(css|js) [NC]
 RewriteCond %{REQUEST_URI} "!=/d2/index.html"
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_METHOD} !POST
 RewriteCond %{HTTP:X-Requested-With} !=XMLHttpRequest
 RewriteCond %{HTTP:X-REQUESTED-WITH} !^(XMLHttpRequest)$
 RewriteRule ^([^/]+)(/|$) /d2/index.html#%{REQUEST_URI} [L,NE,R=302]"""
@@ -212,13 +216,6 @@ def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stup
     header += """
             </head><body>"""
     return header
-
-#def get_body_header():
-#    return "<div id='container'>\n\
-#          <div id='headerContainer'>\n\
-#            <p id='headerText'><a href='/d2/index.html'>weizor's grimoire</a></p>\n\
-#          </div>\n\
-#          <div id='contentContainer'>"
 
 def output_item_file(item, indexes):
     base_attrs, attrs, end_attrs = get_html_for_attributes(item.name, item.attr_dict, [lambda name: name in start_atts, lambda name: name in end_atts, lambda name: name not in start_atts and name not in end_atts])
@@ -557,7 +554,7 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
     <div id='headerContainer'>\n
         <p id='headerText'><a href="/d2/site_map.html">weizor's grimoire</a></p>\n
         <div class='ui-widget'>\n
-            <input spellcheck='false' id='tags' placeholder='enter item/set/attribute' />\n
+            <input spellcheck='false' id='tags' placeholder='enter search term' />\n
         </div>\n
     </div>\n
     <div id='contentContainer'>
@@ -886,19 +883,18 @@ def output_guide_creation_page(items, sets, attributes):
                   }});\n\
                 }});'.format(classnames, field_js, fn_defs)
     
-    body = "<form action='/cgi-bin/create_guide.py' method='post'>\n\
+    body =  '<script type="text/javascript">' + script + '</script>' + "<form action='/d2/cgi-bin/create_guide.py' method='post'>\n\
           <div id='guide_form'>\n\
-            <p><input type='text' placeholder='Gear Guide Name' name='name' id='name' /></p>\n\
+            <p><input type='text' placeholder='Gear Guide Name' name='name' id='name' required /></p>\n\
             <div class='ui-widget'>\n\
-              <p><input spellcheck='false' placeholder='classname' id='classname' name='classname' /></p>\n\
+              <p><input spellcheck='false' placeholder='classname' id='classname' name='classname' required /></p>\n\
             </div>\n\
             <p><input type='text' placeholder='Link to guide (optional)' name='link' id='link' /></p>\n\
             {0}\n\
             <p></p>\n\
             <button type='submit'>Submit</button>\n\
           </div>\n\
-        </form>\n\
-      </div>".format(field_inputs)
+        </form>".format(field_inputs)
         
     with open(HTML_DIR + "/create_guide.html", 'w') as itemfile:
         itemfile.write(body)
@@ -956,12 +952,12 @@ def output_guides(guides):
             itemfile.write(html)
 
 def make_website():
-    items, sets, attributes = load_data()
-    guides = load_guides()
-    
     setup_dirs()
     output_htaccess()
-    
+
+    items, sets, attributes = load_data()
+    guides = load_guides()
+            
     cat_dicts = []
     for cat_name, disp_name in [('tier', 'Item Tiers'), ('type', 'Item Types'), ('stype', 'Item Subtypes')]:
         cat_dict = get_cat_dict(items, cat_name)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python3
 
 import MySQLdb
 import cgi, json, jsonpickle
@@ -8,7 +8,7 @@ from utils import load_data
 from collections import namedtuple
 from config import *
 
-form = cgi.FieldStorage()
+form = cgi.FieldStorage(environ={'REQUEST_METHOD':'POST'})
 vals = {}
 for key in form.keys():
     vals[ key ] = form[ key ].value
@@ -111,13 +111,14 @@ print("Content-type:text/html\r\n\r\n")
 print("<html><head>\
          <title>Gear Guide Creation</title>\
          <link rel='stylesheet' type='text/css' media='screen' href='/d2/style.css' />\
+         <meta http-equiv='refresh' content='2;url=http://localhost/d2/' />\
        </head><body>")
 print("<div id='container'>\n\
           <div id='headerContainer'>\n\
             <p id='headerText'><a href='/d2/index.html'>weizor's grimoire</a></p>\n\
           </div>\n\
           <div id='contentContainer'>\n\
-            <h2>Guide saved successfully.</h2>\n\
+            <h2>Guide saved successfully. Redirecting in 2 seconds.</h2>\n\
           </div>\n\
        </div>\n")
 print("</body></html>")

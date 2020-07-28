@@ -3,11 +3,6 @@ from attribute import *
 from collections import namedtuple, defaultdict
 
 eth_attr_match = None
-for attr_match in attribute_matches:
-    if attr_match.name == 'Ethereal':
-        eth_attr_match = attr_match
-        break
-assert eth_attr_match is not None
 
 class Category(object):
     def __init__(self, name, quality):
@@ -41,6 +36,15 @@ def get_cat_dict(items, cat_name):
 
 class Item(object):
     def __init__(self, name, imagepath, quality, tier, itype, stype, attr_dict):
+        
+        global eth_attr_match
+        if eth_attr_match is None:
+            for attr_match in attribute_matches:
+                if attr_match.name == 'Ethereal':
+                    eth_attr_match = attr_match
+                    break
+            assert eth_attr_match is not None
+        
         self.name = name
         self.imagepath = imagepath
         self.quality = quality # "Unique"
@@ -94,7 +98,7 @@ class Item(object):
                 values = item_attr.value_dict
                 text = item_attr.text
                 
-                print(text, values)
+                #print(text, values)
                 
                 # TODO
                 keys_to_update = ['r11', 'r12', 'r21', 'r22', 'ravg1', 'ravg2']
@@ -117,7 +121,7 @@ class Item(object):
                 
                 text += ' ({}-{} avg)'.format(values['ravg1'], values['ravg2'])
                 
-                print(text, values)
+                #print(text, values)
                 #input("")
             elif attr.name == "Durability":
                 assert len(item_attr.value_dict) == 1
