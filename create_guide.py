@@ -69,8 +69,8 @@ for typename, typeid, typelist in item_types:
     custom_socket_atts = []
     
     cur_soc = 0
-    while 'socket_{0}_{1}'.format(typeid, cur_soc) in vals:
-        sockets.append(vals['socket_{0}_{1}'.format(typeid, cur_soc)])
+    while 'sockets_{0}_{1}'.format(typeid, cur_soc) in vals:
+        sockets.append(vals['sockets_{0}_{1}'.format(typeid, cur_soc)])
         cur_soc += 1
     
     cur_soc = 0
@@ -96,7 +96,7 @@ for typename, typeid, typelist in item_types:
     
     gear_pieces.append(GearPiece(typename, typeid, gear_name, custom_atts, sockets, custom_socket_atts, ethereal, runeword_base, desc, qty))
 
-guide = GearGuide(vals['name'], vals['link'] if 'link' in vals else '', vals['classname'], gear_pieces)
+guide = GearGuide(vals['name'], vals['author'], vals['link'] if 'link' in vals else '', vals['classname'], gear_pieces)
 guide_json = jsonpickle.encode(guide)
 
 db = MySQLdb.connect(host=DBHOST, user=DBUSER, passwd=DBPASSWORD, db=DBNAME)

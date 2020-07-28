@@ -35,8 +35,9 @@ class GearPiece(object):
                 break
 
 class GearGuide(object):
-    def __init__(self, name, link, classname, gear_pieces):
+    def __init__(self, name, author, link, classname, gear_pieces):
         self.name = name
+        self.author = author
         self.link = link
         self.classname = classname
         self.gear_pieces = gear_pieces

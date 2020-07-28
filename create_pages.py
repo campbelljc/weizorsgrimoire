@@ -652,7 +652,7 @@ def output_site_map(items, sets, attributes, cat_dicts, index_links):
         <p class='header'>indexes</p>\n
         {0}\n
         <p class='header'>tools</p>\n
-        <p><a href='./create_guide.html'>create gear guide</a></p>\n
+        <p><a href='/d2/create_guide.html'>create gear guide</a></p>\n
         <hr class='item_separator' />\n
         <p><input type="checkbox" id="show_col_info" style="margin-left: 5px" /> show collector fields</p>\n
         <script>\n
@@ -775,7 +775,7 @@ def output_guide_creation_page(items, sets, attributes):
                  var new_field_html = \"<input spellcheck='false' placeholder='\"+new_field_name+\"' class='item_input \"+name+\"' id='\" + new_field_name + \"' name='\" + new_field_name + \"' />\";\n\
                  var checkboxId = 'custom_'+name+field_num+'_'+field_id;\n\
                  new_field_html += \"<span class='field_name'><input type='checkbox' id='\"+checkboxId+\"' /> Custom \"+name+\"</span><br />\";\n\
-                 var desc_field_name = new_field_name + '_desc'; \n\
+                 var desc_field_name = 'desc_' + new_field_name; \n\
                  if (desc_field)\n\
                     new_field_html += \"<textarea name='\"+desc_field_name+\"' id='\"+desc_field_name+\"' class='item_desc' rows='1' placeholder='Description' /></textarea>\"\n\
                  $(field_container_id).append(new_field_html);\n\
@@ -807,7 +807,7 @@ def output_guide_creation_page(items, sets, attributes):
                          $('#sockets_{0}').empty();\n\
                          for(i=0; i<ui.item.sockets; i++){{\n\
                            // here we add fields for each socket.\n\
-                           new_item_div('{0}', 'socket', sockets, false, false, false);\n\
+                           new_item_div('{0}', 'sockets', sockets, false, false, false);\n\
                          }}\n\
                          if (ui.item.runeword === true){{\n\
                            $('#runeword_base_{0}').show();\n\
@@ -842,6 +842,7 @@ def output_guide_creation_page(items, sets, attributes):
     
     field_js += 'var {0} = [{1}];\n\
                  new_item_div("charm", "charm", charms, true, true, true);'.format(charms.id, charms.type_vals)
+    
     field_js += "$('.socket').autocomplete({source: sockets});\n\
                  $('.ethereal').hide();\n\
                  $('.runeword_base').hide();\n"
@@ -860,7 +861,7 @@ def output_guide_creation_page(items, sets, attributes):
                             <div id='custom_fields_sockets_{0}'></div>\n\
                             <span class='field_name ethereal' id='ethereal_{0}'><input type='checkbox' name='ethereal_{0}' /> Ethereal</span>\n\
                           </p>\n\
-                          <textarea name='{0}_desc' id='{0}_desc' class='item_desc' rows='1' placeholder='Description' /></textarea>\n\
+                          <textarea name='desc_{0}' id='{0}_desc' class='item_desc' rows='1' placeholder='Description' /></textarea>\n\
                         </fieldset></div>\n".format(field.id, field.name)
     
     field_inputs += "<div class='ui-widget'><fieldset>\n\
@@ -890,6 +891,7 @@ def output_guide_creation_page(items, sets, attributes):
     body =  '<script type="text/javascript">' + script + '</script>' + "<form action='/d2/cgi-bin/create_guide.py' method='post'>\n\
           <div id='guide_form'>\n\
             <p><input type='text' placeholder='Gear Guide Name' name='name' id='name' required /></p>\n\
+            <p><input type='text' placeholder='Author' name='author' id='author' required /></p>\n\
             <div class='ui-widget'>\n\
               <p><input spellcheck='false' placeholder='classname' id='classname' name='classname' required /></p>\n\
             </div>\n\
@@ -922,8 +924,8 @@ def create_databases():
 def output_guides(guides):
     for guide in guides:
         body = "<div class='item_container'>\n\
-                  <p class='item_name'>{0}</p>\n\
-                  <p class='item_type'>{1}</p>\n".format(guide.name, guide.classname)
+                  <p class='item_name'>{0} by {2}</p>\n\
+                  <p class='item_type'>{1}</p>\n".format(guide.name, guide.classname, guide.author)
         if len(guide.link) > 0:
             body += "<p class='item_type'><a href='{0}'>more details</a></p>".format(guide.link)
         
@@ -936,7 +938,8 @@ def output_guides(guides):
             if gear_piece.ethereal:
                 body += "<p class='ethereal'>(Ethereal)</p>\n"
             if gear_piece.runeword_base is not None:
-                body += "<p class='item_name_small white>{0}</p>\n".format("<a href='"+get_link(gear_piece.runeword_base)+"'>"+gear_piece.runeword_base.name+"</a>")
+                body += "<p class='item_name_small white'><a href='{0}'>{1}</a></p>\n".format(get_link(gear_piece.runeword_base), gear_piece.runeword_base.name)
+
             if len(gear_piece.sockets) > 0 or len(gear_piece.custom_socket_atts) > 0:
                 body += "<p>Sockets</p>\n"
             for socket in gear_piece.matched_sockets:
