@@ -459,11 +459,46 @@ def output_set_files(sets):
         with open(get_link(itemset, False), 'w') as itemfile:
             itemfile.write(body)
 
-def write_html_for_table(cat, table_headers, itemrows):
-    # save file...
+TableCol = namedtuple('tablecol', 'link classval value subvalue')
+TableRow = namedtuple('tablerow', 'cols')
+
+def get_html_for_table(cat, table_headers, itemrows, sort_val=False):
     # ref sorting: https://github.com/joequery/Stupid-Table-Plugin#readme
     # ref sort(a,b): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-    body = """<script type="text/javascript">$(function(){\n
+
+    headers = ""
+    for i, (title, sort_type) in enumerate(table_headers):
+        headers += "<th class='attr_table_header' data-sort='{1}'>{0}</th>\n".format(title, sort_type)
+    
+    rows = ""
+    for row in itemrows:
+        rows += "<tr class='attr_row'>"
+        for tcol in row.cols:
+            col = "<td>"
+            if tcol.link != "":
+                col += "<a href='{0}' class='{1}'>".format(tcol.link, tcol.classval)
+            col += str(tcol.value)
+            if tcol.subvalue != "":
+                col += "<br /><span class='item_type'>{0}</span>".format(tcol.subvalue)
+            if tcol.link != "":
+                col += "</a>"
+            col += "</td>"
+            rows += col
+            #if len(col) == 1:
+            #    rows += "<td>{0}</td>\n".format(col)
+            #elif len(col) == 3:
+            #    rows += "<td><a href='{0}' class='{2}'>{1}</a></td>\n".format(col[0], col[1], col[2])
+            #elif len(col) == 4:
+            #    rows += "<td><a href='{0}' class='{2}'>{1}<br /><span class='item_type'>{3}</span></a></td>\n".format(col[0], col[1], col[2], col[3])
+        rows += "</tr>\n"
+    
+    body = "<p class='attr_title'><strong>{1}</strong></p>\
+      <table class='centerTable' id='attr_table'>\
+      <thead><tr>{2}</tr></thead><tbody>\
+      {0}\
+      </tbody></table>".format(rows, cat, headers)
+    
+    script = """<script type="text/javascript">$(function(){\n
                   $("#attr_table").stupidtable({\n
                     "range_string":function(a,b){\n
                       var valA = a;\n
@@ -478,18 +513,15 @@ def write_html_for_table(cat, table_headers, itemrows):
                       }\n
                       return parseInt(valA,10) - parseInt(valB,10);\n
                     }\n
-                  });\n
-                });</script>"""
-
-    body += "<p class='attr_title'><strong>{1}</strong></p>\
-      <table class='centerTable' id='attr_table'>\
-      <thead><tr>{2}</tr></thead><tbody>\
-      {0}\
-      </tbody></table>".format(itemrows, cat.name, table_headers)
-
-    #html = get_header(cat.name, script, jquery=True, stupidtable=True) + body + get_footer()
-    with open(get_link(cat, False), 'w') as itemfile:
-        itemfile.write(body)
+                  });"""
+    
+    if sort_val:
+        script += """var $th_to_sort = $("#attr_table").find("thead th").eq(1);
+                     $th_to_sort.stupidsort('desc');"""
+    
+    script += "});</script>"""
+    
+    return body + script
 
 def output_attribute_files(items_per_attribute):
     for attribute in items_per_attribute:
@@ -497,29 +529,42 @@ def output_attribute_files(items_per_attribute):
         for item, item_attr in items_per_attribute[attribute]:
             has_val_text.append(len(item_attr.value_text) > 0)
         display_value_column = sum(has_val_text) > 0
-    
-        itemrows = ''
+        
+        rows = []
+        
         for item, item_attr in items_per_attribute[attribute]:
-            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}<br /><span class="item_type">{3}</span></a></td>'.format(get_link(item), item.name, item.quality, str(item.type))
+            cols = [TableCol(link=get_link(item), value=item.name, classval=item.quality, subvalue=str(item.type))]
             if display_value_column:
-                itemrows += "<td>{0}</td>".format(item_attr.value_text)
-            itemrows += "</tr>"
+                cols.append(TableCol(value=item_attr.value_text, link='', classval='', subvalue=''))
+            rows.append(TableRow(cols=cols))
+            #row = []
+            #row.append([get_link(item), item.name, item.quality, str(item.type)])
+            #itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}<br /><span class="item_type">{3}</span></a></td>'.format(get_link(item), item.name, item.quality, str(item.type))
+            #if display_value_column:
+            #    itemrows += "<td>{0}</td>".format(item_attr.value_text)
+            #rows.append(row)
         
-        table_headers = "<th class='attr_table_header' data-sort='string'>item</th>"
+        table_headers = [('item', 'string')]
         if display_value_column:
-            table_headers += "<th class='attr_table_header' data-sort='range_string'>value</th>"
+            table_headers += [('value', 'range_string')]
         
-        write_html_for_table(attribute, table_headers, itemrows)
+        body = get_html_for_table(attribute.name, table_headers, rows)
+        with open(get_link(attribute, False), 'w') as itemfile:
+            itemfile.write(body)
 
 def output_cat_files(items_per_cat):
     for cat in items_per_cat:
-        itemrows = ''
-        for item in items_per_cat[cat]:
-            itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format(get_link(item), item.name, item.quality)
+        #itemrows = ''
+        #for item in items_per_cat[cat]:
+        #    itemrows += '<tr class="attr_row"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format(get_link(item), item.name, item.quality)
         
-        table_headers = "<th class='attr_table_header' data-sort='string'>item</th>"
+        rows = [TableRow(cols=[TableCol(link=get_link(item), value=item.name, classval=item.quality, subvalue='')]) for item in items_per_cat[cat]]
         
-        write_html_for_table(cat, table_headers, itemrows)
+        #rows = [[(get_link(item), item.name, item.quality)] for item in items_per_cat[cat]]
+        
+        body = get_html_for_table(cat.name, [('item', 'string')], rows)
+        with open(get_link(cat, False), 'w') as itemfile:
+            itemfile.write(body)
 
 def output_main_page(items, sets, attributes, cat_dicts, index_links):
     names = ""
@@ -923,9 +968,9 @@ def create_databases():
 
 def output_guides(guides):
     for guide in guides:
-        body = "<div class='item_container'>\n\
-                  <p class='item_name'>{0} by {2}</p>\n\
-                  <p class='item_type'>{1}</p>\n".format(guide.name, guide.classname, guide.author)
+        body = "<p class='item_name'>{0} by {2}</p>\n\
+                <p class='item_type'>{1}</p>\n".format(guide.name, guide.classname, guide.author)
+        
         if len(guide.link) > 0:
             body += "<p class='item_type'><a href='{0}'>more details</a></p>".format(guide.link)
         
@@ -952,7 +997,39 @@ def output_guides(guides):
                 body += "<p>{0}</p>\n".format(gear_piece.desc)
             body += "</fieldset></div>"
         
-        body += "</div>"
+        # combined stats
+        stat_totals = defaultdict(int)
+        
+        attrs = []
+        for gear_piece in guide.gear_pieces:
+            if gear_piece.matched_item is not None:
+                attrs.extend(list(gear_piece.matched_item.attr_dict.values()))
+            attrs.extend(gear_piece.custom_atts)
+            for soc in gear_piece.matched_sockets:
+                attrs.extend(list(soc.attr_dict.values()))
+            attrs.extend(gear_piece.custom_socket_atts)
+        
+        assert all(type(attr) is Attribute for attr in attrs)
+        for attr in attrs:
+            # add high end of range
+            if attr.sort_value == True:
+                stat_totals[attr.name] = 0
+            elif isinstance(stat_totals[attr.name], (int, float)):
+                stat_totals[attr.name] += int(attr.sort_value)
+            else:
+                raise Exception(stat_totals[attr.name])
+
+        rows = []
+        for attr_name in stat_totals:
+            cols = [TableCol(value=attr_name, link='', classval='', subvalue='')]
+            if stat_totals[attr_name] is not None:
+                cols.append(TableCol(value=stat_totals[attr_name], link='', classval='', subvalue=''))
+            rows.append(TableRow(cols=cols))
+        #rows = [TableRow(cols=[TableCol(value=attr_name, link='', classval='', subvalue=''), TableCol(value=stat_totals[attr_name], link='', classval='', subvalue='')]) for attr_name in stat_totals]
+        #[[attr_name, stat_totals[attr_name]] for attr_name in stat_totals]
+        #print(rows)
+        # output table
+        body += get_html_for_table("Attribute totals", [("Attribute", 'string'), ("Total", 'range_string')], rows, sort_val=True)
         
         with open(get_link(guide, False), 'w') as itemfile:
             itemfile.write(body)
@@ -963,6 +1040,7 @@ def make_website():
 
     items, sets, attributes = load_data()
     guides = load_guides()
+    output_guides(guides)
             
     cat_dicts = []
     for cat_name, disp_name in [('tier', 'Item Tiers'), ('type', 'Item Types'), ('stype', 'Item Subtypes')]:
@@ -987,7 +1065,6 @@ def make_website():
     
     output_set_files(sets)
     output_attribute_files(attributes)
-    output_guides(guides)
     output_guide_creation_page(items, sets, attributes)
     output_site_map(items, sets, attributes, cat_dicts, index_links)
     output_main_page(items, sets, attributes, cat_dicts, index_links)
