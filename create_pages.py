@@ -45,6 +45,18 @@ def setup_dirs():
         shutil.rmtree(HTML_DIR + "/js")
     shutil.copytree("js", HTML_DIR + "/js")
 
+def output_htaccess():
+    contents = """RewriteEngine On
+
+RewriteCond %{REQUEST_URI} "!=/d2/index.html"
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{HTTP:X-Requested-With} !=XMLHttpRequest
+RewriteCond %{HTTP:X-REQUESTED-WITH} !^(XMLHttpRequest)$
+RewriteRule ^([^/]+)(/|$) /d2/index.html#%{REQUEST_URI} [L,NE,R=302]"""
+    
+    with open(HTML_DIR + "/.htaccess", 'w') as f:
+        f.write(contents)
+
 def get_link(item, root=True):
     link = "/" + item.quality.lower() + "/" + item.name.lower().replace("%", "pct").replace("+", "plus").replace("-", "neg").replace("(", "").replace(")", "").replace(" ", "_").replace("'", "").replace("/", "_").replace(":", "")
     if type(item) is Item and item.ethereal:
@@ -554,6 +566,7 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
     
     <script type="text/javascript">
         var first = true;
+        var loading_hash = false;
         function ajaxify_links()
         {
             $('a').click(function(event) { 
@@ -574,15 +587,28 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
                 return false;
             });
         }
-    
-        $('#contentContainer').load('site_map.html', function(responseTxt, statusTxt, xhr){
-            if (statusTxt == "success")
-            {
-                ajaxify_links();
+        
+        $( window ).on( "load", function() {
+            var page = 'site_map.html';
+            if(window.location.hash) {
+                // check if hash present (due to htaccess url rewriting)
+                page = window.location.hash.slice(1);
+                loading_hash = true;
             }
+            $('#contentContainer').load(page, function(responseTxt, statusTxt, xhr){
+                if (statusTxt == "success")
+                {
+                    window.location.hash = '';
+                    //window.history.pushState(page, null, page);
+                    ajaxify_links();
+                    loading_hash = false;
+                }
+            });
         });
         
         window.onpopstate = function() {  
+            if (loading_hash)
+                return false;
             $('#contentContainer').load(location.href, function(responseTxt, statusTxt, xhr){
                 if (statusTxt == "success")
                 {
@@ -934,6 +960,7 @@ def make_website():
     guides = load_guides()
     
     setup_dirs()
+    output_htaccess()
     
     cat_dicts = []
     for cat_name, disp_name in [('tier', 'Item Tiers'), ('type', 'Item Types'), ('stype', 'Item Subtypes')]:
