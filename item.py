@@ -63,6 +63,9 @@ class Item(object):
         self.ethereal = False
         self.eth_item = None
     
+    def __eq__(self, other):
+        return self.name == other.name and self.ethereal == other.ethereal
+    
     def create_ethereal_version(self):
         assert self.can_spawn_ethereal
         #print("Creating ethereal version of", self.name, self.type, self.stype)

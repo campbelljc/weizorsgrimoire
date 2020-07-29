@@ -217,7 +217,7 @@ def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stup
             </head><body>"""
     return header
 
-def output_item_file(item, indexes):
+def output_item_file(item, indexes, guides):
     base_attrs, attrs, end_attrs = get_html_for_attributes(item.name, item.attr_dict, [lambda name: name in start_atts, lambda name: name in end_atts, lambda name: name not in start_atts and name not in end_atts])
 
     matched_link = None
@@ -350,6 +350,23 @@ def output_item_file(item, indexes):
             });
         </script>
     """
+    
+    rows = ''
+    # guide listing
+    for guide in guides:
+        for gear_piece in guide.gear_pieces:
+            if gear_piece.matched_item is not None and gear_piece.matched_item == item:
+                rows += "<tr><td><a href='{1}'>{0}</a></td></tr>".format(guide.name, get_link(guide))
+                break
+    if len(rows) > 0:
+        body += """<hr class='item_separator' />
+            <p class="attr_db">
+                guides that list this item
+                <table id="character_table">
+                {0}
+                </table>
+            </p>
+        """.format(rows)
     
     #html = get_header(item.name, jquery=True, jquery_ui=True, dexie=True, table=True) + body + get_footer(dexie=True)
     with open(get_link(item, False), 'w') as itemfile:
@@ -585,8 +602,11 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
                       $('#contentContainer').load(page, function(responseTxt, statusTxt, xhr) {\n
                           if (statusTxt == "success")\n
                           {\n
+                              $('body, html').animate({scrollTop:$('#contentContainer').offset().top}, 'slow');
                               window.history.pushState(page, null, page);\n
                               ajaxify_links();\n
+                              $('#contentContainer').scrollTop(0);
+                              
                           }\n
                       });\n
                       return false;\n
@@ -643,10 +663,13 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
             $('#contentContainer').load(page, function(responseTxt, statusTxt, xhr){
                 if (statusTxt == "success")
                 {
-                    window.location.hash = '';
+                    $('body, html').animate({scrollTop:$('#contentContainer').offset().top}, 'slow');
+                    //window.location.hash = '';
                     //window.history.pushState(page, null, page);
                     ajaxify_links();
                     loading_hash = false;
+                    $('#contentContainer').scrollTop(0);
+                    
                 }
             });
         });
@@ -657,10 +680,21 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
             $('#contentContainer').load(location.href, function(responseTxt, statusTxt, xhr){
                 if (statusTxt == "success")
                 {
+                    $('body, html').animate({scrollTop:$('#contentContainer').offset().top}, 'slow');
+                    $('#contentContainer').scrollTop(0);
+                    
                     ajaxify_links();
                 }
             });
         };
+        
+        $( document ).ajaxSuccess(function() {
+            //alert("scrolling");
+            setTimeout(function() {
+                $('html, body').animate({ scrollTop: 0 }, 500);
+            }, 10);
+            
+        });
     </script>"""
 
     html = get_header(script=script, jquery=True, jquery_ui=True, dexie=True, table=True, stupidtable=True) + body + get_footer(dexie=True)
@@ -1059,9 +1093,9 @@ def make_website():
             elif item.quality == 'Gem':
                 output_gem_file(item)
         else:
-            output_item_file(item, index_links)
+            output_item_file(item, index_links, guides)
             if item.eth_item is not None:
-                output_item_file(item.eth_item, index_links)
+                output_item_file(item.eth_item, index_links, guides)
     
     output_set_files(sets)
     output_attribute_files(attributes)
