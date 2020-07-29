@@ -161,9 +161,9 @@ def get_footer(dexie=False):
         <script>\n
             db.config.toArray().then( function(arr) {{\n
                 show_fields = arr[0];
-                if (show_fields.status == 0) {
-                    $(".attr_db").hide();
-                }
+                //if (show_fields.status == 0) {
+                //    $(".attr_db").hide();
+                //}
             }});
         </script>\n"""
     return footer + """</body></html>"""
@@ -190,6 +190,8 @@ def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stup
     if dexie:
         assert jquery
         header += """<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+                   <script src="https://unpkg.com/dexie-export-import/dist/dexie-export-import.js"></script>
+                   <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
                    <script type="text/javascript">
                        var db = new Dexie("grimoire");
                        db.version(1).stores({
@@ -636,8 +638,9 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
         {
             $('a').click(function(event) { 
                 var page = $(this).attr('href');
-                if (page.includes("d2/"))
+                if (page.includes("d2/") && (!window.location.hash || window.location.hash != '#'))
                 {
+                    //alert("click");
                     event.preventDefault();
                     $('#contentContainer').load(page, function(responseTxt, statusTxt, xhr){
                         if (statusTxt == "success")
@@ -677,7 +680,7 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
                 return false;
             $('#contentContainer').load(location.href, function(responseTxt, statusTxt, xhr){
                 if (statusTxt == "success")
-                {                    
+                {
                     ajaxify_links();
                 }
             });
@@ -717,9 +720,17 @@ def output_site_map(items, sets, attributes, cat_dicts, index_links):
                   $("#tags").focus();\
                 }});'.format(names)
     
-    index_pages = ""
-    for item_type, index_link in index_links:
-        index_pages += '<p><a href="../{0}">{1}</a></p>'.format(index_link, item_type)
+    classes = {"Unique Items": "Unique", "Set Items": "Set", "Runewords": "runeword", "Runes": "rune", "Gems": "gem", "Attributes": "attr", "White Items": "white"}
+    
+    index_pages = "<p>"
+    for i, (item_type, index_link) in enumerate(index_links):
+        style = ''
+        if i not in [2, 6, 10, 11]:
+            style = 'margin-right: 10px;'
+        index_pages += '<a href="../{0}" class="{2}" style="{3}">{1}</a>'.format(index_link, item_type, classes[item_type] if item_type in classes else '', style)
+        if i in [2, 6, 10]:
+            index_pages += "</p><p>"
+    index_pages += "</p>"
     
     body = """
         <p class='header'>indexes</p>\n
@@ -727,7 +738,12 @@ def output_site_map(items, sets, attributes, cat_dicts, index_links):
         <p class='header'>tools</p>\n
         <p><a href='/d2/create_guide.html'>create gear guide</a></p>\n
         <p><a href='/d2/available_rws.html'>available runewords</a></p>\n
-        <p><a href='/d2/inventory.html'>your items</a></p>\n
+        <p><a href='/d2/inventory.html'>your items</a></p>
+        <p><a href='/d2/db.html'>import/export db</a></p>
+    """.format(index_pages)
+    
+    # collection fields checkbox
+    x = """
         <hr class='item_separator' />\n
         <p><input type="checkbox" id="show_col_info" style="margin-left: 5px" /> show collector fields</p>\n
         <script>\n
@@ -743,12 +759,12 @@ def output_site_map(items, sets, attributes, cat_dicts, index_links):
                 }});\n
             }});
         </script>\n
-      </div>""".format(index_pages)
+      </div>""" #.format(index_pages)
 
     with open(HTML_DIR + "/site_map.html", 'w') as itemfile:
         itemfile.write(body)
 
-def output_index_pages(items, sets, attributes, cat_dicts, guides):
+def get_index_links(items, sets, attributes, cat_dicts, guides):
     unique_items = [item for item in items if isinstance(item, UniqueItem)]
     set_items = [item for item in items if isinstance(item, SetItem)]
     rw_items = [item for item in items if isinstance(item, Runeword)]
@@ -762,7 +778,7 @@ def output_index_pages(items, sets, attributes, cat_dicts, guides):
     #    if len(attributes[attribute]) == 1:
     #        unique_attributes.append(attribute)
     
-    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (item_sets, 'Item Sets'), (rw_items, 'Runewords'), (runes, 'Runes'), (gems, 'Gems'), (list(attributes), 'Attributes'), (white_items, 'White Items'), *[(list(d), n) for d, n in cat_dicts], (guides, 'Guides')]
+    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (rw_items, 'Runewords'), (white_items, 'White Items'), (item_sets, 'Item Sets'), (runes, 'Runes'), (gems, 'Gems'), (list(attributes), 'Attributes'), *[(list(d), n) for d, n in cat_dicts], (guides, 'Guides')]
     #, (unique_attributes, 'Rarely-occurring attributes')]
     
     links = []
@@ -1067,6 +1083,51 @@ def output_inventory_page(items):
     with open(HTML_DIR + "/inventory.html", 'w') as itemfile:
         itemfile.write(body)
 
+def output_db_page():
+    body = """
+    
+    <div class="column">
+        <p><a id="exportLink" href="#">Export database</a></p>
+        <div id="dropzone">
+            Drop database file here to import
+        </div>
+    </div>
+    <div id="status"></div>
+    
+    <script>
+    $(function(){
+        $('#exportLink').click(function() {
+            db.export({prettyJson: true}).then(function(blob) {
+                download(blob, "my-grimoire-db.json", "application/json");
+            });
+        });
+        
+        $('#dropzone').on("dragover", function(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            event.originalEvent.dataTransfer.dropEffect = 'copy';
+        });
+        $('#dropzone').on("drop", function(event) {
+            event.stopPropagation();
+            event.preventDefault();
+
+            // Pick the File from the drop event (a File is also a Blob):
+            const file = event.originalEvent.dataTransfer.files[0];
+            if (!file) throw new Error(`Only files can be dropped here`);
+            console.log("Importing " + file.name);
+            db.import(file, {clearTablesBeforeImport: true}).then(function() {
+                $("#status").html("Import complete.");         
+                console.log("Import complete.");             
+            });
+        });
+    });
+    
+    </script>
+    """
+    
+    with open(HTML_DIR + "/db.html", 'w') as itemfile:
+        itemfile.write(body)
+
 def create_databases():
     print("Running sql.")
     db = MySQLdb.connect(host=DBHOST, user=DBUSER, passwd=DBPASSWORD)
@@ -1165,7 +1226,7 @@ def make_website():
         output_cat_files(cat_dict)
         cat_dicts.append((cat_dict, disp_name))
     
-    index_links = output_index_pages(items, sets, attributes, cat_dicts, guides)
+    index_links = get_index_links(items, sets, attributes, cat_dicts, guides)
     
     rws, runes = [], []
     for item in items:
@@ -1191,6 +1252,7 @@ def make_website():
     output_main_page(items, sets, attributes, cat_dicts, index_links)
     
     output_inventory_page(items)
+    output_db_page()
     
     #output_login_page()
     #output_register_page()

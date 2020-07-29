@@ -269,7 +269,7 @@ button { width: auto; overflow: visible; }
 #container {
 	min-height: 100%;
 	margin: 0px auto;
-	padding-bottom: 50px;
+	padding-bottom: 25px;
 	width: auto;
 	max-width: 512px;
 	text-align: center;
@@ -431,4 +431,17 @@ img .image-right {
 
 #mainTable {
 	margin-top: 20px;
+}
+
+#dropzone {
+  width: 250px;
+  height: 20px;
+  border: 2px dotted #bbb;
+  border-radius: 10px;
+  padding: 35px;
+  color: red;
+  text-align: center;
+  margin-left:auto; 
+  margin-right:auto;
+  margin-bottom: 20px;
 }
