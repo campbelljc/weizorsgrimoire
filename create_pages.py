@@ -97,8 +97,7 @@ def get_html_for_attributes(item_name, item_attrs, selection_fns):
             match = re.search(attr.highlight_regex, attr_text)
         
             if not match:
-                print(attr_text, " couldnt be matched to", attr.highlight_regex)
-                raise Exception
+                raise Exception(attr_text + " couldn't be matched to " + attr.highlight_regex)
         
             text_match = attr_text[match.span()[0]:match.span()[1]]
             text_match_link = '<a href="' + get_link(attr) + '">' + text_match + '</a>'
@@ -110,9 +109,6 @@ def get_html_for_attributes(item_name, item_attrs, selection_fns):
             html += "<br />"
         
         html = html[:-6].lower()
-        if len(attr_max_vals) == 0:
-            attr_htmls.append(html)
-            continue
         
         # script for db/inputs
         item_name = item_name.replace("'", "")
@@ -125,7 +121,7 @@ def get_html_for_attributes(item_name, item_attrs, selection_fns):
                     \n
                     db.items.where('name').equals('{0}').toArray().then( function(item_arr) {{\n
                         item = item_arr[0];\n
-                      """.format(item_name, str(attr_max_vals))
+                      """.format(item_name, str(attr_max_vals) if len(attr_max_vals) > 0 else "['']")
     
         for tag_id in range(len(attr_max_vals)):
             script += """
@@ -217,44 +213,8 @@ def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stup
             </head><body>"""
     return header
 
-def output_item_file(item, indexes, guides):
-    base_attrs, attrs, end_attrs = get_html_for_attributes(item.name, item.attr_dict, [lambda name: name in start_atts, lambda name: name in end_atts, lambda name: name not in start_atts and name not in end_atts])
-
-    matched_link = None
-    for item_type, index_link in indexes:
-        if item_type.lower().split()[0] == item.quality.lower():
-            matched_link = index_link
-    
-    quality = item.quality
-    if matched_link is not None:
-        quality = '<a href="../../../'+matched_link+'">'+quality+'</a>'
-    
-    typeinfo = ""
-    if item.tier is not None:
-        typeinfo = '<a href="'+get_link(item.tier)+'">'+item.tier.name+'</a> ' + typeinfo
-    typeinfo += '<a href="'+get_link(item.type)+'">'+item.type.name+'</a>'
-    
-    stypeinfo = ""
-    if item.stype is not None:
-        stypeinfo += '<a href="'+get_link(item.stype)+'">'+item.stype.name+'</a>'            
-    
-    set_info = ""
-    if isinstance(item, SetItem):
-        set_info = "<p class='item_type'>(<a href='"+get_link(item.set)+"'>"+item.set_name+"</a>)</p>"
-
-    body = "<div class='item_container'>\
-        <p class='item_name {9}'>{0}</p>\
-        {8}\
-        <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
-        <p class='item_stype'>{4} {3}</p>\
-        <p class='item_type'>({2})</p>\
-        <p class='item_attrs_small'>{5}</p>\
-        <p class='item_attrs attr'>{6}</p>\
-        <p class='item_attrs_small'>{7}</p>\
-      </div>".format(item.name, item.imagepath, typeinfo, stypeinfo, quality, base_attrs, attrs, end_attrs, set_info, item.quality)
-    
-    # collector info
-    body += """
+def get_item_collection_db_html(item):
+    body = """
         <hr class='item_separator' />
         <p class="attr_db">
             add new character
@@ -266,11 +226,10 @@ def output_item_file(item, indexes, guides):
                 <th>Account</th>
                 <th>Character</th>
                 <th>Notes</th>
+                <th>Qty</th>
             </tr></thead></table>
         </p>
-    """
-    
-    body += """<script>
+        <script>
             db.items.where('name').equals('"""+item.name.replace("'", "")+"""').toArray().then( function(item_arr) {\n
                 item = item_arr[0];
                 char_data = item.characters;
@@ -289,6 +248,10 @@ def output_item_file(item, indexes, guides):
                         "Notes": {
                             "class": "edit",
                             "type:": "string"
+                        },
+                        "Qty": {
+                            "class": "edit",
+                            "type:": "number"
                         }
                     },
                     data: char_data,
@@ -340,19 +303,59 @@ def output_item_file(item, indexes, guides):
                     
                         // store char/acc data in chars db
                         $.each(table_data, function(index, row) {
-                            db.characters.put({\n
-                                account: row.Account,\n
+                            db.characters.put({
+                                account: row.Account,
                                 name: row.Character
-                            });\n
+                            });
                         });
                     });
                 });
             });
         </script>
     """
+    return body
+
+def output_item_file(item, indexes, guides):
+    base_attrs, attrs, end_attrs = get_html_for_attributes(item.name, item.attr_dict, [lambda name: name in start_atts, lambda name: name in end_atts, lambda name: name not in start_atts and name not in end_atts])
+
+    matched_link = None
+    for item_type, index_link in indexes:
+        if item_type.lower().split()[0] == item.quality.lower():
+            matched_link = index_link
     
-    rows = ''
+    quality = item.quality
+    if matched_link is not None:
+        quality = '<a href="../../../'+matched_link+'">'+quality+'</a>'
+    
+    typeinfo = ""
+    if item.tier is not None:
+        typeinfo = '<a href="'+get_link(item.tier)+'">'+item.tier.name+'</a> ' + typeinfo
+    typeinfo += '<a href="'+get_link(item.type)+'">'+item.type.name+'</a>'
+    
+    stypeinfo = ""
+    if item.stype is not None:
+        stypeinfo += '<a href="'+get_link(item.stype)+'">'+item.stype.name+'</a>'            
+    
+    set_info = ""
+    if isinstance(item, SetItem):
+        set_info = "<p class='item_type'>(<a href='"+get_link(item.set)+"'>"+item.set_name+"</a>)</p>"
+
+    body = "<div class='item_container'>\
+        <p class='item_name {9}'>{0}</p>\
+        {8}\
+        <p class='item_image_p'><img src='{1}' alt='{0}' /></p>\
+        <p class='item_stype'>{4} {3}</p>\
+        <p class='item_type'>({2})</p>\
+        <p class='item_attrs_small'>{5}</p>\
+        <p class='item_attrs attr'>{6}</p>\
+        <p class='item_attrs_small'>{7}</p>\
+      </div>".format(item.name, item.imagepath, typeinfo, stypeinfo, quality, base_attrs, attrs, end_attrs, set_info, item.quality)
+    
+    # collector info
+    body += get_item_collection_db_html(item)
+    
     # guide listing
+    rows = ''
     for guide in guides:
         for gear_piece in guide.gear_pieces:
             if gear_piece.matched_item is not None and gear_piece.matched_item == item:
@@ -394,7 +397,8 @@ def output_rune_file(item):
         </table>\
         <p>Runewords that use this rune:</p>\
         <p>{7}</p>\
-      </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs, runewords)
+        {8}\
+      </div>".format(item.name, item.imagepath, item.rlvl, weap_attrs, armor_attrs, helm_attrs, shield_attrs, runewords, get_item_collection_db_html(item))
 
     #html = get_header(item.name) + body + get_footer()
     with open(get_link(item, False), 'w') as itemfile:
@@ -593,7 +597,7 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
         for cat in cat_dict:
             names += '{ value: "' + cat.name + '", link: "' + get_link(cat) + '", category: "' + cat.quality +'" },'
     
-    script = """$(function(){\n
+    script = """$(function(){
                   var availableTags = ["""+names+"""];\n
                   $("#tags").autocomplete({\n
                     source: availableTags,\n
@@ -602,11 +606,8 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
                       $('#contentContainer').load(page, function(responseTxt, statusTxt, xhr) {\n
                           if (statusTxt == "success")\n
                           {\n
-                              $('body, html').animate({scrollTop:$('#contentContainer').offset().top}, 'slow');
                               window.history.pushState(page, null, page);\n
-                              ajaxify_links();\n
-                              $('#contentContainer').scrollTop(0);
-                              
+                              ajaxify_links();\n                              
                           }\n
                       });\n
                       return false;\n
@@ -663,13 +664,8 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
             $('#contentContainer').load(page, function(responseTxt, statusTxt, xhr){
                 if (statusTxt == "success")
                 {
-                    $('body, html').animate({scrollTop:$('#contentContainer').offset().top}, 'slow');
-                    //window.location.hash = '';
-                    //window.history.pushState(page, null, page);
                     ajaxify_links();
-                    loading_hash = false;
-                    $('#contentContainer').scrollTop(0);
-                    
+                    loading_hash = false;                    
                 }
             });
         });
@@ -679,20 +675,16 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
                 return false;
             $('#contentContainer').load(location.href, function(responseTxt, statusTxt, xhr){
                 if (statusTxt == "success")
-                {
-                    $('body, html').animate({scrollTop:$('#contentContainer').offset().top}, 'slow');
-                    $('#contentContainer').scrollTop(0);
-                    
+                {                    
                     ajaxify_links();
                 }
             });
         };
         
         $( document ).ajaxSuccess(function() {
-            //alert("scrolling");
             setTimeout(function() {
-                $('html, body').animate({ scrollTop: 0 }, 500);
-            }, 10);
+                $('html, body').animate({ scrollTop: 0 }, 1);
+            }, 5);
             
         });
     </script>"""
@@ -732,6 +724,7 @@ def output_site_map(items, sets, attributes, cat_dicts, index_links):
         {0}\n
         <p class='header'>tools</p>\n
         <p><a href='/d2/create_guide.html'>create gear guide</a></p>\n
+        <p><a href='/d2/available_rws.html'>available runewords</a></p>\n
         <hr class='item_separator' />\n
         <p><input type="checkbox" id="show_col_info" style="margin-left: 5px" /> show collector fields</p>\n
         <script>\n
@@ -788,6 +781,71 @@ def output_index_pages(items, sets, attributes, cat_dicts, guides):
             itemfile.write(body)
     
     return links
+
+def output_available_rws_page(runes, runewords):
+    print(len(runes), len(runewords))
+    runewords.sort(key=lambda item: item.name)
+    itemrows = ''
+    for i, item in enumerate(runewords):
+        itemrows += '<tr class="attr_row" id="rw_{3}" style="display: none;"><td><a href="{0}" class="{2}">{1}</a></td></tr>'.format(get_link(item, True), item.name, item.quality, i)
+    
+    body = "<p class='attr_title'><strong>Runewords you can currently make</strong></p>\
+      <table class='centerTable' id='attr_table'>\
+      {0}\
+      </table>\
+    </div>".format(itemrows)
+    
+    # script to load qty of all runes
+    body += """<script>
+    var runeQtys = {};
+    //var numRunesLoaded = 0;
+    """
+    
+    for rune in runes:
+        body += """
+        db.items.where('name').equals('"""+rune.name.replace("'", "")+"""').toArray().then( function(item_arr) {\n
+            item = item_arr[0];
+            char_data = item.characters;
+            total_qty = 0;
+            $.each(char_data, function(index, row) {
+                total_qty += parseInt(row.Qty);
+            });
+            runeQtys['"""+rune.name.replace("'", "")+"""'] = total_qty;
+            //numRunesLoaded += 1;
+        });
+        """
+
+    body += """
+    $(function(){
+        setTimeout(function() {
+    """
+    
+    for i, rw in enumerate(runewords):
+        # get qty of needed runes
+        neededRuneQtys = defaultdict(int)
+        for rune in rw.runes:
+            neededRuneQtys[rune+" Rune"] += 1
+        
+        cond = ''
+        for j, rune in enumerate(neededRuneQtys):
+            cond += "runeQtys['{0}'] >= {1}".format(rune, neededRuneQtys[rune])
+            if j < len(neededRuneQtys)-1:
+                cond += " && "
+                
+        body += """
+        if ({0})
+        {{
+            $("#rw_{1}").show();
+        }}""".format(cond, i)
+    
+    body += """
+        }, 500);
+    });
+    </script>
+    """
+        
+    with open(HTML_DIR + "/available_rws.html", 'w') as itemfile:
+        itemfile.write(body)
 
 def output_guide_creation_page(items, sets, attributes):
     classnames = ""
@@ -1083,12 +1141,15 @@ def make_website():
         cat_dicts.append((cat_dict, disp_name))
     
     index_links = output_index_pages(items, sets, attributes, cat_dicts, guides)
-        
+    
+    rws, runes = [], []
     for item in items:
         if isinstance(item, Runeword):
+            rws.append(item)
             output_runeword_file(item)        
         elif isinstance(item, Socketable):
             if item.quality == 'Rune':
+                runes.append(item)
                 output_rune_file(item)
             elif item.quality == 'Gem':
                 output_gem_file(item)
@@ -1100,6 +1161,7 @@ def make_website():
     output_set_files(sets)
     output_attribute_files(attributes)
     output_guide_creation_page(items, sets, attributes)
+    output_available_rws_page(runes, rws)
     output_site_map(items, sets, attributes, cat_dicts, index_links)
     output_main_page(items, sets, attributes, cat_dicts, index_links)
     

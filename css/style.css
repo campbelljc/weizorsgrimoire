@@ -359,10 +359,10 @@ button { width: auto; overflow: visible; }
 	clear: both;
 	font-size: 8pt;
 	height: 24px;
-	background: linear-gradient(
+	/*background: linear-gradient(
 		rgba(247, 247, 247, 0),
 		rgba(0, 0, 0, 0.15)
-	);
+	);*/
 	/*border-bottom: 1px solid white;*/
 }
 
