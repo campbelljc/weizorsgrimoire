@@ -271,7 +271,7 @@ def get_item_collection_db_html(item):
                     $("#character_input").bind( "keydown", function( event ) {
                         if ( event.keyCode === $.ui.keyCode.ENTER && !$(this).data("selectVisible") ) {
                             // add current char input value to the DB and autocomplete list.
-                            table.addRow({ data: ["", $(this).val(), ""] });
+                            table.addRow({ data: ["", $(this).val(), "", ""] });
                         }
                     });
                     $("#character_input").autocomplete({
@@ -294,11 +294,13 @@ def get_item_collection_db_html(item):
                         // store char/acc/notes data in items db
                         db.items.where('name').equals('"""+item.name.replace("'", "")+"""').toArray().then( function(item_arr) {\n
                             item = item_arr[0];
-                            db.items.put({\n
-                                name: item.name,\n
-                                attributes: item.attributes,\n
-                                characters: table_data\n
-                            });\n
+                            db.items.put({
+                                name: item.name,
+                                attributes: item.attributes,
+                                characters: table_data,
+                                link: '""" + get_link(item) +  """',
+                                quality: '""" + item.quality +  """'
+                            });
                         });
                     
                         // store char/acc data in chars db
@@ -725,6 +727,7 @@ def output_site_map(items, sets, attributes, cat_dicts, index_links):
         <p class='header'>tools</p>\n
         <p><a href='/d2/create_guide.html'>create gear guide</a></p>\n
         <p><a href='/d2/available_rws.html'>available runewords</a></p>\n
+        <p><a href='/d2/inventory.html'>your items</a></p>\n
         <hr class='item_separator' />\n
         <p><input type="checkbox" id="show_col_info" style="margin-left: 5px" /> show collector fields</p>\n
         <script>\n
@@ -1042,6 +1045,28 @@ def output_guide_creation_page(items, sets, attributes):
     with open(HTML_DIR + "/create_guide.html", 'w') as itemfile:
         itemfile.write(body)
 
+def output_inventory_page(items):
+    body = """
+    <div>
+        <table class='centerTable' id='attr_table'>
+        
+        </table>
+    </div>
+    
+    <script>
+    
+    db.items.toArray().then( function(item_arr) {\n
+        $.each(item_arr, function(index, item) {
+            if (item.quality)
+                $('#attr_table').append('<tr class="attr_row"><td><a href="' + item.link + '" class="' + item.quality + '">' + item.name + '</a></td></tr>');
+        });
+    });
+    
+    </script>"""
+    
+    with open(HTML_DIR + "/inventory.html", 'w') as itemfile:
+        itemfile.write(body)
+
 def create_databases():
     print("Running sql.")
     db = MySQLdb.connect(host=DBHOST, user=DBUSER, passwd=DBPASSWORD)
@@ -1164,6 +1189,8 @@ def make_website():
     output_available_rws_page(runes, rws)
     output_site_map(items, sets, attributes, cat_dicts, index_links)
     output_main_page(items, sets, attributes, cat_dicts, index_links)
+    
+    output_inventory_page(items)
     
     #output_login_page()
     #output_register_page()
