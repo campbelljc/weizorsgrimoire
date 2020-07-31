@@ -3,6 +3,7 @@ import os, dill, json, jsonpickle
 from item import *
 from data import *
 from config import *
+from areas import *
 
 def load_data():
     if not os.path.exists("items.dll"):
@@ -16,10 +17,21 @@ def load_data():
     #print("Num items:", len(items))
     
     items = fill_in_tiers(items)
+    add_qlvls(items)
     sets, items = get_sets_from_items(items)
     attributes = get_global_attr_dict(items, sets)
     
     return items, sets, attributes
+
+def load_monsters():
+    if not os.path.exists("monsters.dll"):
+        monsters = scrape_monster_levels()
+        with open("monsters.dll", 'wb') as output:
+            dill.dump(monsters, output, protocol=2)
+    else:
+        monsters = dill.load(open("monsters.dll", 'rb'))
+    print(monsters)
+    return monsters
 
 def load_guides():
     db = MySQLdb.connect(host=DBHOST, user=DBUSER, passwd=DBPASSWORD, db=DBNAME)

@@ -1,5 +1,5 @@
 import re, glob, shutil
-from utils import load_data, load_guides
+from utils import load_data, load_guides, load_monsters
 from item import *
 from guide import *
 from get_items import *
@@ -319,7 +319,7 @@ def get_item_collection_db_html(item):
     """
     return body
 
-def output_item_file(item, indexes, guides):
+def output_item_file(item, indexes, guides, monsters):
     base_attrs, attrs, end_attrs = get_html_for_attributes(item.name, item.attr_dict, [lambda name: name in start_atts, lambda name: name in end_atts, lambda name: name not in start_atts and name not in end_atts])
 
     matched_link = None
@@ -369,11 +369,28 @@ def output_item_file(item, indexes, guides):
         body += """<hr class='item_separator' />
             <p class="attr_db">
                 guides that list this item
-                <table id="character_table">
+                <table>
                 {0}
                 </table>
             </p>
         """.format(rows)
+    
+    rows = ''
+    for monster in monsters:
+        difficulties = ''
+        for difficulty in monster.mlvls:
+            if item.qlvl <= monster.mlvls[difficulty]:
+                difficulties += '{0}, '.format(difficulty)
+        if len(difficulties) > 0:
+            rows += "<tr><td>{0} ({1})</td></tr>".format(monster.name, difficulties[:-2])
+
+    body += """<hr class='item_separator' />
+            <p class="attr_db">
+                superuniques that can drop this item
+                <table>
+                {0}
+                </table>
+            </p>""".format(rows)
     
     #html = get_header(item.name, jquery=True, jquery_ui=True, dexie=True, table=True) + body + get_footer(dexie=True)
     with open(get_link(item, False), 'w') as itemfile:
@@ -1217,6 +1234,7 @@ def make_website():
     output_htaccess()
 
     items, sets, attributes = load_data()
+    monsters = load_monsters()
     guides = load_guides()
     output_guides(guides)
             
@@ -1240,9 +1258,9 @@ def make_website():
             elif item.quality == 'Gem':
                 output_gem_file(item)
         else:
-            output_item_file(item, index_links, guides)
+            output_item_file(item, index_links, guides, monsters)
             if item.eth_item is not None:
-                output_item_file(item.eth_item, index_links, guides)
+                output_item_file(item.eth_item, index_links, guides, monsters)
     
     output_set_files(sets)
     output_attribute_files(attributes)
