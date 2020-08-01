@@ -30,7 +30,7 @@ def load_monsters():
             dill.dump(monsters, output, protocol=2)
     else:
         monsters = dill.load(open("monsters.dll", 'rb'))
-    print(monsters)
+    #print(monsters)
     return monsters
 
 def load_guides():

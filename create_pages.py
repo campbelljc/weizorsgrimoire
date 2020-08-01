@@ -156,19 +156,19 @@ def get_footer(dexie=False):
                  </div>\n
               </div>\n
         </div>\n"""
-    if dexie:
-        footer += """
-        <script>\n
-            db.config.toArray().then( function(arr) {{\n
-                show_fields = arr[0];
-                //if (show_fields.status == 0) {
-                //    $(".attr_db").hide();
-                //}
-            }});
-        </script>\n"""
+    #if dexie:
+    #    footer += """
+    #    <script>\n
+    #        db.config.toArray().then( function(arr) {{\n
+    #            show_fields = arr[0];
+    #            //if (show_fields.status == 0) {
+    #            //    $(".attr_db").hide();
+    #            //}
+    #        }});
+    #    </script>\n"""
     return footer + """</body></html>"""
 
-def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stupidtable=False, dexie=False, table=False):
+def get_header(monsters, page_title=None, script=None, jquery=False, jquery_ui=False, stupidtable=False, dexie=False, table=False):
     if page_title is None:
         page_title = SITENAME
     else:
@@ -196,12 +196,12 @@ def get_header(page_title=None, script=None, jquery=False, jquery_ui=False, stup
                        var db = new Dexie("grimoire");
                        db.version(1).stores({
                            items: 'name, *attributes, *characters',
-                           config: 'show_fields, status',
-                           characters: '++id, account, &name'
+                           config: '++id, visible_superuniques',
+                           characters: 'id, account, &name'
                        });
-                       db.config.add({
-                           show_fields: 0,
-                           status: 0
+                       db.config.add({ // adds only if no data
+                           id: 1,
+                           visible_superuniques: """ + str([[mon.name] for mon in monsters]) + """
                        });
                    </script>"""
     if table:
@@ -382,7 +382,7 @@ def output_item_file(item, indexes, guides, monsters):
             if item.qlvl <= monster.mlvls[difficulty]:
                 difficulties += '{0}, '.format(difficulty)
         if len(difficulties) > 0:
-            rows += "<tr><td>{0} ({1})</td></tr>".format(monster.name, difficulties[:-2])
+            rows += "<tr id='{1}'><td>{0} ({2})</td></tr>".format(monster.name, monster.name.replace(" ", "_"), difficulties[:-2])
 
     body += """<hr class='item_separator' />
             <p class="attr_db">
@@ -391,6 +391,26 @@ def output_item_file(item, indexes, guides, monsters):
                 {0}
                 </table>
             </p>""".format(rows)
+    
+    # turn off selected rows.
+    body += """<script>
+    
+    $(function(){
+        db.config.toArray().then( function(arr) {
+            superuniques = arr[0].visible_superuniques;
+            $.each(superuniques, function(index, row) {
+                name = row.Superunique;
+                if (name.includes(" (hidden)"))
+                {
+                    base_name = name.replace(" (hidden)", "").replaceAll(" ", "_");
+                    $('#' + base_name).hide();
+                }
+            });
+        
+        });
+    });
+    
+    </script>"""
     
     #html = get_header(item.name, jquery=True, jquery_ui=True, dexie=True, table=True) + body + get_footer(dexie=True)
     with open(get_link(item, False), 'w') as itemfile:
@@ -608,7 +628,7 @@ def output_cat_files(items_per_cat):
         with open(get_link(cat, False), 'w') as itemfile:
             itemfile.write(body)
 
-def output_main_page(items, sets, attributes, cat_dicts, index_links):
+def output_main_page(monsters, items, sets, attributes, cat_dicts, index_links):
     names = ""
     for item in items + sets:
         names += '{ value: "' + item.name + '", link: "' + get_link(item) + '", category: "' + item.quality +'" },'
@@ -711,7 +731,7 @@ def output_main_page(items, sets, attributes, cat_dicts, index_links):
         });
     </script>"""
 
-    html = get_header(script=script, jquery=True, jquery_ui=True, dexie=True, table=True, stupidtable=True) + body + get_footer(dexie=True)
+    html = get_header(monsters, script=script, jquery=True, jquery_ui=True, dexie=True, table=True, stupidtable=True) + body + get_footer(dexie=True)
     with open(HTML_DIR + "/index.html", 'w') as itemfile:
         itemfile.write(html)
 
@@ -757,6 +777,7 @@ def output_site_map(items, sets, attributes, cat_dicts, index_links):
         <p><a href='/d2/available_rws.html'>available runewords</a></p>\n
         <p><a href='/d2/inventory.html'>your items</a></p>
         <p><a href='/d2/db.html'>import/export db</a></p>
+        <p><a href='/d2/settings.html'>view settings</a></p>
     """.format(index_pages)
     
     # collection fields checkbox
@@ -1145,6 +1166,151 @@ def output_db_page():
     with open(HTML_DIR + "/db.html", 'w') as itemfile:
         itemfile.write(body)
 
+def output_settings_page(monsters):
+    body = """
+        <p class="attr_db">
+            superuniques to show (click to hide/unhide from item pages)<br />
+            <span id="bosses_only" class="text_link">select act bosses only</span> | <span id="select_all" class="text_link">select all</span> | <span id="select_none" class="text_link">select none</span><br />
+            <table id="character_table" class='click_table'></table>
+        </p>
+        
+        <script>
+            db.config.toArray().then( function(arr) {
+                superuniques = arr[0].visible_superuniques;
+                
+                var table = new Table({
+                    id: "character_table",
+                    fields: {
+                        "Superunique": {
+                            "type:": "string"
+                        }
+                    },
+                    data: superuniques,
+                    direction: "desc",
+                    debug: true
+                });
+                table.render();
+                
+                $('#character_table').find('td').each (function(col, td) {
+                    if ($(td).html().includes(" (hidden)"))
+                    {
+                        $(td).addClass('hidden_row');
+                    }
+                });
+                
+                $('#character_table td').click(function() {
+                    if ($(this).html().includes(" (hidden)"))
+                    {
+                        $(this).html($(this).html().replace(" (hidden)", ""));
+                        $(this).removeClass('hidden_row');
+                    }
+                    else
+                    {
+                        $(this).html($(this).html() + " (hidden)");
+                        $(this).addClass('hidden_row');
+                    }
+                    
+                    // store data in db
+                    var table_data = table.serialize();
+                    db.config.put({
+                        id: 1,
+                        visible_superuniques: table_data
+                    });
+                });
+                
+                $('#bosses_only').click(function() {
+                    $('#character_table').find('td').each (function(col, td) {
+                        if (!($(td).html().includes(" (hidden)")))
+                        {
+                            $(td).html($(td).html() + " (hidden)");
+                            $(td).addClass('hidden_row');
+                        }
+                    });
+                    
+                    // unhide the act bosses
+                    ids = ['59', '42', '36', '24', '12'];
+                    for (td_id of ids)
+                    {
+                        elmt = '#character_table_' + td_id + '_0';
+                        $(elmt).html($(elmt).html().replace(" (hidden)", ""));
+                        $(elmt).removeClass('hidden_row');
+                    }
+                    
+                    var table_data = table.serialize();
+                    db.config.put({
+                        id: 1,
+                        visible_superuniques: table_data
+                    });
+                });
+                
+                $('#select_none').click(function() {
+                    $('#character_table').find('td').each (function(col, td) {
+                        if (!($(td).html().includes(" (hidden)")))
+                        {
+                            $(td).html($(td).html() + " (hidden)");
+                            $(td).addClass('hidden_row');
+                        }
+                    });
+                    var table_data = table.serialize();
+                    db.config.put({
+                        id: 1,
+                        visible_superuniques: table_data
+                    });
+                });
+                
+                $('#select_all').click(function() {
+                    $('#character_table').find('td').each (function(col, td) {
+                        if ($(td).html().includes(" (hidden)"))
+                        {
+                            $(td).html($(td).html().replace(" (hidden)", ""));
+                            $(td).removeClass('hidden_row');
+                        }
+                    });
+                    var table_data = table.serialize();
+                    db.config.put({
+                        id: 1,
+                        visible_superuniques: table_data
+                    });
+                });
+            });
+        </script>"""
+    
+    
+    body += """
+    <script>
+    $(function(){
+        $('#exportLink').click(function() {
+            db.export({prettyJson: true}).then(function(blob) {
+                download(blob, "my-grimoire-db.json", "application/json");
+            });
+        });
+        
+        $('#dropzone').on("dragover", function(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            event.originalEvent.dataTransfer.dropEffect = 'copy';
+        });
+        $('#dropzone').on("drop", function(event) {
+            event.stopPropagation();
+            event.preventDefault();
+
+            // Pick the File from the drop event (a File is also a Blob):
+            const file = event.originalEvent.dataTransfer.files[0];
+            if (!file) throw new Error(`Only files can be dropped here`);
+            console.log("Importing " + file.name);
+            db.import(file, {clearTablesBeforeImport: true}).then(function() {
+                $("#status").html("Import complete.");         
+                console.log("Import complete.");             
+            });
+        });
+    });
+    
+    </script>
+    """
+    
+    with open(HTML_DIR + "/settings.html", 'w') as itemfile:
+        itemfile.write(body)
+
 def create_databases():
     print("Running sql.")
     db = MySQLdb.connect(host=DBHOST, user=DBUSER, passwd=DBPASSWORD)
@@ -1267,10 +1433,11 @@ def make_website():
     output_guide_creation_page(items, sets, attributes)
     output_available_rws_page(runes, rws)
     output_site_map(items, sets, attributes, cat_dicts, index_links)
-    output_main_page(items, sets, attributes, cat_dicts, index_links)
+    output_main_page(monsters, items, sets, attributes, cat_dicts, index_links)
     
     output_inventory_page(items)
     output_db_page()
+    output_settings_page(monsters)
     
     #output_login_page()
     #output_register_page()

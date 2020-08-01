@@ -1,3 +1,5 @@
+// source: https://github.com/mikejsutherland/jquery.Table
+
 function Table (o) {
 
     var s = o || {};

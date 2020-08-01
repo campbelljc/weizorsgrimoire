@@ -52,7 +52,7 @@ def scrape_monster_levels():
         page = lfile.read()
         tree = html.fromstring(page)
         rows = [row.text_content().replace("\n", "--") for row in tree.xpath("//tr")[1:]]
-        print(rows[-1])
+        #print(rows[-1])
         cur_act = None
         for row in rows:
             if 'Act ' in row and 'Act Boss' not in row:
@@ -61,8 +61,8 @@ def scrape_monster_levels():
             data = [r.strip() for r in row.split("--") if len(r.strip()) > 0]
             superuniques.append(Monster(data[0], data[1], data[5], cur_act, [data[2][-2:], data[3][-2:], data[4][-2:]], data[-1]))
             #print(x)
-        print(superuniques[-1])
-    
+        #print(superuniques[-1])
+    print(len(superuniques))
     return superuniques
 
 def add_qlvls(items):

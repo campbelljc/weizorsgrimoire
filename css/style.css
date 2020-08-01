@@ -445,3 +445,20 @@ img .image-right {
   margin-right:auto;
   margin-bottom: 20px;
 }
+
+.click_table tbody>tr:hover {
+    background-color: #ccc;
+}
+
+.text_link {
+	text-decoration: underline;
+}
+
+.text_link:hover {
+    background-color: #ccc;
+	text-decoration: none;
+}
+
+.hidden_row {
+	color: gray;
+}
