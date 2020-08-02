@@ -376,13 +376,18 @@ def output_item_file(item, indexes, guides, monsters):
         """.format(rows)
     
     rows = ''
-    for monster in monsters:
-        difficulties = ''
-        for difficulty in monster.mlvls:
-            if item.qlvl <= monster.mlvls[difficulty]:
-                difficulties += '{0}, '.format(difficulty)
-        if len(difficulties) > 0:
-            rows += "<tr id='{1}'><td>{0} ({2})</td></tr>".format(monster.name, monster.name.replace(" ", "_"), difficulties[:-2])
+    if item.name == 'Annihilus':
+        rows = "<tr><td>Uber Diablo</td></tr>"
+    elif 'Hellfire Torch' in item.name:
+        rows = "<tr><td>Last Uber Tristram boss</td></tr>"
+    else:
+        for monster in monsters:
+            difficulties = ''
+            for difficulty in monster.mlvls:
+                if item.tc <= monster.tcs[difficulty] and item.qlvl <= monster.mlvls[difficulty]:
+                    difficulties += '{0}, '.format(difficulty)
+            if len(difficulties) > 0:
+                rows += "<tr id='{1}'><td>{0} ({2})</td></tr>".format(monster.name, monster.name.replace(" ", "_"), difficulties[:-2])
 
     body += """<hr class='item_separator' />
             <p class="attr_db">
@@ -778,6 +783,7 @@ def output_site_map(items, sets, attributes, cat_dicts, index_links):
         <p><a href='/d2/inventory.html'>your items</a></p>
         <p><a href='/d2/db.html'>import/export db</a></p>
         <p><a href='/d2/settings.html'>view settings</a></p>
+        <p><a href='/d2/links.html'>useful links</a></p>
     """.format(index_pages)
     
     # collection fields checkbox
@@ -796,8 +802,7 @@ def output_site_map(items, sets, attributes, cat_dicts, index_links):
                     }});\n
                 }});\n
             }});
-        </script>\n
-      </div>""" #.format(index_pages)
+        </script>""" #.format(index_pages)
 
     with open(HTML_DIR + "/site_map.html", 'w') as itemfile:
         itemfile.write(body)
@@ -1311,6 +1316,19 @@ def output_settings_page(monsters):
     with open(HTML_DIR + "/settings.html", 'w') as itemfile:
         itemfile.write(body)
 
+def output_links_page():
+    body = """
+    <p class='header'>useful links</p>\n
+    <p><a href='https://forums.d2jsp.org/topic.php?t=23968013&f=87'>rarity of set and unique items</a></p>
+    <p><a href='https://forums.d2jsp.org/topic.php?t=24046916&f=87'>treasure classes</a></p>
+    <p><a href='https://fabd.github.io/diablo2/wiki/super-uniques.html'>superunique monsters</a></p>
+    <p><a href='https://web.archive.org/web/20161018124433/https://diablo2.diablowiki.net/Guide:Diablo_2_Level_Up_Guide_v1.10'>level up guide</a></p>
+    
+    """
+    
+    with open(HTML_DIR + "/links.html", 'w') as itemfile:
+        itemfile.write(body)
+
 def create_databases():
     print("Running sql.")
     db = MySQLdb.connect(host=DBHOST, user=DBUSER, passwd=DBPASSWORD)
@@ -1434,6 +1452,7 @@ def make_website():
     output_available_rws_page(runes, rws)
     output_site_map(items, sets, attributes, cat_dicts, index_links)
     output_main_page(monsters, items, sets, attributes, cat_dicts, index_links)
+    output_links_page()
     
     output_inventory_page(items)
     output_db_page()
