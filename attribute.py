@@ -117,7 +117,7 @@ def get_global_attr_dict(items, sets):
     
     return items_per_attribute
 
-start_atts = ['Damage', 'Throw Damage', 'One-Hand Damage', 'Two-Hand Damage', 'Defense', 'Required Level', 'Required Strength', 'Required Dexterity', 'Max Stack', 'Range', 'Durability', 'Weapon Speed', 'Boxes', 'Chance to Block', 'Chance to Block (Pal)', 'Chance to Block (Ama/Asn/Bar)', 'Chance to Block (Dru/Nec/Sor)', 'Kick Damage', 'Smite Damage']
+start_atts = ['Damage', 'Throw Damage', 'One-Hand Damage', 'Two-Hand Damage', 'Defense', 'Required Level', 'Required Strength', 'Required Dexterity', 'Max Stack', 'Range', 'Durability', 'Weapon Speed', 'Boxes', 'Chance to Block', 'Chance to Block (Pal)', 'Chance to Block (Ama/Asn/Bar)', 'Chance to Block (Dru/Nec/Sor)', 'Kick Damage', 'Smite Damage', 'Treasure Class', 'Quality Level']
 
 if os.path.exists("attr_matches.pkl"):
     attribute_matches = pickle.load(open("attr_matches.pkl", "rb"))
@@ -323,7 +323,9 @@ else:
         AttributeMatch('Indestructible', r'indestructible', 'indestructible'),
         AttributeMatch('Ethereal', r'ethereal \(cannot be repaired\)', 'ethereal'),
         AttributeMatch('Ladder Only', r'\(ladder only\)', 'ladder only'),
-        AttributeMatch('Patch', r'\(only spawns in patch (?P<v>[\d\.]+) or later\)', 'only spawns in patch')
+        AttributeMatch('Patch', r'\(only spawns in patch (?P<v>[\d\.]+) or later\)', 'only spawns in patch'),
+        AttributeMatch('Quality Level', r'no match', 'quality level'),
+        AttributeMatch('Treasure Class', r'no match', 'treasure class')
     ]
     pickle.dump(attribute_matches, open("attr_matches.pkl", "wb"))
 

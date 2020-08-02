@@ -4,6 +4,7 @@ from lxml import html
 from lxml.etree import tostring
 
 from item import *
+from attribute import *
 
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.1 Safari/603.1.30'}
 
@@ -75,6 +76,15 @@ def add_qlvls(items):
                 tcs[item.lower().replace("'", "").replace(" ", "")] = cur_tc
             
             #print(qlvls)
+    
+    tc_attrmatch, qlvl_attrmatch = None, None
+    for attr_match in attribute_matches:
+        if attr_match.name == 'Treasure Class':
+            tc_attrmatch = attr_match
+        elif attr_match.name == 'Quality Level':
+            qlvl_attrmatch = attr_match
+    assert tc_attrmatch is not None and qlvl_attrmatch is not None
+    
     for item in items:
         if not isinstance(item, (WhiteItem, UniqueItem, SetItem)):
             continue
@@ -91,6 +101,10 @@ def add_qlvls(items):
                 item.eth_item.qlvl = item.qlvl
                 item.eth_item.tc = item.tc
             print(item.name, item.qlvl, item.tc)
+        
+        # insert base attributes for qlvl/tc
+        item.attr_dict[tc_attrmatch] = Attribute(tc_attrmatch.name, {'v': str(item.tc)}, "treasure class: {}".format(item.tc), False)
+        item.attr_dict[qlvl_attrmatch] = Attribute(qlvl_attrmatch.name, {'v': str(item.qlvl)}, "quality level: {}".format(item.qlvl), False)
 
 if __name__ == '__main__':
     add_qlvls([])

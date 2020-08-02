@@ -1,3 +1,0 @@
--show qlvl on item pages (as base attribute)
--fix superunique drop calculation (use TC number on wiki page)
--add missing items to proper TC sections on wiki page
