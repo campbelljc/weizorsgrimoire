@@ -1,4 +1,4 @@
-import re, glob, shutil
+import re, glob, shutil, copy
 from utils import load_data, load_guides, load_monsters
 from item import *
 from guide import *
@@ -767,10 +767,10 @@ def output_site_map(items, sets, attributes, cat_dicts, index_links):
     index_pages = "<p>"
     for i, (item_type, index_link) in enumerate(index_links):
         style = ''
-        if i not in [2, 6, 10, 11]:
+        if i not in [2, 5, 10, 11]:
             style = 'margin-right: 10px;'
         index_pages += '<a href="../{0}" class="{2}" style="{3}">{1}</a>'.format(index_link, item_type, classes[item_type] if item_type in classes else '', style)
-        if i in [2, 6, 10]:
+        if i in [2, 5, 10]:
             index_pages += "</p><p>"
     index_pages += "</p>"
     
@@ -821,7 +821,7 @@ def get_index_links(items, sets, attributes, cat_dicts, guides):
     #    if len(attributes[attribute]) == 1:
     #        unique_attributes.append(attribute)
     
-    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (rw_items, 'Runewords'), (white_items, 'White Items'), (item_sets, 'Item Sets'), (runes, 'Runes'), (gems, 'Gems'), (list(attributes), 'Attributes'), *[(list(d), n) for d, n in cat_dicts], (guides, 'Guides')]
+    items_types = [(unique_items, 'Unique Items'), (set_items, 'Set Items'), (rw_items, 'Runewords'), (white_items, 'White Items'), (runes, 'Runes'), (gems, 'Gems'), (list(attributes), 'Attributes'), *[(list(d), n) for d, n in cat_dicts], (item_sets, 'Item Sets'), (guides, 'Guides')]
     #, (unique_attributes, 'Rarely-occurring attributes')]
     
     links = []
@@ -1421,6 +1421,10 @@ def make_website():
     monsters = load_monsters()
     guides = load_guides()
     output_guides(guides)
+    
+    for attribute in copy.copy(attributes):
+        if len(attributes[attribute]) == 0:
+            del attributes[attribute]
             
     cat_dicts = []
     for cat_name, disp_name in [('tier', 'Item Tiers'), ('type', 'Item Types'), ('stype', 'Item Subtypes')]:
