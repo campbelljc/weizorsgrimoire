@@ -515,7 +515,7 @@ def output_set_files(sets):
                     <p class='item_attrs_small'>{5}</p>\
                 </div><hr class='item_separator' />".format(item.name, item.imagepath, item.quality, base_attrs, attrs, end_attrs, "<a href='"+get_link(item)+"'>"+item.name+"</a>")
     
-        set_bonuses = get_html_for_attributes(itemset.name, itemset.set_bonuses, lambda name: True)
+        set_bonuses = get_html_for_attributes(itemset.name, itemset.set_bonuses, lambda name: True)[0]
     
         body = "<p class='item_name set'>{0}</p>\
           {2}\
@@ -646,7 +646,10 @@ def output_main_page(monsters, items, sets, attributes, cat_dicts, index_links):
     script = """$(function(){
                   var availableTags = ["""+names+"""];\n
                   $("#tags").autocomplete({\n
-                    source: availableTags,\n
+                    source: function(request, response) {
+                        var results = $.ui.autocomplete.filter(availableTags, request.term);
+                        response(results.slice(0, 10));
+                    },
                     select: function(event, ui) {\n
                       var page = ui.item.link;\n
                       $('#contentContainer').load(page, function(responseTxt, statusTxt, xhr) {\n
@@ -669,9 +672,8 @@ def output_main_page(monsters, items, sets, attributes, cat_dicts, index_links):
             <input spellcheck='false' id='tags' placeholder='enter search term' />\n
         </div>\n
     </div>\n
-    <div id='contentContainer'>
     
-    </div>
+    <div id='contentContainer'></div>
     
     <script type="text/javascript">
         var first = true;
